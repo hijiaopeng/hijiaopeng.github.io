@@ -4,13 +4,25 @@
   
     
     <entry>
-      <title></title>
+      <title>Linux7.4快速搭建WordPress博客</title>
       <link href="2021/02/24/linux-wordpress/"/>
       <url>2021/02/24/linux-wordpress/</url>
       
-        <content type="html"><![CDATA[<pre class=" language-yaml"><code class="language-yaml"><span class="token key atrule">title</span><span class="token punctuation">:</span> Linux7.4快速搭建WordPress博客<span class="token key atrule">date</span><span class="token punctuation">:</span> <span class="token datetime number">2021-02-24 16:40:20</span><span class="token key atrule">author</span><span class="token punctuation">:</span> Jiao Peng<span class="token key atrule">img</span><span class="token punctuation">:</span> https<span class="token punctuation">:</span>//www.wp.com.cn/images/logo.png<span class="token key atrule">top</span><span class="token punctuation">:</span> <span class="token boolean important">true</span><span class="token key atrule">cover</span><span class="token punctuation">:</span> <span class="token boolean important">true</span><span class="token key atrule">coverImg</span><span class="token punctuation">:</span> /images/1.jpg<span class="token key atrule">password</span><span class="token punctuation">:</span> <span class="token key atrule">toc</span><span class="token punctuation">:</span> <span class="token boolean important">false</span><span class="token key atrule">mathjax</span><span class="token punctuation">:</span> <span class="token boolean important">false</span><span class="token key atrule">summary</span><span class="token punctuation">:</span> 使用阿里云服务器，在Linux下快速搭建WordPress博客网站。<span class="token key atrule">categories</span><span class="token punctuation">:</span> WordPress<span class="token key atrule">tags</span><span class="token punctuation">:</span>  <span class="token punctuation">-</span> WordPress</code></pre><p>我先测试一下</p>]]></content>
+        <content type="html"><![CDATA[<p>测试一下</p>]]></content>
       
       
+      <categories>
+          
+          <category> WordPress </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> WordPress </tag>
+            
+        </tags>
       
     </entry>
     
