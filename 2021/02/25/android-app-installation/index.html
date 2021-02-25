@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Linux7.4快速搭建WordPress博客, Android,Python,Java,...">
+    <meta name="keywords" content="（Android）判断常用APP是否安装, Android,Python,Java,...">
     <meta name="description" content="好记性不如烂笔头">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Linux7.4快速搭建WordPress博客 | HI，JiaoPeng</title>
+    <title>（Android）判断常用APP是否安装 | HI，JiaoPeng</title>
     <link rel="icon" type="image/jpeg" href="/favicon.jpeg">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -288,12 +288,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://www.wp.com.cn/images/logo.png')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/1.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Linux7.4快速搭建WordPress博客</h1>
+                    <h1 class="description center-align post-title">（Android）判断常用APP是否安装</h1>
                 </div>
             </div>
         </div>
@@ -315,8 +315,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/WordPress/">
-                                <span class="chip bg-color">WordPress</span>
+                            <a href="/tags/Android/">
+                                <span class="chip bg-color">Android</span>
+                            </a>
+                        
+                            <a href="/tags/Java/">
+                                <span class="chip bg-color">Java</span>
                             </a>
                         
                     </div>
@@ -327,8 +331,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/WordPress/" class="post-category">
-                                WordPress
+                            <a href="/categories/Android/" class="post-category">
+                                Android
                             </a>
                         
                     </div>
@@ -340,7 +344,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-02-24
+                    2021-02-25
                 </div>
                 
 
@@ -354,7 +358,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    906
+                    559
                 </div>
                 
 
@@ -381,100 +385,146 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>这篇博客是我几年前写的了，当初买的阿里云服务器，又正巧学习了一段时间Linux，才搞的WordPress。整体安装步骤应该一致，可能存在部分版本老旧问题。</p>
-<h5 id="搭建环境"><a href="#搭建环境" class="headerlink" title="搭建环境"></a>搭建环境</h5><p>服务器：阿里云ECS Centos 7.4</p>
-<p>系统架构：LAMP（Linux，Apache，MySQL，PHP）</p>
-<p>博客框架：WordPress</p>
-<h5 id="更新服务器"><a href="#更新服务器" class="headerlink" title="更新服务器"></a>更新服务器</h5><p>首先，我们需要确保服务器系统中的所有内容都是最新的：</p>
-<pre class=" language-bash"><code class="language-bash">$ yum -y update 
+                <h4 id="微信"><a href="#微信" class="headerlink" title="微信"></a>微信</h4><pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
+ * 判断是否安装微信
+ *
+ * @param context
+ * @return
+ */</span>
+<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">boolean</span> <span class="token function">isWxInstall</span><span class="token punctuation">(</span>Context context<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    <span class="token keyword">final</span> PackageManager packagemanager <span class="token operator">=</span> context<span class="token punctuation">.</span><span class="token function">getPackageManager</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">// 获取packagemanager</span>
+    List<span class="token operator">&lt;</span>PackageInfo<span class="token operator">></span> pinfo <span class="token operator">=</span> packagemanager<span class="token punctuation">.</span><span class="token function">getInstalledPackages</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">// 获取所有已安装程序的包信息</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>pinfo <span class="token operator">!=</span> null<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> pinfo<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+            String pn <span class="token operator">=</span> pinfo<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">.</span>packageName<span class="token punctuation">;</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>pn<span class="token punctuation">.</span><span class="token function">equals</span><span class="token punctuation">(</span><span class="token string">"com.tencent.mm"</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+                <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+            <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
 </code></pre>
-<h5 id="搭建LAMP："><a href="#搭建LAMP：" class="headerlink" title="搭建LAMP："></a>搭建LAMP：</h5><p>安装Apache：</p>
-<pre class=" language-bash"><code class="language-bash">$ yum -y <span class="token function">install</span> httpd
+<h4 id="支付宝"><a href="#支付宝" class="headerlink" title="支付宝"></a>支付宝</h4><pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
+ * 检测是否安装支付宝
+ *
+ * @param context
+ * @return
+ */</span>
+<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">boolean</span> <span class="token function">isAliPayInstall</span><span class="token punctuation">(</span>Context context<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    Uri uri <span class="token operator">=</span> Uri<span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span><span class="token string">"alipays://platformapi/startApp"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    Intent intent <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Intent</span><span class="token punctuation">(</span>Intent<span class="token punctuation">.</span>ACTION_VIEW<span class="token punctuation">,</span> uri<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    ComponentName componentName <span class="token operator">=</span> intent<span class="token punctuation">.</span><span class="token function">resolveActivity</span><span class="token punctuation">(</span>context<span class="token punctuation">.</span><span class="token function">getPackageManager</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> componentName <span class="token operator">!=</span> null<span class="token punctuation">;</span>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
 </code></pre>
-<p>设置开机启动：</p>
-<pre class=" language-bash"><code class="language-bash">$ <span class="token function">chkconfig</span> httpd on
+<h4 id="腾讯地图"><a href="#腾讯地图" class="headerlink" title="腾讯地图"></a>腾讯地图</h4><pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
+ * 判断是否安装腾讯地图
+ *
+ * @return
+ */</span>
+<span class="token keyword">public</span> <span class="token keyword">static</span> Boolean <span class="token function">isTencentInstall</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">File</span><span class="token punctuation">(</span><span class="token string">"/data/data/com.tencent.map"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">exists</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
 </code></pre>
-<p>启动服务：</p>
-<pre class=" language-bash"><code class="language-bash">$ systemctl start httpd.service
+<h4 id="QQ"><a href="#QQ" class="headerlink" title="QQ"></a>QQ</h4><pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
+ * 判断是否安装QQ
+ */</span>
+<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">boolean</span> <span class="token function">isQQInstall</span><span class="token punctuation">(</span>Context context<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    <span class="token keyword">final</span> PackageManager packageManager <span class="token operator">=</span> context<span class="token punctuation">.</span><span class="token function">getPackageManager</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    List<span class="token operator">&lt;</span>PackageInfo<span class="token operator">></span> pinfo <span class="token operator">=</span> packageManager<span class="token punctuation">.</span><span class="token function">getInstalledPackages</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>pinfo <span class="token operator">!=</span> null<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> pinfo<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+            String pn <span class="token operator">=</span> pinfo<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">.</span>packageName<span class="token punctuation">;</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>pn<span class="token punctuation">.</span><span class="token function">equalsIgnoreCase</span><span class="token punctuation">(</span><span class="token string">"com.tencent.qqlite"</span><span class="token punctuation">)</span> <span class="token operator">||</span> pn<span class="token punctuation">.</span><span class="token function">equalsIgnoreCase</span><span class="token punctuation">(</span><span class="token string">"com.tencent.mobileqq"</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+                <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+            <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
 </code></pre>
-<p>查看服务状态：</p>
-<pre class=" language-bash"><code class="language-bash">$ systemctl status httpd.service 
+<h4 id="新浪微博"><a href="#新浪微博" class="headerlink" title="新浪微博"></a>新浪微博</h4><pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
+ * 判断是否安装新浪微博
+ */</span>
+<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">boolean</span> <span class="token function">isSinaInstall</span><span class="token punctuation">(</span>Context context<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    <span class="token keyword">final</span> PackageManager packageManager <span class="token operator">=</span> context<span class="token punctuation">.</span><span class="token function">getPackageManager</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">// 获取packagemanager</span>
+    List<span class="token operator">&lt;</span>PackageInfo<span class="token operator">></span> pinfo <span class="token operator">=</span> packageManager<span class="token punctuation">.</span><span class="token function">getInstalledPackages</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">// 获取所有已安装程序的包信息</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>pinfo <span class="token operator">!=</span> null<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> pinfo<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+            String pn <span class="token operator">=</span> pinfo<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">.</span>packageName<span class="token punctuation">;</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>pn<span class="token punctuation">.</span><span class="token function">equals</span><span class="token punctuation">(</span><span class="token string">"com.sina.weibo"</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+                <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+            <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
 </code></pre>
-<p>配置云服务器安全组规则，设置Apache Http端口，一般为80。</p>
-<p>规则方向为入方向，端口范围设置为80/80，授权对象为0.0.0.0/0。</p>
-<h5 id="安装MySQL"><a href="#安装MySQL" class="headerlink" title="安装MySQL"></a>安装MySQL</h5><p>先安装带有当前可用的mysql5系列社区版资源的rpm包：</p>
-<pre class=" language-bash"><code class="language-bash">$ rpm -Uvh http://dev.mysql.com/get/mysql-community-release-el7-5.noarch.rpm
+<h4 id="高德地图"><a href="#高德地图" class="headerlink" title="高德地图"></a>高德地图</h4><pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
+ * 判断是否安装高德地图
+ *
+ * @param context
+ * @return
+ */</span>
+<span class="token keyword">public</span> <span class="token keyword">static</span> Boolean <span class="token function">isAmapInstall</span><span class="token punctuation">(</span>Context context<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    PackageInfo packageInfo<span class="token punctuation">;</span>
+    <span class="token keyword">try</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+        packageInfo <span class="token operator">=</span> context<span class="token punctuation">.</span><span class="token function">getPackageManager</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getPackageInfo</span><span class="token punctuation">(</span><span class="token string">"com.autonavi.minimap"</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">PackageManager<span class="token punctuation">.</span>NameNotFoundException</span> e<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+        packageInfo <span class="token operator">=</span> null<span class="token punctuation">;</span>
+        e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>packageInfo <span class="token operator">==</span> null<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span> <span class="token keyword">else</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
 </code></pre>
-<p>查看当前可用的mysql安装资源：</p>
-<pre class=" language-bash"><code class="language-bash">$ yum repolist enabled <span class="token operator">|</span> <span class="token function">grep</span> <span class="token string">"mysql.-community."</span> 
+<h4 id="百度地图"><a href="#百度地图" class="headerlink" title="百度地图"></a>百度地图</h4><pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
+ * 判断是否安装百度地图
+ *
+ * @param context
+ * @return
+ */</span>
+<span class="token keyword">public</span> <span class="token keyword">static</span> Boolean <span class="token function">isBDMapInstall</span><span class="token punctuation">(</span>Context context<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    PackageInfo packageInfo<span class="token punctuation">;</span>
+    <span class="token keyword">try</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+        packageInfo <span class="token operator">=</span> context<span class="token punctuation">.</span><span class="token function">getPackageManager</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getPackageInfo</span><span class="token punctuation">(</span><span class="token string">"com.baidu.BaiduMap"</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">PackageManager<span class="token punctuation">.</span>NameNotFoundException</span> e<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+        packageInfo <span class="token operator">=</span> null<span class="token punctuation">;</span>
+        e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>packageInfo <span class="token operator">==</span> null<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span> <span class="token keyword">else</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
 </code></pre>
-<p>安装MySQL5.6版本：</p>
-<pre class=" language-bash"><code class="language-bash">$ yum -y <span class="token function">install</span> mysql-community-server 
+<h4 id="根据包名判断该APP是否安装"><a href="#根据包名判断该APP是否安装" class="headerlink" title="根据包名判断该APP是否安装"></a>根据包名判断该APP是否安装</h4><pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
+ * 判断是否安装了这个应用
+ *
+ * @param context
+ * @param packagename
+ * @return
+ */</span>
+<span class="token keyword">public</span> <span class="token keyword">static</span> Boolean <span class="token function">isInstall</span><span class="token punctuation">(</span>Context context<span class="token punctuation">,</span> String packagename<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    PackageInfo packageInfo<span class="token punctuation">;</span>
+    <span class="token keyword">try</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+        packageInfo <span class="token operator">=</span> context<span class="token punctuation">.</span><span class="token function">getPackageManager</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getPackageInfo</span><span class="token punctuation">(</span>packagename<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">PackageManager<span class="token punctuation">.</span>NameNotFoundException</span> e<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+        packageInfo <span class="token operator">=</span> null<span class="token punctuation">;</span>
+        e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>packageInfo <span class="token operator">==</span> null<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span> <span class="token keyword">else</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
 </code></pre>
-<p>设置MySQL开机启动：</p>
-<pre class=" language-bash"><code class="language-bash">$ systemctl <span class="token function">enable</span> mysqld 
-</code></pre>
-<p>启动MySQL：</p>
-<pre class=" language-bash"><code class="language-bash">$ systemctl start mysqld 
-</code></pre>
-<p>初始化MySQL各项配置：</p>
-<pre class=" language-bash"><code class="language-bash">$ mysql_secure_installation
-</code></pre>
-<p>首次打开MySQL提示输入密码，默认是没有密码的，直接回车就可以。</p>
-<p>其次开始设置MySQL各项配置：</p>
-<p>mysqlsecureinstallation Set root password? [Y/n] //设置root密码（最好自己设置密码，选Y）</p>
-<p>anonymous users? [Y/n] //删除匿名用户（选Y） </p>
-<p>Disallow root login remotely? [Y/n] //禁止root用户远程登录（选n） </p>
-<p>Remove test database and access to it? [Y/n] //删除默认的 test 数据库（选Y） </p>
-<p>Reload privilege tables now? [Y/n] //是否马上应用最新的设置（选Y）</p>
-<h5 id="创建WordPress数据库"><a href="#创建WordPress数据库" class="headerlink" title="创建WordPress数据库"></a>创建WordPress数据库</h5><p>登录MySQL：</p>
-<pre class=" language-bash"><code class="language-bash">$ mysql -u root -p
-</code></pre>
-<p>输入之前设置的密码 创建WordPress需要的数据库，名称自定义：</p>
-<pre class=" language-bash"><code class="language-bash">$ create database wordpress<span class="token punctuation">;</span>
-</code></pre>
-<h5 id="安装PHP"><a href="#安装PHP" class="headerlink" title="安装PHP"></a>安装PHP</h5><p>安装PHP：</p>
-<pre class=" language-bash"><code class="language-bash">$ yum -y <span class="token function">install</span> php php-mysql php-gd php-xml
-</code></pre>
-<p>查看PHP版本，是否已经安装成功：</p>
-<pre class=" language-bash"><code class="language-bash">$ php -v
-</code></pre>
-<h5 id="安装WordPress"><a href="#安装WordPress" class="headerlink" title="安装WordPress"></a>安装WordPress</h5><p>进入官网<a target="_blank" rel="noopener" href="https://cn.wordpress.org/txt-download/">WordPress下载地址</a>，查看最新版本号，并进行下载：</p>
-<pre class=" language-bash"><code class="language-bash">$ <span class="token function">wget</span> http://cn.wordpress.org/wordpress-最新的版本号-zh_CN.zip
-</code></pre>
-<p>解压下载的压缩包：</p>
-<pre class=" language-bash"><code class="language-bash">$ unzip wordpress-最新的版本号-zh_CN.zip
-</code></pre>
-<p>如果没有unzip的话，执行以下命令安装：</p>
-<pre class=" language-bash"><code class="language-bash">$ yum <span class="token function">install</span> unzip
-</code></pre>
-<p>将wordpress下的所有文件复制到Apache服务器下的根目录：</p>
-<pre class=" language-bash"><code class="language-bash">$ <span class="token function">cp</span> -r wordpress/* /var/www/html/
-</code></pre>
-<p>配置WordPress的配置文件</p>
-<p>进入Apache的根目录html目录下：</p>
-<pre class=" language-bash"><code class="language-bash">$ <span class="token function">cd</span> /var/www/html/
-</code></pre>
-<p>复制配置文件到wp-config.php：</p>
-<pre class=" language-bash"><code class="language-bash">$ <span class="token function">cp</span> wp-config-sample.php wp-config.php
-</code></pre>
-<p>编辑WordPress的配置文件：</p>
-<pre class=" language-bash"><code class="language-bash">$ <span class="token function">vi</span> wp-config.php
-</code></pre>
-<p>根据文件中的提示，依次设置数据库名称DB_NAME；</p>
-<p>数据库用户名DB_USER（我这里使用的是root）；</p>
-<p>数据库密码DB_PASSEWORD；</p>
-<p>主机地址，默认为localhost，（也可以设置为服务器的IP地址），一般不需 要修改。</p>
-<p>最后在文件末尾添加：</p>
-<p>define(“FS_METHOD”, “direct”); define(“FSCHMODDIR”, 0777); define(“FSCHMODFILE”, 0777);</p>
-<p>用来解决FTP登录凭据问题。</p>
-<p>为了防止之后可能会出现的安装失败或者权限不足等问题， 后退找到html目录，给予它足够的权限，777，并且较为安全。（在安装和更新时设置为777，其他时候最好不要给与这么高权限，存在安全问题）：</p>
-<pre class=" language-bash"><code class="language-bash">$ <span class="token function">chmod</span> -R 777 html/
-</code></pre>
-<p>最后重启Apache服务：</p>
-<pre class=" language-bash"><code class="language-bash">$ systemctl restart httpd.service
-</code></pre>
-<h5 id="WordPress五分钟安装程序"><a href="#WordPress五分钟安装程序" class="headerlink" title="WordPress五分钟安装程序"></a>WordPress五分钟安装程序</h5><p>最后就是按照步骤，填写自己的站点信息和用户信息，一步一步填写就行，密码最好设置的较为复杂一些。之后会进入博客的仪表盘页面，可以在里面管理自己的网站了。</p>
 
                 
             </div>
@@ -501,7 +551,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://hijiaopeng.github.io/2021/02/24/linux-wordpress/">https://hijiaopeng.github.io/2021/02/24/linux-wordpress/</a>
+                    <a href="https://hijiaopeng.github.io/2021/02/25/android-app-installation/">https://hijiaopeng.github.io/2021/02/25/android-app-installation/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -539,8 +589,12 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/WordPress/">
-                                    <span class="chip bg-color">WordPress</span>
+                                <a href="/tags/Android/">
+                                    <span class="chip bg-color">Android</span>
+                                </a>
+                            
+                                <a href="/tags/Java/">
+                                    <span class="chip bg-color">Java</span>
                                 </a>
                             
                         </div>
@@ -588,19 +642,19 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/02/25/android-app-installation/">
+                <a href="/2021/02/25/android-math-use/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="（Android）判断常用APP是否安装">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="（Android）Math函数的使用">
                         
-                        <span class="card-title">（Android）判断常用APP是否安装</span>
+                        <span class="card-title">（Android）Math函数的使用</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Android中判断常用APP是否安装。
+                            Android与Java中使用Math函数。
                         
                     </div>
                     <div class="publish-info">
@@ -638,7 +692,7 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
                 <a href="/2021/02/24/linux-wordpress/">
@@ -671,7 +725,6 @@
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
