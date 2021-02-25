@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="分类, Android,Python,Java,...">
+    <meta name="keywords" content="（Android）Math函数的使用, Android,Python,Java,...">
     <meta name="description" content="好记性不如烂笔头">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>分类 | HI，JiaoPeng</title>
+    <title>（Android）Math函数的使用 | HI，JiaoPeng</title>
     <link rel="icon" type="image/jpeg" href="/favicon.jpeg">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -284,164 +284,586 @@
 
 </header>
 
-    <div class="bg-cover pd-header about-cover">
-    <div class="container">
-    <div class="row">
-    <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
-        <div class="brand">
-            <div class="title center-align">
-                
-                一个代码搬运工的blog
-                
-            </div>
+    
 
-            <div class="description center-align">
-                
-                <span id="subtitle"></span>
-                <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
-                <script>
-                    var typed = new Typed("#subtitle", {
-                        strings: ['Good memory is not as good as bad pen','好记性不如烂笔头'],
-                        startDelay: 300,
-                        typeSpeed: 100,
-                        loop: false,
-                        backSpeed: 50,
-                        showCursor: false
-                    });
-                </script>
-                
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">（Android）Math函数的使用</h1>
+                </div>
             </div>
         </div>
     </div>
+</div>
+
+
+
+
+<main class="container content">
+
+    
+    <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/Android/">
+                                <span class="chip bg-color">Android</span>
+                            </a>
+                        
+                            <a href="/tags/Java/">
+                                <span class="chip bg-color">Java</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/Android/" class="post-category">
+                                Android
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2021-02-25
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2021-02-25
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    578
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    2 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <table>
+<thead>
+<tr>
+<th>函数</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Math.PI;</td>
+<td>圆周率</td>
+</tr>
+<tr>
+<td>Math.E;</td>
+<td>e的常量</td>
+</tr>
+<tr>
+<td>Math.sin();</td>
+<td>正弦函数</td>
+</tr>
+<tr>
+<td>Math.cos();</td>
+<td>余弦函数</td>
+</tr>
+<tr>
+<td>Math.tan();</td>
+<td>正切函数</td>
+</tr>
+<tr>
+<td>Math.asin();</td>
+<td>反正弦函数</td>
+</tr>
+<tr>
+<td>Math.acos();</td>
+<td>反余弦函数</td>
+</tr>
+<tr>
+<td>Math.atan();</td>
+<td>反正切函数</td>
+</tr>
+<tr>
+<td>Math.toRadians();</td>
+<td>将角度转换为弧度</td>
+</tr>
+<tr>
+<td>Math.toDegrees();</td>
+<td>将弧度转换角度</td>
+</tr>
+<tr>
+<td>Math.exp();</td>
+<td>求e的任意次方</td>
+</tr>
+<tr>
+<td>Math.log();</td>
+<td>自然对数</td>
+</tr>
+<tr>
+<td>Math.log10();</td>
+<td>以10为底的对数</td>
+</tr>
+<tr>
+<td>Math.sqrt();</td>
+<td>平方根</td>
+</tr>
+<tr>
+<td>Math.cbrt();</td>
+<td>立方根</td>
+</tr>
+<tr>
+<td>Math.IEEEremainder();</td>
+<td>求余</td>
+</tr>
+<tr>
+<td>Math.ceil();</td>
+<td>向上取整</td>
+</tr>
+<tr>
+<td>Math.floor();</td>
+<td>向下取整</td>
+</tr>
+<tr>
+<td>Math.rint();</td>
+<td>返回最接近该值的那个整数，如果存在两个这样的整数，则返回其中的偶数</td>
+</tr>
+<tr>
+<td>Math.atan2();</td>
+<td>返回从 x 轴到点 (x,y) 之间的角度</td>
+</tr>
+<tr>
+<td>Math.pow(x,y);</td>
+<td>x的y次方</td>
+</tr>
+<tr>
+<td>Math.round();</td>
+<td>四舍五入</td>
+</tr>
+<tr>
+<td>Math.random();</td>
+<td>返回0，1之间的一个随机数</td>
+</tr>
+<tr>
+<td>Math.addExact();</td>
+<td>加法运算</td>
+</tr>
+<tr>
+<td>Math.subtractExact();</td>
+<td>减法运算</td>
+</tr>
+<tr>
+<td>Math.multiplyExact();</td>
+<td>乘法运算</td>
+</tr>
+<tr>
+<td>Math.incrementExact();</td>
+<td>返回参数值加一</td>
+</tr>
+<tr>
+<td>Math.decrementExact();</td>
+<td>返回参数值减一</td>
+</tr>
+<tr>
+<td>Math.negateExact();</td>
+<td>改变参数符号</td>
+</tr>
+<tr>
+<td>Math.toIntExact();</td>
+<td>求int值</td>
+</tr>
+<tr>
+<td>Math.floorDiv();</td>
+<td>第一个参数除以第二参数，然后针对结果执行floor操作，返回小于或等于商的整数</td>
+</tr>
+<tr>
+<td>Math.floorMod();</td>
+<td>对一个数的余数进行下舍入，返回给定参数最大的整数，该整数小于或等给定的参数</td>
+</tr>
+<tr>
+<td>Math.abs();</td>
+<td>返回绝对值</td>
+</tr>
+<tr>
+<td>Math.max();</td>
+<td>求两数中最大</td>
+</tr>
+<tr>
+<td>Math.min();</td>
+<td>求两数中最小</td>
+</tr>
+<tr>
+<td>Math.ulp();</td>
+<td>返回参数的ulp大小</td>
+</tr>
+<tr>
+<td>Math.signum();</td>
+<td>符号函数；如果参数为 0，则返回 0；如果参数大于 0，则返回 1.0；如果参数小于 0，则返回 -1.0。</td>
+</tr>
+<tr>
+<td>Math.sinh();</td>
+<td>双曲正弦值</td>
+</tr>
+<tr>
+<td>Math.cosh();</td>
+<td>双曲余弦值</td>
+</tr>
+<tr>
+<td>Math.tanh();</td>
+<td>双曲正切值</td>
+</tr>
+<tr>
+<td>Math.hypot();</td>
+<td>返回 sqrt(x2次方 +y2次方) 没有中间溢或下溢</td>
+</tr>
+<tr>
+<td>Math.expm1();</td>
+<td>返回 Ex次方 - 1, 其中 x 是该函数的参数, E 是自然对数的底数</td>
+</tr>
+<tr>
+<td>Math.log1p();</td>
+<td>返回参数与 1 之和的自然对数</td>
+</tr>
+<tr>
+<td>Math.copySign();</td>
+<td>符号赋值，返回带有第二个浮点数符号的第一个浮点参数</td>
+</tr>
+<tr>
+<td>Math.getExponent();</td>
+<td>返回参数的无偏指数</td>
+</tr>
+<tr>
+<td>Math.nextAfter();</td>
+<td>返回第一个参数和第二个参数之间与第一个参数相邻的浮点数</td>
+</tr>
+<tr>
+<td>Math.nextUp();</td>
+<td>返回比目标数略大的浮点数</td>
+</tr>
+<tr>
+<td>Math.nextDown();</td>
+<td>返回参数直接较低的值</td>
+</tr>
+<tr>
+<td>Math.scalb();</td>
+<td>返回 d x 2(scaleFactor次方)</td>
+</tr>
+</tbody></table>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">Jiao Peng</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://hijiaopeng.github.io/2021/02/25/android-math-use/">https://hijiaopeng.github.io/2021/02/25/android-math-use/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">Jiao Peng</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/Android/">
+                                    <span class="chip bg-color">Android</span>
+                                </a>
+                            
+                                <a href="/tags/Java/">
+                                    <span class="chip bg-color">Java</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2021/02/25/android-gitignore/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="android-gitignore">
+                        
+                        <span class="card-title">android-gitignore</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            Android设置.gitignore忽略文件。
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-02-25
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Android/" class="post-category">
+                                    Android
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Android/">
+                        <span class="chip bg-color">Android</span>
+                    </a>
+                    
+                    <a href="/tags/Java/">
+                        <span class="chip bg-color">Java</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2021/02/24/linux-wordpress/">
+                    <div class="card-image">
+                        
+                        <img src="https://www.wp.com.cn/images/logo.png" class="responsive-img" alt="Linux7.4快速搭建WordPress博客">
+                        
+                        <span class="card-title">Linux7.4快速搭建WordPress博客</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            使用阿里云服务器，在Linux下快速搭建WordPress博客网站。
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-24
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/WordPress/" class="post-category">
+                                    WordPress
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/WordPress/">
+                        <span class="chip bg-color">WordPress</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
 </div>
 
 
 <script>
-    // 每天切换 banner 图.  Switch banner image every day.
-    var bannerUrl = "/medias/banner/" + new Date().getDay() + '.jpg';
-    $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('120')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: HI，JiaoPeng<br />'
+            + '文章作者: Jiao Peng<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
 </script>
 
 
-    </div>
-</div>
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
 
-<main class="content">
-
-    
-
-<div id="category-cloud" class="container chip-container">
-    <div class="card">
-        <div class="card-content">
-            <div class="tag-title center-align">
-                <i class="fas fa-bookmark"></i>&nbsp;&nbsp;文章分类
-            </div>
-            <div class="tag-chips">
-                
-                
-                
-                <a href="/categories/WordPress/" title="WordPress: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            style="background-color: #F9EBEA;">WordPress
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/categories/Android/" title="Android: 3">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            style="background-color: #F5EEF8;">Android
-                        <span class="tag-length">3</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/categories/Java/" title="Java: 2">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            style="background-color: #D5F5E3;">Java
-                        <span class="tag-length">2</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/categories/Python/" title="Python: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            style="background-color: #E8F8F5;">Python
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-            </div>
-        </div>
-    </div>
-</div>
+<!-- 代码语言 -->
 
 
-    
-    <style type="text/css">
-    #category-radar {
-        width: 100%;
-        height: 360px;
-    }
-</style>
+<!-- 代码块复制 -->
 
-<div class="container" data-aos="fade-up">
-    <div class="card">
-        <div id="category-radar" class="card-content"></div>
-    </div>
-</div>
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
 
-<script type="text/javascript" src="/libs/echarts/echarts.min.js"></script>
-<script type="text/javascript">
-    let radarChart = echarts.init(document.getElementById('category-radar'));
 
-    
+<!-- 代码块收缩 -->
 
-    let option = {
-        title: {
-            left: 'center',
-            text: '文章分类雷达图',
-            textStyle: {
-                fontWeight: 500,
-                fontSize: 22
-            }
-        },
-        tooltip: {},
-        radar: {
-            name: {
-                textStyle: {
-                    color: '#3C4858'
-                }
-            },
-            indicator: [{"name":"WordPress","max":4},{"name":"Android","max":4},{"name":"Java","max":4},{"name":"Python","max":4}],
-            nameGap: 5,
-            center: ['50%','55%'],
-            radius: '66%'
-        },
-        series: [{
-            type: 'radar',
-            color: ['#3ecf8e'],
-            itemStyle: {normal: {areaStyle: {type: 'default'}}},
-            data : [
-                {
-                    value : [1,3,2,1],
-                    name : '文章分类数量'
-                }
-            ]
-        }]
-    };
-
-    radarChart.setOption(option);
-</script>
 
     
 
 </main>
+
+
 
 
     <footer class="page-footer bg-color">

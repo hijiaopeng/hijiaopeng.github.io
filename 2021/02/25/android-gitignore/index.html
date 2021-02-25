@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Linux7.4快速搭建WordPress博客, Android,Python,Java,...">
+    <meta name="keywords" content="android-gitignore, Android,Python,Java,...">
     <meta name="description" content="好记性不如烂笔头">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Linux7.4快速搭建WordPress博客 | HI，JiaoPeng</title>
+    <title>android-gitignore | HI，JiaoPeng</title>
     <link rel="icon" type="image/jpeg" href="/favicon.jpeg">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -288,12 +288,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://www.wp.com.cn/images/logo.png')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Linux7.4快速搭建WordPress博客</h1>
+                    <h1 class="description center-align post-title">android-gitignore</h1>
                 </div>
             </div>
         </div>
@@ -315,8 +315,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/WordPress/">
-                                <span class="chip bg-color">WordPress</span>
+                            <a href="/tags/Android/">
+                                <span class="chip bg-color">Android</span>
+                            </a>
+                        
+                            <a href="/tags/Java/">
+                                <span class="chip bg-color">Java</span>
                             </a>
                         
                     </div>
@@ -327,8 +331,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/WordPress/" class="post-category">
-                                WordPress
+                            <a href="/categories/Android/" class="post-category">
+                                Android
                             </a>
                         
                     </div>
@@ -340,7 +344,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-02-24
+                    2021-02-25
                 </div>
                 
 
@@ -354,7 +358,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    906
+                    740
                 </div>
                 
 
@@ -381,100 +385,160 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>这篇博客是我几年前写的了，当初买的阿里云服务器，又正巧学习了一段时间Linux，才搞的WordPress。整体安装步骤应该一致，可能存在部分版本老旧问题。</p>
-<h5 id="搭建环境"><a href="#搭建环境" class="headerlink" title="搭建环境"></a>搭建环境</h5><p>服务器：阿里云ECS Centos 7.4</p>
-<p>系统架构：LAMP（Linux，Apache，MySQL，PHP）</p>
-<p>博客框架：WordPress</p>
-<h5 id="更新服务器"><a href="#更新服务器" class="headerlink" title="更新服务器"></a>更新服务器</h5><p>首先，我们需要确保服务器系统中的所有内容都是最新的：</p>
-<pre class=" language-bash"><code class="language-bash">$ yum -y update 
+                <p>之前使用Github for Windows的时候，直接创建一个目录，就开始往里面放项目，也没有考虑过设置忽略文件，倒是很久之前，刚开始做项目时，因为是两个人一起开发，所以设置的SVN的忽略文件。 最近要开始新的项目，又因为是在Mac上开发，最后还需要放到公司的Windows电脑上，所以好好梳理了一下忽略文件这个知识点，方便项目的多端开发使用。</p>
+<h3 id="基本需要忽略的文件"><a href="#基本需要忽略的文件" class="headerlink" title="基本需要忽略的文件"></a>基本需要忽略的文件</h3><ul>
+<li>.gradle/下的所有文件</li>
+<li>.idea/下的所有文件</li>
+<li>所有的build下的文件</li>
+<li>local.properties</li>
+<li>所有的.iml文件</li>
+</ul>
+<p>我们需要将以上文件忽略掉，这样在重新档下项目后，顺利的进行编译。</p>
+<h3 id="配置-gitignore文件"><a href="#配置-gitignore文件" class="headerlink" title="配置.gitignore文件"></a>配置.gitignore文件</h3><h4 id="手动配置："><a href="#手动配置：" class="headerlink" title="手动配置："></a>手动配置：</h4><p>可以参考：<a target="_blank" rel="noopener" href="https://github.com/github/gitignore%EF%BC%8C%E9%87%8C%E9%9D%A2%E6%9C%89%E5%90%84%E7%A7%8D.gitignore%E6%A8%A1%E6%9D%BF%EF%BC%8C%E6%89%BE%E5%88%B0Android%E7%9A%84%E5%B0%B1%E8%A1%8C%EF%BC%8C%E5%9C%A8%E5%85%A8%E5%B1%80%E7%9A%84.gitignore%E6%96%87%E4%BB%B6%E4%B8%AD%E9%87%8D%E5%86%99%E3%80%82">https://github.com/github/gitignore，里面有各种.gitignore模板，找到Android的就行，在全局的.gitignore文件中重写。</a> Android.gitignore：</p>
+<pre class=" language-java"><code class="language-java"># Built application files
+<span class="token operator">*</span><span class="token punctuation">.</span>apk
+<span class="token operator">*</span><span class="token punctuation">.</span>ap_
+<span class="token operator">*</span><span class="token punctuation">.</span>aab
+
+# Files <span class="token keyword">for</span> the ART<span class="token operator">/</span>Dalvik VM
+<span class="token operator">*</span><span class="token punctuation">.</span>dex
+
+# Java <span class="token keyword">class</span> <span class="token class-name">files</span>
+<span class="token operator">*</span><span class="token punctuation">.</span><span class="token keyword">class</span>
+
+# Generated files
+bin<span class="token operator">/</span>
+gen<span class="token operator">/</span>
+out<span class="token operator">/</span>
+
+# Gradle files
+<span class="token punctuation">.</span>gradle<span class="token operator">/</span>
+build<span class="token operator">/</span>
+
+# Local configuration <span class="token function">file</span> <span class="token punctuation">(</span>sdk path<span class="token punctuation">,</span> etc<span class="token punctuation">)</span>
+local<span class="token punctuation">.</span>properties
+
+# Proguard folder generated by Eclipse
+proguard<span class="token operator">/</span>
+
+# Log Files
+<span class="token operator">*</span><span class="token punctuation">.</span>log
+
+# Android Studio Navigation editor temp files
+<span class="token punctuation">.</span>navigation<span class="token operator">/</span>
+
+# Android Studio captures folder
+captures<span class="token operator">/</span>
+
+# IntelliJ
+<span class="token operator">*</span><span class="token punctuation">.</span>iml
+<span class="token punctuation">.</span>idea<span class="token operator">/</span>workspace<span class="token punctuation">.</span>xml
+<span class="token punctuation">.</span>idea<span class="token operator">/</span>tasks<span class="token punctuation">.</span>xml
+<span class="token punctuation">.</span>idea<span class="token operator">/</span>gradle<span class="token punctuation">.</span>xml
+<span class="token punctuation">.</span>idea<span class="token operator">/</span>assetWizardSettings<span class="token punctuation">.</span>xml
+<span class="token punctuation">.</span>idea<span class="token operator">/</span>dictionaries
+<span class="token punctuation">.</span>idea<span class="token operator">/</span>libraries
+<span class="token punctuation">.</span>idea<span class="token operator">/</span>caches
+
+# Keystore files
+# Uncomment the following lines <span class="token keyword">if</span> you <span class="token keyword">do</span> not want to check your keystore files in<span class="token punctuation">.</span>
+#<span class="token operator">*</span><span class="token punctuation">.</span>jks
+#<span class="token operator">*</span><span class="token punctuation">.</span>keystore
+
+# External <span class="token keyword">native</span> build folder generated in Android Studio <span class="token number">2.2</span> and later
+<span class="token punctuation">.</span>externalNativeBuild
+
+# Google <span class="token function">Services</span> <span class="token punctuation">(</span>e<span class="token punctuation">.</span>g<span class="token punctuation">.</span> APIs or Firebase<span class="token punctuation">)</span>
+google<span class="token operator">-</span>services<span class="token punctuation">.</span>json
+
+# Freeline
+freeline<span class="token punctuation">.</span>py
+freeline<span class="token operator">/</span>
+freeline_project_description<span class="token punctuation">.</span>json
+
+# fastlane
+fastlane<span class="token operator">/</span>report<span class="token punctuation">.</span>xml
+fastlane<span class="token operator">/</span>Preview<span class="token punctuation">.</span>html
+fastlane<span class="token operator">/</span>screenshots
+fastlane<span class="token operator">/</span>test_output
+fastlane<span class="token operator">/</span>readme<span class="token punctuation">.</span>md
 </code></pre>
-<h5 id="搭建LAMP："><a href="#搭建LAMP：" class="headerlink" title="搭建LAMP："></a>搭建LAMP：</h5><p>安装Apache：</p>
-<pre class=" language-bash"><code class="language-bash">$ yum -y <span class="token function">install</span> httpd
+<p>会出现的问题：<br>有时候添加完成后，提交代码发现并没有进行忽略，解决方式就是清除一下缓存，原因gitignore对已经追踪(track)的文件无效，清除缓存后文件将以未追踪的形式出现.然后再重新添加提交一下,.gitignore文件里的规则就可以起作用了。</p>
+<p>执行以下命令：</p>
+<pre class=" language-java"><code class="language-java"><span class="token punctuation">[</span>路径<span class="token punctuation">]</span>git rm <span class="token operator">-</span>r <span class="token operator">--</span>cached <span class="token punctuation">.</span>
+<span class="token punctuation">[</span>路径<span class="token punctuation">]</span>git add <span class="token punctuation">.</span>
+<span class="token punctuation">[</span>路径<span class="token punctuation">]</span>git commit <span class="token operator">-</span>m <span class="token string">'update .gitignore'</span>
 </code></pre>
-<p>设置开机启动：</p>
-<pre class=" language-bash"><code class="language-bash">$ <span class="token function">chkconfig</span> httpd on
+<p>目前我还没遇到过这种问题，待确认是否可行。</p>
+<h4 id="自动配置"><a href="#自动配置" class="headerlink" title="自动配置"></a>自动配置</h4><p>当我们在Github上创建一个新的目录时，下面有一个选项，如图：</p>
+<p>直接设置为Android即可。 接下来是在本地创建项目，会弹出一个提示框，如图：<br>选择“proceed”。<br>项目创建完成后，可以看到根目录的.gitignore文件为：</p>
+<pre class=" language-java"><code class="language-java"># Built application files
+<span class="token operator">*</span><span class="token punctuation">.</span>apk
+<span class="token operator">*</span><span class="token punctuation">.</span>ap_
+
+# Files <span class="token keyword">for</span> the ART<span class="token operator">/</span>Dalvik VM
+<span class="token operator">*</span><span class="token punctuation">.</span>dex
+
+# Java <span class="token keyword">class</span> <span class="token class-name">files</span>
+<span class="token operator">*</span><span class="token punctuation">.</span><span class="token keyword">class</span>
+
+# Generated files
+bin<span class="token operator">/</span>
+gen<span class="token operator">/</span>
+out<span class="token operator">/</span>
+
+# Gradle files
+<span class="token punctuation">.</span>gradle<span class="token operator">/</span>
+build<span class="token operator">/</span>
+
+# Local configuration <span class="token function">file</span> <span class="token punctuation">(</span>sdk path<span class="token punctuation">,</span> etc<span class="token punctuation">)</span>
+local<span class="token punctuation">.</span>properties
+
+# Proguard folder generated by Eclipse
+proguard<span class="token operator">/</span>
+
+# Log Files
+<span class="token operator">*</span><span class="token punctuation">.</span>log
+
+# Android Studio Navigation editor temp files
+<span class="token punctuation">.</span>navigation<span class="token operator">/</span>
+
+# Android Studio captures folder
+captures<span class="token operator">/</span>
+
+# IntelliJ
+<span class="token operator">*</span><span class="token punctuation">.</span>iml
+<span class="token punctuation">.</span>idea<span class="token operator">/</span>workspace<span class="token punctuation">.</span>xml
+<span class="token punctuation">.</span>idea<span class="token operator">/</span>tasks<span class="token punctuation">.</span>xml
+<span class="token punctuation">.</span>idea<span class="token operator">/</span>gradle<span class="token punctuation">.</span>xml
+<span class="token punctuation">.</span>idea<span class="token operator">/</span>assetWizardSettings<span class="token punctuation">.</span>xml
+<span class="token punctuation">.</span>idea<span class="token operator">/</span>dictionaries
+<span class="token punctuation">.</span>idea<span class="token operator">/</span>libraries
+<span class="token punctuation">.</span>idea<span class="token operator">/</span>caches
+
+# Keystore files
+# Uncomment the following line <span class="token keyword">if</span> you <span class="token keyword">do</span> not want to check your keystore files in<span class="token punctuation">.</span>
+#<span class="token operator">*</span><span class="token punctuation">.</span>jks
+
+# External <span class="token keyword">native</span> build folder generated in Android Studio <span class="token number">2.2</span> and later
+<span class="token punctuation">.</span>externalNativeBuild
+
+# Google <span class="token function">Services</span> <span class="token punctuation">(</span>e<span class="token punctuation">.</span>g<span class="token punctuation">.</span> APIs or Firebase<span class="token punctuation">)</span>
+google<span class="token operator">-</span>services<span class="token punctuation">.</span>json
+
+# Freeline
+freeline<span class="token punctuation">.</span>py
+freeline<span class="token operator">/</span>
+freeline_project_description<span class="token punctuation">.</span>json
+
+# fastlane
+fastlane<span class="token operator">/</span>report<span class="token punctuation">.</span>xml
+fastlane<span class="token operator">/</span>Preview<span class="token punctuation">.</span>html
+fastlane<span class="token operator">/</span>screenshots
+fastlane<span class="token operator">/</span>test_output
+fastlane<span class="token operator">/</span>readme<span class="token punctuation">.</span>md
 </code></pre>
-<p>启动服务：</p>
-<pre class=" language-bash"><code class="language-bash">$ systemctl start httpd.service
-</code></pre>
-<p>查看服务状态：</p>
-<pre class=" language-bash"><code class="language-bash">$ systemctl status httpd.service 
-</code></pre>
-<p>配置云服务器安全组规则，设置Apache Http端口，一般为80。</p>
-<p>规则方向为入方向，端口范围设置为80/80，授权对象为0.0.0.0/0。</p>
-<h5 id="安装MySQL"><a href="#安装MySQL" class="headerlink" title="安装MySQL"></a>安装MySQL</h5><p>先安装带有当前可用的mysql5系列社区版资源的rpm包：</p>
-<pre class=" language-bash"><code class="language-bash">$ rpm -Uvh http://dev.mysql.com/get/mysql-community-release-el7-5.noarch.rpm
-</code></pre>
-<p>查看当前可用的mysql安装资源：</p>
-<pre class=" language-bash"><code class="language-bash">$ yum repolist enabled <span class="token operator">|</span> <span class="token function">grep</span> <span class="token string">"mysql.-community."</span> 
-</code></pre>
-<p>安装MySQL5.6版本：</p>
-<pre class=" language-bash"><code class="language-bash">$ yum -y <span class="token function">install</span> mysql-community-server 
-</code></pre>
-<p>设置MySQL开机启动：</p>
-<pre class=" language-bash"><code class="language-bash">$ systemctl <span class="token function">enable</span> mysqld 
-</code></pre>
-<p>启动MySQL：</p>
-<pre class=" language-bash"><code class="language-bash">$ systemctl start mysqld 
-</code></pre>
-<p>初始化MySQL各项配置：</p>
-<pre class=" language-bash"><code class="language-bash">$ mysql_secure_installation
-</code></pre>
-<p>首次打开MySQL提示输入密码，默认是没有密码的，直接回车就可以。</p>
-<p>其次开始设置MySQL各项配置：</p>
-<p>mysqlsecureinstallation Set root password? [Y/n] //设置root密码（最好自己设置密码，选Y）</p>
-<p>anonymous users? [Y/n] //删除匿名用户（选Y） </p>
-<p>Disallow root login remotely? [Y/n] //禁止root用户远程登录（选n） </p>
-<p>Remove test database and access to it? [Y/n] //删除默认的 test 数据库（选Y） </p>
-<p>Reload privilege tables now? [Y/n] //是否马上应用最新的设置（选Y）</p>
-<h5 id="创建WordPress数据库"><a href="#创建WordPress数据库" class="headerlink" title="创建WordPress数据库"></a>创建WordPress数据库</h5><p>登录MySQL：</p>
-<pre class=" language-bash"><code class="language-bash">$ mysql -u root -p
-</code></pre>
-<p>输入之前设置的密码 创建WordPress需要的数据库，名称自定义：</p>
-<pre class=" language-bash"><code class="language-bash">$ create database wordpress<span class="token punctuation">;</span>
-</code></pre>
-<h5 id="安装PHP"><a href="#安装PHP" class="headerlink" title="安装PHP"></a>安装PHP</h5><p>安装PHP：</p>
-<pre class=" language-bash"><code class="language-bash">$ yum -y <span class="token function">install</span> php php-mysql php-gd php-xml
-</code></pre>
-<p>查看PHP版本，是否已经安装成功：</p>
-<pre class=" language-bash"><code class="language-bash">$ php -v
-</code></pre>
-<h5 id="安装WordPress"><a href="#安装WordPress" class="headerlink" title="安装WordPress"></a>安装WordPress</h5><p>进入官网<a target="_blank" rel="noopener" href="https://cn.wordpress.org/txt-download/">WordPress下载地址</a>，查看最新版本号，并进行下载：</p>
-<pre class=" language-bash"><code class="language-bash">$ <span class="token function">wget</span> http://cn.wordpress.org/wordpress-最新的版本号-zh_CN.zip
-</code></pre>
-<p>解压下载的压缩包：</p>
-<pre class=" language-bash"><code class="language-bash">$ unzip wordpress-最新的版本号-zh_CN.zip
-</code></pre>
-<p>如果没有unzip的话，执行以下命令安装：</p>
-<pre class=" language-bash"><code class="language-bash">$ yum <span class="token function">install</span> unzip
-</code></pre>
-<p>将wordpress下的所有文件复制到Apache服务器下的根目录：</p>
-<pre class=" language-bash"><code class="language-bash">$ <span class="token function">cp</span> -r wordpress/* /var/www/html/
-</code></pre>
-<p>配置WordPress的配置文件</p>
-<p>进入Apache的根目录html目录下：</p>
-<pre class=" language-bash"><code class="language-bash">$ <span class="token function">cd</span> /var/www/html/
-</code></pre>
-<p>复制配置文件到wp-config.php：</p>
-<pre class=" language-bash"><code class="language-bash">$ <span class="token function">cp</span> wp-config-sample.php wp-config.php
-</code></pre>
-<p>编辑WordPress的配置文件：</p>
-<pre class=" language-bash"><code class="language-bash">$ <span class="token function">vi</span> wp-config.php
-</code></pre>
-<p>根据文件中的提示，依次设置数据库名称DB_NAME；</p>
-<p>数据库用户名DB_USER（我这里使用的是root）；</p>
-<p>数据库密码DB_PASSEWORD；</p>
-<p>主机地址，默认为localhost，（也可以设置为服务器的IP地址），一般不需 要修改。</p>
-<p>最后在文件末尾添加：</p>
-<p>define(“FS_METHOD”, “direct”); define(“FSCHMODDIR”, 0777); define(“FSCHMODFILE”, 0777);</p>
-<p>用来解决FTP登录凭据问题。</p>
-<p>为了防止之后可能会出现的安装失败或者权限不足等问题， 后退找到html目录，给予它足够的权限，777，并且较为安全。（在安装和更新时设置为777，其他时候最好不要给与这么高权限，存在安全问题）：</p>
-<pre class=" language-bash"><code class="language-bash">$ <span class="token function">chmod</span> -R 777 html/
-</code></pre>
-<p>最后重启Apache服务：</p>
-<pre class=" language-bash"><code class="language-bash">$ systemctl restart httpd.service
-</code></pre>
-<h5 id="WordPress五分钟安装程序"><a href="#WordPress五分钟安装程序" class="headerlink" title="WordPress五分钟安装程序"></a>WordPress五分钟安装程序</h5><p>最后就是按照步骤，填写自己的站点信息和用户信息，一步一步填写就行，密码最好设置的较为复杂一些。之后会进入博客的仪表盘页面，可以在里面管理自己的网站了。</p>
+<p>至此完成配置。</p>
 
                 
             </div>
@@ -501,7 +565,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://hijiaopeng.github.io/2021/02/24/linux-wordpress/">https://hijiaopeng.github.io/2021/02/24/linux-wordpress/</a>
+                    <a href="https://hijiaopeng.github.io/2021/02/25/android-gitignore/">https://hijiaopeng.github.io/2021/02/25/android-gitignore/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -539,8 +603,12 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/WordPress/">
-                                    <span class="chip bg-color">WordPress</span>
+                                <a href="/tags/Android/">
+                                    <span class="chip bg-color">Android</span>
+                                </a>
+                            
+                                <a href="/tags/Java/">
+                                    <span class="chip bg-color">Java</span>
                                 </a>
                             
                         </div>
@@ -588,6 +656,55 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
+                <a href="/2021/02/25/python-face-recognition/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="使用Python实现人脸识别">
+                        
+                        <span class="card-title">使用Python实现人脸识别</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            使用Python与face_recognition实现人脸识别。
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-02-25
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Python/" class="post-category">
+                                    Python
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Python/">
+                        <span class="chip bg-color">Python</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
                 <a href="/2021/02/25/android-math-use/">
                     <div class="card-image">
                         
@@ -604,9 +721,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-02-25
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-25
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -628,55 +745,6 @@
                     
                     <a href="/tags/Java/">
                         <span class="chip bg-color">Java</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
-            </div>
-            <div class="card">
-                <a href="/2021/02/24/linux-wordpress/">
-                    <div class="card-image">
-                        
-                        <img src="https://www.wp.com.cn/images/logo.png" class="responsive-img" alt="Linux7.4快速搭建WordPress博客">
-                        
-                        <span class="card-title">Linux7.4快速搭建WordPress博客</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            使用阿里云服务器，在Linux下快速搭建WordPress博客网站。
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-24
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/WordPress/" class="post-category">
-                                    WordPress
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/WordPress/">
-                        <span class="chip bg-color">WordPress</span>
                     </a>
                     
                 </div>
