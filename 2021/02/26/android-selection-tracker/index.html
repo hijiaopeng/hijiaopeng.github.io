@@ -410,7 +410,7 @@ implementation <span class="token string">'androidx.recyclerview:recyclerview-se
  * SCOPE_MAPPED：提供对所有数据的访问，无论是否绑定到视图。具有此访问类型的密钥提供者享受对增强功能的支持，例如：SHIFT +单击范围选择和频段选择。
  */</span>
 <span class="token keyword">class</span> <span class="token class-name">MyKeyProvider</span><span class="token punctuation">(</span><span class="token keyword">private</span> val adapter<span class="token operator">:</span> ItemAdapter<span class="token punctuation">)</span> <span class="token operator">:</span>
-    ItemKeyProvider<span class="token operator">&lt;</span>Person<span class="token operator">></span><span class="token punctuation">(</span>SCOPE_CACHED<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    ItemKeyProvider<span class="token operator">&lt;</span>Person<span class="token operator">></span><span class="token punctuation">(</span>SCOPE_CACHED<span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
 
     override fun <span class="token function">getKey</span><span class="token punctuation">(</span>position<span class="token operator">:</span> Int<span class="token punctuation">)</span><span class="token operator">:</span> Person <span class="token operator">=</span> adapter<span class="token punctuation">.</span><span class="token function">getItem</span><span class="token punctuation">(</span>position<span class="token punctuation">)</span>
 
@@ -420,7 +420,7 @@ implementation <span class="token string">'androidx.recyclerview:recyclerview-se
 </code></pre>
 <h6 id="构建ItemDetailsLookup"><a href="#构建ItemDetailsLookup" class="headerlink" title="构建ItemDetailsLookup"></a>构建ItemDetailsLookup</h6><p>ItemDetailsLookup接口可以接受RecyclerView的Item上发生的MotionEvent事件，我们需要实现其<code>getItemDetails()</code>方法，通过ReyclerView的<code>findChildView(int,int)</code>方法来判断具体touch的是哪一个Item，强转成我们的ViewHolder类型，调用我们<code>RecyclerView.ViewHolder</code>中的方法来返回一个ItemDetails实例，返回实例的方法是我们自己添加的，ViewHolder中并没有该抽象方法。</p>
 <pre class=" language-java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">MyLookup</span><span class="token punctuation">(</span><span class="token keyword">private</span> val recyclerView<span class="token operator">:</span> RecyclerView<span class="token punctuation">)</span> <span class="token operator">:</span>
-    ItemDetailsLookup<span class="token operator">&lt;</span>Person<span class="token operator">></span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    ItemDetailsLookup<span class="token operator">&lt;</span>Person<span class="token operator">></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
 
     override fun <span class="token function">getItemDetails</span><span class="token punctuation">(</span>e<span class="token operator">:</span> MotionEvent<span class="token punctuation">)</span><span class="token operator">:</span> ItemDetails<span class="token operator">&lt;</span>Person<span class="token operator">></span><span class="token operator">?</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
         val view <span class="token operator">=</span> recyclerView<span class="token punctuation">.</span><span class="token function">findChildViewUnder</span><span class="token punctuation">(</span>e<span class="token punctuation">.</span>x<span class="token punctuation">,</span> e<span class="token punctuation">.</span>y<span class="token punctuation">)</span>
@@ -429,7 +429,6 @@ implementation <span class="token string">'androidx.recyclerview:recyclerview-se
         <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
         <span class="token keyword">return</span> null
     <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-
 <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
 </code></pre>
 <p>下面是返回ItemDetails实例的方法，写在Adapter适配器ViewHolder中</p>
@@ -446,7 +445,6 @@ implementation <span class="token string">'androidx.recyclerview:recyclerview-se
     override fun <span class="token function">getSelectionKey</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> Person <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
         <span class="token keyword">return</span> item
     <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-    
 <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
 </code></pre>
 <h6 id="构建Adapter"><a href="#构建Adapter" class="headerlink" title="构建Adapter"></a>构建Adapter</h6><p>适配器中，我们需要重写几个方法，并创建一个SelectionTracker对象，用来接收外部SelectionTracker对象。ViewHolder可以考虑单独写出去。</p>
