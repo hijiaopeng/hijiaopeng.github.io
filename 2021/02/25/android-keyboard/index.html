@@ -358,7 +358,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.4k
+                    1.3k
                 </div>
                 
 
@@ -455,36 +455,36 @@
     <span class="token attr-name"><span class="token namespace">android:</span>textSize</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>14sp<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span>
 </code></pre>
 <h3 id="创建Util帮助类"><a href="#创建Util帮助类" class="headerlink" title="创建Util帮助类"></a>创建Util帮助类</h3><p>在这个类中，主要对KeyboardView和Keyboard进行一些配置。</p>
-<pre class=" language-java"><code class="language-java"><span class="token keyword">private</span> <span class="token keyword">void</span> <span class="token function">initLetterKeyboard</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">private</span> <span class="token keyword">void</span> <span class="token function">initLetterKeyboard</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     mKeyboard <span class="token operator">=</span> null<span class="token punctuation">;</span>
     mKeyboard <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Keyboard</span><span class="token punctuation">(</span>mActivity<span class="token punctuation">,</span> R<span class="token punctuation">.</span>xml<span class="token punctuation">.</span>letters_kb<span class="token punctuation">)</span><span class="token punctuation">;</span>
     mKeyboardView<span class="token punctuation">.</span><span class="token function">setKeyboard</span><span class="token punctuation">(</span>mKeyboard<span class="token punctuation">)</span><span class="token punctuation">;</span>
     mKeyboardView<span class="token punctuation">.</span><span class="token function">setOnKeyboardActionListener</span><span class="token punctuation">(</span>mListener<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 </code></pre>
 <p>首先把自定义的内容xml文件加载进入Keyboard中，再放入KeyboardView中，监听setOnKeyboardActionListener方法，获取键盘上按键的点击监听：</p>
 <pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
  * 键盘监听
  */</span>
-<span class="token keyword">private</span> KeyboardView<span class="token punctuation">.</span>OnKeyboardActionListener mListener <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">KeyboardView<span class="token punctuation">.</span>OnKeyboardActionListener</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+<span class="token keyword">private</span> KeyboardView<span class="token punctuation">.</span>OnKeyboardActionListener mListener <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">KeyboardView<span class="token punctuation">.</span>OnKeyboardActionListener</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
 
     <span class="token comment" spellcheck="true">/**
      * 按下触发
      * @param primaryCode
      */</span>
     <span class="token annotation punctuation">@Override</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onPress</span><span class="token punctuation">(</span><span class="token keyword">int</span> primaryCode<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onPress</span><span class="token punctuation">(</span><span class="token keyword">int</span> primaryCode<span class="token punctuation">)</span> <span class="token punctuation">{</span>
 
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
 
     <span class="token comment" spellcheck="true">/**
      * 松开触发
      * @param primaryCode
      */</span>
     <span class="token annotation punctuation">@Override</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onRelease</span><span class="token punctuation">(</span><span class="token keyword">int</span> primaryCode<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onRelease</span><span class="token punctuation">(</span><span class="token keyword">int</span> primaryCode<span class="token punctuation">)</span> <span class="token punctuation">{</span>
 
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
 
     <span class="token comment" spellcheck="true">/**
      * 松开触发，在OnRelease之前触发
@@ -492,70 +492,70 @@
      * @param keyCodes
      */</span>
     <span class="token annotation punctuation">@Override</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onKey</span><span class="token punctuation">(</span><span class="token keyword">int</span> primaryCode<span class="token punctuation">,</span> <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> keyCodes<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onKey</span><span class="token punctuation">(</span><span class="token keyword">int</span> primaryCode<span class="token punctuation">,</span> <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> keyCodes<span class="token punctuation">)</span> <span class="token punctuation">{</span>
             String editStr <span class="token operator">=</span> mEditText<span class="token punctuation">.</span><span class="token function">getText</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
                       <span class="token comment" spellcheck="true">//这里的primaryCode就是xml文件中设置的code，用来区别按键执行不同的功能</span>
-            <span class="token keyword">if</span> <span class="token punctuation">(</span>primaryCode <span class="token operator">==</span> <span class="token operator">-</span><span class="token number">5</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>primaryCode <span class="token operator">==</span> <span class="token operator">-</span><span class="token number">5</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
                           <span class="token comment" spellcheck="true">//是否显示预览图</span>
                 mKeyboardView<span class="token punctuation">.</span><span class="token function">setPreviewEnabled</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-                <span class="token keyword">if</span> <span class="token punctuation">(</span>editStr<span class="token punctuation">.</span><span class="token function">length</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">!=</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span>editStr<span class="token punctuation">.</span><span class="token function">length</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">!=</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
                     mEditText<span class="token punctuation">.</span><span class="token function">setText</span><span class="token punctuation">(</span>editStr<span class="token punctuation">.</span><span class="token function">substring</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> editStr<span class="token punctuation">.</span><span class="token function">length</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-                <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-            <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>primaryCode <span class="token operator">==</span> <span class="token operator">-</span><span class="token number">3</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>primaryCode <span class="token operator">==</span> <span class="token operator">-</span><span class="token number">3</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
                 mKeyboardView<span class="token punctuation">.</span><span class="token function">setPreviewEnabled</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
                                 <span class="token comment" spellcheck="true">//点击完成隐藏掉键盘</span>
                 <span class="token function">hideKeyboard</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span> <span class="token keyword">else</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
                 mKeyboardView<span class="token punctuation">.</span><span class="token function">setPreviewEnabled</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
                           <span class="token comment" spellcheck="true">//通过primaryCode获取按键的值</span>
                 mEditText<span class="token punctuation">.</span><span class="token function">setText</span><span class="token punctuation">(</span>editStr <span class="token operator">+</span> mKeyboard<span class="token punctuation">.</span><span class="token function">getKeys</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>primaryCode<span class="token punctuation">)</span><span class="token punctuation">.</span>label<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-             <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+             <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
     
         <span class="token comment" spellcheck="true">/**
      * 自定义xml的keyOutputText的值
      * @param text
      */</span>
     <span class="token annotation punctuation">@Override</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onText</span><span class="token punctuation">(</span>CharSequence text<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onText</span><span class="token punctuation">(</span>CharSequence text<span class="token punctuation">)</span> <span class="token punctuation">{</span>
 
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
 
     <span class="token comment" spellcheck="true">/**
      * 左滑动
      */</span>
     <span class="token annotation punctuation">@Override</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">swipeLeft</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">swipeLeft</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
 
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
 
     <span class="token comment" spellcheck="true">/**
      * 右滑动
      */</span>
     <span class="token annotation punctuation">@Override</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">swipeRight</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">swipeRight</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
 
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
 
     <span class="token comment" spellcheck="true">/**
      * 下滑动
      */</span>
     <span class="token annotation punctuation">@Override</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">swipeDown</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">swipeDown</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
 
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
 
     <span class="token comment" spellcheck="true">/**
      * 上滑动
      */</span>
     <span class="token annotation punctuation">@Override</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">swipeUp</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">swipeUp</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
 
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
 </code></pre>
 <p>配置完成，展示出来就行了：</p>
-<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">showEditKeyboard</span><span class="token punctuation">(</span>EditText view<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">showEditKeyboard</span><span class="token punctuation">(</span>EditText view<span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token comment" spellcheck="true">//添加一个展示的动画</span>
     TranslateAnimation animation <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">TranslateAnimation</span><span class="token punctuation">(</span>
             Animation<span class="token punctuation">.</span>RELATIVE_TO_PARENT<span class="token punctuation">,</span> <span class="token number">0.0f</span><span class="token punctuation">,</span> Animation<span class="token punctuation">.</span>RELATIVE_TO_PARENT<span class="token punctuation">,</span> <span class="token number">0.0f</span><span class="token punctuation">,</span>
@@ -566,17 +566,17 @@
         <span class="token comment" spellcheck="true">//以防万一，先关闭掉系统键盘</span>
     <span class="token function">hideKeyboard</span><span class="token punctuation">(</span>view<span class="token punctuation">)</span><span class="token punctuation">;</span>
     mKeyboardView<span class="token punctuation">.</span><span class="token function">setVisibility</span><span class="token punctuation">(</span>View<span class="token punctuation">.</span>VISIBLE<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 </code></pre>
 <p>隐藏掉自定义键盘：</p>
-<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">hideKeyboard</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">hideKeyboard</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     TranslateAnimation animation <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">TranslateAnimation</span><span class="token punctuation">(</span>
             Animation<span class="token punctuation">.</span>RELATIVE_TO_SELF<span class="token punctuation">,</span> <span class="token number">0.0f</span><span class="token punctuation">,</span> Animation<span class="token punctuation">.</span>RELATIVE_TO_SELF<span class="token punctuation">,</span> <span class="token number">0.0f</span><span class="token punctuation">,</span>
             Animation<span class="token punctuation">.</span>RELATIVE_TO_SELF<span class="token punctuation">,</span> <span class="token number">0.0f</span><span class="token punctuation">,</span> Animation<span class="token punctuation">.</span>RELATIVE_TO_SELF<span class="token punctuation">,</span> <span class="token number">1.0f</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     animation<span class="token punctuation">.</span><span class="token function">setDuration</span><span class="token punctuation">(</span><span class="token number">500</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     mKeyboardView<span class="token punctuation">.</span><span class="token function">startAnimation</span><span class="token punctuation">(</span>animation<span class="token punctuation">)</span><span class="token punctuation">;</span>
     mKeyboardView<span class="token punctuation">.</span><span class="token function">setVisibility</span><span class="token punctuation">(</span>View<span class="token punctuation">.</span>GONE<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 </code></pre>
 <p>到这里，你可能会问，为什么使用的setVisibility()，我的思路是在布局中先绘制上KeyBoardView，隐藏掉，这样点击输入框的时候，就让它显示出来。来看一下布局文件：</p>
 <pre class=" language-html"><code class="language-html"><span class="token prolog">&lt;?xml version="1.0" encoding="utf-8"?></span>
@@ -637,19 +637,19 @@
 <pre class=" language-java"><code class="language-java"><span class="token keyword">private</span> KeyboardUtil keyboardUtil<span class="token punctuation">;</span>
 
 <span class="token annotation punctuation">@Override</span>
-<span class="token keyword">protected</span> <span class="token keyword">void</span> <span class="token function">onCreate</span><span class="token punctuation">(</span>Bundle savedInstanceState<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+<span class="token keyword">protected</span> <span class="token keyword">void</span> <span class="token function">onCreate</span><span class="token punctuation">(</span>Bundle savedInstanceState<span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">onCreate</span><span class="token punctuation">(</span>savedInstanceState<span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token function">setContentView</span><span class="token punctuation">(</span>R<span class="token punctuation">.</span>layout<span class="token punctuation">.</span>activity_main<span class="token punctuation">)</span><span class="token punctuation">;</span>
     ButterKnife<span class="token punctuation">.</span><span class="token function">bind</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     keyboardUtil <span class="token operator">=</span> KeyboardUtil<span class="token punctuation">.</span><span class="token function">getInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 <span class="token comment" spellcheck="true">//显示键盘</span>
 <span class="token annotation punctuation">@OnClick</span><span class="token punctuation">(</span>R<span class="token punctuation">.</span>id<span class="token punctuation">.</span>tvProvince<span class="token punctuation">)</span>
-<span class="token keyword">void</span> <span class="token function">tvProvince</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+<span class="token keyword">void</span> <span class="token function">tvProvince</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     keyboardUtil<span class="token punctuation">.</span><span class="token function">initTextViewFeatures</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">,</span> tvProvince<span class="token punctuation">,</span> kvShow<span class="token punctuation">)</span><span class="token punctuation">;</span>
     keyboardUtil<span class="token punctuation">.</span><span class="token function">showTextKeyboard</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 </code></pre>
 
                 
@@ -994,7 +994,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">12k</span>&nbsp;字
+                class="white-color">11.6k</span>&nbsp;字
             
             
             
