@@ -385,8 +385,7 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>[TOC]</p>
-<p>工作以来，好几个项目中，都使用到了相机功能，进行拍照，或者二维码扫描等等。以前总是使用GitHub上的开源库，直到同事和我说，JetPack里面出了一个CameraX，又碰巧遇到了扫描二维码的需求，学习并使用了一下，做了一个二维码扫描库，并且带有解析功能：<a target="_blank" rel="noopener" href="https://github.com/hijiaopeng/QRScan">QRScan</a>。</p>
+                <p>工作以来，好几个项目中，都使用到了相机功能，进行拍照，或者二维码扫描等等。以前总是使用GitHub上的开源库，直到同事和我说，JetPack里面出了一个CameraX，又碰巧遇到了扫描二维码的需求，学习并使用了一下，做了一个二维码扫描库，并且带有解析功能：<a target="_blank" rel="noopener" href="https://github.com/hijiaopeng/QRScan">QRScan</a>。</p>
 <p>下面记录我的CameraX学习理解。</p>
 <h4 id="概览"><a href="#概览" class="headerlink" title="概览"></a>概览</h4><p>CameraX向下兼容到5.0（API 21），里面利用的是Camera2的功能，但是使用的是更为简单且基于用例的方法，这些方法具有生命周期感知能力，因此我们不必再着重于生命周期管理上。解决了设备兼容性问题，不用为了适配不同厂商写if-else了。</p>
 <p>目前是Beta版，在版本的升级中，存在部分函数和使用的不同，并可能发生意外的错误。不过还是可以使用的，整体不影响功能的实现。</p>
