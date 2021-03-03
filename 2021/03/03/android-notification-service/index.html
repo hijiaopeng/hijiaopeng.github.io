@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="（Kotlin）关于List集合的操作扩展函数, Android,Python,Java,...">
+    <meta name="keywords" content="（Android）使用前台服务, Android,Python,Java,...">
     <meta name="description" content="好记性不如烂笔头">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>（Kotlin）关于List集合的操作扩展函数 | HI，JiaoPeng</title>
+    <title>（Android）使用前台服务 | HI，JiaoPeng</title>
     <link rel="icon" type="image/jpeg" href="/favicon.jpeg">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -288,12 +288,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/17.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">（Kotlin）关于List集合的操作扩展函数</h1>
+                    <h1 class="description center-align post-title">（Android）使用前台服务</h1>
                 </div>
             </div>
         </div>
@@ -315,8 +315,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Kotlin/">
-                                <span class="chip bg-color">Kotlin</span>
+                            <a href="/tags/Android/">
+                                <span class="chip bg-color">Android</span>
                             </a>
                         
                     </div>
@@ -327,8 +327,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/Kotlin/" class="post-category">
-                                Kotlin
+                            <a href="/categories/Android/" class="post-category">
+                                Android
                             </a>
                         
                     </div>
@@ -340,28 +340,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-02-25
+                    2021-03-03
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-03-01
+                    2021-03-03
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.8k
+                    449
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    6 分
+                    1 分
                 </div>
                 
 
@@ -381,119 +381,63 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>A</p>
-<ul>
-<li>associateBy({key},{value})：通过指定的条件，把list转换成map</li>
-<li>any() : 判断是不是一个集合，若是，则在判断集合是否为空，若为空则返回false,反之返回true,若不是集合，则返回hasNext</li>
-<li>any{…} : 判断集合中是否存在满足条件的元素。若存在则返回true,反之返回false</li>
-<li>all{…} : 判断集合中的所有元素是否都满足条件。若是则返回true,反之则返回false</li>
-<li>average() : 获取平均数</li>
-</ul>
-<h6 id="B"><a href="#B" class="headerlink" title="B"></a>B</h6><h6 id="C"><a href="#C" class="headerlink" title="C"></a>C</h6><ul>
-<li>contains(元素) : 检查集合中是否包含指定的元素，若存在则返回true，反之返回false</li>
-<li>componentX() ： 这个函数在前面的章节中提过多次了。用于获取元素。其中的X只能代表1..5。</li>
-<li>count{}:返回符合匹配条件的元素的个数</li>
-</ul>
-<h6 id="D"><a href="#D" class="headerlink" title="D"></a>D</h6><ul>
-<li>drop(num) : 过滤集合中前num个元素</li>
-<li>dropWhile{…} : 相同条件下，和执行takeWhile{…}函数后得到的结果相反</li>
-<li>dropLast(num) : 过滤集合中后num个元素</li>
-<li>dropLastWhile{…} : 相同条件下，和执行takeLastWhile{…}函数后得到的结果相反</li>
-<li>distinct() : 去除重复元素</li>
-<li>distinctBy{…} : 根据操作元素后的结果去除重复元素</li>
-</ul>
-<h6 id="E"><a href="#E" class="headerlink" title="E"></a>E</h6><ul>
-<li>elementAt(index) : 获取对应下标的元素。若下标越界，会抛出IndexOutOfBoundsException（下标越界）异常，同get(index)一样</li>
-<li>elementAtOrElse(index,{…}) : 获取对应下标的元素。若下标越界，返回默认值，此默认值就是你传入的下标的运算值</li>
-<li>elementAtOrNull(index) : 获取对应下标的元素。若下标越界，返回null</li>
-</ul>
-<h6 id="F"><a href="#F" class="headerlink" title="F"></a>F</h6><ul>
-<li>first() : 获取第一个元素，若集合为空集合，这会抛出NoSuchElementException异常</li>
-<li>first{} : 获取指定元素的第一个元素。若不满足条件，则抛出NoSuchElementException异常</li>
-<li>firstOrNull() : 获取第一个元素，若集合为空集合，返回null</li>
-<li>firstOrNull{} : 获取指定元素的第一个元素。若不满足条件，返回null</li>
-<li>forEach{…} : 遍历元素。一般用作元素的打印</li>
-<li>forEachIndexed{index,value} : 遍历元素，可获得集合中元素的下标。一般用作元素以及下标的打印</li>
-<li>filter{…} : 把不满足条件的元素过滤掉</li>
-<li>filterIndexed{…} : 和filter{}函数作用类似，只是可以操作集合中元素的下标（index）</li>
-<li>filterNot{…} : 和filter{}函数的作用相反</li>
-<li>filterNotNull() : 过滤掉集合中为null的元素。</li>
-<li>fold{…} : 和reduce{}类似，但是fold{}有一个初始值</li>
-<li>foldIndexed{…} : 和reduceIndexed{}类似，但是foldIndexed{}有一个初始值</li>
-<li>foldRight{…} : 和reduceRight{}类似，但是foldRight{}有一个初始值</li>
-<li>foldRightIndexed{…} : 和reduceRightIndexed{}类似，但是foldRightIndexed{}有一个初始值</li>
-<li>flatMap() : 合并两个集合，可以在合并的时候对迭代元素值it做想要的操作</li>
-<li>flatten() : 遍历一个单独的集合，包含给定嵌套集合里面的所有元素。</li>
-</ul>
-<h6 id="G"><a href="#G" class="headerlink" title="G"></a>G</h6><ul>
-<li>getOrElse(index,{…}) : 获取对应下标的元素。若下标越界，返回默认值，此默认值就是你传入的下标的运算值</li>
-<li>getOrNull(index) : 获取对应下标的元素。若下标越界，返回默认值，此默认值就是你传入的下标的运算值</li>
-<li>groupBy() : 将集合中的元素按照某个条件分组，返回Map</li>
-<li>get() : 获取索引所在的元素，没有则返回ArrayIndexOutOfBoundsException</li>
-<li>getOrElse() : 获取索引所在的元素，没有就返回默认值</li>
-<li>getOrNull() : 获取索引所在的元素，没有就返回nul</li>
-</ul>
-<h6 id="H"><a href="#H" class="headerlink" title="H"></a>H</h6><h6 id="I"><a href="#I" class="headerlink" title="I"></a>I</h6><ul>
-<li>indexOf(元素) : 返回指定元素的下标，若不存在，则返回-1</li>
-<li>indexOfFirst{…} : 返回第一个满足条件元素的下标，若不存在，则返回-1</li>
-<li>indexOfLast{…} : 返回最后一个满足条件元素的下标，若不存在，则返回-1</li>
-</ul>
-<h6 id="J"><a href="#J" class="headerlink" title="J"></a>J</h6><h6 id="K"><a href="#K" class="headerlink" title="K"></a>K</h6><h6 id="L"><a href="#L" class="headerlink" title="L"></a>L</h6><ul>
-<li>last() : 获取最后一个元素，若集合为空集合，这会抛出NoSuchElementException异常</li>
-<li>last{} : 获取指定元素的最后一个元素。若不满足条件，则抛出NoSuchElementException异常</li>
-<li>lastOrNull{} : 获取指定元素的最后一个元素。若不满足条件，返回null</li>
-<li>lastOrNull() : 获取最后一个元素，若集合为空集合，返回null</li>
-</ul>
-<h6 id="M"><a href="#M" class="headerlink" title="M"></a>M</h6><ul>
-<li>map():重组所用到的函数</li>
-<li>max() : 获取集合中最大的元素，若为空元素集合，则返回null</li>
-<li>maxBy{…} : 获取方法处理后返回结果最大值对应那个元素的初始值，如果没有则返回null</li>
-<li>min() : 获取集合中最小的元素，若为空元素集合，则返回null</li>
-<li>minBy{…} : 获取方法处理后返回结果最小值对应那个元素的初始值，如果没有则返回null</li>
-<li>mapIndexed() : 除了得到转换后的结果，还可以拿到index(索引)</li>
-<li>mapNotNull() : 执行方法转换前过滤掉为null的元素</li>
-</ul>
-<h6 id="N"><a href="#N" class="headerlink" title="N"></a>N</h6><ul>
-<li>none() : 如果集合中没有元素，则返回true，否则返回false</li>
-<li>none{…} : 如果集合中没有符合匹配条件的元素，返回true，否则返回false</li>
-</ul>
-<h6 id="O"><a href="#O" class="headerlink" title="O"></a>O</h6><h6 id="P"><a href="#P" class="headerlink" title="P"></a>P</h6><ul>
-<li>partition():将原始集合拆分两个集合，一个集合包含判断条件为true的元素，另一个集合包含判断条件为false的元素</li>
-<li>plus() : 合并两个List</li>
-</ul>
-<h6 id="Q"><a href="#Q" class="headerlink" title="Q"></a>Q</h6><h6 id="R"><a href="#R" class="headerlink" title="R"></a>R</h6><ul>
-<li>reversed() : 反序。即和初始化的顺序反过来。</li>
-<li>reduce{…} : 从集合中的第一项到最后一项的累计操作。</li>
-<li>reduceIndexed{…} : 和reduce{}作用相同，只是其可以操作元素的下标(index)</li>
-<li>reduceRight{…} : 从集合中的最后一项到第一项的累计操作。</li>
-<li>reduceRightIndexed{…} : 和reduceRight{}作用相同，只是其可以操作元素的下标(index)</li>
-</ul>
-<h6 id="S"><a href="#S" class="headerlink" title="S"></a>S</h6><ul>
-<li>single() : 若集合的长度等于0,则抛出NoSuchElementException异常，若等于1，则返回第一个元素。反之，则抛出IllegalArgumentException异常</li>
-<li>single{} : 找到集合中满足条件的元素，若元素满足条件，则返回该元素。否则会根据不同的条件，抛出异常。这个方法慎用</li>
-<li>singleOrNull() : 若集合的长度等于1,则返回第一个元素。否则，返回null</li>
-<li>singleOrNull{} : 找到集合中满足条件的元素，若元素满足条件，则返回该元素。否则返回null</li>
-<li>sorted() : 自然升序。</li>
-<li>sortedBy{} : 根据条件升序，即把不满足条件的放在前面，满足条件的放在后面</li>
-<li>sortedDescending() : 自然降序。</li>
-<li>sortedByDescending{} : 根据条件降序。和sortedBy{}相反</li>
-<li>slice() : 过滤掉所有不满足执行下标的元素。</li>
-<li>sum() : 计算出集合元素累加的结果。</li>
-<li>sumBy{…} : 根据元素运算操作后的结果，然后根据这个结果计算出累加的值。</li>
-<li>sumByDouble{…} : 和sumBy{}相似，不过sumBy{}是操作Int类型数据，而sumByDouble{}操作的是Double类型数据</li>
-</ul>
-<h6 id="T"><a href="#T" class="headerlink" title="T"></a>T</h6><ul>
-<li>take(num) : 返回集合中前num个元素组成的集合</li>
-<li>takeWhile{…} : 循环遍历集合，从第一个元素开始遍历集合，当第一个出现不满足条件元素的时候，退出遍历。然后把满足条件所有元素组成的集合返回。</li>
-<li>takeLast(num) : 返回集合中后num个元素组成的集合</li>
-<li>takeLastWhile{…} : 循环遍历集合，从最后一个元素开始遍历集合，当第一个出现不满足条件元素的时候，退出遍历。然后把满足条件所有元素组成的集合返回。</li>
-</ul>
-<h6 id="U"><a href="#U" class="headerlink" title="U"></a>U</h6><ul>
-<li>unzip() : 和zip的作用相反。把一个类型为List<Pair>的集合拆分为两个集合</li>
-</ul>
-<h6 id="V"><a href="#V" class="headerlink" title="V"></a>V</h6><h6 id="W"><a href="#W" class="headerlink" title="W"></a>W</h6><h6 id="X"><a href="#X" class="headerlink" title="X"></a>X</h6><h6 id="Y"><a href="#Y" class="headerlink" title="Y"></a>Y</h6><h6 id="Z"><a href="#Z" class="headerlink" title="Z"></a>Z</h6><ul>
-<li>zip() : 返回一个列表，该列表由两个集合中相同索引元素建立的元素对。这个列表长度为最短集合的长度</li>
-</ul>
+                <h4 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h4><p>项目中涉及到了蓝牙设备的开发，需要开启一个后台服务实时监听数据变化，在进程保活这块和同事探讨了很久，然后发现课本里面有讲啊《第一行代码- Android》。产品需求也不并不是很严，就考虑使用前台服务确保进程的保活，起码不会被kill了。</p>
+<h4 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h4><h6 id="创建Service"><a href="#创建Service" class="headerlink" title="创建Service"></a>创建Service</h6><pre class=" language-kotlin"><code class="language-kotlin"><span class="token keyword">class</span> MyService <span class="token operator">:</span> <span class="token function">Service</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    
+    <span class="token keyword">override</span> <span class="token keyword">fun</span> <span class="token function">onCreate</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">onCreate</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token keyword">val</span> manager <span class="token operator">=</span> <span class="token function">getSystemService</span><span class="token punctuation">(</span>Context<span class="token punctuation">.</span>NOTIFICATION_SERVICE<span class="token punctuation">)</span> <span class="token keyword">as</span> NotificationManager
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>Build<span class="token punctuation">.</span>VERSION<span class="token punctuation">.</span>SDK_INT <span class="token operator">>=</span> Build<span class="token punctuation">.</span>VERSION_CODES<span class="token punctuation">.</span>O<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">val</span> channel <span class="token operator">=</span> <span class="token function">NotificationChannel</span><span class="token punctuation">(</span>
+                <span class="token string">"my_service"</span><span class="token punctuation">,</span>
+                <span class="token string">"前台服务通知"</span><span class="token punctuation">,</span>
+                NotificationManager<span class="token punctuation">.</span>IMPORTANCE_DEFAULT
+            <span class="token punctuation">)</span>
+            manager<span class="token punctuation">.</span><span class="token function">createNotificationChannel</span><span class="token punctuation">(</span>channel<span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">val</span> intent <span class="token operator">=</span> <span class="token function">Intent</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">,</span> MainActivity<span class="token operator">::</span><span class="token keyword">class</span><span class="token punctuation">.</span>java<span class="token punctuation">)</span>
+        <span class="token keyword">val</span> pi <span class="token operator">=</span> PendingIntent<span class="token punctuation">.</span><span class="token function">getActivity</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> intent<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span>
+        <span class="token keyword">val</span> notification <span class="token operator">=</span> NotificationCompat<span class="token punctuation">.</span><span class="token function">Builder</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">,</span> <span class="token string">"my_service"</span><span class="token punctuation">)</span>
+            <span class="token punctuation">.</span><span class="token function">setContentTitle</span><span class="token punctuation">(</span><span class="token string">"这是标题"</span><span class="token punctuation">)</span>
+            <span class="token punctuation">.</span><span class="token function">setContentText</span><span class="token punctuation">(</span><span class="token string">"这是内容"</span><span class="token punctuation">)</span>
+            <span class="token punctuation">.</span><span class="token function">setSmallIcon</span><span class="token punctuation">(</span>R<span class="token punctuation">.</span>mipmap<span class="token punctuation">.</span>ic_launcher_round<span class="token punctuation">)</span>
+            <span class="token punctuation">.</span><span class="token function">setLargeIcon</span><span class="token punctuation">(</span>BitmapFactory<span class="token punctuation">.</span><span class="token function">decodeResource</span><span class="token punctuation">(</span>resources<span class="token punctuation">,</span> R<span class="token punctuation">.</span>mipmap<span class="token punctuation">.</span>ic_launcher<span class="token punctuation">)</span><span class="token punctuation">)</span>
+            <span class="token punctuation">.</span><span class="token function">setContentIntent</span><span class="token punctuation">(</span>pi<span class="token punctuation">)</span>
+            <span class="token punctuation">.</span><span class="token function">build</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token function">startForeground</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> notification<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">override</span> <span class="token keyword">fun</span> <span class="token function">onStartCommand</span><span class="token punctuation">(</span>intent<span class="token operator">:</span> Intent<span class="token operator">?</span><span class="token punctuation">,</span> flags<span class="token operator">:</span> Int<span class="token punctuation">,</span> startId<span class="token operator">:</span> Int<span class="token punctuation">)</span><span class="token operator">:</span> Int <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> START_STICKY
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">override</span> <span class="token keyword">fun</span> <span class="token function">onBind</span><span class="token punctuation">(</span>intent<span class="token operator">:</span> Intent<span class="token operator">?</span><span class="token punctuation">)</span><span class="token operator">:</span> IBinder<span class="token operator">?</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token keyword">null</span>
+    <span class="token punctuation">}</span>
+
+<span class="token punctuation">}</span>
+</code></pre>
+<h6 id="配置清单文件AndroidManifest-xml"><a href="#配置清单文件AndroidManifest-xml" class="headerlink" title="配置清单文件AndroidManifest.xml"></a>配置清单文件AndroidManifest.xml</h6><pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>uses-permission</span> <span class="token attr-name"><span class="token namespace">android:</span>name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>android.permission.FOREGROUND_SERVICE<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>application</span>
+                <span class="token attr-name">...</span><span class="token punctuation">></span></span>
+        
+                ...
+              
+                <span class="token comment" spellcheck="true">&lt;!--android:enabled：表示是否启用这个服务
+            android:exported：表示是否允许除了当前程序之外的其他程序访问这个服务
+            android:process：是否需要在单独的进程中运行,当设置为android:process=”:remote”时，代表Service在单独的进程中运行。注意“：”很重要，它的意思是指要在当前进程名称前面附加上当前的包名，所以“remote”和”:remote”不是同一个意思，前者的进程名称为：remote，而后者的进程名称为：App-packageName:remote。
+            android:isolatedProcess：设置 true 意味着，服务会在一个特殊的进程下运行，这个进程与系统其他进程分开且没有自己的权限。与其通信的唯一途径是通过服务的API(bind and start)。
+        --></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>service</span>
+            <span class="token attr-name"><span class="token namespace">android:</span>name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>.MyService<span class="token punctuation">"</span></span>
+            <span class="token attr-name"><span class="token namespace">android:</span>enabled</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>true<span class="token punctuation">"</span></span>
+            <span class="token attr-name"><span class="token namespace">android:</span>exported</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>false<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>application</span><span class="token punctuation">></span></span>
+</code></pre>
+<h6 id="启动服务"><a href="#启动服务" class="headerlink" title="启动服务"></a>启动服务</h6><pre class=" language-kotlin"><code class="language-kotlin"><span class="token function">startService</span><span class="token punctuation">(</span><span class="token function">Intent</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">,</span> MyService<span class="token operator">::</span><span class="token keyword">class</span><span class="token punctuation">.</span>java<span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre>
 
                 
             </div>
@@ -520,7 +464,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://hijiaopeng.github.io/2021/02/25/kotlin-list-operate/">https://hijiaopeng.github.io/2021/02/25/kotlin-list-operate/</a>
+                    <a href="https://hijiaopeng.github.io/2021/03/03/android-notification-service/">https://hijiaopeng.github.io/2021/03/03/android-notification-service/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -558,8 +502,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Kotlin/">
-                                    <span class="chip bg-color">Kotlin</span>
+                                <a href="/tags/Android/">
+                                    <span class="chip bg-color">Android</span>
                                 </a>
                             
                         </div>
@@ -603,29 +547,30 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2021/02/26/android-selection-tracker/">
+                <a href="/2021/03/03/android-notification-service/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="（Android）RecyclerView的SelectionTracker选择器使用">
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="（Android）使用前台服务">
                         
-                        <span class="card-title">（Android）RecyclerView的SelectionTracker选择器使用</span>
+                        <span class="card-title">（Android）使用前台服务</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            使用并分析recyclerview-selection来简化RecyclerView选择。
+                            通过前台服务常驻，进行保活。
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-02-26
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-03
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -638,15 +583,12 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
                     <a href="/tags/Android/">
                         <span class="chip bg-color">Android</span>
-                    </a>
-                    
-                    <a href="/tags/Kotlin/">
-                        <span class="chip bg-color">Kotlin</span>
                     </a>
                     
                 </div>
@@ -660,24 +602,24 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/02/25/android-garble-use/">
+                <a href="/2021/03/02/android-motionlayout/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="（Android）关于混淆的理解和使用">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="（Android）MotionLayout管理运动和微件动画">
                         
-                        <span class="card-title">（Android）关于混淆的理解和使用</span>
+                        <span class="card-title">（Android）MotionLayout管理运动和微件动画</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            关于混淆proguard-rules.pro文件的理解和使用。
+                            认识并使用MotionLayout布局。
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-25
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-02
                             </span>
                         <span class="publish-author">
                             
