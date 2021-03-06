@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>16进制颜色透明度</title>
+      <link href="2021/03/06/color-transparency-16/"/>
+      <url>2021/03/06/color-transparency-16/</url>
+      
+        <content type="html"><![CDATA[<p>Android中的颜色值通常遵循RGB/ARGB标准，使用时通常以“#”字符开头，以16进制表示。</p><p>ARGB 依次代表透明度（alpha）、红色(red)、绿色(green)、蓝色(blue)。以颜色值 #FF99CC00 为例，其中，FF 是透明度，99 是红色值， CC 是绿色值， 00 是蓝色值。</p><h4 id="透明度换算"><a href="#透明度换算" class="headerlink" title="透明度换算"></a>透明度换算</h4><p>透明度分为256阶（0-255），计算机上用16进制表示为（00-ff）。透明就是0阶，不透明就是255阶,如果50%透明就是127阶（256的一半当然是128，但因为是从0开始，所以实际上是127）。</p><p>透明度 和 不透明度 是两个概念， 它们加起来是1，或者100%.</p><p>ARGB 中的透明度alpha，表示的是不透明度。</p><h5 id="换算过程"><a href="#换算过程" class="headerlink" title="换算过程"></a>换算过程</h5><p>将透明度转换成不透明度(转换方式参考“透明度”，第2条) 。不透明度为60%</p><p>不透明度乘以255。 我们得到结果：153</p><p>将计算结果转换成16进制。得到最终的不透明度：99</p><p>将不透明度和颜色值拼接成ARGB格式。得到最终的颜色值： #99FFFFFF</p><table><thead><tr><th>透明度</th><th>16进制表示</th></tr></thead><tbody><tr><td>100%</td><td>00</td></tr><tr><td>95 %</td><td>0D</td></tr><tr><td>90 %</td><td>1A</td></tr><tr><td>85 %</td><td>26</td></tr><tr><td>80 %</td><td>33</td></tr><tr><td>75 %</td><td>40</td></tr><tr><td>70 %</td><td>4D</td></tr><tr><td>65 %</td><td>59</td></tr><tr><td>60 %</td><td>66</td></tr><tr><td>55 %</td><td>73</td></tr><tr><td>50 %</td><td>80</td></tr><tr><td>45 %</td><td>8C</td></tr><tr><td>40 %</td><td>99</td></tr><tr><td>35 %</td><td>A6</td></tr><tr><td>30 %</td><td>B3</td></tr><tr><td>25 %</td><td>BF</td></tr><tr><td>20 %</td><td>CC</td></tr><tr><td>15 %</td><td>D9</td></tr><tr><td>10 %</td><td>E6</td></tr><tr><td>5 %</td><td>F2</td></tr><tr><td>0 %</td><td>FF</td></tr></tbody></table>]]></content>
+      
+      
+      <categories>
+          
+          <category> Color </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Android </tag>
+            
+            <tag> Color </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>（Android）使用前台服务</title>
       <link href="2021/03/03/android-notification-service/"/>
       <url>2021/03/03/android-notification-service/</url>
