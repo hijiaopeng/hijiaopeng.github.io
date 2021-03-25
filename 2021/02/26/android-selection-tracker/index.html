@@ -351,21 +351,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-02-26
+                    2021-03-25
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.6k
+                    1.8k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    6 分
+                    7 分
                 </div>
                 
 
@@ -589,6 +589,29 @@ implementation <span class="token string">'androidx.recyclerview:recyclerview-se
         mSelectionTracker<span class="token operator">?</span><span class="token punctuation">.</span><span class="token function">onSaveInstanceState</span><span class="token punctuation">(</span>outState<span class="token punctuation">)</span>
 <span class="token punctuation">}</span>
 </code></pre>
+<h6 id="扩展"><a href="#扩展" class="headerlink" title="扩展"></a>扩展</h6><p>在使用过程中，我发现要写很多的重复性代码，例如：LookUp类，KeyProvider类等等，连Adapter类都要针对不同页面写好几个，除了逻辑，显示，实体类不同，其他很多一样的。</p>
+<p>所以我写了一个扩展函数以支持简单的使用，详情见GitHub项目中的<code>encapsulation</code>包，和<code>TestActivity</code>，<code>TestAdapter</code>类。</p>
+<p>简要的介绍一下该如何使用：</p>
+<ol>
+<li><p>构建自己的<code>Adapter</code>类，继承<code>BaseTrackerAdapter</code>，传入布局和数据，重写<code>bind</code>方法，<code>bind</code>方法有三个参数，<code>holder</code>获取布局设置对应值和样式，<code>item</code>为数据，<code>isSelected</code>判断是否选中状态。</p>
+</li>
+<li><p>在页面中直接通过<code>RecyclerView</code>调用：<code>initMultipleSelectTrack()</code>多选，传入adapter，最大选择数量（可选，默认5个），超出选择数量的操作函数（可选）。<code>initSingleSelectTrack()</code>单选。</p>
+</li>
+<li><p>如：</p>
+<pre class=" language-kotlin"><code class="language-kotlin"><span class="token comment" spellcheck="true">/**
+* 初始化调用
+*/</span>
+<span class="token keyword">val</span> track <span class="token operator">=</span> rv_test<span class="token operator">?</span><span class="token punctuation">.</span><span class="token function">initSingleSelectTrack</span><span class="token punctuation">(</span>testAdapter<span class="token punctuation">)</span>
+
+btn_show<span class="token operator">?</span><span class="token punctuation">.</span><span class="token function">setOnClickListener</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">//获取最后选择的数据</span>
+    track<span class="token operator">?</span><span class="token punctuation">.</span>selection<span class="token operator">?</span><span class="token punctuation">.</span><span class="token function">forEach</span> <span class="token punctuation">{</span>
+        Log<span class="token punctuation">.</span><span class="token function">e</span><span class="token punctuation">(</span><span class="token string">"JP"</span><span class="token punctuation">,</span> <span class="token string">"onCreate: <span class="token interpolation variable">$it</span>"</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+</li>
+</ol>
 <h6 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h6><p>以上描述或分析可能不是很全面，今后我会逐步完善，<a target="_blank" rel="noopener" href="https://developer.android.google.cn/reference/androidx/recyclerview/selection/package-summary"><code>recyclerview-selection</code></a>库要分适当的场景进行使用，避免遇到意外坑。</p>
 
                 
@@ -937,7 +960,7 @@ implementation <span class="token string">'androidx.recyclerview:recyclerview-se
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">15.9k</span>&nbsp;字
+                class="white-color">16.1k</span>&nbsp;字
             
             
             
