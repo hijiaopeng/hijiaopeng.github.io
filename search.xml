@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>Android Studio项目中导入aar包</title>
+      <link href="2021/05/07/android-build-aar/"/>
+      <url>2021/05/07/android-build-aar/</url>
+      
+        <content type="html"><![CDATA[<h4 id="第一种方式："><a href="#第一种方式：" class="headerlink" title="第一种方式："></a>第一种方式：</h4><p>找到module的build.gradle文件，在dependencies{}里面直接添加：</p><pre class=" language-kotlin"><code class="language-kotlin">implementation <span class="token function">fileTree</span><span class="token punctuation">(</span>include<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'*.jar'</span><span class="token punctuation">,</span><span class="token string">"*.aar"</span><span class="token punctuation">]</span><span class="token punctuation">,</span> dir<span class="token operator">:</span> <span class="token string">'libs'</span><span class="token punctuation">)</span></code></pre><h4 id="第二种方式："><a href="#第二种方式：" class="headerlink" title="第二种方式："></a>第二种方式：</h4><p>找到项目的build.gradle文件，添加：</p><pre class=" language-kotlin"><code class="language-kotlin">allprojects <span class="token punctuation">{</span>    repositories <span class="token punctuation">{</span>            <span class="token operator">..</span><span class="token punctuation">.</span>            flatDir <span class="token punctuation">{</span>            dirs <span class="token string">'libs'</span>        <span class="token punctuation">}</span>    <span class="token punctuation">}</span><span class="token punctuation">}</span></code></pre><p>在使用到的对应module的build.gradle文件里面添加：</p><pre class=" language-kotlin"><code class="language-kotlin">dependencies <span class="token punctuation">{</span>         <span class="token function">implementation</span><span class="token punctuation">(</span>name<span class="token operator">:</span> <span class="token string">'aar名字'</span><span class="token punctuation">,</span> ext<span class="token operator">:</span> <span class="token string">'aar'</span><span class="token punctuation">)</span><span class="token punctuation">}</span></code></pre><p>注意点：此种方法适用于单一module引入aar文件。如果引入aar的是一个moduleA，这个moduleA又被其他module引用，项目就会编译失败，所以在多module下，使用下面这种方式。</p><h4 id="第三种方式："><a href="#第三种方式：" class="headerlink" title="第三种方式："></a>第三种方式：</h4><p>修改项目的build.gradle文件：</p><pre class=" language-kotlin"><code class="language-kotlin">allprojects <span class="token punctuation">{</span>    repositories <span class="token punctuation">{</span>            <span class="token operator">..</span><span class="token punctuation">.</span>            flatDir <span class="token punctuation">{</span>                    <span class="token comment" spellcheck="true">//这里需要把引入了aar包的module添加到依赖关系中</span>            dirs <span class="token function">project</span><span class="token punctuation">(</span><span class="token string">':xxModule'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">file</span><span class="token punctuation">(</span><span class="token string">'libs'</span><span class="token punctuation">)</span>        <span class="token punctuation">}</span>    <span class="token punctuation">}</span><span class="token punctuation">}</span></code></pre><p>xxModule的build.gradle文件里面添加：</p><pre class=" language-kotlin"><code class="language-kotlin">dependencies <span class="token punctuation">{</span>         <span class="token function">implementation</span><span class="token punctuation">(</span>name<span class="token operator">:</span> <span class="token string">'aar名字'</span><span class="token punctuation">,</span> ext<span class="token operator">:</span> <span class="token string">'aar'</span><span class="token punctuation">)</span><span class="token punctuation">}</span></code></pre><p>至此完成。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Android </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Android </tag>
+            
+            <tag> Android Studio </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>(Java)环境配置</title>
       <link href="2021/03/24/java-install-jdk/"/>
       <url>2021/03/24/java-install-jdk/</url>
