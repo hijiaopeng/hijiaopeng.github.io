@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>Android Studio插件整理文档</title>
+      <link href="2021/05/07/android-studio-plugin/"/>
+      <url>2021/05/07/android-studio-plugin/</url>
+      
+        <content type="html"><![CDATA[<ul><li>SequenceDiagram：根据代码调用链路自动生成时序图</li><li>.ignore：生成代码提交的忽略文件</li><li>JSON To Kotlin Class：Json字符串转译为Kotlin数据类</li><li>Markdown：Markdown编辑器</li><li>Material Theme UI：自定义Android Studio的界面UI</li><li>Translation：翻译插件</li><li>CodeGlance：在右侧显示代码地图</li><li>Rainbow Brackets：彩虹括号</li><li>Codota：辅助开发神器，智能代码自动提示</li><li>AiXcoder Code Completer：代码提示补全</li><li>Grep Console：自定义控制台输出格式</li><li>HighlightBracketPair：高亮显示</li><li>Android Drawable Preview：预览图片资源缩略图</li><li>ADB Idea：ADB调试工具</li><li>AndroidProguardPlugin：一键生成项目混淆代码</li><li>folding-plugin：布局文件分组</li><li>Kotlin Fill Class：快速创建具有默认属性的Kotlin类</li><li>KDoc-er - Kotlin Doc Generator：快速生成注释</li><li>Lint Cleaner Plugin：删除项目中未使用的资源</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Android </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Android </tag>
+            
+            <tag> Android Studio </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Android Studio项目中导入aar包</title>
       <link href="2021/05/07/android-build-aar/"/>
       <url>2021/05/07/android-build-aar/</url>
