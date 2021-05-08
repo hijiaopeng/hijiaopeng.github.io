@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="标签: Jetpack, Android,Python,Java,...">
+    <meta name="keywords" content="Android开发中一些实用点, Android,Python,Java,...">
     <meta name="description" content="好记性不如烂笔头">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>标签: Jetpack | HI，JiaoPeng</title>
+    <title>Android开发中一些实用点 | HI，JiaoPeng</title>
     <link rel="icon" type="image/jpeg" href="/favicon.jpeg">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -284,176 +284,431 @@
 
 </header>
 
-    <div class="bg-cover pd-header about-cover">
-    <div class="container">
-    <div class="row">
-    <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
-        <div class="brand">
-            <div class="title center-align">
-                
-                一个代码搬运工的blog
-                
-            </div>
+    
 
-            <div class="description center-align">
-                
-                <span id="subtitle"></span>
-                <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
-                <script>
-                    var typed = new Typed("#subtitle", {
-                        strings: ['Good memory is not as good as bad pen','好记性不如烂笔头'],
-                        startDelay: 300,
-                        typeSpeed: 100,
-                        loop: false,
-                        backSpeed: 50,
-                        showCursor: false
-                    });
-                </script>
-                
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">Android开发中一些实用点</h1>
+                </div>
             </div>
         </div>
     </div>
 </div>
 
 
-<script>
-    // 每天切换 banner 图.  Switch banner image every day.
-    var bannerUrl = "/medias/banner/" + new Date().getDay() + '.jpg';
-    $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
-</script>
 
 
-    </div>
-</div>
-
-<main class="content">
+<main class="container content">
 
     
-
-<div id="tags" class="container chip-container">
+    <!-- 文章内容详情 -->
+<div id="artDetail">
     <div class="card">
-        <div class="card-content">
-            <div class="tag-title center-align">
-                <i class="fas fa-tags"></i>&nbsp;&nbsp;文章标签
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/Android/">
+                                <span class="chip bg-color">Android</span>
+                            </a>
+                        
+                            <a href="/tags/Java/">
+                                <span class="chip bg-color">Java</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/Android/" class="post-category">
+                                Android
+                            </a>
+                        
+                    </div>
+                    
+                </div>
             </div>
-            <div class="tag-chips">
+
+            <div class="post-info">
                 
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2021-05-07
+                </div>
                 
-                <a href="/tags/Android/" title="Android: 13">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="Android" style="background-color: #F9EBEA;">Android
-                        <span class="tag-length">13</span>
-                    </span>
-                </a>
+
                 
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2021-05-07
+                </div>
                 
-                <a href="/tags/Jetpack/" title="Jetpack: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-active "
-                            data-tagname="Jetpack" style="background-color: #F5EEF8;">Jetpack
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
+
                 
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    414
+                </div>
                 
-                <a href="/tags/Android-Studio/" title="Android Studio: 2">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="Android Studio" style="background-color: #D5F5E3;">Android Studio
-                        <span class="tag-length">2</span>
-                    </span>
-                </a>
+
                 
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    1 分
+                </div>
                 
-                <a href="/tags/WordPress/" title="WordPress: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="WordPress" style="background-color: #E8F8F5;">WordPress
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
+
                 
-                
-                <a href="/tags/Java/" title="Java: 8">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="Java" style="background-color: #FEF9E7;">Java
-                        <span class="tag-length">8</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/Kotlin/" title="Kotlin: 2">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="Kotlin" style="background-color: #F8F9F9;">Kotlin
-                        <span class="tag-length">2</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/Python/" title="Python: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="Python" style="background-color: #82E0AA;">Python
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/Color/" title="Color: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="Color" style="background-color: #D7BDE2;">Color
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
             </div>
         </div>
+        <hr class="clearfix">
+
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <ul>
+<li><p>组合使用<merge/>（只能在布局根节点使用）、<include/>、<ViewStub/>标签，减少布局层级嵌套；</p>
+</li>
+<li><p>RecyclerView的layoutManager，spanCount,orientation属性可以在xml中设置；</p>
+</li>
+<li><p>通过SpannableString设置TextView样式，减少TextView创建；</p>
+</li>
+<li><p>图片如果只是颜色不一致的话，可以使用tint着色器进行更改，不必进行图片切换，减少图片资源的引入；</p>
+</li>
+<li><p>ViewFlipper：翻转视图，可以用来实现轮播，大图滑动查看，Banner图，启动引导页等；</p>
+</li>
+<li><p>设置EditText文本：EditText.text = Editable.Factory.getInstance().newEditable(“”)；</p>
+</li>
+<li><p>设置Button无样式显示：style=”?android:attr/borderlessButtonStyle”；</p>
+</li>
+<li><p>防止同时按下两个按钮触发两个事件,在style中配置：</p>
+<pre class=" language-kotlin"><code class="language-kotlin"><span class="token operator">&lt;</span>style name<span class="token operator">=</span><span class="token string">"AppTheme"</span> parent<span class="token operator">=</span><span class="token string">"Theme.AppCompat.Light.NoActionBar"</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> 防止同时按下两个按钮 <span class="token operator">--</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span>item name<span class="token operator">=</span><span class="token string">"android:windowEnableSplitTouch"</span><span class="token operator">></span><span class="token boolean">false</span><span class="token operator">&lt;</span><span class="token operator">/</span>item<span class="token operator">></span>
+    <span class="token operator">&lt;</span>item name<span class="token operator">=</span><span class="token string">"android:splitMotionEvents"</span><span class="token operator">></span><span class="token boolean">false</span><span class="token operator">&lt;</span><span class="token operator">/</span>item<span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>style<span class="token operator">></span>
+</code></pre>
+</li>
+<li><p>金钱等两位小数的值使用BigDecimal类型；</p>
+</li>
+<li><p>对于简单方案，例如调用list集合的扩展函数，可以不使用{ }的lambda形式，直接使用（类名：属性）的方式，易于阅读；</p>
+</li>
+<li><p>a = b.also { b = a } ，交换两个属性，不用来回赋值了，每一次触发，都会进行调换；</p>
+</li>
+<li><p>by lazy只能作用于val关键字标注的属性，当属性用到的时候才会初始化”lazy{}”里面的内容，而且再次调用属性的时候，只会得到结果，而不会再次执行lazy{}的运行过程；</p>
+</li>
+<li><p>绘制RecyclerView后，可以设置tools:listitem=”@layout/list_item”，显示对应的Item布局；</p>
+</li>
+<li><p>解决android:animateLayoutChanges=”true”动画跳跃问题：</p>
+<pre class=" language-kotlin"><code class="language-kotlin"><span class="token keyword">if</span><span class="token punctuation">(</span>Build<span class="token punctuation">.</span>VERSION<span class="token punctuation">.</span>SDK_INT<span class="token operator">>=</span>Build<span class="token punctuation">.</span>VERSION_CODES<span class="token punctuation">.</span>JELLY_BEAN<span class="token punctuation">)</span><span class="token punctuation">{</span>                      
+        父布局<span class="token operator">?</span><span class="token punctuation">.</span>layoutTransition<span class="token operator">!!</span><span class="token punctuation">.</span><span class="token function">enableTransitionType</span><span class="token punctuation">(</span>LayoutTransition<span class="token punctuation">.</span>CHANGING<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+</li>
+<li><p>动态的在代码里进行设置edittext限制规则：</p>
+<pre class=" language-kotlin"><code class="language-kotlin">editText<span class="token punctuation">.</span><span class="token function">setKeyListener</span><span class="token punctuation">(</span>DigitsKeyListener<span class="token punctuation">.</span><span class="token function">getInstance</span><span class="token punctuation">(</span><span class="token string">"1234567890"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+</li>
+<li></li>
+</ul>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">Jiao Peng</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://hijiaopeng.github.io/2021/05/07/android-tips/">https://hijiaopeng.github.io/2021/05/07/android-tips/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">Jiao Peng</a>
+                    !
+                </span>
+            </div>
+        
     </div>
-</div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/Android/">
+                                    <span class="chip bg-color">Android</span>
+                                </a>
+                            
+                                <a href="/tags/Java/">
+                                    <span class="chip bg-color">Java</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
 
     
 
-    <article id="articles" class="container articles">
-        <div class="row tags-posts">
-            
-            
-            <div class="article tag-post col s12 m6 l4" data-tags="Android, Jetpack" data-aos="fade-up">
-                <div class="card">
-                    <a href="/2021/03/01/android-camerax/">
-                        <div class="card-image tag-image">
-                            
-                            
-                            <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="（Android）CameraX相机功能">
-                            
-                            <span class="card-title">（Android）CameraX相机功能</span>
-                        </div>
-                    </a>
-                    <div class="card-content article-content">
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-01
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/Android/" class="post-category">
-                                Android
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
+</div>
+
                 </div>
             </div>
             
         </div>
-    </article>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2021/05/07/android-tips/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="Android开发中一些实用点">
+                        
+                        <span class="card-title">Android开发中一些实用点</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            记录开发中遇到的优秀技巧。
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-07
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Android/" class="post-category">
+                                    Android
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Android/">
+                        <span class="chip bg-color">Android</span>
+                    </a>
+                    
+                    <a href="/tags/Java/">
+                        <span class="chip bg-color">Java</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2021/05/07/android-studio-plugin/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="Android Studio插件整理文档">
+                        
+                        <span class="card-title">Android Studio插件整理文档</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            记录常用的好用的Android Studio插件。
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-07
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Android/" class="post-category">
+                                    Android
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Android/">
+                        <span class="chip bg-color">Android</span>
+                    </a>
+                    
+                    <a href="/tags/Android-Studio/">
+                        <span class="chip bg-color">Android Studio</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('120')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: HI，JiaoPeng<br />'
+            + '文章作者: Jiao Peng<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+
+    
+
 </main>
 
 
