@@ -351,21 +351,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-05-07
+                    2021-05-21
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    414
+                    586
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
 
@@ -428,7 +428,32 @@
 <pre class=" language-kotlin"><code class="language-kotlin">editText<span class="token punctuation">.</span><span class="token function">setKeyListener</span><span class="token punctuation">(</span>DigitsKeyListener<span class="token punctuation">.</span><span class="token function">getInstance</span><span class="token punctuation">(</span><span class="token string">"1234567890"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 </li>
-<li></li>
+<li><p>单独对某个值或者对象判空并操作：</p>
+<pre class=" language-kotlin"><code class="language-kotlin">bean<span class="token operator">?</span><span class="token punctuation">.</span><span class="token function">let</span> <span class="token punctuation">{</span>
+    <span class="token operator">..</span><span class="token punctuation">.</span>
+<span class="token punctuation">}</span>
+</code></pre>
+</li>
+<li><p>取某个对象中的各个属性进行操作：</p>
+<pre class=" language-kotlin"><code class="language-kotlin"><span class="token function">with</span><span class="token punctuation">(</span>bean<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token operator">..</span><span class="token punctuation">.</span>
+<span class="token punctuation">}</span>
+</code></pre>
+</li>
+<li><p>既判空也取各个属性，并且不需要依靠it来调用：</p>
+<pre class=" language-kotlin"><code class="language-kotlin">bean<span class="token punctuation">.</span><span class="token function">run</span> <span class="token punctuation">{</span>
+    <span class="token operator">..</span><span class="token punctuation">.</span>
+<span class="token punctuation">}</span>
+</code></pre>
+</li>
+<li><p>apply：1、适用于run函数的任何场景，一般用于初始化一个对象实例的时候，操作对象属性，并最终返回这个对象。<br>2、动态inflate出一个XML的View的时候需要给View绑定数据也会用到.<br>3、一般可用于多个扩展函数链式调用<br>4、数据model多层级包裹判空处理的问题</p>
+<pre class=" language-kotlin"><code class="language-kotlin">bean<span class="token operator">?</span><span class="token punctuation">.</span><span class="token function">apply</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">//第一层级不为空</span>
+<span class="token punctuation">}</span><span class="token operator">?</span><span class="token punctuation">.</span>name<span class="token operator">?</span><span class="token punctuation">.</span><span class="token function">apply</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">//第二层级不为空</span>
+<span class="token punctuation">}</span>
+</code></pre>
+</li>
 </ul>
 
                 
@@ -777,7 +802,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">18.1k</span>&nbsp;字
+                class="white-color">19.4k</span>&nbsp;字
             
             
             

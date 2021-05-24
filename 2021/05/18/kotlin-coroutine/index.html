@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="（Java）四种对象引用的理解, Android,Python,Java,...">
+    <meta name="keywords" content="对于Kotlin协程的学习和使用, Android,Python,Java,...">
     <meta name="description" content="好记性不如烂笔头">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>（Java）四种对象引用的理解 | HI，JiaoPeng</title>
+    <title>对于Kotlin协程的学习和使用 | HI，JiaoPeng</title>
     <link rel="icon" type="image/jpeg" href="/favicon.jpeg">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -288,12 +288,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/9.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">（Java）四种对象引用的理解</h1>
+                    <h1 class="description center-align post-title">对于Kotlin协程的学习和使用</h1>
                 </div>
             </div>
         </div>
@@ -315,8 +315,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Java/">
-                                <span class="chip bg-color">Java</span>
+                            <a href="/tags/Kotlin/">
+                                <span class="chip bg-color">Kotlin</span>
+                            </a>
+                        
+                            <a href="/tags/Coroutine/">
+                                <span class="chip bg-color">Coroutine</span>
                             </a>
                         
                     </div>
@@ -327,8 +331,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/Java/" class="post-category">
-                                Java
+                            <a href="/categories/Kotlin/" class="post-category">
+                                Kotlin
                             </a>
                         
                     </div>
@@ -340,28 +344,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-02-25
+                    2021-05-18
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-02-25
+                    2021-05-19
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    913
+                    1.1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    4 分
                 </div>
                 
 
@@ -381,64 +385,129 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>JDK1.2版本开始，为了在JVM中更加灵活的进行对象的垃圾回收，使程序灵活的控制对象的生命周期，加入把对象引用分为了四种级别：强引用、软引用、弱引用和虚引用。<br>级别对比：强引用 &gt; 软引用 &gt; 弱引用  &gt; 虚引用</p>
-<h3 id="强引用"><a href="#强引用" class="headerlink" title="强引用"></a>强引用</h3><p>这是使用最普遍的一种引用。一个对象具有强引用，那么垃圾回收器绝对不会回收它。当内存空间不足时，JVM宁愿抛出OOM错误，让程序终止，也不会随意回收强引用对象来解决内存不足。</p>
-<p>//强引用</p>
-<pre class=" language-java"><code class="language-java">String str <span class="token operator">=</span> <span class="token string">"abc"</span><span class="token punctuation">;</span>
-Object o <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Object</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>关于协程的概念，官方文档说协程就是轻量级的线程，但是也不能就这么断定，在Android中使用时，因为Android是基于JVM的，JVM可以识别线程，却识别不了真正的协程。Android中的协程最终还是用线程，所以不能说是轻量级的线程。非Android中使用的协程，有些的确是轻量级的。</p>
+<p>注意的是，单线程中的协程总的执行时间并不会比不用协程少。</p>
+<h2 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h2><ul>
+<li><p>轻量：可以在单个线程上运行多个协程，因为<code>挂起</code>，不会使正在运行的协程的线程阻塞。<code>挂起</code>比阻塞节省内存，且支持多个并行操作。</p>
+</li>
+<li><p>内存泄漏更少：使用了结构化并发机制在一个作用域内执行多项操作。</p>
+</li>
+<li><p>内置取消支持：取消会自动在运行中的整个协程层次结构中传播。</p>
+</li>
+<li><p>Jetpack集成：许多 Jetpack 库都包含提供全面协程支持的扩展。某些库还提供自己的协程作用域。</p>
+</li>
+<li><p>线程自动切换：通过<code>withContext</code>函数和<code>Dispatch</code>简单快捷的自动切换线程。</p>
+</li>
+</ul>
+<h2 id="集成"><a href="#集成" class="headerlink" title="集成"></a>集成</h2><p>以在Android项目为例：通过gradle引入：</p>
+<pre class=" language-kotlin"><code class="language-kotlin">dependencies <span class="token punctuation">{</span>
+    <span class="token operator">..</span><span class="token punctuation">.</span>
+    <span class="token comment" spellcheck="true">//依赖协程核心库</span>
+    implementation <span class="token string">"org.jetbrains.kotlinx:kotlinx-coroutines-core:版本号"</span>
+    <span class="token comment" spellcheck="true">//依赖当前平台所对应的平台库</span>
+    implementation <span class="token string">"org.jetbrains.kotlinx:kotlinx-coroutines-android:版本号"</span>
+    <span class="token operator">..</span><span class="token punctuation">.</span>
+<span class="token punctuation">}</span>
 </code></pre>
-<p>如果想把强引用和某个对象之间的关联切断，可以显式的将引用赋值为null，JVM就会在合适的时候回收该对象。</p>
-<h3 id="软引用（SoftReference）"><a href="#软引用（SoftReference）" class="headerlink" title="软引用（SoftReference）"></a>软引用（SoftReference）</h3><p>一个对象只具有软引用，当内存空间足够，垃圾回收器就不会回收它，如果内存不足，就会回收这些对象的内存，只要该对象没有被回收，就可以被程序使用。<br>软引用适合创建内存敏感的高速缓存，系统内存如果不足的时候，缓存是可以被释放的。<br>软引用可以和一个引用队列（ReferenceQueue）联合使用，如果软引用所引用的对象被垃圾回收器回收，JVM就会把这个软引用加入到与之关联的引用队列中。</p>
-<pre class=" language-java"><code class="language-java">SoftReference<span class="token operator">&lt;</span>String<span class="token operator">></span> sr <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">SoftReference</span><span class="token operator">&lt;</span>String<span class="token operator">></span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">String</span><span class="token punctuation">(</span><span class="token string">"Hello World"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token comment" spellcheck="true">//如果软引用对象被GC回收，该方法返回的就是null</span>
-sr<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<h2 id="开始使用"><a href="#开始使用" class="headerlink" title="开始使用"></a>开始使用</h2><h3 id="创建协程"><a href="#创建协程" class="headerlink" title="创建协程"></a>创建协程</h3><ul>
+<li><pre class=" language-kotlin"><code class="language-kotlin"><span class="token comment" spellcheck="true">//通常适用于单元测试场景，业务开发中不会使用，因为它是线程阻塞的</span>
+runBlocking <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">//doSomeThing</span>
+<span class="token punctuation">}</span>
 </code></pre>
-<h3 id="弱引用（WeakReference）"><a href="#弱引用（WeakReference）" class="headerlink" title="弱引用（WeakReference）"></a>弱引用（WeakReference）</h3><p>弱引用就是将对象留在内存的能力弱于强引用，只具有弱引用的对象拥有更短暂的生命周期。在垃圾回收器线程扫描它 所管辖的内存区域的过程中，一旦发现了只具有弱引用的对象，不管当前内存空间足够与否，都会回收它的内存。不过，由于垃圾回收器是一个优先级很低的线程， 因此不一定会很快发现那些只具有弱引用的对象。 </p>
-<p>弱引用也可以和一个引用队列（ReferenceQueue）联合使用，如果弱引用所引用的对象被垃圾回收，Java虚拟机就会把这个弱引用加入到与之关联的引用队列中。</p>
-<pre class=" language-java"><code class="language-java">WeakReference<span class="token operator">&lt;</span>String<span class="token operator">></span> sr <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">WeakReference</span><span class="token operator">&lt;</span>String<span class="token operator">></span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">String</span><span class="token punctuation">(</span><span class="token string">"hello"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token comment" spellcheck="true">//gc进行垃圾回收</span>
-System<span class="token punctuation">.</span><span class="token function">gc</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</li>
+</ul>
+<ul>
+<li><pre class=" language-kotlin"><code class="language-kotlin"><span class="token comment" spellcheck="true">//此方式不会阻塞线程，但是它的生命周期会和app一致，且不能取消</span>
+<span class="token comment" spellcheck="true">//如果我们忘记保持对新启动的协程的引用，它会继续运行</span>
+<span class="token comment" spellcheck="true">//假如启动太多的协程并导致内存不足，就必须手动保持对所有已启动协程的引用并join，这样很容易出错</span>
+GlobalScope<span class="token punctuation">.</span><span class="token function">launch</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">//doSomeThing</span>
+<span class="token punctuation">}</span>
 </code></pre>
-<h3 id="虚引用（PhantomReference）"><a href="#虚引用（PhantomReference）" class="headerlink" title="虚引用（PhantomReference）"></a>虚引用（PhantomReference）</h3><p>虚引用不会决定对象的生命周期，当其指向的对象被回收之后，自己被加入到引用队列，用作记录该引用指向的对象已被销毁。虚引用职能在其指向的对象从内存中移除掉之后才会加入到引用队列。其 get 方法一直返回 null 就是为了阻止其指向的几乎被销毁的对象重新复活。<br>虚引用主要用来跟踪被垃圾回收器回收的活动。它必须和引用队列 （ReferenceQueue）联合使用。</p>
-<pre class=" language-java"><code class="language-java">ReferenceQueue<span class="token operator">&lt;</span>String<span class="token operator">></span> queue <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ReferenceQueue</span><span class="token operator">&lt;</span>String<span class="token operator">></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-PhantomReference<span class="token operator">&lt;</span>String<span class="token operator">></span> pr <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">PhantomReference</span><span class="token operator">&lt;</span>String<span class="token operator">></span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">String</span><span class="token punctuation">(</span><span class="token string">"hello"</span><span class="token punctuation">)</span><span class="token punctuation">,</span> queue<span class="token punctuation">)</span><span class="token punctuation">;</span>
-pr<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</li>
+<li><pre class=" language-kotlin"><code class="language-kotlin"><span class="token comment" spellcheck="true">//推荐使用</span>
+<span class="token keyword">class</span> MainActivity <span class="token operator">:</span> <span class="token function">AppCompatActivity</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> CoroutineScope <span class="token punctuation">{</span>
+
+    <span class="token keyword">private</span> <span class="token keyword">val</span> job <span class="token operator">=</span> <span class="token function">Job</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">override</span> <span class="token keyword">val</span> coroutineContext<span class="token operator">:</span> CoroutineContext
+        <span class="token keyword">get</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span> Dispatchers<span class="token punctuation">.</span>Main <span class="token operator">+</span> job
+
+    <span class="token keyword">override</span> <span class="token keyword">fun</span> <span class="token function">onCreate</span><span class="token punctuation">(</span>savedInstanceState<span class="token operator">:</span> Bundle<span class="token operator">?</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">onCreate</span><span class="token punctuation">(</span>savedInstanceState<span class="token punctuation">)</span>
+        <span class="token function">setContentView</span><span class="token punctuation">(</span>R<span class="token punctuation">.</span>layout<span class="token punctuation">.</span>activity_main<span class="token punctuation">)</span>
+
+        <span class="token keyword">val</span> coroutineScope <span class="token operator">=</span> <span class="token function">CoroutineScope</span><span class="token punctuation">(</span>coroutineContext<span class="token punctuation">)</span>
+        coroutineScope<span class="token punctuation">.</span><span class="token function">launch</span><span class="token punctuation">(</span>Dispatchers<span class="token punctuation">.</span>Main<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token comment" spellcheck="true">//doSomeThing</span>
+        <span class="token punctuation">}</span>
+
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">override</span> <span class="token keyword">fun</span> <span class="token function">onDestroy</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">onDestroy</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+          <span class="token comment" spellcheck="true">//停止协程</span>
+        job<span class="token punctuation">.</span><span class="token function">cancel</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 </code></pre>
-<p>不同点</p>
-<table>
-<thead>
-<tr>
-<th>引用类型</th>
-<th>何时被GC回收</th>
-<th>何时终止</th>
-<th>用途</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>强引用</td>
-<td>从来不会</td>
-<td>JVM停止运行时</td>
-<td>对象一般状态</td>
-</tr>
-<tr>
-<td>软引用</td>
-<td>内存不足</td>
-<td>内存不足时</td>
-<td>对象缓存</td>
-</tr>
-<tr>
-<td>弱引用</td>
-<td>对象未被引用</td>
-<td>gc运行后</td>
-<td>对象缓存</td>
-</tr>
-<tr>
-<td>虚引用</td>
-<td>被回收时</td>
-<td>内存使用控制，引用队列中对象被回收</td>
-<td>用来跟踪对象被垃圾回收的活动</td>
-</tr>
-</tbody></table>
+</li>
+</ul>
+<h4 id="launch和async"><a href="#launch和async" class="headerlink" title="launch和async"></a>launch和async</h4><p><strong>launch</strong>：用来启动一个协程并立即返回，像线程一样异步执行。协程中的未捕获异常会导致进程的crash。<code>launch</code>返回一个Job对象，通过<code>Job.join</code>方法可以同步等待协程的完成。</p>
+<p><strong>async</strong>：用来启动一个协程并返回一个<code>Deferred</code>，使用<code>Deffered.await</code>可以获取<code>async</code>返回的结果，所以<code>async</code>相当于可以返回结果的<code>launch</code>。<code>async</code>内的代码中未捕获异常不会造成进程crash，而是会被储存到<code>Deferred</code>中返回。<code>Deferred</code>实际也是一个Job。<code>async</code>默认启动协程后立即执行，但是也可以通过参数指定启动方式为<code>CoroutineStart.LAZY</code>，此时只有调用了<code>await</code>时，才会启动协程。</p>
+<h5 id="参数说明"><a href="#参数说明" class="headerlink" title="参数说明"></a>参数说明</h5><p>源码：（launch和async差不多）</p>
+<pre class=" language-kotlin"><code class="language-kotlin"><span class="token keyword">public</span> <span class="token keyword">fun</span> CoroutineScope<span class="token punctuation">.</span><span class="token function">launch</span><span class="token punctuation">(</span>
+    context<span class="token operator">:</span> CoroutineContext <span class="token operator">=</span> EmptyCoroutineContext<span class="token punctuation">,</span>
+    start<span class="token operator">:</span> CoroutineStart <span class="token operator">=</span> CoroutineStart<span class="token punctuation">.</span>DEFAULT<span class="token punctuation">,</span>
+    block<span class="token operator">:</span> suspend CoroutineScope<span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-></span> Unit
+<span class="token punctuation">)</span><span class="token operator">:</span> Job <span class="token punctuation">{</span>
+    <span class="token keyword">val</span> newContext <span class="token operator">=</span> <span class="token function">newCoroutineContext</span><span class="token punctuation">(</span>context<span class="token punctuation">)</span>
+    <span class="token keyword">val</span> coroutine <span class="token operator">=</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>start<span class="token punctuation">.</span>isLazy<span class="token punctuation">)</span>
+        <span class="token function">LazyStandaloneCoroutine</span><span class="token punctuation">(</span>newContext<span class="token punctuation">,</span> block<span class="token punctuation">)</span> <span class="token keyword">else</span>
+        <span class="token function">StandaloneCoroutine</span><span class="token punctuation">(</span>newContext<span class="token punctuation">,</span> active <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">)</span>
+    coroutine<span class="token punctuation">.</span><span class="token function">start</span><span class="token punctuation">(</span>start<span class="token punctuation">,</span> coroutine<span class="token punctuation">,</span> block<span class="token punctuation">)</span>
+    <span class="token keyword">return</span> coroutine
+<span class="token punctuation">}</span>
+</code></pre>
+<ul>
+<li><p>context: CoroutineContext = EmptyCoroutineContext</p>
+<p>当前协程的上下文，用于在协程间参数传递。可以来声明当前协程在哪一个线程中声明，以及当前协程被中断后，在哪一个线程中恢复它。</p>
+<p>最常用的功能是并发，典型场景就是多线程，即需要切换线程，我们经常这样写：</p>
+<pre class=" language-kotlin"><code class="language-kotlin">mCoroutineScope<span class="token punctuation">.</span><span class="token function">launch</span><span class="token punctuation">(</span>Dispatchers<span class="token punctuation">.</span>IO<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token comment" spellcheck="true">//切换到IO线程执行事务</span>
+    <span class="token operator">..</span><span class="token punctuation">.</span>
+<span class="token punctuation">}</span>
+
+mCoroutineScope<span class="token punctuation">.</span><span class="token function">launch</span><span class="token punctuation">(</span>Dispatchers<span class="token punctuation">.</span>Main<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token comment" spellcheck="true">//切换到主线程执行事务</span>
+    <span class="token operator">..</span><span class="token punctuation">.</span>
+<span class="token punctuation">}</span>
+
+mCoroutineScope<span class="token punctuation">.</span><span class="token function">launch</span><span class="token punctuation">(</span>Dispatchers<span class="token punctuation">.</span>Default<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token comment" spellcheck="true">//同IO线程，切换到IO线程执行事务</span>
+    <span class="token operator">..</span><span class="token punctuation">.</span>
+<span class="token punctuation">}</span>
+
+mCoroutineScope<span class="token punctuation">.</span><span class="token function">launch</span><span class="token punctuation">(</span>Dispatchers<span class="token punctuation">.</span>Unconfined<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token comment" spellcheck="true">//不绑定在任何特定执行线程上</span>
+      <span class="token comment" spellcheck="true">//在CPU进行密集型计算时使用</span>
+    <span class="token operator">..</span><span class="token punctuation">.</span>
+<span class="token punctuation">}</span>
+</code></pre>
+</li>
+<li><p>start: CoroutineStart = CoroutineStart.DEFAULT</p>
+<p>协程的启动参数，表示需要哪种方式启动。</p>
+<pre class=" language-kotlin"><code class="language-kotlin">CoroutineStart<span class="token punctuation">.</span>DEFAULT：默认的启动方式，表示当前线程什么时候有空，就什么时候启动。
+CoroutineStart<span class="token punctuation">.</span>LAZY：仅在需要时才延迟启动协程。
+CoroutineStart<span class="token punctuation">.</span>ATOMIC：以原子方式（即以不可取消的方式）根据协程安排协程执行。
+CoroutineStart<span class="token punctuation">.</span>UNDISPATCHED：未定义，通常用于自定义的启动方式，如果未自定义，则与 DEFAULT 启动方式一致。
+</code></pre>
+</li>
+<li><p>block: suspend CoroutineScope.() -&gt; Unit</p>
+<p>协程真正要去执行的内容。</p>
+</li>
+</ul>
 
                 
             </div>
@@ -465,7 +534,7 @@ pr<span class="token punctuation">.</span><span class="token function">get</span
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://hijiaopeng.github.io/2021/02/25/java-quote-object/">https://hijiaopeng.github.io/2021/02/25/java-quote-object/</a>
+                    <a href="https://hijiaopeng.github.io/2021/05/18/kotlin-coroutine/">https://hijiaopeng.github.io/2021/05/18/kotlin-coroutine/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -503,8 +572,12 @@ pr<span class="token punctuation">.</span><span class="token function">get</span
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Java/">
-                                    <span class="chip bg-color">Java</span>
+                                <a href="/tags/Kotlin/">
+                                    <span class="chip bg-color">Kotlin</span>
+                                </a>
+                            
+                                <a href="/tags/Coroutine/">
+                                    <span class="chip bg-color">Coroutine</span>
                                 </a>
                             
                         </div>
@@ -548,46 +621,52 @@ pr<span class="token punctuation">.</span><span class="token function">get</span
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2021/02/25/java-environment-configuration/">
+                <a href="/2021/05/18/kotlin-coroutine/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="（Java）开发环境配置">
+                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="对于Kotlin协程的学习和使用">
                         
-                        <span class="card-title">（Java）开发环境配置</span>
+                        <span class="card-title">对于Kotlin协程的学习和使用</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Java开发环境配置。
+                            Kotlin Coroutine的使用和学习进阶。
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-02-25
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-18
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Java/" class="post-category">
-                                    Java
+                            <a href="/categories/Kotlin/" class="post-category">
+                                    Kotlin
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Java/">
-                        <span class="chip bg-color">Java</span>
+                    <a href="/tags/Kotlin/">
+                        <span class="chip bg-color">Kotlin</span>
+                    </a>
+                    
+                    <a href="/tags/Coroutine/">
+                        <span class="chip bg-color">Coroutine</span>
                     </a>
                     
                 </div>
@@ -601,24 +680,24 @@ pr<span class="token punctuation">.</span><span class="token function">get</span
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/02/25/android-keyboard/">
+                <a href="/2021/05/11/android-huawei-scan/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="（Android）自定义键盘">
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="Android 使用华为的扫描功能">
                         
-                        <span class="card-title">（Android）自定义键盘</span>
+                        <span class="card-title">Android 使用华为的扫描功能</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            简单自定义键盘，学会基础才会深入发展。
+                            尝试使用华为的HMS Scan完成二维码等扫描。
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-25
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-11
                             </span>
                         <span class="publish-author">
                             
@@ -637,10 +716,6 @@ pr<span class="token punctuation">.</span><span class="token function">get</span
                     
                     <a href="/tags/Android/">
                         <span class="chip bg-color">Android</span>
-                    </a>
-                    
-                    <a href="/tags/Java/">
-                        <span class="chip bg-color">Java</span>
                     </a>
                     
                 </div>
