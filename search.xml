@@ -106,6 +106,33 @@
     
     
     <entry>
+      <title>Android开发中一些实用点</title>
+      <link href="2021/05/07/android-tips/"/>
+      <url>2021/05/07/android-tips/</url>
+      
+        <content type="html"><![CDATA[<ul><li><p>组合使用<merge/>（只能在布局根节点使用）、<include/>、<ViewStub/>标签，减少布局层级嵌套；</p></li><li><p>RecyclerView的layoutManager，spanCount,orientation属性可以在xml中设置；</p></li><li><p>通过SpannableString设置TextView样式，减少TextView创建；</p></li><li><p>图片如果只是颜色不一致的话，可以使用tint着色器进行更改，不必进行图片切换，减少图片资源的引入；</p></li><li><p>ViewFlipper：翻转视图，可以用来实现轮播，大图滑动查看，Banner图，启动引导页等；</p></li><li><p>设置EditText文本：EditText.text = Editable.Factory.getInstance().newEditable(“”)；</p></li><li><p>设置Button无样式显示：style=”?android:attr/borderlessButtonStyle”；</p></li><li><p>防止同时按下两个按钮触发两个事件,在style中配置：</p><pre class=" language-kotlin"><code class="language-kotlin"><span class="token operator">&lt;</span>style name<span class="token operator">=</span><span class="token string">"AppTheme"</span> parent<span class="token operator">=</span><span class="token string">"Theme.AppCompat.Light.NoActionBar"</span><span class="token operator">></span>    <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> 防止同时按下两个按钮 <span class="token operator">--</span><span class="token operator">></span>    <span class="token operator">&lt;</span>item name<span class="token operator">=</span><span class="token string">"android:windowEnableSplitTouch"</span><span class="token operator">></span><span class="token boolean">false</span><span class="token operator">&lt;</span><span class="token operator">/</span>item<span class="token operator">></span>    <span class="token operator">&lt;</span>item name<span class="token operator">=</span><span class="token string">"android:splitMotionEvents"</span><span class="token operator">></span><span class="token boolean">false</span><span class="token operator">&lt;</span><span class="token operator">/</span>item<span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>style<span class="token operator">></span></code></pre></li><li><p>金钱等两位小数的值使用BigDecimal类型；</p></li><li><p>对于简单方案，例如调用list集合的扩展函数，可以不使用{ }的lambda形式，直接使用（类名：属性）的方式，易于阅读；</p></li><li><p>a = b.also { b = a } ，交换两个属性，不用来回赋值了，每一次触发，都会进行调换；</p></li><li><p>by lazy只能作用于val关键字标注的属性，当属性用到的时候才会初始化”lazy{}”里面的内容，而且再次调用属性的时候，只会得到结果，而不会再次执行lazy{}的运行过程；</p></li><li><p>绘制RecyclerView后，可以设置tools:listitem=”@layout/list_item”，显示对应的Item布局；</p></li><li><p>解决android:animateLayoutChanges=”true”动画跳跃问题：</p><pre class=" language-kotlin"><code class="language-kotlin"><span class="token keyword">if</span><span class="token punctuation">(</span>Build<span class="token punctuation">.</span>VERSION<span class="token punctuation">.</span>SDK_INT<span class="token operator">>=</span>Build<span class="token punctuation">.</span>VERSION_CODES<span class="token punctuation">.</span>JELLY_BEAN<span class="token punctuation">)</span><span class="token punctuation">{</span>                              父布局<span class="token operator">?</span><span class="token punctuation">.</span>layoutTransition<span class="token operator">!!</span><span class="token punctuation">.</span><span class="token function">enableTransitionType</span><span class="token punctuation">(</span>LayoutTransition<span class="token punctuation">.</span>CHANGING<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">}</span></code></pre></li><li><p>动态的在代码里进行设置edittext限制规则：</p><pre class=" language-kotlin"><code class="language-kotlin">editText<span class="token punctuation">.</span><span class="token function">setKeyListener</span><span class="token punctuation">(</span>DigitsKeyListener<span class="token punctuation">.</span><span class="token function">getInstance</span><span class="token punctuation">(</span><span class="token string">"1234567890"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></li><li><p>单独对某个值或者对象判空并操作：</p><pre class=" language-kotlin"><code class="language-kotlin">bean<span class="token operator">?</span><span class="token punctuation">.</span><span class="token function">let</span> <span class="token punctuation">{</span>    <span class="token operator">..</span><span class="token punctuation">.</span><span class="token punctuation">}</span></code></pre></li><li><p>取某个对象中的各个属性进行操作：</p><pre class=" language-kotlin"><code class="language-kotlin"><span class="token function">with</span><span class="token punctuation">(</span>bean<span class="token punctuation">)</span> <span class="token punctuation">{</span>    <span class="token operator">..</span><span class="token punctuation">.</span><span class="token punctuation">}</span></code></pre></li><li><p>既判空也取各个属性，并且不需要依靠it来调用：</p><pre class=" language-kotlin"><code class="language-kotlin">bean<span class="token punctuation">.</span><span class="token function">run</span> <span class="token punctuation">{</span>    <span class="token operator">..</span><span class="token punctuation">.</span><span class="token punctuation">}</span></code></pre></li><li><p>apply：1、适用于run函数的任何场景，一般用于初始化一个对象实例的时候，操作对象属性，并最终返回这个对象。<br>2、动态inflate出一个XML的View的时候需要给View绑定数据也会用到.<br>3、一般可用于多个扩展函数链式调用<br>4、数据model多层级包裹判空处理的问题</p><pre class=" language-kotlin"><code class="language-kotlin">bean<span class="token operator">?</span><span class="token punctuation">.</span><span class="token function">apply</span> <span class="token punctuation">{</span>    <span class="token comment" spellcheck="true">//第一层级不为空</span><span class="token punctuation">}</span><span class="token operator">?</span><span class="token punctuation">.</span>name<span class="token operator">?</span><span class="token punctuation">.</span><span class="token function">apply</span> <span class="token punctuation">{</span>    <span class="token comment" spellcheck="true">//第二层级不为空</span><span class="token punctuation">}</span></code></pre></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Android </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Android </tag>
+            
+            <tag> Java </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Android Studio插件整理文档</title>
       <link href="2021/05/07/android-studio-plugin/"/>
       <url>2021/05/07/android-studio-plugin/</url>
