@@ -285,6 +285,19 @@
 </header>
 
     
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
 
 
 
@@ -737,19 +750,19 @@ remoteView<span class="token punctuation">.</span><span class="token function">s
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/05/07/android-tips/">
+                <a href="/2021/05/07/android-studio-plugin/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="Android开发中一些实用点">
+                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="Android Studio插件整理文档">
                         
-                        <span class="card-title">Android开发中一些实用点</span>
+                        <span class="card-title">Android Studio插件整理文档</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            记录开发中遇到的优秀技巧。
+                            记录常用的好用的Android Studio插件。
                         
                     </div>
                     <div class="publish-info">
@@ -775,8 +788,8 @@ remoteView<span class="token punctuation">.</span><span class="token function">s
                         <span class="chip bg-color">Android</span>
                     </a>
                     
-                    <a href="/tags/Java/">
-                        <span class="chip bg-color">Java</span>
+                    <a href="/tags/Android-Studio/">
+                        <span class="chip bg-color">Android Studio</span>
                     </a>
                     
                 </div>
@@ -918,7 +931,7 @@ remoteView<span class="token punctuation">.</span><span class="token function">s
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">20.9k</span>&nbsp;字
+                class="white-color">20.4k</span>&nbsp;字
             
             
             
