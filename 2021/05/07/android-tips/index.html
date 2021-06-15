@@ -364,21 +364,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-06-01
+                    2021-06-11
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    586
+                    782
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    3 分
                 </div>
                 
 
@@ -464,6 +464,29 @@
     <span class="token comment" spellcheck="true">//第一层级不为空</span>
 <span class="token punctuation">}</span><span class="token operator">?</span><span class="token punctuation">.</span>name<span class="token operator">?</span><span class="token punctuation">.</span><span class="token function">apply</span> <span class="token punctuation">{</span>
     <span class="token comment" spellcheck="true">//第二层级不为空</span>
+<span class="token punctuation">}</span>
+</code></pre>
+</li>
+<li><p><code>also</code> 对于执行一些将上下文对象作为参数的操作很有用。 对于需要引用对象而不是其属性与函数的操作，或者不想屏蔽来自外部作用域的 <code>this</code> 引用时，请使用 <code>also</code>。可以将其理解为“并且用该对象执行以下操作”</p>
+</li>
+<li><p>要善于使用解构声明，把一个对象，或者一个方法直接返回所需的多个变量：</p>
+<p>小括号里面的变量会从对象中依次调取，如果有用不到的参数，使用<code>_</code>替代</p>
+<pre class=" language-kotlin"><code class="language-kotlin"><span class="token keyword">val</span> <span class="token punctuation">(</span>name<span class="token punctuation">,</span>age<span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token function">f1</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">private</span> <span class="token keyword">fun</span> <span class="token function">f1</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> MyTestBean <span class="token punctuation">{</span>
+   <span class="token keyword">return</span> <span class="token function">MyTestBean</span><span class="token punctuation">(</span><span class="token string">"123"</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>集合中也可以使用：</p>
+<pre class=" language-kotlin"><code class="language-kotlin"><span class="token keyword">val</span> list <span class="token operator">=</span> <span class="token function">arrayListOf</span><span class="token punctuation">(</span>
+    <span class="token function">MyTestBean</span><span class="token punctuation">(</span><span class="token string">"123"</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token function">MyTestBean</span><span class="token punctuation">(</span><span class="token string">"456"</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token function">MyTestBean</span><span class="token punctuation">(</span><span class="token string">"789"</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token function">MyTestBean</span><span class="token punctuation">(</span><span class="token string">"000"</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span>
+<span class="token punctuation">)</span>
+
+<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>name<span class="token punctuation">,</span>age<span class="token punctuation">)</span> <span class="token keyword">in</span> list<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    Log<span class="token punctuation">.</span><span class="token function">e</span><span class="token punctuation">(</span><span class="token string">"JP"</span><span class="token punctuation">,</span> <span class="token string">"name: <span class="token interpolation variable">$name</span>"</span><span class="token punctuation">)</span>
+    Log<span class="token punctuation">.</span><span class="token function">e</span><span class="token punctuation">(</span><span class="token string">"JP"</span><span class="token punctuation">,</span> <span class="token string">"age: <span class="token interpolation variable">$age</span>"</span><span class="token punctuation">)</span>
 <span class="token punctuation">}</span>
 </code></pre>
 </li>
@@ -815,7 +838,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">20.9k</span>&nbsp;字
+                class="white-color">21.2k</span>&nbsp;字
             
             
             
