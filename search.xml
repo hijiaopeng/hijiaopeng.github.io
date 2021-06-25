@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>EventBus和BroadCast的差异</title>
+      <link href="2021/06/25/eventbus-broadcast/"/>
+      <url>2021/06/25/eventbus-broadcast/</url>
+      
+        <content type="html"><![CDATA[<p>消息传递的实现，可以使用EventBus、广播、观察者。任何一种方式都有它的利弊，存在差异。</p><ul><li><h5 id="广播BroadCastReceiver"><a href="#广播BroadCastReceiver" class="headerlink" title="广播BroadCastReceiver"></a>广播BroadCastReceiver</h5></li></ul><p>全局广播：它是重量级的，会消耗很多的资源，但是可以跨进程通信，这个特点是其他方案做不到的。</p><p>本地广播：也会消耗很多资源，较全局广播轻量些，它可以拿到Context、Intent等和Android系统紧密相关的上下文，这样就方便数据的传递和接收。但是，获取到的这些对象，并不是像Activity那样获取到后做最全的事情。</p><p>作为四大组件之一，广播同SDK的交互比较好。所以系统级的事件都是通过广播来实现的。</p><p>谨记：广播是消耗时间、空间最多的一种方式。</p><ul><li><h5 id="EventBus"><a href="#EventBus" class="headerlink" title="EventBus"></a>EventBus</h5></li></ul><p>开发中使用最多的一种方式，调度灵活，不依赖Context，父类对于通知的监听和处理可以继承给子类，设置通知的优先级，粘滞事件能够保证通知不会因 Subscriber 的不在场而忽略。</p><p>使用起来也简单，通过注册来监听数据变化即可。</p><p>使用完成后需要解绑监听，并且无法跨进程传递消息。</p><ul><li><h5 id="观察者模式"><a href="#观察者模式" class="headerlink" title="观察者模式"></a>观察者模式</h5></li></ul><p>观察者的实现比较简单，性能上所以是最好的，但是无法控制优先级、粘滞事件，耦合性比EventBus大。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Android </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Android </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>低耦合高内聚</title>
       <link href="2021/06/25/coupling-cohesion/"/>
       <url>2021/06/25/coupling-cohesion/</url>

@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Android Studio项目中导入aar包, Android,Python,Java,...">
+    <meta name="keywords" content="EventBus和BroadCast的差异, Android,Python,Java,...">
     <meta name="description" content="好记性不如烂笔头">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Android Studio项目中导入aar包 | HI，JiaoPeng</title>
+    <title>EventBus和BroadCast的差异 | HI，JiaoPeng</title>
     <link rel="icon" type="image/jpeg" href="/favicon.jpeg">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -301,12 +301,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Android Studio项目中导入aar包</h1>
+                    <h1 class="description center-align post-title">EventBus和BroadCast的差异</h1>
                 </div>
             </div>
         </div>
@@ -332,10 +332,6 @@
                                 <span class="chip bg-color">Android</span>
                             </a>
                         
-                            <a href="/tags/Android-Studio/">
-                                <span class="chip bg-color">Android Studio</span>
-                            </a>
-                        
                     </div>
                     
                 </div>
@@ -357,21 +353,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-05-07
+                    2021-06-25
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-05-07
+                    2021-06-25
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    191
+                    363
                 </div>
                 
 
@@ -398,42 +394,24 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h4 id="第一种方式："><a href="#第一种方式：" class="headerlink" title="第一种方式："></a>第一种方式：</h4><p>找到module的build.gradle文件，在dependencies{}里面直接添加：</p>
-<pre class=" language-kotlin"><code class="language-kotlin">implementation <span class="token function">fileTree</span><span class="token punctuation">(</span>include<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'*.jar'</span><span class="token punctuation">,</span><span class="token string">"*.aar"</span><span class="token punctuation">]</span><span class="token punctuation">,</span> dir<span class="token operator">:</span> <span class="token string">'libs'</span><span class="token punctuation">)</span>
-</code></pre>
-<h4 id="第二种方式："><a href="#第二种方式：" class="headerlink" title="第二种方式："></a>第二种方式：</h4><p>找到项目的build.gradle文件，添加：</p>
-<pre class=" language-kotlin"><code class="language-kotlin">allprojects <span class="token punctuation">{</span>
-    repositories <span class="token punctuation">{</span>
-            <span class="token operator">..</span><span class="token punctuation">.</span>
-            flatDir <span class="token punctuation">{</span>
-            dirs <span class="token string">'libs'</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-</code></pre>
-<p>在使用到的对应module的build.gradle文件里面添加：</p>
-<pre class=" language-kotlin"><code class="language-kotlin">dependencies <span class="token punctuation">{</span>
-         <span class="token function">implementation</span><span class="token punctuation">(</span>name<span class="token operator">:</span> <span class="token string">'aar名字'</span><span class="token punctuation">,</span> ext<span class="token operator">:</span> <span class="token string">'aar'</span><span class="token punctuation">)</span>
-<span class="token punctuation">}</span>
-</code></pre>
-<p>注意点：此种方法适用于单一module引入aar文件。如果引入aar的是一个moduleA，这个moduleA又被其他module引用，项目就会编译失败，所以在多module下，使用下面这种方式。</p>
-<h4 id="第三种方式："><a href="#第三种方式：" class="headerlink" title="第三种方式："></a>第三种方式：</h4><p>修改项目的build.gradle文件：</p>
-<pre class=" language-kotlin"><code class="language-kotlin">allprojects <span class="token punctuation">{</span>
-    repositories <span class="token punctuation">{</span>
-            <span class="token operator">..</span><span class="token punctuation">.</span>
-            flatDir <span class="token punctuation">{</span>
-                    <span class="token comment" spellcheck="true">//这里需要把引入了aar包的module添加到依赖关系中</span>
-            dirs <span class="token function">project</span><span class="token punctuation">(</span><span class="token string">':xxModule'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">file</span><span class="token punctuation">(</span><span class="token string">'libs'</span><span class="token punctuation">)</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-</code></pre>
-<p>xxModule的build.gradle文件里面添加：</p>
-<pre class=" language-kotlin"><code class="language-kotlin">dependencies <span class="token punctuation">{</span>
-         <span class="token function">implementation</span><span class="token punctuation">(</span>name<span class="token operator">:</span> <span class="token string">'aar名字'</span><span class="token punctuation">,</span> ext<span class="token operator">:</span> <span class="token string">'aar'</span><span class="token punctuation">)</span>
-<span class="token punctuation">}</span>
-</code></pre>
-<p>至此完成。</p>
+                <p>消息传递的实现，可以使用EventBus、广播、观察者。任何一种方式都有它的利弊，存在差异。</p>
+<ul>
+<li><h5 id="广播BroadCastReceiver"><a href="#广播BroadCastReceiver" class="headerlink" title="广播BroadCastReceiver"></a>广播BroadCastReceiver</h5></li>
+</ul>
+<p>全局广播：它是重量级的，会消耗很多的资源，但是可以跨进程通信，这个特点是其他方案做不到的。</p>
+<p>本地广播：也会消耗很多资源，较全局广播轻量些，它可以拿到Context、Intent等和Android系统紧密相关的上下文，这样就方便数据的传递和接收。但是，获取到的这些对象，并不是像Activity那样获取到后做最全的事情。</p>
+<p>作为四大组件之一，广播同SDK的交互比较好。所以系统级的事件都是通过广播来实现的。</p>
+<p>谨记：广播是消耗时间、空间最多的一种方式。</p>
+<ul>
+<li><h5 id="EventBus"><a href="#EventBus" class="headerlink" title="EventBus"></a>EventBus</h5></li>
+</ul>
+<p>开发中使用最多的一种方式，调度灵活，不依赖Context，父类对于通知的监听和处理可以继承给子类，设置通知的优先级，粘滞事件能够保证通知不会因 Subscriber 的不在场而忽略。</p>
+<p>使用起来也简单，通过注册来监听数据变化即可。</p>
+<p>使用完成后需要解绑监听，并且无法跨进程传递消息。</p>
+<ul>
+<li><h5 id="观察者模式"><a href="#观察者模式" class="headerlink" title="观察者模式"></a>观察者模式</h5></li>
+</ul>
+<p>观察者的实现比较简单，性能上所以是最好的，但是无法控制优先级、粘滞事件，耦合性比EventBus大。</p>
 
                 
             </div>
@@ -460,7 +438,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://hijiaopeng.github.io/2021/05/07/android-build-aar/">https://hijiaopeng.github.io/2021/05/07/android-build-aar/</a>
+                    <a href="https://hijiaopeng.github.io/2021/06/25/eventbus-broadcast/">https://hijiaopeng.github.io/2021/06/25/eventbus-broadcast/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -500,10 +478,6 @@
                             
                                 <a href="/tags/Android/">
                                     <span class="chip bg-color">Android</span>
-                                </a>
-                            
-                                <a href="/tags/Android-Studio/">
-                                    <span class="chip bg-color">Android Studio</span>
                                 </a>
                             
                         </div>
@@ -547,29 +521,30 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2021/05/07/android-studio-plugin/">
+                <a href="/2021/06/25/eventbus-broadcast/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="Android Studio插件整理文档">
+                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="EventBus和BroadCast的差异">
                         
-                        <span class="card-title">Android Studio插件整理文档</span>
+                        <span class="card-title">EventBus和BroadCast的差异</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            记录常用的好用的Android Studio插件。
+                            EventBus和BroadCast的差异。
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-05-07
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-06-25
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -582,15 +557,12 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
                     <a href="/tags/Android/">
                         <span class="chip bg-color">Android</span>
-                    </a>
-                    
-                    <a href="/tags/Android-Studio/">
-                        <span class="chip bg-color">Android Studio</span>
                     </a>
                     
                 </div>
@@ -604,31 +576,31 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/03/24/java-install-jdk/">
+                <a href="/2021/06/25/coupling-cohesion/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="(Java)环境配置">
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="低耦合高内聚">
                         
-                        <span class="card-title">(Java)环境配置</span>
+                        <span class="card-title">低耦合高内聚</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            JDK环境配置。
+                            软件编程的总的原则：低耦合，高内聚。
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-24
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-06-25
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Java/" class="post-category">
-                                    Java
+                            <a href="/categories/Principle/" class="post-category">
+                                    Principle
                                 </a>
                             
                             
@@ -638,8 +610,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Java/">
-                        <span class="chip bg-color">Java</span>
+                    <a href="/tags/Principle/">
+                        <span class="chip bg-color">Principle</span>
                     </a>
                     
                 </div>
