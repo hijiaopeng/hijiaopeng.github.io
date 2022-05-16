@@ -1,6 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Elden Ring-速刷卢恩699大法</title>
+    <url>/2022/05/16/ER-699/</url>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>艾尔登法环里面，除了在“鲜血银行”刷乌鸦和白金之子，更为快捷的方式便是“699大法”了。</p>
+<p>因为“王之卢恩”只能持有699个，所以叫做“699大法”。“王之卢恩”是最多的，一个5w。</p>
+<p>这种刷卢恩的方式，有个很重要的前提，就是你得有一个同样在玩艾尔登法环的小伙伴，两个人一起刷。以下为操作步骤。图片在以后上传，现阶段为文字讲述。</p>
+<span id="more"></span>
+
+<h2 id="操作流程"><a href="#操作流程" class="headerlink" title="操作流程"></a>操作流程</h2><ul>
+<li>两个同时在线的玩家A和B（确保服务器连接正常）</li>
+<li>确保玩家A拥有“王之卢恩”。</li>
+<li>玩家A打开电脑的C盘，找到文件夹的选项，打开后，点击“查看”，下滑找到“显示隐藏的文件、文件夹和驱动器”选项，并选中，依次点击“应用”–“确定”。</li>
+<li>这时候，玩家A进入C盘–用户–用户名下，可以看见AppData文件夹了。</li>
+<li>玩家A进入文件夹：C:\Users\用户名\AppData\Roaming\EldenRing\765……396（这里是一堆数字的文件夹），可以看到有3个文件：ER0000.sl2，ER0000.sl2.bak，steam_autocloud.vdf。</li>
+<li>玩家A将ER0000.sl2复制出来，个人建议复制到桌面，这样好找。</li>
+<li>此时准备工作基本完成。</li>
+<li>玩家A和玩家B同时上线，找一个赐福点，两人同时传送过去。</li>
+<li>两名玩家打开游戏页面的菜单，找到“多人联机游玩”，设置同一个“多人联机游玩暗号”，并确保应用成功。</li>
+<li>玩家B使用“斗士勾指”画下红色符号，等待召唤。</li>
+<li>玩家A在玩家B画完符号后，使用“唤勾指药”，就能看见玩家B所画的红色符号，过去进行召唤，等待玩家B进入玩家A的世界来。</li>
+<li>玩家B进入玩家A的世界后，玩家A将“王之卢恩”“放置原地”，等玩家B拾取，玩家B拾取后，返回自己的世界。</li>
+<li>玩家A等待玩家B返回自己的世界后，正常退出游戏。</li>
+<li>玩家A用之前复制的ER0000.sl2替换当前文件夹中的ER0000.sl2。</li>
+<li>重新进入游戏，此时玩家A的“王之卢恩”又回来了，玩家B画符，玩家A召唤。</li>
+<li>这时候是玩家B将“王之卢恩”“放置原地”，由玩家A拾取，玩家A此时的“王之卢恩”变成双倍了。</li>
+<li>玩家B返回自己的世界，玩家A坐一下赐福，返回游戏的标题页面，“请按任意按钮”那个页面，返回电脑桌面，将文件夹刷新一下，重新备份ER0000.sl2文件。再进入页面。</li>
+<li>重复以上步骤，直到玩家A拥有699个。</li>
+<li>当玩家A有了699个后，备份当前存档，进入游戏，召唤玩家B，再给玩家B“王之卢恩”，玩家B拿到后返回自己的世界，玩家A需要坐赐福从箱子里面再取出“王之卢恩”，召唤玩家B。依次重复进行。这里需要注意的是，玩家A坐赐福取卢恩后，不需要重新使用“唤勾指药”，等玩家B画符就行。</li>
+<li>当玩家B也699个后，玩家A再把之前的存档覆盖回来，那么，两个人就都是699个“王之卢恩”了。</li>
+</ul>
+<h2 id="提示"><a href="#提示" class="headerlink" title="提示"></a>提示</h2><ul>
+<li>请确保“唤勾指药”的数量，拿“落叶花”进行制作，这玩意儿到处都是，也可以去“壶村”刷。</li>
+<li>如果想保存游戏存档，只坐赐福是不管用的，得回到标题页面才行。</li>
+<li>服务器的稳定性决定刷卢恩的时间。</li>
+<li>一定要用“斗士勾指”画符，不然会被其他玩家入侵，链接起来更慢。</li>
+</ul>
+<p>最后祝各位小伙伴刷的开心，玩的飞起！</p>
+]]></content>
+      <categories>
+        <category>游戏时间</category>
+      </categories>
+      <tags>
+        <tag>Elden Ring</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Linux7.4快速搭建WordPress博客</title>
     <url>/2021/02/24/Linux-WordPress/</url>
     <content><![CDATA[<p>这篇博客是我几年前写的了，当初买的阿里云服务器，又正巧学习了一段时间Linux，才搞的WordPress。整体安装步骤应该一致，可能存在部分版本老旧问题。</p>
@@ -108,51 +153,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Elden Ring-速刷卢恩699大法</title>
-    <url>/2022/05/16/ER-699/</url>
-    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>艾尔登法环里面，除了在“鲜血银行”刷乌鸦和白金之子，更为快捷的方式便是“699大法”了。</p>
-<p>因为“王之卢恩”只能持有699个，所以叫做“699大法”。“王之卢恩”是最多的，一个5w。</p>
-<p>这种刷卢恩的方式，有个很重要的前提，就是你得有一个同样在玩艾尔登法环的小伙伴，两个人一起刷。以下为操作步骤。图片在以后上传，现阶段为文字讲述。</p>
-<span id="more"></span>
-
-<h2 id="操作流程"><a href="#操作流程" class="headerlink" title="操作流程"></a>操作流程</h2><ul>
-<li>两个同时在线的玩家A和B（确保服务器连接正常）</li>
-<li>确保玩家A拥有“王之卢恩”。</li>
-<li>玩家A打开电脑的C盘，找到文件夹的选项，打开后，点击“查看”，下滑找到“显示隐藏的文件、文件夹和驱动器”选项，并选中，依次点击“应用”–“确定”。</li>
-<li>这时候，玩家A进入C盘–用户–用户名下，可以看见AppData文件夹了。</li>
-<li>玩家A进入文件夹：C:\Users\用户名\AppData\Roaming\EldenRing\765……396（这里是一堆数字的文件夹），可以看到有3个文件：ER0000.sl2，ER0000.sl2.bak，steam_autocloud.vdf。</li>
-<li>玩家A将ER0000.sl2复制出来，个人建议复制到桌面，这样好找。</li>
-<li>此时准备工作基本完成。</li>
-<li>玩家A和玩家B同时上线，找一个赐福点，两人同时传送过去。</li>
-<li>两名玩家打开游戏页面的菜单，找到“多人联机游玩”，设置同一个“多人联机游玩暗号”，并确保应用成功。</li>
-<li>玩家B使用“斗士勾指”画下红色符号，等待召唤。</li>
-<li>玩家A在玩家B画完符号后，使用“唤勾指药”，就能看见玩家B所画的红色符号，过去进行召唤，等待玩家B进入玩家A的世界来。</li>
-<li>玩家B进入玩家A的世界后，玩家A将“王之卢恩”“放置原地”，等玩家B拾取，玩家B拾取后，返回自己的世界。</li>
-<li>玩家A等待玩家B返回自己的世界后，正常退出游戏。</li>
-<li>玩家A用之前复制的ER0000.sl2替换当前文件夹中的ER0000.sl2。</li>
-<li>重新进入游戏，此时玩家A的“王之卢恩”又回来了，玩家B画符，玩家A召唤。</li>
-<li>这时候是玩家B将“王之卢恩”“放置原地”，由玩家A拾取，玩家A此时的“王之卢恩”变成双倍了。</li>
-<li>玩家B返回自己的世界，玩家A坐一下赐福，返回游戏的标题页面，“请按任意按钮”那个页面，返回电脑桌面，将文件夹刷新一下，重新备份ER0000.sl2文件。再进入页面。</li>
-<li>重复以上步骤，直到玩家A拥有699个。</li>
-<li>当玩家A有了699个后，备份当前存档，进入游戏，召唤玩家B，再给玩家B“王之卢恩”，玩家B拿到后返回自己的世界，玩家A需要坐赐福从箱子里面再取出“王之卢恩”，召唤玩家B。依次重复进行。这里需要注意的是，玩家A坐赐福取卢恩后，不需要重新使用“唤勾指药”，等玩家B画符就行。</li>
-<li>当玩家B也699个后，玩家A再把之前的存档覆盖回来，那么，两个人就都是699个“王之卢恩”了。</li>
-</ul>
-<h2 id="提示"><a href="#提示" class="headerlink" title="提示"></a>提示</h2><ul>
-<li>请确保“唤勾指药”的数量，拿“落叶花”进行制作，这玩意儿到处都是，也可以去“壶村”刷。</li>
-<li>如果想保存游戏存档，只坐赐福是不管用的，得回到标题页面才行。</li>
-<li>服务器的稳定性决定刷卢恩的时间。</li>
-<li>一定要用“斗士勾指”画符，不然会被其他玩家入侵，链接起来更慢。</li>
-</ul>
-<p>最后祝各位小伙伴刷的开心，玩的飞起！</p>
-]]></content>
-      <categories>
-        <category>游戏时间</category>
-      </categories>
-      <tags>
-        <tag>Elden Ring</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Android-判断常用APP是否安装</title>
     <url>/2021/02/25/android-app-installation/</url>
     <content><![CDATA[<span id="more"></span>
@@ -223,37 +223,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Android Studio项目中导入aar包</title>
-    <url>/2021/05/07/android-build-aar/</url>
-    <content><![CDATA[<span id="more"></span>
-
-<h4 id="第一种方式："><a href="#第一种方式：" class="headerlink" title="第一种方式："></a>第一种方式：</h4><p>找到module的build.gradle文件，在dependencies{}里面直接添加：</p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line">implementation fileTree(include: [<span class="string">&#x27;*.jar&#x27;</span>,<span class="string">&quot;*.aar&quot;</span>], dir: <span class="string">&#x27;libs&#x27;</span>)</span><br></pre></td></tr></table></figure>
-
-<h4 id="第二种方式："><a href="#第二种方式：" class="headerlink" title="第二种方式："></a>第二种方式：</h4><p>找到项目的build.gradle文件，添加：</p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line">allprojects &#123;</span><br><span class="line">    repositories &#123;</span><br><span class="line">    		...</span><br><span class="line">    		flatDir &#123;</span><br><span class="line">            dirs <span class="string">&#x27;libs&#x27;</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>在使用到的对应module的build.gradle文件里面添加：</p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line">dependencies &#123;</span><br><span class="line">		 implementation(name: <span class="string">&#x27;aar名字&#x27;</span>, ext: <span class="string">&#x27;aar&#x27;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>注意点：此种方法适用于单一module引入aar文件。如果引入aar的是一个moduleA，这个moduleA又被其他module引用，项目就会编译失败，所以在多module下，使用下面这种方式。</p>
-<h4 id="第三种方式："><a href="#第三种方式：" class="headerlink" title="第三种方式："></a>第三种方式：</h4><p>修改项目的build.gradle文件：</p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line">allprojects &#123;</span><br><span class="line">    repositories &#123;</span><br><span class="line">    		...</span><br><span class="line">    		flatDir &#123;</span><br><span class="line">    				<span class="comment">//这里需要把引入了aar包的module添加到依赖关系中</span></span><br><span class="line">            dirs project(<span class="string">&#x27;:xxModule&#x27;</span>).file(<span class="string">&#x27;libs&#x27;</span>)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>xxModule的build.gradle文件里面添加：</p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line">dependencies &#123;</span><br><span class="line">		 implementation(name: <span class="string">&#x27;aar名字&#x27;</span>, ext: <span class="string">&#x27;aar&#x27;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>至此完成。</p>
-]]></content>
-      <categories>
-        <category>-编程</category>
-      </categories>
-      <tags>
-        <tag>Android</tag>
-        <tag>Android Studio</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Android-关于混淆的理解和使用</title>
     <url>/2021/02/25/android-garble-use/</url>
     <content><![CDATA[<p>Android Studio使用Proguard进行代码混淆，是一个压缩，优化，混淆Java字节码文件的工具。混淆配置在proguard-rules.pro文件中。</p>
@@ -310,6 +279,37 @@
       </categories>
       <tags>
         <tag>Android</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Android Studio项目中导入aar包</title>
+    <url>/2021/05/07/android-build-aar/</url>
+    <content><![CDATA[<span id="more"></span>
+
+<h4 id="第一种方式："><a href="#第一种方式：" class="headerlink" title="第一种方式："></a>第一种方式：</h4><p>找到module的build.gradle文件，在dependencies{}里面直接添加：</p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line">implementation fileTree(include: [<span class="string">&#x27;*.jar&#x27;</span>,<span class="string">&quot;*.aar&quot;</span>], dir: <span class="string">&#x27;libs&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<h4 id="第二种方式："><a href="#第二种方式：" class="headerlink" title="第二种方式："></a>第二种方式：</h4><p>找到项目的build.gradle文件，添加：</p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line">allprojects &#123;</span><br><span class="line">    repositories &#123;</span><br><span class="line">    		...</span><br><span class="line">    		flatDir &#123;</span><br><span class="line">            dirs <span class="string">&#x27;libs&#x27;</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>在使用到的对应module的build.gradle文件里面添加：</p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line">dependencies &#123;</span><br><span class="line">		 implementation(name: <span class="string">&#x27;aar名字&#x27;</span>, ext: <span class="string">&#x27;aar&#x27;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>注意点：此种方法适用于单一module引入aar文件。如果引入aar的是一个moduleA，这个moduleA又被其他module引用，项目就会编译失败，所以在多module下，使用下面这种方式。</p>
+<h4 id="第三种方式："><a href="#第三种方式：" class="headerlink" title="第三种方式："></a>第三种方式：</h4><p>修改项目的build.gradle文件：</p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line">allprojects &#123;</span><br><span class="line">    repositories &#123;</span><br><span class="line">    		...</span><br><span class="line">    		flatDir &#123;</span><br><span class="line">    				<span class="comment">//这里需要把引入了aar包的module添加到依赖关系中</span></span><br><span class="line">            dirs project(<span class="string">&#x27;:xxModule&#x27;</span>).file(<span class="string">&#x27;libs&#x27;</span>)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>xxModule的build.gradle文件里面添加：</p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line">dependencies &#123;</span><br><span class="line">		 implementation(name: <span class="string">&#x27;aar名字&#x27;</span>, ext: <span class="string">&#x27;aar&#x27;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>至此完成。</p>
+]]></content>
+      <categories>
+        <category>-编程</category>
+      </categories>
+      <tags>
+        <tag>Android</tag>
+        <tag>Android Studio</tag>
       </tags>
   </entry>
   <entry>
@@ -370,6 +370,191 @@
 
 <p>只有这个地方，如果使用lifecycle就更好了。</p>
 <h4 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h4><p>目前最常使用到功能就这些，它里面还有别的功能与实现，后续有时间，再完善一下。</p>
+]]></content>
+      <categories>
+        <category>-编程</category>
+      </categories>
+      <tags>
+        <tag>Android</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Android-自定义键盘</title>
+    <url>/2021/02/25/android-keyboard/</url>
+    <content><![CDATA[<p>在开发中，可能会有一些对于键盘的自定义，不建议直接使用PopWindow或者Dialog，可以尝试一下隐藏掉系统的键盘，我们自定义一个。</p>
+<p>大体上分为一下几步：</p>
+<ul>
+<li>编写键盘上展示内容的xml文件</li>
+<li>创建键盘Util使用类</li>
+<li>使用</li>
+</ul>
+<span id="more"></span>
+
+<h3 id="编写xml文件"><a href="#编写xml文件" class="headerlink" title="编写xml文件"></a>编写xml文件</h3><p>在res目录下创建一个xml文件夹，然后新建一个.xml文件，这个文件用来标识键盘上要显示的内容，以及编码。先放上示例代码：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=<span class="string">&quot;1.0&quot;</span> encoding=<span class="string">&quot;UTF-8&quot;</span>?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">Keyboard</span> <span class="attr">xmlns:android</span>=<span class="string">&quot;http://schemas.android.com/apk/res/android&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:horizontalGap</span>=<span class="string">&quot;2dp&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:keyHeight</span>=<span class="string">&quot;50dp&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:verticalGap</span>=<span class="string">&quot;2dp&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">Key</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:codes</span>=<span class="string">&quot;0&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:keyEdgeFlags</span>=<span class="string">&quot;left&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:keyLabel</span>=<span class="string">&quot;0&quot;</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">Key</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:codes</span>=<span class="string">&quot;1&quot;</span></span></span><br><span class="line"><span class="tag">        &lt;<span class="attr">Key</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:codes</span>=<span class="string">&quot;2&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:keyLabel</span>=<span class="string">&quot;2&quot;</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">Key</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:codes</span>=<span class="string">&quot;3&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:keyLabel</span>=<span class="string">&quot;3&quot;</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">Key</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:codes</span>=<span class="string">&quot;4&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:keyLabel</span>=<span class="string">&quot;4&quot;</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">Key</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:keyLabel</span>=<span class="string">&quot;5&quot;</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">Key</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:codes</span>=<span class="string">&quot;6&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:keyLabel</span>=<span class="string">&quot;6&quot;</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">Key</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:codes</span>=<span class="string">&quot;7&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:keyLabel</span>=<span class="string">&quot;7&quot;</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">Key</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:codes</span>=<span class="string">&quot;8&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:keyLabel</span>=<span class="string">&quot;8&quot;</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">Key</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:codes</span>=<span class="string">&quot;9&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:keyEdgeFlags</span>=<span class="string">&quot;right&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:keyLabel</span>=<span class="string">&quot;9&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">Row</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">Keyboard</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><Keyboard>标签中的android:keyHeight和android:keyWidth属性，可以使用百分比赋值。<br>标签属性：<br>属性 说明<br>keyLabel 按键显示的内容<br>keyIcon 按键显示的图标内容<br>keyWidth 按键的宽度<br>keyHeight 按键的高度<br>horizontalGap 代表按键前的间隙水平方向上的<br>isSticky 按键是否是sticky的，就像shift 键 具有两种状态<br>isModifier 按键是不是功能键<br>keyOutputText 指定按键输出的内容是字符串<br>isRepeatable 按键是可重复的，如果长按键可以触发重复按键事件则为true，else为false<br>keyEdgeFlags 指定按键的对齐指令，取值为left或者right<br>codes 指这个键代表的字符的unicode</p>
+<p>常用的codes值：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">int</span> <span class="variable">EDGE_LEFT</span> <span class="operator">=</span> <span class="number">1</span>;</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">int</span> <span class="variable">EDGE_RIGHT</span> <span class="operator">=</span> <span class="number">2</span>;</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">int</span> <span class="variable">EDGE_TOP</span> <span class="operator">=</span> <span class="number">4</span>;</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">int</span> <span class="variable">EDGE_BOTTOM</span> <span class="operator">=</span> <span class="number">8</span>;</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">int</span> <span class="variable">KEYCODE_SHIFT</span> <span class="operator">=</span> -<span class="number">1</span>;</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">int</span> <span class="variable">KEYCODE_MODE_CHANGE</span> <span class="operator">=</span> -<span class="number">2</span>;</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">int</span> <span class="variable">KEYCODE_CANCEL</span> <span class="operator">=</span> -<span class="number">3</span>;</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">int</span> <span class="variable">KEYCODE_DONE</span> <span class="operator">=</span> -<span class="number">4</span>;</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">int</span> <span class="variable">KEYCODE_DELETE</span> <span class="operator">=</span> -<span class="number">5</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">int</span> <span class="variable">KEYCODE_ALT</span> <span class="operator">=</span> -<span class="number">6</span>;</span><br></pre></td></tr></table></figure>
+
+<p>还需要一个布局xml文件来显示每个按键的预览图，在layout文件夹中创建即可，示例代码key_preview.xml：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=<span class="string">&quot;1.0&quot;</span> encoding=<span class="string">&quot;utf-8&quot;</span>?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">TextView</span> <span class="attr">xmlns:android</span>=<span class="string">&quot;http://schemas.android.com/apk/res/android&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:layout_width</span>=<span class="string">&quot;wrap_content&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:layout_height</span>=<span class="string">&quot;wrap_content&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:background</span>=<span class="string">&quot;#FFFFFF&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:gravity</span>=<span class="string">&quot;center&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:textColor</span>=<span class="string">&quot;#FF0000&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:textSize</span>=<span class="string">&quot;14sp&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="创建Util帮助类"><a href="#创建Util帮助类" class="headerlink" title="创建Util帮助类"></a>创建Util帮助类</h3><p>在这个类中，主要对KeyboardView和Keyboard进行一些配置。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title function_">initLetterKeyboard</span><span class="params">()</span> &#123;</span><br><span class="line">    mKeyboard = <span class="literal">null</span>;</span><br><span class="line">    mKeyboard = <span class="keyword">new</span> <span class="title class_">Keyboard</span>(mActivity, R.xml.letters_kb);</span><br><span class="line">    mKeyboardView.setKeyboard(mKeyboard);</span><br><span class="line">    mKeyboardView.setOnKeyboardActionListener(mListener);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>首先把自定义的内容xml文件加载进入Keyboard中，再放入KeyboardView中，监听setOnKeyboardActionListener方法，获取键盘上按键的点击监听：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 键盘监听</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">private</span> KeyboardView.<span class="type">OnKeyboardActionListener</span> <span class="variable">mListener</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">KeyboardView</span>.OnKeyboardActionListener() &#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 按下触发</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> primaryCode</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">onPress</span><span class="params">(<span class="type">int</span> primaryCode)</span> &#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 松开触发</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> primaryCode</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">onRelease</span><span class="params">(<span class="type">int</span> primaryCode)</span> &#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 松开触发，在OnRelease之前触发</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> primaryCode</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> keyCodes</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">onKey</span><span class="params">(<span class="type">int</span> primaryCode, <span class="type">int</span>[] keyCodes)</span> &#123;</span><br><span class="line">            <span class="type">String</span> <span class="variable">editStr</span> <span class="operator">=</span> mEditText.getText().toString();</span><br><span class="line">  					<span class="comment">//这里的primaryCode就是xml文件中设置的code，用来区别按键执行不同的功能</span></span><br><span class="line">            <span class="keyword">if</span> (primaryCode == -<span class="number">5</span>) &#123;</span><br><span class="line">      					<span class="comment">//是否显示预览图</span></span><br><span class="line">                mKeyboardView.setPreviewEnabled(<span class="literal">false</span>);</span><br><span class="line">                <span class="keyword">if</span> (editStr.length() != <span class="number">0</span>) &#123;</span><br><span class="line">                    mEditText.setText(editStr.substring(<span class="number">0</span>, editStr.length() - <span class="number">1</span>));</span><br><span class="line">                &#125;</span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (primaryCode == -<span class="number">3</span>) &#123;</span><br><span class="line">                mKeyboardView.setPreviewEnabled(<span class="literal">false</span>);</span><br><span class="line">								<span class="comment">//点击完成隐藏掉键盘</span></span><br><span class="line">                hideKeyboard();</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                mKeyboardView.setPreviewEnabled(<span class="literal">true</span>);</span><br><span class="line">      					<span class="comment">//通过primaryCode获取按键的值</span></span><br><span class="line">                mEditText.setText(editStr + mKeyboard.getKeys().get(primaryCode).label.toString());</span><br><span class="line">             &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">		<span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 自定义xml的keyOutputText的值</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> text</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">onText</span><span class="params">(CharSequence text)</span> &#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 左滑动</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">swipeLeft</span><span class="params">()</span> &#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 右滑动</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">swipeRight</span><span class="params">()</span> &#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 下滑动</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">swipeDown</span><span class="params">()</span> &#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 上滑动</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">swipeUp</span><span class="params">()</span> &#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>配置完成，展示出来就行了：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">showEditKeyboard</span><span class="params">(EditText view)</span> &#123;</span><br><span class="line">		<span class="comment">//添加一个展示的动画</span></span><br><span class="line">    <span class="type">TranslateAnimation</span> <span class="variable">animation</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">TranslateAnimation</span>(</span><br><span class="line">            Animation.RELATIVE_TO_PARENT, <span class="number">0.0f</span>, Animation.RELATIVE_TO_PARENT, <span class="number">0.0f</span>,</span><br><span class="line">            Animation.RELATIVE_TO_PARENT, <span class="number">1.0f</span>, Animation.RELATIVE_TO_PARENT, <span class="number">0.0f</span></span><br><span class="line">    );</span><br><span class="line">    animation.setDuration(<span class="number">500</span>);</span><br><span class="line">    mKeyboardView.startAnimation(animation);</span><br><span class="line">		<span class="comment">//以防万一，先关闭掉系统键盘</span></span><br><span class="line">    hideKeyboard(view);</span><br><span class="line">    mKeyboardView.setVisibility(View.VISIBLE);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>隐藏掉自定义键盘：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">hideKeyboard</span><span class="params">()</span> &#123;</span><br><span class="line">    <span class="type">TranslateAnimation</span> <span class="variable">animation</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">TranslateAnimation</span>(</span><br><span class="line">            Animation.RELATIVE_TO_SELF, <span class="number">0.0f</span>, Animation.RELATIVE_TO_SELF, <span class="number">0.0f</span>,</span><br><span class="line">            Animation.RELATIVE_TO_SELF, <span class="number">0.0f</span>, Animation.RELATIVE_TO_SELF, <span class="number">1.0f</span>);</span><br><span class="line">    animation.setDuration(<span class="number">500</span>);</span><br><span class="line">    mKeyboardView.startAnimation(animation);</span><br><span class="line">    mKeyboardView.setVisibility(View.GONE);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>到这里，你可能会问，为什么使用的setVisibility()，我的思路是在布局中先绘制上KeyBoardView，隐藏掉，这样点击输入框的时候，就让它显示出来。来看一下布局文件：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=<span class="string">&quot;1.0&quot;</span> encoding=<span class="string">&quot;utf-8&quot;</span>?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">RelativeLayout</span> <span class="attr">xmlns:android</span>=<span class="string">&quot;http://schemas.android.com/apk/res/android&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">xmlns:tools</span>=<span class="string">&quot;http://schemas.android.com/tools&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:id</span>=<span class="string">&quot;@+id/parentView&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:layout_width</span>=<span class="string">&quot;match_parent&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:layout_height</span>=<span class="string">&quot;match_parent&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:background</span>=<span class="string">&quot;#F5DEB3&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">tools:context</span>=<span class="string">&quot;.MainActivity&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">LinearLayout</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:layout_width</span>=<span class="string">&quot;match_parent&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:layout_height</span>=<span class="string">&quot;wrap_content&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:orientation</span>=<span class="string">&quot;horizontal&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:padding</span>=<span class="string">&quot;10dp&quot;</span>&gt;</span></span><br><span class="line">    </span><br><span class="line">        <span class="tag">&lt;<span class="name">TextView</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:id</span>=<span class="string">&quot;@+id/tvProvince&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:layout_width</span>=<span class="string">&quot;30dp&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:layout_height</span>=<span class="string">&quot;30dp&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:gravity</span>=<span class="string">&quot;center&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:text</span>=<span class="string">&quot;京&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:textColor</span>=<span class="string">&quot;#FF0000&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:textSize</span>=<span class="string">&quot;16sp&quot;</span> /&gt;</span></span><br><span class="line">    </span><br><span class="line">        <span class="tag">&lt;<span class="name">com.jiaop.demos.keyboard.LastInputEditText</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:id</span>=<span class="string">&quot;@+id/etInput&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:layout_width</span>=<span class="string">&quot;match_parent&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:layout_height</span>=<span class="string">&quot;wrap_content&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:layout_marginLeft</span>=<span class="string">&quot;10dp&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:layout_marginRight</span>=<span class="string">&quot;10dp&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:hint</span>=<span class="string">&quot;输入&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:letterSpacing</span>=<span class="string">&quot;2&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:maxLength</span>=<span class="string">&quot;6&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:maxLines</span>=<span class="string">&quot;1&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:textColor</span>=<span class="string">&quot;#DEB887&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:textSize</span>=<span class="string">&quot;16sp&quot;</span> /&gt;</span></span><br><span class="line">    </span><br><span class="line">    <span class="tag">&lt;/<span class="name">LinearLayout</span>&gt;</span></span><br><span class="line">    </span><br><span class="line">    <span class="tag">&lt;<span class="name">android.inputmethodservice.KeyboardView</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:id</span>=<span class="string">&quot;@+id/kvShow&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:layout_width</span>=<span class="string">&quot;match_parent&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:layout_height</span>=<span class="string">&quot;wrap_content&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:layout_alignParentBottom</span>=<span class="string">&quot;true&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:background</span>=<span class="string">&quot;#FFFFFF&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:keyBackground</span>=<span class="string">&quot;@color/colorAccent&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:keyPreviewLayout</span>=<span class="string">&quot;@layout/key_preview&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:keyTextColor</span>=<span class="string">&quot;#8A2BE2&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:keyTextSize</span>=<span class="string">&quot;14sp&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:visibility</span>=<span class="string">&quot;gone&quot;</span> /&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">RelativeLayout</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>使用起来就很简单了，只需要先实例化Util类，依次调用键盘的初始化和显示或隐藏就行了，不过在键盘中设置了“完成”按钮，所以点击“完成”即可关闭掉自定义键盘。</p>
+<p>这只不过是很简单的自定义键盘，如果像银行那种安全性键盘，我想应该一些字码安全处理，有了基础，再根据需求深度开发不也是手到擒来的么。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">private</span> KeyboardUtil keyboardUtil;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">onCreate</span><span class="params">(Bundle savedInstanceState)</span> &#123;</span><br><span class="line">    <span class="built_in">super</span>.onCreate(savedInstanceState);</span><br><span class="line">    setContentView(R.layout.activity_main);</span><br><span class="line">    ButterKnife.bind(<span class="built_in">this</span>);</span><br><span class="line">    keyboardUtil = KeyboardUtil.getInstance();</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//显示键盘</span></span><br><span class="line"><span class="meta">@OnClick(R.id.tvProvince)</span></span><br><span class="line"><span class="keyword">void</span> <span class="title function_">tvProvince</span><span class="params">()</span> &#123;</span><br><span class="line">    keyboardUtil.initTextViewFeatures(<span class="built_in">this</span>, tvProvince, kvShow);</span><br><span class="line">    keyboardUtil.showTextKeyboard();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>-编程</category>
+      </categories>
+      <tags>
+        <tag>Android</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Android-MotionLayout管理运动和微件动画</title>
+    <url>/2021/03/02/android-motionLayout/</url>
+    <content><![CDATA[<h4 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h4><p><code>MotionLayout</code>是一种布局类型，是<code>ConstraintLayout</code> 库的一部分，实现了运动形式的动画，缩小了布局转换与复杂运动处理之间的差距，同时在<code>属性动画框架</code>和 <code>CoordinatorLayout</code>之间提供了各种功能。</p>
+<p><code>MotionLayout</code>完全可以使用xml文件来描述任何转换和动画，无论多么复杂。值得注意的是，<code>MotionLayout</code> 仅适用于其直接子级，不支持嵌套布局层次结构或 <code>Activity </code>转换。</p>
+<p>项目中要做一个仿携程的城市交换动画，一开始使用属性动画写起来很是麻烦，后来就用了<code>MotionLayout</code>，虽然还是有些瑕疵，不过逻辑处理上清晰了很多。</p>
+<span id="more"></span>
+
+<h4 id="声明依赖项"><a href="#声明依赖项" class="headerlink" title="声明依赖项"></a>声明依赖项</h4><figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line">implementation <span class="string">&#x27;androidx.constraintlayout:constraintlayout:2.0.4&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<p>引入版本需要在2.0以上，旧版本不支持。</p>
+<h4 id="绘制页面布局xml"><a href="#绘制页面布局xml" class="headerlink" title="绘制页面布局xml"></a>绘制页面布局xml</h4><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">androidx.constraintlayout.motion.widget.MotionLayout</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:id</span>=<span class="string">&quot;@+id/motionLayout&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:layout_width</span>=<span class="string">&quot;match_parent&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:layout_height</span>=<span class="string">&quot;wrap_content&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">app:layoutDescription</span>=<span class="string">&quot;@xml/scene1&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">app:layout_constraintBottom_toBottomOf</span>=<span class="string">&quot;parent&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">app:layout_constraintTop_toTopOf</span>=<span class="string">&quot;parent&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">app:showPaths</span>=<span class="string">&quot;true&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;<span class="name">TextView</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:id</span>=<span class="string">&quot;@+id/button&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:layout_width</span>=<span class="string">&quot;wrap_content&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:layout_height</span>=<span class="string">&quot;wrap_content&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:gravity</span>=<span class="string">&quot;center&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:text</span>=<span class="string">&quot;北京站&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:textSize</span>=<span class="string">&quot;16sp&quot;</span> /&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;<span class="name">TextView</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:id</span>=<span class="string">&quot;@+id/button1&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:layout_width</span>=<span class="string">&quot;wrap_content&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:layout_height</span>=<span class="string">&quot;wrap_content&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:gravity</span>=<span class="string">&quot;center&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:text</span>=<span class="string">&quot;上海站&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:textSize</span>=<span class="string">&quot;16sp&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">app:layout_constraintEnd_toEndOf</span>=<span class="string">&quot;parent&quot;</span> /&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">androidx.constraintlayout.motion.widget.MotionLayout</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><code>app:layoutDescription</code>：</p>
+<blockquote>
+<p>引用的是一个<code>MotionScene</code>，它是一个<code>xml</code>资源文件，用来描述所有的运动。为了将布局信息与运动描述分开，每个<code>MotionLayout</code>都要引用一个单独的<code>MotionScene</code>。注意，<code>MotionScene </code>中的定义优先于 <code>MotionLayout</code> 中的任何类似定义。</p>
+</blockquote>
+<p><code>app:showPaths</code>：</p>
+<blockquote>
+<p>表示在运动进行时是否显示运动路径。此属性的默认值为 <code>false</code>。</p>
+</blockquote>
+<p><code>app:applyMotionScene=&quot;boolean</code>：</p>
+<blockquote>
+<p>表示是否应用 MotionScene。此属性的默认值为 <code>true</code>。</p>
+</blockquote>
+<p><code>app:progress=&quot;float</code>：</p>
+<blockquote>
+<p>可让您明确指定转换进度。您可以使用从 <code>0</code>（转换开始）到 <code>1</code>（转换结束）之间的任意浮点值。</p>
+</blockquote>
+<p><code>app:currentState=&quot;reference</code>：</p>
+<blockquote>
+<p>可让您指定具体的 <code>ConstraintSet</code>。</p>
+</blockquote>
+<p><code>app:motionDebug</code>：</p>
+<blockquote>
+<p>可让您显示与运动有关的其他调试信息。可能的值为“SHOW_PROGRESS”、“SHOW_PATH”或“SHOW_ALL”。</p>
+</blockquote>
+<h4 id="配置MotionScene描述文件"><a href="#配置MotionScene描述文件" class="headerlink" title="配置MotionScene描述文件"></a>配置MotionScene描述文件</h4><p>在<code>res</code>下创建<code>xml</code>包，新建<code>scene.xml</code>描述文件。</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=<span class="string">&quot;1.0&quot;</span> encoding=<span class="string">&quot;utf-8&quot;</span>?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">MotionScene</span> <span class="attr">xmlns:android</span>=<span class="string">&quot;http://schemas.android.com/apk/res/android&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">xmlns:motion</span>=<span class="string">&quot;http://schemas.android.com/apk/res-auto&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">&lt;!--运动的基本定义</span></span><br><span class="line"><span class="comment">        motion:constraintSetStart 和 motion:constraintSetEnd：运动的端点。</span></span><br><span class="line"><span class="comment">        这些端点在 MotionScene 后面的 &lt;ConstraintSet&gt; 元素中定义。</span></span><br><span class="line"><span class="comment">        motion:duration：完成运动所需的毫秒数。</span></span><br><span class="line"><span class="comment">    --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">Transition</span></span></span><br><span class="line"><span class="tag">        <span class="attr">motion:constraintSetEnd</span>=<span class="string">&quot;@+id/end&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">motion:constraintSetStart</span>=<span class="string">&quot;@+id/start&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">motion:duration</span>=<span class="string">&quot;500&quot;</span> &gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">&lt;!--轻触控制运动</span></span><br><span class="line"><span class="comment">            motion:touchAnchorId：可以滑动并拖动的视图。</span></span><br><span class="line"><span class="comment">            motion:touchAnchorSide：表示我们从右侧拖动视图。</span></span><br><span class="line"><span class="comment">            motion:dragDirection：拖动的进度方向。例如，motion:dragDirection=&quot;dragRight&quot; 表示当您向右拖动时，进度会增加。</span></span><br><span class="line"><span class="comment">        --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">OnSwipe</span></span></span><br><span class="line"><span class="tag">            <span class="attr">motion:touchAnchorId</span>=<span class="string">&quot;@+id/button&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">motion:touchAnchorSide</span>=<span class="string">&quot;right&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">motion:dragDirection</span>=<span class="string">&quot;dragRight&quot;</span> /&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;/<span class="name">Transition</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">&lt;!--定义描述运动的各种限制条件的位置。--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">ConstraintSet</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:id</span>=<span class="string">&quot;@+id/start&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">&lt;!--android:id：需要和布局文件中MotionLayout里面子组件的id一致，一一对应。--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">Constraint</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:id</span>=<span class="string">&quot;@+id/button&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:layout_width</span>=<span class="string">&quot;wrap_content&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:layout_height</span>=<span class="string">&quot;wrap_content&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:layout_marginStart</span>=<span class="string">&quot;8dp&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">motion:layout_constraintBottom_toBottomOf</span>=<span class="string">&quot;parent&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">motion:layout_constraintStart_toStartOf</span>=<span class="string">&quot;parent&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">motion:layout_constraintTop_toTopOf</span>=<span class="string">&quot;parent&quot;</span> /&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;<span class="name">Constraint</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:id</span>=<span class="string">&quot;@+id/button1&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:layout_width</span>=<span class="string">&quot;wrap_content&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:layout_height</span>=<span class="string">&quot;wrap_content&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:layout_marginEnd</span>=<span class="string">&quot;8dp&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">motion:layout_constraintBottom_toBottomOf</span>=<span class="string">&quot;parent&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">motion:layout_constraintEnd_toEndOf</span>=<span class="string">&quot;parent&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">motion:layout_constraintTop_toTopOf</span>=<span class="string">&quot;parent&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">&lt;!--自定义属性，为不仅仅与位置相关的属性或 View 属性指定转换。</span></span><br><span class="line"><span class="comment">            这个标签也可以用在Constraint标签里面</span></span><br><span class="line"><span class="comment">            motion:attributeName：是必需属性，并且必须与具有 getter 和 setter 方法的对象匹配。getter 和 setter 与特定模式非常匹配。</span></span><br><span class="line"><span class="comment">            此外，您必须提供的另一个属性基于值类型。从以下支持的类型中选择：</span></span><br><span class="line"><span class="comment">            motion:customColorValue 适用于颜色</span></span><br><span class="line"><span class="comment">            motion:customIntegerValue 适用于整数</span></span><br><span class="line"><span class="comment">            motion:customFloatValue 适用于浮点值</span></span><br><span class="line"><span class="comment">            motion:customStringValue 适用于字符串</span></span><br><span class="line"><span class="comment">            motion:customDimension 适用于尺寸</span></span><br><span class="line"><span class="comment">            motion:customBoolean 适用于布尔值</span></span><br><span class="line"><span class="comment">            注意，在指定自定义属性时，您必须定义开始和结束 &lt;ConstraintSet&gt; 元素中的端点值。</span></span><br><span class="line"><span class="comment">        --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">CustomAttribute</span></span></span><br><span class="line"><span class="tag">            <span class="attr">motion:attributeName</span>=<span class="string">&quot;backgroundColor&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">motion:customColorValue</span>=<span class="string">&quot;#D81B60&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;/<span class="name">ConstraintSet</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">ConstraintSet</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:id</span>=<span class="string">&quot;@+id/end&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">Constraint</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:id</span>=<span class="string">&quot;@+id/button&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:layout_width</span>=<span class="string">&quot;wrap_content&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:layout_height</span>=<span class="string">&quot;wrap_content&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:layout_marginEnd</span>=<span class="string">&quot;8dp&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">motion:layout_constraintBottom_toBottomOf</span>=<span class="string">&quot;parent&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">motion:layout_constraintEnd_toEndOf</span>=<span class="string">&quot;parent&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">motion:layout_constraintTop_toTopOf</span>=<span class="string">&quot;parent&quot;</span> /&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;<span class="name">Constraint</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:id</span>=<span class="string">&quot;@+id/button1&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:layout_width</span>=<span class="string">&quot;wrap_content&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:layout_height</span>=<span class="string">&quot;wrap_content&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:layout_marginStart</span>=<span class="string">&quot;8dp&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">motion:layout_constraintBottom_toBottomOf</span>=<span class="string">&quot;parent&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">motion:layout_constraintStart_toStartOf</span>=<span class="string">&quot;parent&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">motion:layout_constraintTop_toTopOf</span>=<span class="string">&quot;parent&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">ConstraintSet</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">MotionScene</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="KeyFrameSet关键帧"><a href="#KeyFrameSet关键帧" class="headerlink" title="KeyFrameSet关键帧"></a>KeyFrameSet关键帧</h3><p>这个标签可以改变我们动画过程中某个关键帧的位置以及状态信息。</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Transition</span></span></span><br><span class="line"><span class="tag">        <span class="attr">app:constraintSetEnd</span>=<span class="string">&quot;@id/end&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">app:constraintSetStart</span>=<span class="string">&quot;@id/start&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;<span class="name">KeyFrameSet</span>&gt;</span></span><br><span class="line">          </span><br><span class="line">            <span class="tag">&lt;<span class="name">KeyPosition</span></span></span><br><span class="line"><span class="tag">                <span class="attr">app:framePosition</span>=<span class="string">&quot;50&quot;</span></span></span><br><span class="line"><span class="tag">                <span class="attr">app:keyPositionType</span>=<span class="string">&quot;parentRelative&quot;</span></span></span><br><span class="line"><span class="tag">                <span class="attr">app:motionTarget</span>=<span class="string">&quot;@id/windmill&quot;</span></span></span><br><span class="line"><span class="tag">                <span class="attr">app:percentY</span>=<span class="string">&quot;0.5&quot;</span> /&gt;</span></span><br><span class="line">          </span><br><span class="line">            <span class="comment">&lt;!--前半段的动画效果：逆时针旋转一圈，同时放大一倍--&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">KeyAttribute</span></span></span><br><span class="line"><span class="tag">                <span class="attr">app:framePosition</span>=<span class="string">&quot;50&quot;</span></span></span><br><span class="line"><span class="tag">                <span class="attr">app:motionTarget</span>=<span class="string">&quot;@id/windmill&quot;</span></span></span><br><span class="line"><span class="tag">                <span class="attr">android:rotation</span>=<span class="string">&quot;-360&quot;</span></span></span><br><span class="line"><span class="tag">                <span class="attr">android:scaleX</span>=<span class="string">&quot;2.0&quot;</span></span></span><br><span class="line"><span class="tag">                <span class="attr">android:scaleY</span>=<span class="string">&quot;2.0&quot;</span> /&gt;</span></span><br><span class="line">          </span><br><span class="line">            <span class="comment">&lt;!--后半段的动画效果：逆时针旋转一圈，同时变回原样--&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">KeyAttribute</span></span></span><br><span class="line"><span class="tag">                <span class="attr">app:framePosition</span>=<span class="string">&quot;100&quot;</span></span></span><br><span class="line"><span class="tag">                <span class="attr">app:motionTarget</span>=<span class="string">&quot;@id/windmill&quot;</span></span></span><br><span class="line"><span class="tag">                <span class="attr">android:rotation</span>=<span class="string">&quot;-720&quot;</span> /&gt;</span></span><br><span class="line">          </span><br><span class="line">            <span class="comment">&lt;!--延迟动画——0-85过程中将透明度一直维持在0.0--&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">KeyAttribute</span></span></span><br><span class="line"><span class="tag">                <span class="attr">app:framePosition</span>=<span class="string">&quot;85&quot;</span></span></span><br><span class="line"><span class="tag">                <span class="attr">app:motionTarget</span>=<span class="string">&quot;@id/tipText&quot;</span></span></span><br><span class="line"><span class="tag">                <span class="attr">android:alpha</span>=<span class="string">&quot;0.0&quot;</span> /&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;/<span class="name">KeyFrameSet</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;/<span class="name">Transition</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><code>KeyPosition</code>和<code>KeyAttribute</code>：用来设置动画某个位置的关键帧，进而为某段动画指定所期望的效果。</p>
+<p><code>KeyPosition</code>用于指定动画某个关键帧的位置信息。</p>
+<p><code>KeyAttribute</code> 则用来描述动画某关键帧的属性配置（如：透明度、缩放、旋转等）。</p>
+<h4 id="页面中使用"><a href="#页面中使用" class="headerlink" title="页面中使用"></a>页面中使用</h4><figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="comment">//开始动画，起始点和终点</span></span><br><span class="line">motionLayout?.transitionToStart()</span><br><span class="line">motionLayout?.transitionToEnd()</span><br><span class="line"></span><br><span class="line">motionLayout?.setTransitionListener(<span class="keyword">object</span> : MotionLayout.TransitionListener &#123;</span><br><span class="line">            <span class="keyword">override</span> <span class="function"><span class="keyword">fun</span> <span class="title">onTransitionCompleted</span><span class="params">(p0: <span class="type">MotionLayout</span>?, p1: <span class="type">Int</span>)</span></span> &#123;</span><br><span class="line">              <span class="comment">//	动画完全执行完毕</span></span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">override</span> <span class="function"><span class="keyword">fun</span> <span class="title">onTransitionStarted</span><span class="params">(p0: <span class="type">MotionLayout</span>?, p1: <span class="type">Int</span>, p2: <span class="type">Int</span>)</span></span> &#123;</span><br><span class="line">              <span class="comment">//动画开始执行</span></span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">override</span> <span class="function"><span class="keyword">fun</span> <span class="title">onTransitionChange</span><span class="params">(p0: <span class="type">MotionLayout</span>?, p1: <span class="type">Int</span>, p2: <span class="type">Int</span>, p3: <span class="type">Float</span>)</span></span> &#123;</span><br><span class="line">              <span class="comment">//动画改变过程</span></span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">override</span> <span class="function"><span class="keyword">fun</span> <span class="title">onTransitionTrigger</span><span class="params">(p0: <span class="type">MotionLayout</span>?, p1: <span class="type">Int</span>, p2: <span class="type">Boolean</span>, p3: <span class="type">Float</span>)</span></span> &#123;</span><br><span class="line">              <span class="comment">//动画触发时监听</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;)</span><br></pre></td></tr></table></figure>
+
+<h4 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h4><p>更多事例可以查看<a href="https://developer.android.google.cn/training/constraint-layout/motionlayout/examples">MotionLayout 示例</a>，官方已经写好了，以提供参考。</p>
+<h4 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h4><p><code>MotionLayout</code>解决了我们绘制动画的复杂性，减少了相当多的计算绘制代码，但是也不能说就一定要用它，视情况和需求而定。</p>
+]]></content>
+      <categories>
+        <category>-编程</category>
+      </categories>
+      <tags>
+        <tag>Android</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Activity的启动模式</title>
+    <url>/2021/05/27/android-launch-mode/</url>
+    <content><![CDATA[<h4 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h4><p><code>Activity</code>的启动模式，在面试中提问到的几率很高，以此梳理一下知识点。</p>
+<span id="more"></span>
+
+<h4 id="任务栈"><a href="#任务栈" class="headerlink" title="任务栈"></a>任务栈</h4><p><code>Android</code>采用任务栈的方式管理<code>Activity</code>的实例，当一个应用启动时，<code>Android</code>就会创建一个任务栈。任务栈类似于一个容器，每次存放一个<code>Activity</code>时，满足“先进后出（First-In&#x2F;Last-out）”的原则。先加入的<code>Activity</code>实例将会处于底部，后加入的<code>Activity</code>实例会依次处于栈的上面。堆栈中存放的<code>Activity</code>实例顺序永远不会重新排列，只会被送入和退出。</p>
+<p>启动模式简单地说就是<code>Activity</code>启动时的策略，告诉堆栈将如何管理里面的实例。</p>
+<h4 id="四种启动模式"><a href="#四种启动模式" class="headerlink" title="四种启动模式"></a>四种启动模式</h4><h5 id="standard"><a href="#standard" class="headerlink" title="standard"></a>standard</h5><p>标准模式。默认启动模式。每启动一个<code>Activity</code>，就会创建一个新的实例，并将处于堆栈的栈顶位置。</p>
+<h5 id="singleTop"><a href="#singleTop" class="headerlink" title="singleTop"></a>singleTop</h5><p>栈顶复用模式。如果当前实例已经存在于栈顶，堆栈将直接使用它，不会再重新创建新的实例。系统将调用<code>onNewIntent()</code>方法将<code>intent</code>转送给该实例。</p>
+<h5 id="singleTask"><a href="#singleTask" class="headerlink" title="singleTask"></a>singleTask</h5><p>栈内复用模式。每次启动该<code>Activity</code>时，系统首先会检查堆栈中是否存在该<code>Activity</code>的实例，如果发现已经存在则直接使用该实例，并将当前<code>Activity</code>之上的所有<code>Activity</code>出栈，如果没有发现则创建一个新的实例。 系统将调用<code>onNewIntent()</code>方法将<code>intent</code>转送给该实例。</p>
+<h5 id="singleInstance"><a href="#singleInstance" class="headerlink" title="singleInstance"></a>singleInstance</h5><p>单实例模式。<code>singleTask</code>的增强版，具有它的所有特性。如果该<code>Activity</code>实例不存在，系统将开启一个新的堆栈，存放这个实例，并保证不再有其他<code>Activity</code>实例进入。如果<code>Activity</code>实例已经存在，无论位于哪个应用程序或者哪个任务栈中，系统都会把该<code>Activity</code>所有的任务栈转到前台，从而使该<code>Activity</code>显示出来。</p>
+<h4 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h4><p>standard：适用于大部分场景。</p>
+<p>singleTop：适合接收通知启动的内容显示页面。</p>
+<p>singleTask：适合作为程序入口点。</p>
+<p>singleInstance：适合需要与程序分离开的页面。</p>
+<h4 id="使用方式"><a href="#使用方式" class="headerlink" title="使用方式"></a>使用方式</h4><ul>
+<li><p>在 Manifest.xml中指定Activity启动模式</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">activity</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:name</span>=<span class="string">&quot;.activity.Activity&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:launchMode</span>=<span class="string">&quot;singleTop&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>使用<code>Intent</code>标记</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//FLAG_ACTIVITY_NEW_TASK</span></span><br><span class="line"><span class="comment">//作用是为Activity指定 “SingleTask”启动模式。跟在AndroidMainfest.xml指定效果同样。</span></span><br><span class="line"><span class="comment">//FLAG_ACTIVITY_SINGLE_TOP</span></span><br><span class="line"><span class="comment">//作用是为Activity指定 “SingleTop”启动模式，跟在AndroidMainfest.xml指定效果同样。</span></span><br><span class="line"><span class="comment">//FLAG_ACTIVITY_CLEAN_TOP</span></span><br><span class="line"><span class="comment">//具有此标记位的Activity，启动时会将与该Activity在同一任务栈的其他Activity出栈。一般与SingleTask启动模式一起出现。它会完毕SingleTask的作用。但事实上SingleTask启动模式默认具有此标记位的作用</span></span><br><span class="line"><span class="comment">//FLAG_ACTIVITY_EXCLUDE_FROM_RECENTS</span></span><br><span class="line"><span class="comment">//具有此标记位的Activity不会出如今历史Activity的列表中，使用场景：当某些情况下我们不希望用户通过历史列表回到Activity时，此标记位便体现了它的效果。它等同于在xml中指定Activity的属性：</span></span><br><span class="line"><span class="comment">//android:excludeFromRecents=“trure”</span></span><br><span class="line"><span class="type">Intent</span> <span class="variable">intent</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Intent</span>();</span><br><span class="line">intent.setClass(context, MainActivity.class);</span><br><span class="line">intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);</span><br><span class="line">context.startActivity(intent);</span><br></pre></td></tr></table></figure></li>
+</ul>
+]]></content>
+      <categories>
+        <category>-编程</category>
+      </categories>
+      <tags>
+        <tag>Android</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Android-关于Activity生命周期的理解</title>
+    <url>/2021/05/24/android-life-cycle/</url>
+    <content><![CDATA[<h4 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h4><p>最近在重构支付模块时，测试说一直跳转不到支付结果页面，最后发现我们是在<code>onRestart()</code>里面写的支付回调接口，但是那个小米的测试机，真的就是不走<code>onRestart()</code>方法啊！！奇怪的知识又增加了，这个到现在我也没搞明白为什么……也好，再次熟悉一下Activity的生命周期吧，毕竟面试问的最多的也是这个。</p>
+<span id="more"></span>
+
+<h4 id="Activity生命周期的简化图示"><a href="#Activity生命周期的简化图示" class="headerlink" title="Activity生命周期的简化图示"></a>Activity生命周期的简化图示</h4><p><img data-src="https://developer.android.google.cn/guide/components/images/activity_lifecycle.png"></p>
+<p>惯例先看这张经典的流程图。</p>
+<h4 id="详解"><a href="#详解" class="headerlink" title="详解"></a>详解</h4><h6 id="onCreate"><a href="#onCreate" class="headerlink" title="onCreate()"></a>onCreate()</h6><p>在<code>Activity</code>首次创建时触发，<code>Activity</code>会在创建后进入“已创建”的状态。并且只会发生一次。应当在此时完成<code>Activity</code>中的一些初始化操作。</p>
+<p>参数：<code>savedInstanceState: Bundle</code>：包含<code>Activity</code>先前保存状态的<code>Bundle</code>对象，如果<code>Activity</code>此前未曾存在，该对象值为<code>null</code>。与之对应的方法为：</p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">override</span> <span class="function"><span class="keyword">fun</span> <span class="title">onCreate</span><span class="params">(savedInstanceState: <span class="type">Bundle</span>?)</span></span> &#123;</span><br><span class="line">    <span class="keyword">super</span>.onCreate(savedInstanceState)</span><br><span class="line">    <span class="comment">//获取保存的状态值</span></span><br><span class="line">    <span class="keyword">val</span> gameState = savedInstanceState?.getString(GAME_STATE_KEY)</span><br><span class="line">    setContentView(R.layout.main_activity)</span><br><span class="line">		<span class="comment">//do something</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">override</span> <span class="function"><span class="keyword">fun</span> <span class="title">onRestoreInstanceState</span><span class="params">(savedInstanceState: <span class="type">Bundle</span>?)</span></span> &#123;</span><br><span class="line">    <span class="comment">//此方法在onStart()完成后执行，根据不同业务场景按需调用</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//当活动可能被临时破坏时调用，在此处保存实例状态</span></span><br><span class="line"><span class="keyword">override</span> <span class="function"><span class="keyword">fun</span> <span class="title">onSaveInstanceState</span><span class="params">(outState: <span class="type">Bundle</span>?)</span></span> &#123;</span><br><span class="line">    outState?.run &#123;</span><br><span class="line">        putString(GAME_STATE_KEY, gameState)</span><br><span class="line">        putString(TEXT_VIEW_KEY, textView.text.toString())</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">super</span>.onSaveInstanceState(outState)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h6 id="onStart"><a href="#onStart" class="headerlink" title="onStart()"></a>onStart()</h6><p>在<code>onCreate()</code>之后执行，<code>Activity</code>处于“已开始”状态，此时<code>Activity</code>对用户是可见状态，应用会为<code>Activity</code>进入前台并支持互动做准备，可以在<code>onStart()</code>方法中，初始化维护界面的代码。</p>
+<h6 id="onResume"><a href="#onResume" class="headerlink" title="onResume()"></a>onResume()</h6><p><code>Activity</code>进入“已恢复”状态，并来到前台，此时应用与用户处于互动状态。应用会一直保持这种状态。<code>Activity</code>也一定位于返回栈的栈顶并处于运行状态。</p>
+<h6 id="onPause"><a href="#onPause" class="headerlink" title="onPause()"></a>onPause()</h6><p>调用这个方法时，说明用户将要离开当前<code>Activity</code>，<code>Activity</code>将不再位于前台，而是处于“已暂停”状态。这个函数的执行速度一定要快，不然会影响新的栈顶活动的使用。通常在此函数中将一些消耗CPU的资源释放掉，以及保存一些重要的数据。</p>
+<h6 id="onStop"><a href="#onStop" class="headerlink" title="onStop()"></a>onStop()</h6><p>此时，<code>Activity</code>已进入“已停止”状态，<code>Activity</code>不再对用户可见，新的<code>Activity</code>已经覆盖屏幕。这个函数中，应释放或调整在应用对用户不可见时的无用资源，例如：暂停动画效果等。</p>
+<h6 id="onDestroy"><a href="#onDestroy" class="headerlink" title="onDestroy()"></a>onDestroy()</h6><p><code>Activity</code>销毁状态调用，此时<code>Activity</code>被用户彻底关闭，或者调用了<code>finish()</code>方法，或者由于配置变更，例如设备旋转、多窗口模式，系统暂时销毁<code>Activity</code>。</p>
+<h6 id="onRestart"><a href="#onRestart" class="headerlink" title="onRestart()"></a>onRestart()</h6><p><code>Activity</code>由停止状态变为运行状态之前调用，<code>Activity</code>重启。</p>
+<h4 id="各种场景下调用顺序"><a href="#各种场景下调用顺序" class="headerlink" title="各种场景下调用顺序"></a>各种场景下调用顺序</h4><ul>
+<li><h6 id="Activity跳转到下一个Activity"><a href="#Activity跳转到下一个Activity" class="headerlink" title="Activity跳转到下一个Activity"></a><code>Activity</code>跳转到下一个<code>Activity</code></h6></li>
+</ul>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line">$:MainActivity onCreate</span><br><span class="line">$:MainActivity onStart</span><br><span class="line">$:MainActivity onResume</span><br><span class="line">$:MainActivity onPause</span><br><span class="line">$:SecondActivity onCreate</span><br><span class="line">$:SecondActivity onStart</span><br><span class="line">$:SecondActivity onResume</span><br><span class="line">$:MainActivity onStop</span><br></pre></td></tr></table></figure>
+
+<p>然后从第二个<code>Activity</code>返回到之前的<code>Activity</code></p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line">$:SecondActivity onPause</span><br><span class="line">$:MainActivity onRestart</span><br><span class="line">$:MainActivity onStart</span><br><span class="line">$:MainActivity onResume</span><br><span class="line">$:SecondActivity onStop</span><br><span class="line">$:SecondActivity onDestroy</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><h6 id="Activity中打开Dialog样式的Activity"><a href="#Activity中打开Dialog样式的Activity" class="headerlink" title="Activity中打开Dialog样式的Activity"></a><code>Activity</code>中打开<code>Dialog</code>样式的<code>Activity</code></h6></li>
+</ul>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line">$:MainActivity onCreate</span><br><span class="line">$:MainActivity onStart</span><br><span class="line">$:MainActivity onResume</span><br><span class="line">$:MainActivity onPause</span><br><span class="line">$:SecondActivity onCreate</span><br><span class="line">$:SecondActivity onStart</span><br><span class="line">$:SecondActivity onResume</span><br></pre></td></tr></table></figure>
+
+<p>关闭<code>Dialog</code></p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line">$:SecondActivity onPause</span><br><span class="line">$:MainActivity onResume</span><br><span class="line">$:SecondActivity onStop</span><br><span class="line">$:SecondActivity onDestroy</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><h6 id="Activity翻转屏幕（会重新创建）"><a href="#Activity翻转屏幕（会重新创建）" class="headerlink" title="Activity翻转屏幕（会重新创建）"></a><code>Activity</code>翻转屏幕（会重新创建）</h6></li>
+</ul>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line">$:MainActivity onCreate</span><br><span class="line">$:MainActivity onStart</span><br><span class="line">$:MainActivity onResume</span><br><span class="line">$:MainActivity onPause</span><br><span class="line">$:MainActivity onStop</span><br><span class="line">$:MainActivity onDestroy</span><br><span class="line">$:MainActivity onCreate</span><br><span class="line">$:MainActivity onStart</span><br><span class="line">$:MainActivity onResume</span><br></pre></td></tr></table></figure>
+
 ]]></content>
       <categories>
         <category>-编程</category>
@@ -597,191 +782,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Android-自定义键盘</title>
-    <url>/2021/02/25/android-keyboard/</url>
-    <content><![CDATA[<p>在开发中，可能会有一些对于键盘的自定义，不建议直接使用PopWindow或者Dialog，可以尝试一下隐藏掉系统的键盘，我们自定义一个。</p>
-<p>大体上分为一下几步：</p>
-<ul>
-<li>编写键盘上展示内容的xml文件</li>
-<li>创建键盘Util使用类</li>
-<li>使用</li>
-</ul>
-<span id="more"></span>
-
-<h3 id="编写xml文件"><a href="#编写xml文件" class="headerlink" title="编写xml文件"></a>编写xml文件</h3><p>在res目录下创建一个xml文件夹，然后新建一个.xml文件，这个文件用来标识键盘上要显示的内容，以及编码。先放上示例代码：</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=<span class="string">&quot;1.0&quot;</span> encoding=<span class="string">&quot;UTF-8&quot;</span>?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">Keyboard</span> <span class="attr">xmlns:android</span>=<span class="string">&quot;http://schemas.android.com/apk/res/android&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:horizontalGap</span>=<span class="string">&quot;2dp&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:keyHeight</span>=<span class="string">&quot;50dp&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:verticalGap</span>=<span class="string">&quot;2dp&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">Key</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:codes</span>=<span class="string">&quot;0&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:keyEdgeFlags</span>=<span class="string">&quot;left&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:keyLabel</span>=<span class="string">&quot;0&quot;</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">Key</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:codes</span>=<span class="string">&quot;1&quot;</span></span></span><br><span class="line"><span class="tag">        &lt;<span class="attr">Key</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:codes</span>=<span class="string">&quot;2&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:keyLabel</span>=<span class="string">&quot;2&quot;</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">Key</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:codes</span>=<span class="string">&quot;3&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:keyLabel</span>=<span class="string">&quot;3&quot;</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">Key</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:codes</span>=<span class="string">&quot;4&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:keyLabel</span>=<span class="string">&quot;4&quot;</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">Key</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:keyLabel</span>=<span class="string">&quot;5&quot;</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">Key</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:codes</span>=<span class="string">&quot;6&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:keyLabel</span>=<span class="string">&quot;6&quot;</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">Key</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:codes</span>=<span class="string">&quot;7&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:keyLabel</span>=<span class="string">&quot;7&quot;</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">Key</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:codes</span>=<span class="string">&quot;8&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:keyLabel</span>=<span class="string">&quot;8&quot;</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">Key</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:codes</span>=<span class="string">&quot;9&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:keyEdgeFlags</span>=<span class="string">&quot;right&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:keyLabel</span>=<span class="string">&quot;9&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">Row</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">Keyboard</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p><Keyboard>标签中的android:keyHeight和android:keyWidth属性，可以使用百分比赋值。<br>标签属性：<br>属性 说明<br>keyLabel 按键显示的内容<br>keyIcon 按键显示的图标内容<br>keyWidth 按键的宽度<br>keyHeight 按键的高度<br>horizontalGap 代表按键前的间隙水平方向上的<br>isSticky 按键是否是sticky的，就像shift 键 具有两种状态<br>isModifier 按键是不是功能键<br>keyOutputText 指定按键输出的内容是字符串<br>isRepeatable 按键是可重复的，如果长按键可以触发重复按键事件则为true，else为false<br>keyEdgeFlags 指定按键的对齐指令，取值为left或者right<br>codes 指这个键代表的字符的unicode</p>
-<p>常用的codes值：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">int</span> <span class="variable">EDGE_LEFT</span> <span class="operator">=</span> <span class="number">1</span>;</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">int</span> <span class="variable">EDGE_RIGHT</span> <span class="operator">=</span> <span class="number">2</span>;</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">int</span> <span class="variable">EDGE_TOP</span> <span class="operator">=</span> <span class="number">4</span>;</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">int</span> <span class="variable">EDGE_BOTTOM</span> <span class="operator">=</span> <span class="number">8</span>;</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">int</span> <span class="variable">KEYCODE_SHIFT</span> <span class="operator">=</span> -<span class="number">1</span>;</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">int</span> <span class="variable">KEYCODE_MODE_CHANGE</span> <span class="operator">=</span> -<span class="number">2</span>;</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">int</span> <span class="variable">KEYCODE_CANCEL</span> <span class="operator">=</span> -<span class="number">3</span>;</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">int</span> <span class="variable">KEYCODE_DONE</span> <span class="operator">=</span> -<span class="number">4</span>;</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">int</span> <span class="variable">KEYCODE_DELETE</span> <span class="operator">=</span> -<span class="number">5</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">int</span> <span class="variable">KEYCODE_ALT</span> <span class="operator">=</span> -<span class="number">6</span>;</span><br></pre></td></tr></table></figure>
-
-<p>还需要一个布局xml文件来显示每个按键的预览图，在layout文件夹中创建即可，示例代码key_preview.xml：</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=<span class="string">&quot;1.0&quot;</span> encoding=<span class="string">&quot;utf-8&quot;</span>?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">TextView</span> <span class="attr">xmlns:android</span>=<span class="string">&quot;http://schemas.android.com/apk/res/android&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:layout_width</span>=<span class="string">&quot;wrap_content&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:layout_height</span>=<span class="string">&quot;wrap_content&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:background</span>=<span class="string">&quot;#FFFFFF&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:gravity</span>=<span class="string">&quot;center&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:textColor</span>=<span class="string">&quot;#FF0000&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:textSize</span>=<span class="string">&quot;14sp&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="创建Util帮助类"><a href="#创建Util帮助类" class="headerlink" title="创建Util帮助类"></a>创建Util帮助类</h3><p>在这个类中，主要对KeyboardView和Keyboard进行一些配置。</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title function_">initLetterKeyboard</span><span class="params">()</span> &#123;</span><br><span class="line">    mKeyboard = <span class="literal">null</span>;</span><br><span class="line">    mKeyboard = <span class="keyword">new</span> <span class="title class_">Keyboard</span>(mActivity, R.xml.letters_kb);</span><br><span class="line">    mKeyboardView.setKeyboard(mKeyboard);</span><br><span class="line">    mKeyboardView.setOnKeyboardActionListener(mListener);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>首先把自定义的内容xml文件加载进入Keyboard中，再放入KeyboardView中，监听setOnKeyboardActionListener方法，获取键盘上按键的点击监听：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 键盘监听</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">private</span> KeyboardView.<span class="type">OnKeyboardActionListener</span> <span class="variable">mListener</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">KeyboardView</span>.OnKeyboardActionListener() &#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 按下触发</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> primaryCode</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">onPress</span><span class="params">(<span class="type">int</span> primaryCode)</span> &#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 松开触发</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> primaryCode</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">onRelease</span><span class="params">(<span class="type">int</span> primaryCode)</span> &#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 松开触发，在OnRelease之前触发</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> primaryCode</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> keyCodes</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">onKey</span><span class="params">(<span class="type">int</span> primaryCode, <span class="type">int</span>[] keyCodes)</span> &#123;</span><br><span class="line">            <span class="type">String</span> <span class="variable">editStr</span> <span class="operator">=</span> mEditText.getText().toString();</span><br><span class="line">  					<span class="comment">//这里的primaryCode就是xml文件中设置的code，用来区别按键执行不同的功能</span></span><br><span class="line">            <span class="keyword">if</span> (primaryCode == -<span class="number">5</span>) &#123;</span><br><span class="line">      					<span class="comment">//是否显示预览图</span></span><br><span class="line">                mKeyboardView.setPreviewEnabled(<span class="literal">false</span>);</span><br><span class="line">                <span class="keyword">if</span> (editStr.length() != <span class="number">0</span>) &#123;</span><br><span class="line">                    mEditText.setText(editStr.substring(<span class="number">0</span>, editStr.length() - <span class="number">1</span>));</span><br><span class="line">                &#125;</span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (primaryCode == -<span class="number">3</span>) &#123;</span><br><span class="line">                mKeyboardView.setPreviewEnabled(<span class="literal">false</span>);</span><br><span class="line">								<span class="comment">//点击完成隐藏掉键盘</span></span><br><span class="line">                hideKeyboard();</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                mKeyboardView.setPreviewEnabled(<span class="literal">true</span>);</span><br><span class="line">      					<span class="comment">//通过primaryCode获取按键的值</span></span><br><span class="line">                mEditText.setText(editStr + mKeyboard.getKeys().get(primaryCode).label.toString());</span><br><span class="line">             &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">		<span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 自定义xml的keyOutputText的值</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> text</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">onText</span><span class="params">(CharSequence text)</span> &#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 左滑动</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">swipeLeft</span><span class="params">()</span> &#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 右滑动</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">swipeRight</span><span class="params">()</span> &#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 下滑动</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">swipeDown</span><span class="params">()</span> &#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 上滑动</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">swipeUp</span><span class="params">()</span> &#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-<p>配置完成，展示出来就行了：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">showEditKeyboard</span><span class="params">(EditText view)</span> &#123;</span><br><span class="line">		<span class="comment">//添加一个展示的动画</span></span><br><span class="line">    <span class="type">TranslateAnimation</span> <span class="variable">animation</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">TranslateAnimation</span>(</span><br><span class="line">            Animation.RELATIVE_TO_PARENT, <span class="number">0.0f</span>, Animation.RELATIVE_TO_PARENT, <span class="number">0.0f</span>,</span><br><span class="line">            Animation.RELATIVE_TO_PARENT, <span class="number">1.0f</span>, Animation.RELATIVE_TO_PARENT, <span class="number">0.0f</span></span><br><span class="line">    );</span><br><span class="line">    animation.setDuration(<span class="number">500</span>);</span><br><span class="line">    mKeyboardView.startAnimation(animation);</span><br><span class="line">		<span class="comment">//以防万一，先关闭掉系统键盘</span></span><br><span class="line">    hideKeyboard(view);</span><br><span class="line">    mKeyboardView.setVisibility(View.VISIBLE);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>隐藏掉自定义键盘：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">hideKeyboard</span><span class="params">()</span> &#123;</span><br><span class="line">    <span class="type">TranslateAnimation</span> <span class="variable">animation</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">TranslateAnimation</span>(</span><br><span class="line">            Animation.RELATIVE_TO_SELF, <span class="number">0.0f</span>, Animation.RELATIVE_TO_SELF, <span class="number">0.0f</span>,</span><br><span class="line">            Animation.RELATIVE_TO_SELF, <span class="number">0.0f</span>, Animation.RELATIVE_TO_SELF, <span class="number">1.0f</span>);</span><br><span class="line">    animation.setDuration(<span class="number">500</span>);</span><br><span class="line">    mKeyboardView.startAnimation(animation);</span><br><span class="line">    mKeyboardView.setVisibility(View.GONE);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>到这里，你可能会问，为什么使用的setVisibility()，我的思路是在布局中先绘制上KeyBoardView，隐藏掉，这样点击输入框的时候，就让它显示出来。来看一下布局文件：</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=<span class="string">&quot;1.0&quot;</span> encoding=<span class="string">&quot;utf-8&quot;</span>?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">RelativeLayout</span> <span class="attr">xmlns:android</span>=<span class="string">&quot;http://schemas.android.com/apk/res/android&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">xmlns:tools</span>=<span class="string">&quot;http://schemas.android.com/tools&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:id</span>=<span class="string">&quot;@+id/parentView&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:layout_width</span>=<span class="string">&quot;match_parent&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:layout_height</span>=<span class="string">&quot;match_parent&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:background</span>=<span class="string">&quot;#F5DEB3&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">tools:context</span>=<span class="string">&quot;.MainActivity&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">LinearLayout</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:layout_width</span>=<span class="string">&quot;match_parent&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:layout_height</span>=<span class="string">&quot;wrap_content&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:orientation</span>=<span class="string">&quot;horizontal&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:padding</span>=<span class="string">&quot;10dp&quot;</span>&gt;</span></span><br><span class="line">    </span><br><span class="line">        <span class="tag">&lt;<span class="name">TextView</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:id</span>=<span class="string">&quot;@+id/tvProvince&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:layout_width</span>=<span class="string">&quot;30dp&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:layout_height</span>=<span class="string">&quot;30dp&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:gravity</span>=<span class="string">&quot;center&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:text</span>=<span class="string">&quot;京&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:textColor</span>=<span class="string">&quot;#FF0000&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:textSize</span>=<span class="string">&quot;16sp&quot;</span> /&gt;</span></span><br><span class="line">    </span><br><span class="line">        <span class="tag">&lt;<span class="name">com.jiaop.demos.keyboard.LastInputEditText</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:id</span>=<span class="string">&quot;@+id/etInput&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:layout_width</span>=<span class="string">&quot;match_parent&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:layout_height</span>=<span class="string">&quot;wrap_content&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:layout_marginLeft</span>=<span class="string">&quot;10dp&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:layout_marginRight</span>=<span class="string">&quot;10dp&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:hint</span>=<span class="string">&quot;输入&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:letterSpacing</span>=<span class="string">&quot;2&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:maxLength</span>=<span class="string">&quot;6&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:maxLines</span>=<span class="string">&quot;1&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:textColor</span>=<span class="string">&quot;#DEB887&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:textSize</span>=<span class="string">&quot;16sp&quot;</span> /&gt;</span></span><br><span class="line">    </span><br><span class="line">    <span class="tag">&lt;/<span class="name">LinearLayout</span>&gt;</span></span><br><span class="line">    </span><br><span class="line">    <span class="tag">&lt;<span class="name">android.inputmethodservice.KeyboardView</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:id</span>=<span class="string">&quot;@+id/kvShow&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:layout_width</span>=<span class="string">&quot;match_parent&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:layout_height</span>=<span class="string">&quot;wrap_content&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:layout_alignParentBottom</span>=<span class="string">&quot;true&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:background</span>=<span class="string">&quot;#FFFFFF&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:keyBackground</span>=<span class="string">&quot;@color/colorAccent&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:keyPreviewLayout</span>=<span class="string">&quot;@layout/key_preview&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:keyTextColor</span>=<span class="string">&quot;#8A2BE2&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:keyTextSize</span>=<span class="string">&quot;14sp&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:visibility</span>=<span class="string">&quot;gone&quot;</span> /&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">RelativeLayout</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>使用起来就很简单了，只需要先实例化Util类，依次调用键盘的初始化和显示或隐藏就行了，不过在键盘中设置了“完成”按钮，所以点击“完成”即可关闭掉自定义键盘。</p>
-<p>这只不过是很简单的自定义键盘，如果像银行那种安全性键盘，我想应该一些字码安全处理，有了基础，再根据需求深度开发不也是手到擒来的么。</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">private</span> KeyboardUtil keyboardUtil;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">onCreate</span><span class="params">(Bundle savedInstanceState)</span> &#123;</span><br><span class="line">    <span class="built_in">super</span>.onCreate(savedInstanceState);</span><br><span class="line">    setContentView(R.layout.activity_main);</span><br><span class="line">    ButterKnife.bind(<span class="built_in">this</span>);</span><br><span class="line">    keyboardUtil = KeyboardUtil.getInstance();</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//显示键盘</span></span><br><span class="line"><span class="meta">@OnClick(R.id.tvProvince)</span></span><br><span class="line"><span class="keyword">void</span> <span class="title function_">tvProvince</span><span class="params">()</span> &#123;</span><br><span class="line">    keyboardUtil.initTextViewFeatures(<span class="built_in">this</span>, tvProvince, kvShow);</span><br><span class="line">    keyboardUtil.showTextKeyboard();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>-编程</category>
-      </categories>
-      <tags>
-        <tag>Android</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Android-MotionLayout管理运动和微件动画</title>
-    <url>/2021/03/02/android-motionLayout/</url>
-    <content><![CDATA[<h4 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h4><p><code>MotionLayout</code>是一种布局类型，是<code>ConstraintLayout</code> 库的一部分，实现了运动形式的动画，缩小了布局转换与复杂运动处理之间的差距，同时在<code>属性动画框架</code>和 <code>CoordinatorLayout</code>之间提供了各种功能。</p>
-<p><code>MotionLayout</code>完全可以使用xml文件来描述任何转换和动画，无论多么复杂。值得注意的是，<code>MotionLayout</code> 仅适用于其直接子级，不支持嵌套布局层次结构或 <code>Activity </code>转换。</p>
-<p>项目中要做一个仿携程的城市交换动画，一开始使用属性动画写起来很是麻烦，后来就用了<code>MotionLayout</code>，虽然还是有些瑕疵，不过逻辑处理上清晰了很多。</p>
-<span id="more"></span>
-
-<h4 id="声明依赖项"><a href="#声明依赖项" class="headerlink" title="声明依赖项"></a>声明依赖项</h4><figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line">implementation <span class="string">&#x27;androidx.constraintlayout:constraintlayout:2.0.4&#x27;</span></span><br></pre></td></tr></table></figure>
-
-<p>引入版本需要在2.0以上，旧版本不支持。</p>
-<h4 id="绘制页面布局xml"><a href="#绘制页面布局xml" class="headerlink" title="绘制页面布局xml"></a>绘制页面布局xml</h4><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">androidx.constraintlayout.motion.widget.MotionLayout</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:id</span>=<span class="string">&quot;@+id/motionLayout&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:layout_width</span>=<span class="string">&quot;match_parent&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:layout_height</span>=<span class="string">&quot;wrap_content&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">app:layoutDescription</span>=<span class="string">&quot;@xml/scene1&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">app:layout_constraintBottom_toBottomOf</span>=<span class="string">&quot;parent&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">app:layout_constraintTop_toTopOf</span>=<span class="string">&quot;parent&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">app:showPaths</span>=<span class="string">&quot;true&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;<span class="name">TextView</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:id</span>=<span class="string">&quot;@+id/button&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:layout_width</span>=<span class="string">&quot;wrap_content&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:layout_height</span>=<span class="string">&quot;wrap_content&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:gravity</span>=<span class="string">&quot;center&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:text</span>=<span class="string">&quot;北京站&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:textSize</span>=<span class="string">&quot;16sp&quot;</span> /&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;<span class="name">TextView</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:id</span>=<span class="string">&quot;@+id/button1&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:layout_width</span>=<span class="string">&quot;wrap_content&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:layout_height</span>=<span class="string">&quot;wrap_content&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:gravity</span>=<span class="string">&quot;center&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:text</span>=<span class="string">&quot;上海站&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:textSize</span>=<span class="string">&quot;16sp&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">app:layout_constraintEnd_toEndOf</span>=<span class="string">&quot;parent&quot;</span> /&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">androidx.constraintlayout.motion.widget.MotionLayout</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p><code>app:layoutDescription</code>：</p>
-<blockquote>
-<p>引用的是一个<code>MotionScene</code>，它是一个<code>xml</code>资源文件，用来描述所有的运动。为了将布局信息与运动描述分开，每个<code>MotionLayout</code>都要引用一个单独的<code>MotionScene</code>。注意，<code>MotionScene </code>中的定义优先于 <code>MotionLayout</code> 中的任何类似定义。</p>
-</blockquote>
-<p><code>app:showPaths</code>：</p>
-<blockquote>
-<p>表示在运动进行时是否显示运动路径。此属性的默认值为 <code>false</code>。</p>
-</blockquote>
-<p><code>app:applyMotionScene=&quot;boolean</code>：</p>
-<blockquote>
-<p>表示是否应用 MotionScene。此属性的默认值为 <code>true</code>。</p>
-</blockquote>
-<p><code>app:progress=&quot;float</code>：</p>
-<blockquote>
-<p>可让您明确指定转换进度。您可以使用从 <code>0</code>（转换开始）到 <code>1</code>（转换结束）之间的任意浮点值。</p>
-</blockquote>
-<p><code>app:currentState=&quot;reference</code>：</p>
-<blockquote>
-<p>可让您指定具体的 <code>ConstraintSet</code>。</p>
-</blockquote>
-<p><code>app:motionDebug</code>：</p>
-<blockquote>
-<p>可让您显示与运动有关的其他调试信息。可能的值为“SHOW_PROGRESS”、“SHOW_PATH”或“SHOW_ALL”。</p>
-</blockquote>
-<h4 id="配置MotionScene描述文件"><a href="#配置MotionScene描述文件" class="headerlink" title="配置MotionScene描述文件"></a>配置MotionScene描述文件</h4><p>在<code>res</code>下创建<code>xml</code>包，新建<code>scene.xml</code>描述文件。</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=<span class="string">&quot;1.0&quot;</span> encoding=<span class="string">&quot;utf-8&quot;</span>?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">MotionScene</span> <span class="attr">xmlns:android</span>=<span class="string">&quot;http://schemas.android.com/apk/res/android&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">xmlns:motion</span>=<span class="string">&quot;http://schemas.android.com/apk/res-auto&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">&lt;!--运动的基本定义</span></span><br><span class="line"><span class="comment">        motion:constraintSetStart 和 motion:constraintSetEnd：运动的端点。</span></span><br><span class="line"><span class="comment">        这些端点在 MotionScene 后面的 &lt;ConstraintSet&gt; 元素中定义。</span></span><br><span class="line"><span class="comment">        motion:duration：完成运动所需的毫秒数。</span></span><br><span class="line"><span class="comment">    --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">Transition</span></span></span><br><span class="line"><span class="tag">        <span class="attr">motion:constraintSetEnd</span>=<span class="string">&quot;@+id/end&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">motion:constraintSetStart</span>=<span class="string">&quot;@+id/start&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">motion:duration</span>=<span class="string">&quot;500&quot;</span> &gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">&lt;!--轻触控制运动</span></span><br><span class="line"><span class="comment">            motion:touchAnchorId：可以滑动并拖动的视图。</span></span><br><span class="line"><span class="comment">            motion:touchAnchorSide：表示我们从右侧拖动视图。</span></span><br><span class="line"><span class="comment">            motion:dragDirection：拖动的进度方向。例如，motion:dragDirection=&quot;dragRight&quot; 表示当您向右拖动时，进度会增加。</span></span><br><span class="line"><span class="comment">        --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">OnSwipe</span></span></span><br><span class="line"><span class="tag">            <span class="attr">motion:touchAnchorId</span>=<span class="string">&quot;@+id/button&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">motion:touchAnchorSide</span>=<span class="string">&quot;right&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">motion:dragDirection</span>=<span class="string">&quot;dragRight&quot;</span> /&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;/<span class="name">Transition</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">&lt;!--定义描述运动的各种限制条件的位置。--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">ConstraintSet</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:id</span>=<span class="string">&quot;@+id/start&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">&lt;!--android:id：需要和布局文件中MotionLayout里面子组件的id一致，一一对应。--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">Constraint</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:id</span>=<span class="string">&quot;@+id/button&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:layout_width</span>=<span class="string">&quot;wrap_content&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:layout_height</span>=<span class="string">&quot;wrap_content&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:layout_marginStart</span>=<span class="string">&quot;8dp&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">motion:layout_constraintBottom_toBottomOf</span>=<span class="string">&quot;parent&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">motion:layout_constraintStart_toStartOf</span>=<span class="string">&quot;parent&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">motion:layout_constraintTop_toTopOf</span>=<span class="string">&quot;parent&quot;</span> /&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;<span class="name">Constraint</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:id</span>=<span class="string">&quot;@+id/button1&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:layout_width</span>=<span class="string">&quot;wrap_content&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:layout_height</span>=<span class="string">&quot;wrap_content&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:layout_marginEnd</span>=<span class="string">&quot;8dp&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">motion:layout_constraintBottom_toBottomOf</span>=<span class="string">&quot;parent&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">motion:layout_constraintEnd_toEndOf</span>=<span class="string">&quot;parent&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">motion:layout_constraintTop_toTopOf</span>=<span class="string">&quot;parent&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">&lt;!--自定义属性，为不仅仅与位置相关的属性或 View 属性指定转换。</span></span><br><span class="line"><span class="comment">            这个标签也可以用在Constraint标签里面</span></span><br><span class="line"><span class="comment">            motion:attributeName：是必需属性，并且必须与具有 getter 和 setter 方法的对象匹配。getter 和 setter 与特定模式非常匹配。</span></span><br><span class="line"><span class="comment">            此外，您必须提供的另一个属性基于值类型。从以下支持的类型中选择：</span></span><br><span class="line"><span class="comment">            motion:customColorValue 适用于颜色</span></span><br><span class="line"><span class="comment">            motion:customIntegerValue 适用于整数</span></span><br><span class="line"><span class="comment">            motion:customFloatValue 适用于浮点值</span></span><br><span class="line"><span class="comment">            motion:customStringValue 适用于字符串</span></span><br><span class="line"><span class="comment">            motion:customDimension 适用于尺寸</span></span><br><span class="line"><span class="comment">            motion:customBoolean 适用于布尔值</span></span><br><span class="line"><span class="comment">            注意，在指定自定义属性时，您必须定义开始和结束 &lt;ConstraintSet&gt; 元素中的端点值。</span></span><br><span class="line"><span class="comment">        --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">CustomAttribute</span></span></span><br><span class="line"><span class="tag">            <span class="attr">motion:attributeName</span>=<span class="string">&quot;backgroundColor&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">motion:customColorValue</span>=<span class="string">&quot;#D81B60&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;/<span class="name">ConstraintSet</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">ConstraintSet</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:id</span>=<span class="string">&quot;@+id/end&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">Constraint</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:id</span>=<span class="string">&quot;@+id/button&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:layout_width</span>=<span class="string">&quot;wrap_content&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:layout_height</span>=<span class="string">&quot;wrap_content&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:layout_marginEnd</span>=<span class="string">&quot;8dp&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">motion:layout_constraintBottom_toBottomOf</span>=<span class="string">&quot;parent&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">motion:layout_constraintEnd_toEndOf</span>=<span class="string">&quot;parent&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">motion:layout_constraintTop_toTopOf</span>=<span class="string">&quot;parent&quot;</span> /&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;<span class="name">Constraint</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:id</span>=<span class="string">&quot;@+id/button1&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:layout_width</span>=<span class="string">&quot;wrap_content&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:layout_height</span>=<span class="string">&quot;wrap_content&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:layout_marginStart</span>=<span class="string">&quot;8dp&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">motion:layout_constraintBottom_toBottomOf</span>=<span class="string">&quot;parent&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">motion:layout_constraintStart_toStartOf</span>=<span class="string">&quot;parent&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">motion:layout_constraintTop_toTopOf</span>=<span class="string">&quot;parent&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">ConstraintSet</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">MotionScene</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="KeyFrameSet关键帧"><a href="#KeyFrameSet关键帧" class="headerlink" title="KeyFrameSet关键帧"></a>KeyFrameSet关键帧</h3><p>这个标签可以改变我们动画过程中某个关键帧的位置以及状态信息。</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Transition</span></span></span><br><span class="line"><span class="tag">        <span class="attr">app:constraintSetEnd</span>=<span class="string">&quot;@id/end&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">app:constraintSetStart</span>=<span class="string">&quot;@id/start&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;<span class="name">KeyFrameSet</span>&gt;</span></span><br><span class="line">          </span><br><span class="line">            <span class="tag">&lt;<span class="name">KeyPosition</span></span></span><br><span class="line"><span class="tag">                <span class="attr">app:framePosition</span>=<span class="string">&quot;50&quot;</span></span></span><br><span class="line"><span class="tag">                <span class="attr">app:keyPositionType</span>=<span class="string">&quot;parentRelative&quot;</span></span></span><br><span class="line"><span class="tag">                <span class="attr">app:motionTarget</span>=<span class="string">&quot;@id/windmill&quot;</span></span></span><br><span class="line"><span class="tag">                <span class="attr">app:percentY</span>=<span class="string">&quot;0.5&quot;</span> /&gt;</span></span><br><span class="line">          </span><br><span class="line">            <span class="comment">&lt;!--前半段的动画效果：逆时针旋转一圈，同时放大一倍--&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">KeyAttribute</span></span></span><br><span class="line"><span class="tag">                <span class="attr">app:framePosition</span>=<span class="string">&quot;50&quot;</span></span></span><br><span class="line"><span class="tag">                <span class="attr">app:motionTarget</span>=<span class="string">&quot;@id/windmill&quot;</span></span></span><br><span class="line"><span class="tag">                <span class="attr">android:rotation</span>=<span class="string">&quot;-360&quot;</span></span></span><br><span class="line"><span class="tag">                <span class="attr">android:scaleX</span>=<span class="string">&quot;2.0&quot;</span></span></span><br><span class="line"><span class="tag">                <span class="attr">android:scaleY</span>=<span class="string">&quot;2.0&quot;</span> /&gt;</span></span><br><span class="line">          </span><br><span class="line">            <span class="comment">&lt;!--后半段的动画效果：逆时针旋转一圈，同时变回原样--&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">KeyAttribute</span></span></span><br><span class="line"><span class="tag">                <span class="attr">app:framePosition</span>=<span class="string">&quot;100&quot;</span></span></span><br><span class="line"><span class="tag">                <span class="attr">app:motionTarget</span>=<span class="string">&quot;@id/windmill&quot;</span></span></span><br><span class="line"><span class="tag">                <span class="attr">android:rotation</span>=<span class="string">&quot;-720&quot;</span> /&gt;</span></span><br><span class="line">          </span><br><span class="line">            <span class="comment">&lt;!--延迟动画——0-85过程中将透明度一直维持在0.0--&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">KeyAttribute</span></span></span><br><span class="line"><span class="tag">                <span class="attr">app:framePosition</span>=<span class="string">&quot;85&quot;</span></span></span><br><span class="line"><span class="tag">                <span class="attr">app:motionTarget</span>=<span class="string">&quot;@id/tipText&quot;</span></span></span><br><span class="line"><span class="tag">                <span class="attr">android:alpha</span>=<span class="string">&quot;0.0&quot;</span> /&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;/<span class="name">KeyFrameSet</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;/<span class="name">Transition</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p><code>KeyPosition</code>和<code>KeyAttribute</code>：用来设置动画某个位置的关键帧，进而为某段动画指定所期望的效果。</p>
-<p><code>KeyPosition</code>用于指定动画某个关键帧的位置信息。</p>
-<p><code>KeyAttribute</code> 则用来描述动画某关键帧的属性配置（如：透明度、缩放、旋转等）。</p>
-<h4 id="页面中使用"><a href="#页面中使用" class="headerlink" title="页面中使用"></a>页面中使用</h4><figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="comment">//开始动画，起始点和终点</span></span><br><span class="line">motionLayout?.transitionToStart()</span><br><span class="line">motionLayout?.transitionToEnd()</span><br><span class="line"></span><br><span class="line">motionLayout?.setTransitionListener(<span class="keyword">object</span> : MotionLayout.TransitionListener &#123;</span><br><span class="line">            <span class="keyword">override</span> <span class="function"><span class="keyword">fun</span> <span class="title">onTransitionCompleted</span><span class="params">(p0: <span class="type">MotionLayout</span>?, p1: <span class="type">Int</span>)</span></span> &#123;</span><br><span class="line">              <span class="comment">//	动画完全执行完毕</span></span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">override</span> <span class="function"><span class="keyword">fun</span> <span class="title">onTransitionStarted</span><span class="params">(p0: <span class="type">MotionLayout</span>?, p1: <span class="type">Int</span>, p2: <span class="type">Int</span>)</span></span> &#123;</span><br><span class="line">              <span class="comment">//动画开始执行</span></span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">override</span> <span class="function"><span class="keyword">fun</span> <span class="title">onTransitionChange</span><span class="params">(p0: <span class="type">MotionLayout</span>?, p1: <span class="type">Int</span>, p2: <span class="type">Int</span>, p3: <span class="type">Float</span>)</span></span> &#123;</span><br><span class="line">              <span class="comment">//动画改变过程</span></span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">override</span> <span class="function"><span class="keyword">fun</span> <span class="title">onTransitionTrigger</span><span class="params">(p0: <span class="type">MotionLayout</span>?, p1: <span class="type">Int</span>, p2: <span class="type">Boolean</span>, p3: <span class="type">Float</span>)</span></span> &#123;</span><br><span class="line">              <span class="comment">//动画触发时监听</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;)</span><br></pre></td></tr></table></figure>
-
-<h4 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h4><p>更多事例可以查看<a href="https://developer.android.google.cn/training/constraint-layout/motionlayout/examples">MotionLayout 示例</a>，官方已经写好了，以提供参考。</p>
-<h4 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h4><p><code>MotionLayout</code>解决了我们绘制动画的复杂性，减少了相当多的计算绘制代码，但是也不能说就一定要用它，视情况和需求而定。</p>
-]]></content>
-      <categories>
-        <category>-编程</category>
-      </categories>
-      <tags>
-        <tag>Android</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Activity的启动模式</title>
-    <url>/2021/05/27/android-launch-mode/</url>
-    <content><![CDATA[<h4 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h4><p><code>Activity</code>的启动模式，在面试中提问到的几率很高，以此梳理一下知识点。</p>
-<span id="more"></span>
-
-<h4 id="任务栈"><a href="#任务栈" class="headerlink" title="任务栈"></a>任务栈</h4><p><code>Android</code>采用任务栈的方式管理<code>Activity</code>的实例，当一个应用启动时，<code>Android</code>就会创建一个任务栈。任务栈类似于一个容器，每次存放一个<code>Activity</code>时，满足“先进后出（First-In&#x2F;Last-out）”的原则。先加入的<code>Activity</code>实例将会处于底部，后加入的<code>Activity</code>实例会依次处于栈的上面。堆栈中存放的<code>Activity</code>实例顺序永远不会重新排列，只会被送入和退出。</p>
-<p>启动模式简单地说就是<code>Activity</code>启动时的策略，告诉堆栈将如何管理里面的实例。</p>
-<h4 id="四种启动模式"><a href="#四种启动模式" class="headerlink" title="四种启动模式"></a>四种启动模式</h4><h5 id="standard"><a href="#standard" class="headerlink" title="standard"></a>standard</h5><p>标准模式。默认启动模式。每启动一个<code>Activity</code>，就会创建一个新的实例，并将处于堆栈的栈顶位置。</p>
-<h5 id="singleTop"><a href="#singleTop" class="headerlink" title="singleTop"></a>singleTop</h5><p>栈顶复用模式。如果当前实例已经存在于栈顶，堆栈将直接使用它，不会再重新创建新的实例。系统将调用<code>onNewIntent()</code>方法将<code>intent</code>转送给该实例。</p>
-<h5 id="singleTask"><a href="#singleTask" class="headerlink" title="singleTask"></a>singleTask</h5><p>栈内复用模式。每次启动该<code>Activity</code>时，系统首先会检查堆栈中是否存在该<code>Activity</code>的实例，如果发现已经存在则直接使用该实例，并将当前<code>Activity</code>之上的所有<code>Activity</code>出栈，如果没有发现则创建一个新的实例。 系统将调用<code>onNewIntent()</code>方法将<code>intent</code>转送给该实例。</p>
-<h5 id="singleInstance"><a href="#singleInstance" class="headerlink" title="singleInstance"></a>singleInstance</h5><p>单实例模式。<code>singleTask</code>的增强版，具有它的所有特性。如果该<code>Activity</code>实例不存在，系统将开启一个新的堆栈，存放这个实例，并保证不再有其他<code>Activity</code>实例进入。如果<code>Activity</code>实例已经存在，无论位于哪个应用程序或者哪个任务栈中，系统都会把该<code>Activity</code>所有的任务栈转到前台，从而使该<code>Activity</code>显示出来。</p>
-<h4 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h4><p>standard：适用于大部分场景。</p>
-<p>singleTop：适合接收通知启动的内容显示页面。</p>
-<p>singleTask：适合作为程序入口点。</p>
-<p>singleInstance：适合需要与程序分离开的页面。</p>
-<h4 id="使用方式"><a href="#使用方式" class="headerlink" title="使用方式"></a>使用方式</h4><ul>
-<li><p>在 Manifest.xml中指定Activity启动模式</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">activity</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:name</span>=<span class="string">&quot;.activity.Activity&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:launchMode</span>=<span class="string">&quot;singleTop&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>使用<code>Intent</code>标记</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//FLAG_ACTIVITY_NEW_TASK</span></span><br><span class="line"><span class="comment">//作用是为Activity指定 “SingleTask”启动模式。跟在AndroidMainfest.xml指定效果同样。</span></span><br><span class="line"><span class="comment">//FLAG_ACTIVITY_SINGLE_TOP</span></span><br><span class="line"><span class="comment">//作用是为Activity指定 “SingleTop”启动模式，跟在AndroidMainfest.xml指定效果同样。</span></span><br><span class="line"><span class="comment">//FLAG_ACTIVITY_CLEAN_TOP</span></span><br><span class="line"><span class="comment">//具有此标记位的Activity，启动时会将与该Activity在同一任务栈的其他Activity出栈。一般与SingleTask启动模式一起出现。它会完毕SingleTask的作用。但事实上SingleTask启动模式默认具有此标记位的作用</span></span><br><span class="line"><span class="comment">//FLAG_ACTIVITY_EXCLUDE_FROM_RECENTS</span></span><br><span class="line"><span class="comment">//具有此标记位的Activity不会出如今历史Activity的列表中，使用场景：当某些情况下我们不希望用户通过历史列表回到Activity时，此标记位便体现了它的效果。它等同于在xml中指定Activity的属性：</span></span><br><span class="line"><span class="comment">//android:excludeFromRecents=“trure”</span></span><br><span class="line"><span class="type">Intent</span> <span class="variable">intent</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Intent</span>();</span><br><span class="line">intent.setClass(context, MainActivity.class);</span><br><span class="line">intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);</span><br><span class="line">context.startActivity(intent);</span><br></pre></td></tr></table></figure></li>
-</ul>
-]]></content>
-      <categories>
-        <category>-编程</category>
-      </categories>
-      <tags>
-        <tag>Android</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Android-关于Activity生命周期的理解</title>
-    <url>/2021/05/24/android-life-cycle/</url>
-    <content><![CDATA[<h4 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h4><p>最近在重构支付模块时，测试说一直跳转不到支付结果页面，最后发现我们是在<code>onRestart()</code>里面写的支付回调接口，但是那个小米的测试机，真的就是不走<code>onRestart()</code>方法啊！！奇怪的知识又增加了，这个到现在我也没搞明白为什么……也好，再次熟悉一下Activity的生命周期吧，毕竟面试问的最多的也是这个。</p>
-<span id="more"></span>
-
-<h4 id="Activity生命周期的简化图示"><a href="#Activity生命周期的简化图示" class="headerlink" title="Activity生命周期的简化图示"></a>Activity生命周期的简化图示</h4><p><img data-src="https://developer.android.google.cn/guide/components/images/activity_lifecycle.png"></p>
-<p>惯例先看这张经典的流程图。</p>
-<h4 id="详解"><a href="#详解" class="headerlink" title="详解"></a>详解</h4><h6 id="onCreate"><a href="#onCreate" class="headerlink" title="onCreate()"></a>onCreate()</h6><p>在<code>Activity</code>首次创建时触发，<code>Activity</code>会在创建后进入“已创建”的状态。并且只会发生一次。应当在此时完成<code>Activity</code>中的一些初始化操作。</p>
-<p>参数：<code>savedInstanceState: Bundle</code>：包含<code>Activity</code>先前保存状态的<code>Bundle</code>对象，如果<code>Activity</code>此前未曾存在，该对象值为<code>null</code>。与之对应的方法为：</p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">override</span> <span class="function"><span class="keyword">fun</span> <span class="title">onCreate</span><span class="params">(savedInstanceState: <span class="type">Bundle</span>?)</span></span> &#123;</span><br><span class="line">    <span class="keyword">super</span>.onCreate(savedInstanceState)</span><br><span class="line">    <span class="comment">//获取保存的状态值</span></span><br><span class="line">    <span class="keyword">val</span> gameState = savedInstanceState?.getString(GAME_STATE_KEY)</span><br><span class="line">    setContentView(R.layout.main_activity)</span><br><span class="line">		<span class="comment">//do something</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">override</span> <span class="function"><span class="keyword">fun</span> <span class="title">onRestoreInstanceState</span><span class="params">(savedInstanceState: <span class="type">Bundle</span>?)</span></span> &#123;</span><br><span class="line">    <span class="comment">//此方法在onStart()完成后执行，根据不同业务场景按需调用</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//当活动可能被临时破坏时调用，在此处保存实例状态</span></span><br><span class="line"><span class="keyword">override</span> <span class="function"><span class="keyword">fun</span> <span class="title">onSaveInstanceState</span><span class="params">(outState: <span class="type">Bundle</span>?)</span></span> &#123;</span><br><span class="line">    outState?.run &#123;</span><br><span class="line">        putString(GAME_STATE_KEY, gameState)</span><br><span class="line">        putString(TEXT_VIEW_KEY, textView.text.toString())</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">super</span>.onSaveInstanceState(outState)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h6 id="onStart"><a href="#onStart" class="headerlink" title="onStart()"></a>onStart()</h6><p>在<code>onCreate()</code>之后执行，<code>Activity</code>处于“已开始”状态，此时<code>Activity</code>对用户是可见状态，应用会为<code>Activity</code>进入前台并支持互动做准备，可以在<code>onStart()</code>方法中，初始化维护界面的代码。</p>
-<h6 id="onResume"><a href="#onResume" class="headerlink" title="onResume()"></a>onResume()</h6><p><code>Activity</code>进入“已恢复”状态，并来到前台，此时应用与用户处于互动状态。应用会一直保持这种状态。<code>Activity</code>也一定位于返回栈的栈顶并处于运行状态。</p>
-<h6 id="onPause"><a href="#onPause" class="headerlink" title="onPause()"></a>onPause()</h6><p>调用这个方法时，说明用户将要离开当前<code>Activity</code>，<code>Activity</code>将不再位于前台，而是处于“已暂停”状态。这个函数的执行速度一定要快，不然会影响新的栈顶活动的使用。通常在此函数中将一些消耗CPU的资源释放掉，以及保存一些重要的数据。</p>
-<h6 id="onStop"><a href="#onStop" class="headerlink" title="onStop()"></a>onStop()</h6><p>此时，<code>Activity</code>已进入“已停止”状态，<code>Activity</code>不再对用户可见，新的<code>Activity</code>已经覆盖屏幕。这个函数中，应释放或调整在应用对用户不可见时的无用资源，例如：暂停动画效果等。</p>
-<h6 id="onDestroy"><a href="#onDestroy" class="headerlink" title="onDestroy()"></a>onDestroy()</h6><p><code>Activity</code>销毁状态调用，此时<code>Activity</code>被用户彻底关闭，或者调用了<code>finish()</code>方法，或者由于配置变更，例如设备旋转、多窗口模式，系统暂时销毁<code>Activity</code>。</p>
-<h6 id="onRestart"><a href="#onRestart" class="headerlink" title="onRestart()"></a>onRestart()</h6><p><code>Activity</code>由停止状态变为运行状态之前调用，<code>Activity</code>重启。</p>
-<h4 id="各种场景下调用顺序"><a href="#各种场景下调用顺序" class="headerlink" title="各种场景下调用顺序"></a>各种场景下调用顺序</h4><ul>
-<li><h6 id="Activity跳转到下一个Activity"><a href="#Activity跳转到下一个Activity" class="headerlink" title="Activity跳转到下一个Activity"></a><code>Activity</code>跳转到下一个<code>Activity</code></h6></li>
-</ul>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line">$:MainActivity onCreate</span><br><span class="line">$:MainActivity onStart</span><br><span class="line">$:MainActivity onResume</span><br><span class="line">$:MainActivity onPause</span><br><span class="line">$:SecondActivity onCreate</span><br><span class="line">$:SecondActivity onStart</span><br><span class="line">$:SecondActivity onResume</span><br><span class="line">$:MainActivity onStop</span><br></pre></td></tr></table></figure>
-
-<p>然后从第二个<code>Activity</code>返回到之前的<code>Activity</code></p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line">$:SecondActivity onPause</span><br><span class="line">$:MainActivity onRestart</span><br><span class="line">$:MainActivity onStart</span><br><span class="line">$:MainActivity onResume</span><br><span class="line">$:SecondActivity onStop</span><br><span class="line">$:SecondActivity onDestroy</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><h6 id="Activity中打开Dialog样式的Activity"><a href="#Activity中打开Dialog样式的Activity" class="headerlink" title="Activity中打开Dialog样式的Activity"></a><code>Activity</code>中打开<code>Dialog</code>样式的<code>Activity</code></h6></li>
-</ul>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line">$:MainActivity onCreate</span><br><span class="line">$:MainActivity onStart</span><br><span class="line">$:MainActivity onResume</span><br><span class="line">$:MainActivity onPause</span><br><span class="line">$:SecondActivity onCreate</span><br><span class="line">$:SecondActivity onStart</span><br><span class="line">$:SecondActivity onResume</span><br></pre></td></tr></table></figure>
-
-<p>关闭<code>Dialog</code></p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line">$:SecondActivity onPause</span><br><span class="line">$:MainActivity onResume</span><br><span class="line">$:SecondActivity onStop</span><br><span class="line">$:SecondActivity onDestroy</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><h6 id="Activity翻转屏幕（会重新创建）"><a href="#Activity翻转屏幕（会重新创建）" class="headerlink" title="Activity翻转屏幕（会重新创建）"></a><code>Activity</code>翻转屏幕（会重新创建）</h6></li>
-</ul>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line">$:MainActivity onCreate</span><br><span class="line">$:MainActivity onStart</span><br><span class="line">$:MainActivity onResume</span><br><span class="line">$:MainActivity onPause</span><br><span class="line">$:MainActivity onStop</span><br><span class="line">$:MainActivity onDestroy</span><br><span class="line">$:MainActivity onCreate</span><br><span class="line">$:MainActivity onStart</span><br><span class="line">$:MainActivity onResume</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>-编程</category>
-      </categories>
-      <tags>
-        <tag>Android</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Android-使用前台服务</title>
     <url>/2021/03/03/android-notification-service/</url>
     <content><![CDATA[<h4 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h4><p>项目中涉及到了蓝牙设备的开发，需要开启一个后台服务实时监听数据变化，在进程保活这块和同事探讨了很久，然后发现课本里面有讲啊《第一行代码- Android》。产品需求也不并不是很严，就考虑使用前台服务确保进程的保活，起码不会被kill了。</p>
@@ -799,6 +799,40 @@
       </categories>
       <tags>
         <tag>Android</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Android Studio插件整理文档</title>
+    <url>/2021/05/07/android-studio-plugin/</url>
+    <content><![CDATA[<span id="more"></span>
+
+<ul>
+<li>SequenceDiagram：根据代码调用链路自动生成时序图</li>
+<li>.ignore：生成代码提交的忽略文件</li>
+<li>JSON To Kotlin Class：Json字符串转译为Kotlin数据类</li>
+<li>Markdown：Markdown编辑器</li>
+<li>Material Theme UI：自定义Android Studio的界面UI</li>
+<li>Translation：翻译插件</li>
+<li>CodeGlance：在右侧显示代码地图</li>
+<li>Rainbow Brackets：彩虹括号</li>
+<li>Codota：辅助开发神器，智能代码自动提示</li>
+<li>AiXcoder Code Completer：代码提示补全</li>
+<li>Grep Console：自定义控制台输出格式</li>
+<li>HighlightBracketPair：高亮显示</li>
+<li>Android Drawable Preview：预览图片资源缩略图</li>
+<li>ADB Idea：ADB调试工具</li>
+<li>AndroidProguardPlugin：一键生成项目混淆代码</li>
+<li>folding-plugin：布局文件分组</li>
+<li>Kotlin Fill Class：快速创建具有默认属性的Kotlin类</li>
+<li>KDoc-er - Kotlin Doc Generator：快速生成注释</li>
+<li>Lint Cleaner Plugin：删除项目中未使用的资源</li>
+</ul>
+]]></content>
+      <categories>
+        <category>-编程</category>
+      </categories>
+      <tags>
+        <tag>Android Studio</tag>
       </tags>
   </entry>
   <entry>
@@ -876,40 +910,6 @@
       <tags>
         <tag>Android</tag>
         <tag>Kotlin</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Android Studio插件整理文档</title>
-    <url>/2021/05/07/android-studio-plugin/</url>
-    <content><![CDATA[<span id="more"></span>
-
-<ul>
-<li>SequenceDiagram：根据代码调用链路自动生成时序图</li>
-<li>.ignore：生成代码提交的忽略文件</li>
-<li>JSON To Kotlin Class：Json字符串转译为Kotlin数据类</li>
-<li>Markdown：Markdown编辑器</li>
-<li>Material Theme UI：自定义Android Studio的界面UI</li>
-<li>Translation：翻译插件</li>
-<li>CodeGlance：在右侧显示代码地图</li>
-<li>Rainbow Brackets：彩虹括号</li>
-<li>Codota：辅助开发神器，智能代码自动提示</li>
-<li>AiXcoder Code Completer：代码提示补全</li>
-<li>Grep Console：自定义控制台输出格式</li>
-<li>HighlightBracketPair：高亮显示</li>
-<li>Android Drawable Preview：预览图片资源缩略图</li>
-<li>ADB Idea：ADB调试工具</li>
-<li>AndroidProguardPlugin：一键生成项目混淆代码</li>
-<li>folding-plugin：布局文件分组</li>
-<li>Kotlin Fill Class：快速创建具有默认属性的Kotlin类</li>
-<li>KDoc-er - Kotlin Doc Generator：快速生成注释</li>
-<li>Lint Cleaner Plugin：删除项目中未使用的资源</li>
-</ul>
-]]></content>
-      <categories>
-        <category>-编程</category>
-      </categories>
-      <tags>
-        <tag>Android Studio</tag>
       </tags>
   </entry>
   <entry>
@@ -1141,6 +1141,37 @@
       </tags>
   </entry>
   <entry>
+    <title>EventBus和BroadCast的差异</title>
+    <url>/2021/06/25/eventbus-broadcast/</url>
+    <content><![CDATA[<p>消息传递的实现，可以使用EventBus、广播、观察者。任何一种方式都有它的利弊，存在差异。</p>
+<span id="more"></span>
+
+<ul>
+<li><h5 id="广播BroadCastReceiver"><a href="#广播BroadCastReceiver" class="headerlink" title="广播BroadCastReceiver"></a>广播BroadCastReceiver</h5></li>
+</ul>
+<p>全局广播：它是重量级的，会消耗很多的资源，但是可以跨进程通信，这个特点是其他方案做不到的。</p>
+<p>本地广播：也会消耗很多资源，较全局广播轻量些，它可以拿到Context、Intent等和Android系统紧密相关的上下文，这样就方便数据的传递和接收。但是，获取到的这些对象，并不是像Activity那样获取到后做最全的事情。</p>
+<p>作为四大组件之一，广播同SDK的交互比较好。所以系统级的事件都是通过广播来实现的。</p>
+<p>谨记：广播是消耗时间、空间最多的一种方式。</p>
+<ul>
+<li><h5 id="EventBus"><a href="#EventBus" class="headerlink" title="EventBus"></a>EventBus</h5></li>
+</ul>
+<p>开发中使用最多的一种方式，调度灵活，不依赖Context，父类对于通知的监听和处理可以继承给子类，设置通知的优先级，粘滞事件能够保证通知不会因 Subscriber 的不在场而忽略。</p>
+<p>使用起来也简单，通过注册来监听数据变化即可。</p>
+<p>使用完成后需要解绑监听，并且无法跨进程传递消息。</p>
+<ul>
+<li><h5 id="观察者模式"><a href="#观察者模式" class="headerlink" title="观察者模式"></a>观察者模式</h5></li>
+</ul>
+<p>观察者的实现比较简单，性能上所以是最好的，但是无法控制优先级、粘滞事件，耦合性比EventBus大。</p>
+]]></content>
+      <categories>
+        <category>-编程</category>
+      </categories>
+      <tags>
+        <tag>Android</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>低耦合高内聚</title>
     <url>/2021/06/25/coupling-cohesion/</url>
     <content><![CDATA[<p>软件编程总原则：低耦合，高内聚。</p>
@@ -1176,37 +1207,6 @@
       </categories>
       <tags>
         <tag>Principle</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>EventBus和BroadCast的差异</title>
-    <url>/2021/06/25/eventbus-broadcast/</url>
-    <content><![CDATA[<p>消息传递的实现，可以使用EventBus、广播、观察者。任何一种方式都有它的利弊，存在差异。</p>
-<span id="more"></span>
-
-<ul>
-<li><h5 id="广播BroadCastReceiver"><a href="#广播BroadCastReceiver" class="headerlink" title="广播BroadCastReceiver"></a>广播BroadCastReceiver</h5></li>
-</ul>
-<p>全局广播：它是重量级的，会消耗很多的资源，但是可以跨进程通信，这个特点是其他方案做不到的。</p>
-<p>本地广播：也会消耗很多资源，较全局广播轻量些，它可以拿到Context、Intent等和Android系统紧密相关的上下文，这样就方便数据的传递和接收。但是，获取到的这些对象，并不是像Activity那样获取到后做最全的事情。</p>
-<p>作为四大组件之一，广播同SDK的交互比较好。所以系统级的事件都是通过广播来实现的。</p>
-<p>谨记：广播是消耗时间、空间最多的一种方式。</p>
-<ul>
-<li><h5 id="EventBus"><a href="#EventBus" class="headerlink" title="EventBus"></a>EventBus</h5></li>
-</ul>
-<p>开发中使用最多的一种方式，调度灵活，不依赖Context，父类对于通知的监听和处理可以继承给子类，设置通知的优先级，粘滞事件能够保证通知不会因 Subscriber 的不在场而忽略。</p>
-<p>使用起来也简单，通过注册来监听数据变化即可。</p>
-<p>使用完成后需要解绑监听，并且无法跨进程传递消息。</p>
-<ul>
-<li><h5 id="观察者模式"><a href="#观察者模式" class="headerlink" title="观察者模式"></a>观察者模式</h5></li>
-</ul>
-<p>观察者的实现比较简单，性能上所以是最好的，但是无法控制优先级、粘滞事件，耦合性比EventBus大。</p>
-]]></content>
-      <categories>
-        <category>-编程</category>
-      </categories>
-      <tags>
-        <tag>Android</tag>
       </tags>
   </entry>
   <entry>
@@ -1345,6 +1345,135 @@
       </categories>
       <tags>
         <tag>Principle</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Java-环境配置</title>
+    <url>/2021/03/24/java-install-jdk/</url>
+    <content><![CDATA[<span id="more"></span>
+
+<h4 id="Windows"><a href="#Windows" class="headerlink" title="Windows"></a>Windows</h4><ul>
+<li><p>进入<a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">http://www.oracle.com/technetwork/java/javase/downloads/index.html</a> 官网，找到需要下载的版本，选择Accept License Agreement，点击下载。</p>
+</li>
+<li><p>新建一个文件夹java，里面创建jdk和jre两个文件夹。</p>
+</li>
+<li><p>双击下载的exe文件，开始安装。 </p>
+</li>
+<li><p>安装路径选择java&#x2F;jdk，当提示安装jre时，安装路径选择java&#x2F;jre。区分jdk和jre分别安装。</p>
+</li>
+<li><p>安装完成之后，返回桌面，选中此电脑或者计算机，依次进入右键–属性–高级系统设置–高级–环境变量。 </p>
+</li>
+<li><p>在系统变量中新建JAVA_HOME，取值为jdk安装目录 –在系统变量中新建CLASSPATH，取值为： <code>.;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\lib\tools.jar;</code> 特别注意！！最前面有个点，千万不要忘记！！ </p>
+</li>
+<li><p>在Path中添加 <code>%JAVA_HOME%\bin;%JAVA_HOME%\jre\bin;</code></p>
+</li>
+<li><p>设置完成之后，依次点击确定退出。 </p>
+</li>
+<li><p>使用快捷键Win+R，打开运行，输入cmd，打开命令提示符窗口，执行命令：<code>java -version</code></p>
+</li>
+<li><p>如果出现类似以下的信息：</p>
+</li>
+</ul>
+<p> <code>java version &quot;1.8.0_162&quot; Java(TM) SE Runtime Environment (build 1.8.0_162-b12) Java HotSpot(TM) 64-Bit Server VM (build 25.162-b12, mixed mode)</code></p>
+<p> 则说明Java环境配置成功。 </p>
+<h4 id="Linux"><a href="#Linux" class="headerlink" title="Linux"></a>Linux</h4><p>目前使用的Linux为Centos7。 </p>
+<ul>
+<li>查看系统自带的openJDK版本</li>
+</ul>
+<p><code>rpm -qa | grep jdk</code></p>
+<ul>
+<li>依次删除这些jdk</li>
+</ul>
+<p><code>yum -y remove jdk名称</code></p>
+<ul>
+<li><p>安装之前，我们可以根据需求，在根目录中创建专门安装软件的目录（e.g. software）。</p>
+</li>
+<li><p>此时，如果使用普通账户的话，会有权限不足的提示，就需要我们给用户添加root权限。</p>
+</li>
+</ul>
+<p>给普通账户添加权限：</p>
+<ol>
+<li>使用su，进入root账户下。</li>
+<li>ll查看&#x2F;etc&#x2F;sudoers目录权限状态，是否可编辑。</li>
+<li>设置sudoers目录为可写状态：440，执行命令<code>chmod 777 sudoers</code>，将sudoers目录变成可读可写可执行。</li>
+<li>执行命令<code>vim /etc/sudoers</code>,点击i键，找到</li>
+</ol>
+<p>## Allow root to run any commands anywhere</p>
+<p>root ALL&#x3D;(ALL) ALL</p>
+<p>在下面添加：用户名 ALL&#x3D;(ALL) ALL</p>
+<p>点击esc，输入：wq保存。</p>
+<ol>
+<li>此时完成账户的权限配置，接下来要把sudoers目录的权限复原，执行命令chmod 440 sudoers。</li>
+</ol>
+<ul>
+<li><p>以下可以使用登录的普通账户进行操作，注意的是命令前面需要加上sudo（即root权限操作）</p>
+</li>
+<li><p>创建软件安装目录（e.g. software）</p>
+</li>
+</ul>
+<p><code>sudo mkdir software</code></p>
+<ul>
+<li>进入目录</li>
+</ul>
+<p><code>cd software</code></p>
+<ul>
+<li>创建一个新的java目录</li>
+</ul>
+<p><code>mkdir java</code></p>
+<ul>
+<li>进入java，我们要在这个目录里进行安装配置</li>
+</ul>
+<p><code>cd java</code></p>
+<ul>
+<li>下载jdk的tar包</li>
+</ul>
+<p><code>wget http://download.oracle.com/otn-pub/java/jdk/......</code></p>
+<p>下载地址在<a href="http://www.oracle.com/technetwork/java/javase/overview/index.html%E7%9A%84Downloads%E4%B8%AD%E5%AF%BB%E6%89%BE%EF%BC%8C%E6%89%BE%E5%88%B0%E6%83%B3%E8%A6%81%E4%B8%8B%E8%BD%BD%E7%9A%84%E7%89%88%E6%9C%AC%EF%BC%8C%E7%82%B9%E5%87%BBJDK">http://www.oracle.com/technetwork/java/javase/overview/index.html的Downloads中寻找，找到想要下载的版本，点击JDK</a> Download，选择Accept License Agreement ，右键.tar.gz格式，复制链接地址。</p>
+<p>部分版本下载地址：</p>
+<p>32位：</p>
+<p>1.8-171：<a href="http://download.oracle.com/otn-pub/java/jdk/8u171-b11/512cd62ec5174c3487ac17c61aaa89e8/jdk-8u171-linux-i586.tar.gz">http://download.oracle.com/otn-pub/java/jdk/8u171-b11/512cd62ec5174c3487ac17c61aaa89e8/jdk-8u171-linux-i586.tar.gz</a></p>
+<p>1.8-172：<a href="http://download.oracle.com/otn-pub/java/jdk/8u172-b11/a58eab1ec242421181065cdc37240b08/jdk-8u172-linux-i586.tar.gz">http://download.oracle.com/otn-pub/java/jdk/8u172-b11/a58eab1ec242421181065cdc37240b08/jdk-8u172-linux-i586.tar.gz</a></p>
+<p>64位：</p>
+<p>1.8-171：<a href="http://download.oracle.com/otn-pub/java/jdk/8u171-b11/512cd62ec5174c3487ac17c61aaa89e8/jdk-8u171-linux-x64.tar.gz">http://download.oracle.com/otn-pub/java/jdk/8u171-b11/512cd62ec5174c3487ac17c61aaa89e8/jdk-8u171-linux-x64.tar.gz</a></p>
+<p>1.8-172：<a href="http://download.oracle.com/otn-pub/java/jdk/8u172-b11/a58eab1ec242421181065cdc37240b08/jdk-8u172-linux-x64.tar.gz">http://download.oracle.com/otn-pub/java/jdk/8u172-b11/a58eab1ec242421181065cdc37240b08/jdk-8u172-linux-x64.tar.gz</a></p>
+<p>10.0.1：<a href="http://download.oracle.com/otn-pub/java/jdk/10.0.1+10/fb4372174a714e6b8c52526dc134031e/jdk-10.0.1_linux-x64_bin.tar.gz">http://download.oracle.com/otn-pub/java/jdk/10.0.1+10/fb4372174a714e6b8c52526dc134031e/jdk-10.0.1_linux-x64_bin.tar.gz</a></p>
+<ul>
+<li>下载完成后，进行解压</li>
+</ul>
+<p><code>tar -zxvf jdk名称.tar.gz</code></p>
+<ul>
+<li>删除压缩包</li>
+</ul>
+<p><code>rm jdk名称.tar.gz</code></p>
+<ul>
+<li>编辑&#x2F;etc&#x2F;profile文件，配置环境变量</li>
+</ul>
+<p><code>vim /etc/profile</code></p>
+<p>在末尾添加：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">export</span> JAVA_HOME=/目录名/java（自定义目录名）/jdk目录名称</span><br><span class="line"></span><br><span class="line"><span class="built_in">export</span> CLASSPATH=.:JAVA_HOME/jre/lib/rt.jar:JAVA_HOME/lib/dt.jar:<span class="variable">$JAVA_HOME</span>/lib/tools.jar</span><br><span class="line"></span><br><span class="line"><span class="built_in">export</span> PATH=PATH:JAVA_HOME/bin&gt;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>Esc–:wq保存并退出</p>
+</li>
+<li><p>重新加载profile目录</p>
+</li>
+</ul>
+<p><code>source /etc/profile</code></p>
+<ul>
+<li>检查是否安装成功</li>
+</ul>
+<p><code>java -version</code></p>
+<ul>
+<li>成功则会显示类似于以下信息</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">java version <span class="string">&quot;1.8.0_144&quot;</span></span><br><span class="line"></span><br><span class="line">Java(TM) SE Runtime Environment (build 1.8.0_144-b01)</span><br><span class="line"></span><br><span class="line">Java HotSpot(TM) 64-Bit Server VM (build 25.144-b01, mixed mode)</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>-编程</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
       </tags>
   </entry>
   <entry>
@@ -1510,135 +1639,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Java-环境配置</title>
-    <url>/2021/03/24/java-install-jdk/</url>
-    <content><![CDATA[<span id="more"></span>
-
-<h4 id="Windows"><a href="#Windows" class="headerlink" title="Windows"></a>Windows</h4><ul>
-<li><p>进入<a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">http://www.oracle.com/technetwork/java/javase/downloads/index.html</a> 官网，找到需要下载的版本，选择Accept License Agreement，点击下载。</p>
-</li>
-<li><p>新建一个文件夹java，里面创建jdk和jre两个文件夹。</p>
-</li>
-<li><p>双击下载的exe文件，开始安装。 </p>
-</li>
-<li><p>安装路径选择java&#x2F;jdk，当提示安装jre时，安装路径选择java&#x2F;jre。区分jdk和jre分别安装。</p>
-</li>
-<li><p>安装完成之后，返回桌面，选中此电脑或者计算机，依次进入右键–属性–高级系统设置–高级–环境变量。 </p>
-</li>
-<li><p>在系统变量中新建JAVA_HOME，取值为jdk安装目录 –在系统变量中新建CLASSPATH，取值为： <code>.;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\lib\tools.jar;</code> 特别注意！！最前面有个点，千万不要忘记！！ </p>
-</li>
-<li><p>在Path中添加 <code>%JAVA_HOME%\bin;%JAVA_HOME%\jre\bin;</code></p>
-</li>
-<li><p>设置完成之后，依次点击确定退出。 </p>
-</li>
-<li><p>使用快捷键Win+R，打开运行，输入cmd，打开命令提示符窗口，执行命令：<code>java -version</code></p>
-</li>
-<li><p>如果出现类似以下的信息：</p>
-</li>
-</ul>
-<p> <code>java version &quot;1.8.0_162&quot; Java(TM) SE Runtime Environment (build 1.8.0_162-b12) Java HotSpot(TM) 64-Bit Server VM (build 25.162-b12, mixed mode)</code></p>
-<p> 则说明Java环境配置成功。 </p>
-<h4 id="Linux"><a href="#Linux" class="headerlink" title="Linux"></a>Linux</h4><p>目前使用的Linux为Centos7。 </p>
-<ul>
-<li>查看系统自带的openJDK版本</li>
-</ul>
-<p><code>rpm -qa | grep jdk</code></p>
-<ul>
-<li>依次删除这些jdk</li>
-</ul>
-<p><code>yum -y remove jdk名称</code></p>
-<ul>
-<li><p>安装之前，我们可以根据需求，在根目录中创建专门安装软件的目录（e.g. software）。</p>
-</li>
-<li><p>此时，如果使用普通账户的话，会有权限不足的提示，就需要我们给用户添加root权限。</p>
-</li>
-</ul>
-<p>给普通账户添加权限：</p>
-<ol>
-<li>使用su，进入root账户下。</li>
-<li>ll查看&#x2F;etc&#x2F;sudoers目录权限状态，是否可编辑。</li>
-<li>设置sudoers目录为可写状态：440，执行命令<code>chmod 777 sudoers</code>，将sudoers目录变成可读可写可执行。</li>
-<li>执行命令<code>vim /etc/sudoers</code>,点击i键，找到</li>
-</ol>
-<p>## Allow root to run any commands anywhere</p>
-<p>root ALL&#x3D;(ALL) ALL</p>
-<p>在下面添加：用户名 ALL&#x3D;(ALL) ALL</p>
-<p>点击esc，输入：wq保存。</p>
-<ol>
-<li>此时完成账户的权限配置，接下来要把sudoers目录的权限复原，执行命令chmod 440 sudoers。</li>
-</ol>
-<ul>
-<li><p>以下可以使用登录的普通账户进行操作，注意的是命令前面需要加上sudo（即root权限操作）</p>
-</li>
-<li><p>创建软件安装目录（e.g. software）</p>
-</li>
-</ul>
-<p><code>sudo mkdir software</code></p>
-<ul>
-<li>进入目录</li>
-</ul>
-<p><code>cd software</code></p>
-<ul>
-<li>创建一个新的java目录</li>
-</ul>
-<p><code>mkdir java</code></p>
-<ul>
-<li>进入java，我们要在这个目录里进行安装配置</li>
-</ul>
-<p><code>cd java</code></p>
-<ul>
-<li>下载jdk的tar包</li>
-</ul>
-<p><code>wget http://download.oracle.com/otn-pub/java/jdk/......</code></p>
-<p>下载地址在<a href="http://www.oracle.com/technetwork/java/javase/overview/index.html%E7%9A%84Downloads%E4%B8%AD%E5%AF%BB%E6%89%BE%EF%BC%8C%E6%89%BE%E5%88%B0%E6%83%B3%E8%A6%81%E4%B8%8B%E8%BD%BD%E7%9A%84%E7%89%88%E6%9C%AC%EF%BC%8C%E7%82%B9%E5%87%BBJDK">http://www.oracle.com/technetwork/java/javase/overview/index.html的Downloads中寻找，找到想要下载的版本，点击JDK</a> Download，选择Accept License Agreement ，右键.tar.gz格式，复制链接地址。</p>
-<p>部分版本下载地址：</p>
-<p>32位：</p>
-<p>1.8-171：<a href="http://download.oracle.com/otn-pub/java/jdk/8u171-b11/512cd62ec5174c3487ac17c61aaa89e8/jdk-8u171-linux-i586.tar.gz">http://download.oracle.com/otn-pub/java/jdk/8u171-b11/512cd62ec5174c3487ac17c61aaa89e8/jdk-8u171-linux-i586.tar.gz</a></p>
-<p>1.8-172：<a href="http://download.oracle.com/otn-pub/java/jdk/8u172-b11/a58eab1ec242421181065cdc37240b08/jdk-8u172-linux-i586.tar.gz">http://download.oracle.com/otn-pub/java/jdk/8u172-b11/a58eab1ec242421181065cdc37240b08/jdk-8u172-linux-i586.tar.gz</a></p>
-<p>64位：</p>
-<p>1.8-171：<a href="http://download.oracle.com/otn-pub/java/jdk/8u171-b11/512cd62ec5174c3487ac17c61aaa89e8/jdk-8u171-linux-x64.tar.gz">http://download.oracle.com/otn-pub/java/jdk/8u171-b11/512cd62ec5174c3487ac17c61aaa89e8/jdk-8u171-linux-x64.tar.gz</a></p>
-<p>1.8-172：<a href="http://download.oracle.com/otn-pub/java/jdk/8u172-b11/a58eab1ec242421181065cdc37240b08/jdk-8u172-linux-x64.tar.gz">http://download.oracle.com/otn-pub/java/jdk/8u172-b11/a58eab1ec242421181065cdc37240b08/jdk-8u172-linux-x64.tar.gz</a></p>
-<p>10.0.1：<a href="http://download.oracle.com/otn-pub/java/jdk/10.0.1+10/fb4372174a714e6b8c52526dc134031e/jdk-10.0.1_linux-x64_bin.tar.gz">http://download.oracle.com/otn-pub/java/jdk/10.0.1+10/fb4372174a714e6b8c52526dc134031e/jdk-10.0.1_linux-x64_bin.tar.gz</a></p>
-<ul>
-<li>下载完成后，进行解压</li>
-</ul>
-<p><code>tar -zxvf jdk名称.tar.gz</code></p>
-<ul>
-<li>删除压缩包</li>
-</ul>
-<p><code>rm jdk名称.tar.gz</code></p>
-<ul>
-<li>编辑&#x2F;etc&#x2F;profile文件，配置环境变量</li>
-</ul>
-<p><code>vim /etc/profile</code></p>
-<p>在末尾添加：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">export</span> JAVA_HOME=/目录名/java（自定义目录名）/jdk目录名称</span><br><span class="line"></span><br><span class="line"><span class="built_in">export</span> CLASSPATH=.:JAVA_HOME/jre/lib/rt.jar:JAVA_HOME/lib/dt.jar:<span class="variable">$JAVA_HOME</span>/lib/tools.jar</span><br><span class="line"></span><br><span class="line"><span class="built_in">export</span> PATH=PATH:JAVA_HOME/bin&gt;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><p>Esc–:wq保存并退出</p>
-</li>
-<li><p>重新加载profile目录</p>
-</li>
-</ul>
-<p><code>source /etc/profile</code></p>
-<ul>
-<li>检查是否安装成功</li>
-</ul>
-<p><code>java -version</code></p>
-<ul>
-<li>成功则会显示类似于以下信息</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">java version <span class="string">&quot;1.8.0_144&quot;</span></span><br><span class="line"></span><br><span class="line">Java(TM) SE Runtime Environment (build 1.8.0_144-b01)</span><br><span class="line"></span><br><span class="line">Java HotSpot(TM) 64-Bit Server VM (build 25.144-b01, mixed mode)</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>-编程</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Java-四种对象引用的理解</title>
     <url>/2021/02/25/java-quote-object/</url>
     <content><![CDATA[<p>JDK1.2版本开始，为了在JVM中更加灵活的进行对象的垃圾回收，使程序灵活的控制对象的生命周期，加入把对象引用分为了四种级别：强引用、软引用、弱引用和虚引用。<br>级别对比：强引用 &gt; 软引用 &gt; 弱引用  &gt; 虚引用</p>
@@ -1724,55 +1724,33 @@
 <h2 id="集成"><a href="#集成" class="headerlink" title="集成"></a>集成</h2><p>以在Android项目为例：通过gradle引入：</p>
 <figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line">dependencies &#123;</span><br><span class="line">    ...</span><br><span class="line">    <span class="comment">//依赖协程核心库</span></span><br><span class="line">    implementation <span class="string">&quot;org.jetbrains.kotlinx:kotlinx-coroutines-core:版本号&quot;</span></span><br><span class="line">    <span class="comment">//依赖当前平台所对应的平台库</span></span><br><span class="line">    implementation <span class="string">&quot;org.jetbrains.kotlinx:kotlinx-coroutines-android:版本号&quot;</span></span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h2 id="开始使用"><a href="#开始使用" class="headerlink" title="开始使用"></a>开始使用</h2><h3 id="创建协程"><a href="#创建协程" class="headerlink" title="创建协程"></a>创建协程</h3><ul>
-<li><pre><code class="kotlin">//通常适用于单元测试场景，业务开发中不会使用，因为它是线程阻塞的
-runBlocking &#123;
-    //doSomeThing
-&#125;
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">  </span><br><span class="line">  </span><br><span class="line">- ```kotlin</span><br><span class="line">  //此方式不会阻塞线程，但是它的生命周期会和app一致，且不能取消</span><br><span class="line">  //如果我们忘记保持对新启动的协程的引用，它会继续运行</span><br><span class="line">  //假如启动太多的协程并导致内存不足，就必须手动保持对所有已启动协程的引用并join，这样很容易出错</span><br><span class="line">  GlobalScope.launch &#123;</span><br><span class="line">      //doSomeThing</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+<h2 id="开始使用"><a href="#开始使用" class="headerlink" title="开始使用"></a>开始使用</h2><h3 id="创建协程"><a href="#创建协程" class="headerlink" title="创建协程"></a>创建协程</h3><figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="comment">//通常适用于单元测试场景，业务开发中不会使用，因为它是线程阻塞的</span></span><br><span class="line">runBlocking &#123;</span><br><span class="line">    <span class="comment">//doSomeThing</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-</code></pre>
-</li>
-<li><pre><code class="kotlin">//推荐使用
-class MainActivity : AppCompatActivity(), CoroutineScope &#123;
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="comment">//此方式不会阻塞线程，但是它的生命周期会和app一致，且不能取消</span></span><br><span class="line"><span class="comment">//如果我们忘记保持对新启动的协程的引用，它会继续运行</span></span><br><span class="line"><span class="comment">//假如启动太多的协程并导致内存不足，就必须手动保持对所有已启动协程的引用并join，这样很容易出错</span></span><br><span class="line">GlobalScope.launch &#123;</span><br><span class="line">    <span class="comment">//doSomeThing</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-    private val job = Job()
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="comment">//推荐使用</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MainActivity</span> : <span class="type">AppCompatActivity</span></span>(), CoroutineScope &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">val</span> job = Job()</span><br><span class="line"></span><br><span class="line">    <span class="keyword">override</span> <span class="keyword">val</span> coroutineContext: CoroutineContext</span><br><span class="line">        <span class="keyword">get</span>() = Dispatchers.Main + job</span><br><span class="line"></span><br><span class="line">    <span class="keyword">override</span> <span class="function"><span class="keyword">fun</span> <span class="title">onCreate</span><span class="params">(savedInstanceState: <span class="type">Bundle</span>?)</span></span> &#123;</span><br><span class="line">        <span class="keyword">super</span>.onCreate(savedInstanceState)</span><br><span class="line">        setContentView(R.layout.activity_main)</span><br><span class="line"></span><br><span class="line">        <span class="keyword">val</span> coroutineScope = CoroutineScope(coroutineContext)</span><br><span class="line">        coroutineScope.launch(Dispatchers.Main) &#123;</span><br><span class="line">            <span class="comment">//doSomeThing</span></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">override</span> <span class="function"><span class="keyword">fun</span> <span class="title">onDestroy</span><span class="params">()</span></span> &#123;</span><br><span class="line">        <span class="keyword">super</span>.onDestroy()</span><br><span class="line">      	<span class="comment">//停止协程</span></span><br><span class="line">        job.cancel()</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-    override val coroutineContext: CoroutineContext
-        get() = Dispatchers.Main + job
+<h4 id="launch和async"><a href="#launch和async" class="headerlink" title="launch和async"></a>launch和async</h4><p><strong>launch</strong>：用来启动一个协程并立即返回，像线程一样异步执行。协程中的未捕获异常会导致进程的crash。<code>launch</code>返回一个Job对象，通过<code>Job.join</code>方法可以同步等待协程的完成。</p>
+<p><strong>async</strong>：用来启动一个协程并返回一个<code>Deferred</code>，使用<code>Deffered.await</code>可以获取<code>async</code>返回的结果，所以<code>async</code>相当于可以返回结果的<code>launch</code>。<code>async</code>内的代码中未捕获异常不会造成进程crash，而是会被储存到<code>Deferred</code>中返回。<code>Deferred</code>实际也是一个Job。<code>async</code>默认启动协程后立即执行，但是也可以通过参数指定启动方式为<code>CoroutineStart.LAZY</code>，此时只有调用了<code>await</code>时，才会启动协程。</p>
+<h5 id="参数说明"><a href="#参数说明" class="headerlink" title="参数说明"></a>参数说明</h5><p>源码：（launch和async差不多）</p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="function"><span class="keyword">fun</span> CoroutineScope.<span class="title">launch</span><span class="params">(</span></span></span><br><span class="line"><span class="params"><span class="function">    context: <span class="type">CoroutineContext</span> = EmptyCoroutineContext,</span></span></span><br><span class="line"><span class="params"><span class="function">    start: <span class="type">CoroutineStart</span> = CoroutineStart.DEFAULT,</span></span></span><br><span class="line"><span class="params"><span class="function">    block: <span class="type">suspend</span> <span class="type">CoroutineScope</span>.() -&gt; <span class="type">Unit</span></span></span></span><br><span class="line"><span class="params"><span class="function">)</span></span>: Job &#123;</span><br><span class="line">    <span class="keyword">val</span> newContext = newCoroutineContext(context)</span><br><span class="line">    <span class="keyword">val</span> coroutine = <span class="keyword">if</span> (start.isLazy)</span><br><span class="line">        LazyStandaloneCoroutine(newContext, block) <span class="keyword">else</span></span><br><span class="line">        StandaloneCoroutine(newContext, active = <span class="literal">true</span>)</span><br><span class="line">    coroutine.start(start, coroutine, block)</span><br><span class="line">    <span class="keyword">return</span> coroutine</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-    override fun onCreate(savedInstanceState: Bundle?) &#123;
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-
-        val coroutineScope = CoroutineScope(coroutineContext)
-        coroutineScope.launch(Dispatchers.Main) &#123;
-            //doSomeThing
-        &#125;
-
-    &#125;
-
-    override fun onDestroy() &#123;
-        super.onDestroy()
-          //停止协程
-        job.cancel()
-    &#125;
-&#125;
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">#### launch和async</span><br><span class="line"></span><br><span class="line">**launch**：用来启动一个协程并立即返回，像线程一样异步执行。协程中的未捕获异常会导致进程的crash。`launch`返回一个Job对象，通过`Job.join`方法可以同步等待协程的完成。</span><br><span class="line"></span><br><span class="line">**async**：用来启动一个协程并返回一个`Deferred`，使用`Deffered.await`可以获取`async`返回的结果，所以`async`相当于可以返回结果的`launch`。`async`内的代码中未捕获异常不会造成进程crash，而是会被储存到`Deferred`中返回。`Deferred`实际也是一个Job。`async`默认启动协程后立即执行，但是也可以通过参数指定启动方式为`CoroutineStart.LAZY`，此时只有调用了`await`时，才会启动协程。</span><br><span class="line"></span><br><span class="line">##### 参数说明</span><br><span class="line"></span><br><span class="line">源码：（launch和async差不多）</span><br><span class="line"></span><br><span class="line">```kotlin</span><br><span class="line">public fun CoroutineScope.launch(</span><br><span class="line">    context: CoroutineContext = EmptyCoroutineContext,</span><br><span class="line">    start: CoroutineStart = CoroutineStart.DEFAULT,</span><br><span class="line">    block: suspend CoroutineScope.() -&gt; Unit</span><br><span class="line">): Job &#123;</span><br><span class="line">    val newContext = newCoroutineContext(context)</span><br><span class="line">    val coroutine = if (start.isLazy)</span><br><span class="line">        LazyStandaloneCoroutine(newContext, block) else</span><br><span class="line">        StandaloneCoroutine(newContext, active = true)</span><br><span class="line">    coroutine.start(start, coroutine, block)</span><br><span class="line">    return coroutine</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-</code></pre>
-</li>
+<ul>
 <li><p>context: CoroutineContext &#x3D; EmptyCoroutineContext</p>
 <p>当前协程的上下文，用于在协程间参数传递。可以来声明当前协程在哪一个线程中声明，以及当前协程被中断后，在哪一个线程中恢复它。</p>
 <p>最常用的功能是并发，典型场景就是多线程，即需要切换线程，我们经常这样写：</p>
+</li>
+</ul>
 <figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line">mCoroutineScope.launch(Dispatchers.IO) &#123;</span><br><span class="line">  	<span class="comment">//切换到IO线程执行事务</span></span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">mCoroutineScope.launch(Dispatchers.Main) &#123;</span><br><span class="line">  	<span class="comment">//切换到主线程执行事务</span></span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">mCoroutineScope.launch(Dispatchers.Default) &#123;</span><br><span class="line">  	<span class="comment">//同IO线程，切换到IO线程执行事务</span></span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">mCoroutineScope.launch(Dispatchers.Unconfined) &#123;</span><br><span class="line">  	<span class="comment">//不绑定在任何特定执行线程上</span></span><br><span class="line">  	<span class="comment">//在CPU进行密集型计算时使用</span></span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-
-</li>
+<ul>
 <li><p>start: CoroutineStart &#x3D; CoroutineStart.DEFAULT</p>
 <p>协程的启动参数，表示需要哪种方式启动。</p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line">CoroutineStart.DEFAULT：默认的启动方式，表示当前线程什么时候有空，就什么时候启动。</span><br><span class="line">CoroutineStart.LAZY：仅在需要时才延迟启动协程。</span><br><span class="line">CoroutineStart.ATOMIC：以原子方式（即以不可取消的方式）根据协程安排协程执行。</span><br><span class="line">CoroutineStart.UNDISPATCHED：未定义，通常用于自定义的启动方式，如果未自定义，则与 DEFAULT 启动方式一致。</span><br></pre></td></tr></table></figure>
 </li>
+</ul>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line">CoroutineStart.DEFAULT：默认的启动方式，表示当前线程什么时候有空，就什么时候启动。</span><br><span class="line">CoroutineStart.LAZY：仅在需要时才延迟启动协程。</span><br><span class="line">CoroutineStart.ATOMIC：以原子方式（即以不可取消的方式）根据协程安排协程执行。</span><br><span class="line">CoroutineStart.UNDISPATCHED：未定义，通常用于自定义的启动方式，如果未自定义，则与 DEFAULT 启动方式一致。</span><br></pre></td></tr></table></figure>
+
+<ul>
 <li><p>block: suspend CoroutineScope.() -&gt; Unit</p>
 <p>协程真正要去执行的内容。</p>
 </li>
@@ -1790,6 +1768,36 @@ class MainActivity : AppCompatActivity(), CoroutineScope &#123;
       <tags>
         <tag>Kotlin</tag>
         <tag>Coroutine</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>使用Python实现人脸识别</title>
+    <url>/2021/02/25/python-face-recognition/</url>
+    <content><![CDATA[<h2 id="Windows-10"><a href="#Windows-10" class="headerlink" title="Windows 10"></a>Windows 10</h2><p>开发前安装和配置dlib和face_recognition</p>
+<span id="more"></span>
+
+<h3 id="安装Visual-Studio"><a href="#安装Visual-Studio" class="headerlink" title="安装Visual Studio"></a>安装Visual Studio</h3><ul>
+<li>安装VS 2015 C++：下载地址：<a href="https://www.microsoft.com/en-us/download/confirmation.aspx?id=48145%E3%80%82">https://www.microsoft.com/en-us/download/confirmation.aspx?id=48145。</a></li>
+<li>安装Visual Studio：下载地址：<a href="https://visualstudio.microsoft.com/zh-hans/downloads/%E3%80%82">https://visualstudio.microsoft.com/zh-hans/downloads/。</a> 安装过程中应该注意：在工作负载中选中“使用C++的桌面开发”，我这里还选中了“Visual Studio扩展开发”。</li>
+</ul>
+<h3 id="安装Boost-C-Libraries"><a href="#安装Boost-C-Libraries" class="headerlink" title="安装Boost C++ Libraries"></a>安装Boost C++ Libraries</h3><ul>
+<li>下载地址：<a href="https://sourceforge.net/projects/boost/files%EF%BC%8C%E9%80%89%E6%8B%A9boost-binaries%EF%BC%8C%E6%89%BE%E5%88%B0%E6%9C%80%E6%96%B0%E7%89%88%E6%9C%AC%EF%BC%8C%E4%B8%8B%E8%BD%BDexe%E3%80%82%EF%BC%88%E5%AE%98%E7%BD%91%E4%B8%8B%E8%BD%BD%E4%B8%8B%E5%88%B0%E6%9C%80%E5%90%8E%E5%B0%B1%E6%B2%A1%E8%B5%84%E6%BA%90%E4%BA%86%EF%BC%8C%E5%BE%88%E6%97%A0%E5%A5%88%EF%BC%89">https://sourceforge.net/projects/boost/files，选择boost-binaries，找到最新版本，下载exe。（官网下载下到最后就没资源了，很无奈）</a></li>
+<li>运行exe文件，选择安装路径，进行安装。时间较慢，慢慢等待。</li>
+<li>将360等安全软件关闭掉。</li>
+<li>在菜单中，找到并打开“适用于VS 2017的x86_x64兼容工具命令提示”，输入命令：cd xx:\xx…\boost\boost_1_68_0（即进入boost安装目录下）。 再次输入：bootstrap.bat。 此时，会生成b2.exe、bjam.exe和project-config.jam文件。 ———-* 找到：project-config.jam，编辑： import option ; using msvc : 14.1 : “cl.exe的路径” option.set keep-going : false ; ———–*我在安装好之后，直接点击了b2.exe文件，然后他就开始编译了。 我也已经搞不清楚该怎么实现了。你可以都试试，目的是成功就行了。 ps：关于boost的编译，还没有搞清楚，好像不用编译也可以。</li>
+</ul>
+<h3 id="安装CMake"><a href="#安装CMake" class="headerlink" title="安装CMake"></a>安装CMake</h3><p>下载地址：<a href="https://cmake.org/download/%E3%80%82">https://cmake.org/download/。</a> 建议下载msi文件。可以自动配置环境变量。</p>
+<h3 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h3><p>通过pip install dlib和pip install face_recognition进行最后的安装。</p>
+<h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><p>在python文件中import face_recognition检验是否安装成功。</p>
+<h3 id="安装OpenCV"><a href="#安装OpenCV" class="headerlink" title="安装OpenCV"></a>安装OpenCV</h3><p>pip install opencv-python</p>
+<h3 id="示例代码"><a href="#示例代码" class="headerlink" title="示例代码"></a>示例代码</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 调用OpenCV</span></span><br><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"><span class="comment"># 调用人脸识别</span></span><br><span class="line"><span class="keyword">import</span> face_recognition <span class="keyword">as</span> fc</span><br><span class="line"></span><br><span class="line"><span class="comment"># 打开摄像头，参数为调用第几个摄像头</span></span><br><span class="line">cap = cv2.VideoCapture(<span class="number">0</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 加载样本图片，并了解如何识别它</span></span><br><span class="line">img = fc.load_image_file(<span class="string">&#x27;h.jpg&#x27;</span>)</span><br><span class="line">fc_encoding = fc.face_encodings(img)[<span class="number">0</span>]</span><br><span class="line"></span><br><span class="line">know_fcs = [fc_encoding]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 初始化一些变量</span></span><br><span class="line">fc_locations = []</span><br><span class="line">fc_encodings = []</span><br><span class="line">fc_names = []</span><br><span class="line">process_this_frame = <span class="literal">True</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">    <span class="comment"># 获取每一帧视频</span></span><br><span class="line">    ret, frame = cap.read()</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 调整视频大小为4分之1，便于更快的进行识别</span></span><br><span class="line">    small_frame = cv2.resize(frame, (<span class="number">0</span>, <span class="number">0</span>), fx=<span class="number">0.25</span>, fy=<span class="number">0.25</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 将图像转换为RGB颜色</span></span><br><span class="line">    rgb_sframe = small_frame[:, :, ::-<span class="number">1</span>]</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 仅处理每一帧视频节省时间</span></span><br><span class="line">    <span class="keyword">if</span> process_this_frame:</span><br><span class="line"></span><br><span class="line">        <span class="comment"># 在当前视频帧中查找所有面部和面部编码</span></span><br><span class="line">        fc_locations = fc.face_locations(rgb_sframe)</span><br><span class="line">        fc_encodings = fc.face_encodings(rgb_sframe, fc_locations)</span><br><span class="line"></span><br><span class="line">        fc_names = []</span><br><span class="line">        <span class="keyword">for</span> encoding <span class="keyword">in</span> fc_encodings:</span><br><span class="line"></span><br><span class="line">            <span class="comment"># 判断面部是否与已知面部匹配</span></span><br><span class="line">            matches = fc.compare_faces(know_fcs, encoding)</span><br><span class="line">            name = <span class="string">&#x27;Unknown&#x27;</span></span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> <span class="literal">True</span> <span class="keyword">in</span> matches:</span><br><span class="line">                first_index = matches.index(<span class="literal">True</span>)</span><br><span class="line">                name = <span class="string">&#x27;huge&#x27;</span></span><br><span class="line"></span><br><span class="line">            fc_names.append(name)</span><br><span class="line"></span><br><span class="line">    process_this_frame = <span class="keyword">not</span> process_this_frame</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 显示结果</span></span><br><span class="line">    <span class="keyword">for</span> (top, right, bottom, left), name <span class="keyword">in</span> <span class="built_in">zip</span>(fc_locations, fc_names):</span><br><span class="line">        top *= <span class="number">4</span></span><br><span class="line">        right *= <span class="number">4</span></span><br><span class="line">        bottom *= <span class="number">4</span></span><br><span class="line">        left *= <span class="number">4</span></span><br><span class="line"></span><br><span class="line">        <span class="comment"># 在脸上画上矩形区域</span></span><br><span class="line">        cv2.rectangle(frame, (left, top), (right, bottom), (<span class="number">0</span>, <span class="number">0</span>, <span class="number">255</span>), <span class="number">2</span>)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># 在脸部下面绘制名字标签</span></span><br><span class="line">        cv2.rectangle(frame, (left, bottom - <span class="number">35</span>), (right, bottom), (<span class="number">0</span>, <span class="number">0</span>, <span class="number">255</span>), cv2.FILLED)</span><br><span class="line">        font = cv2.FONT_HERSHEY_DUPLEX</span><br><span class="line">        cv2.putText(frame, name, (left + <span class="number">6</span>, bottom - <span class="number">6</span>), font, <span class="number">1.0</span>, (<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>), <span class="number">1</span>)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># 显示结果图像</span></span><br><span class="line">        cv2.imshow(<span class="string">&#x27;Video&#x27;</span>, frame)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># 点击键盘的‘q’以退出</span></span><br><span class="line">        <span class="keyword">if</span> cv2.waitKey(<span class="number">1</span>) &amp; <span class="number">0xFF</span> == <span class="built_in">ord</span>(<span class="string">&#x27;q&#x27;</span>):</span><br><span class="line">            <span class="keyword">break</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 释放摄像头的手柄</span></span><br><span class="line">cap.release()</span><br><span class="line">cv2.destroyAllWindows()</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>-编程</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
       </tags>
   </entry>
   <entry>
@@ -1973,36 +1981,6 @@ class MainActivity : AppCompatActivity(), CoroutineScope &#123;
       <tags>
         <tag>Principle</tag>
         <tag>OOP</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>使用Python实现人脸识别</title>
-    <url>/2021/02/25/python-face-recognition/</url>
-    <content><![CDATA[<h2 id="Windows-10"><a href="#Windows-10" class="headerlink" title="Windows 10"></a>Windows 10</h2><p>开发前安装和配置dlib和face_recognition</p>
-<span id="more"></span>
-
-<h3 id="安装Visual-Studio"><a href="#安装Visual-Studio" class="headerlink" title="安装Visual Studio"></a>安装Visual Studio</h3><ul>
-<li>安装VS 2015 C++：下载地址：<a href="https://www.microsoft.com/en-us/download/confirmation.aspx?id=48145%E3%80%82">https://www.microsoft.com/en-us/download/confirmation.aspx?id=48145。</a></li>
-<li>安装Visual Studio：下载地址：<a href="https://visualstudio.microsoft.com/zh-hans/downloads/%E3%80%82">https://visualstudio.microsoft.com/zh-hans/downloads/。</a> 安装过程中应该注意：在工作负载中选中“使用C++的桌面开发”，我这里还选中了“Visual Studio扩展开发”。</li>
-</ul>
-<h3 id="安装Boost-C-Libraries"><a href="#安装Boost-C-Libraries" class="headerlink" title="安装Boost C++ Libraries"></a>安装Boost C++ Libraries</h3><ul>
-<li>下载地址：<a href="https://sourceforge.net/projects/boost/files%EF%BC%8C%E9%80%89%E6%8B%A9boost-binaries%EF%BC%8C%E6%89%BE%E5%88%B0%E6%9C%80%E6%96%B0%E7%89%88%E6%9C%AC%EF%BC%8C%E4%B8%8B%E8%BD%BDexe%E3%80%82%EF%BC%88%E5%AE%98%E7%BD%91%E4%B8%8B%E8%BD%BD%E4%B8%8B%E5%88%B0%E6%9C%80%E5%90%8E%E5%B0%B1%E6%B2%A1%E8%B5%84%E6%BA%90%E4%BA%86%EF%BC%8C%E5%BE%88%E6%97%A0%E5%A5%88%EF%BC%89">https://sourceforge.net/projects/boost/files，选择boost-binaries，找到最新版本，下载exe。（官网下载下到最后就没资源了，很无奈）</a></li>
-<li>运行exe文件，选择安装路径，进行安装。时间较慢，慢慢等待。</li>
-<li>将360等安全软件关闭掉。</li>
-<li>在菜单中，找到并打开“适用于VS 2017的x86_x64兼容工具命令提示”，输入命令：cd xx:\xx…\boost\boost_1_68_0（即进入boost安装目录下）。 再次输入：bootstrap.bat。 此时，会生成b2.exe、bjam.exe和project-config.jam文件。 ———-* 找到：project-config.jam，编辑： import option ; using msvc : 14.1 : “cl.exe的路径” option.set keep-going : false ; ———–*我在安装好之后，直接点击了b2.exe文件，然后他就开始编译了。 我也已经搞不清楚该怎么实现了。你可以都试试，目的是成功就行了。 ps：关于boost的编译，还没有搞清楚，好像不用编译也可以。</li>
-</ul>
-<h3 id="安装CMake"><a href="#安装CMake" class="headerlink" title="安装CMake"></a>安装CMake</h3><p>下载地址：<a href="https://cmake.org/download/%E3%80%82">https://cmake.org/download/。</a> 建议下载msi文件。可以自动配置环境变量。</p>
-<h3 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h3><p>通过pip install dlib和pip install face_recognition进行最后的安装。</p>
-<h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><p>在python文件中import face_recognition检验是否安装成功。</p>
-<h3 id="安装OpenCV"><a href="#安装OpenCV" class="headerlink" title="安装OpenCV"></a>安装OpenCV</h3><p>pip install opencv-python</p>
-<h3 id="示例代码"><a href="#示例代码" class="headerlink" title="示例代码"></a>示例代码</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 调用OpenCV</span></span><br><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"><span class="comment"># 调用人脸识别</span></span><br><span class="line"><span class="keyword">import</span> face_recognition <span class="keyword">as</span> fc</span><br><span class="line"></span><br><span class="line"><span class="comment"># 打开摄像头，参数为调用第几个摄像头</span></span><br><span class="line">cap = cv2.VideoCapture(<span class="number">0</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 加载样本图片，并了解如何识别它</span></span><br><span class="line">img = fc.load_image_file(<span class="string">&#x27;h.jpg&#x27;</span>)</span><br><span class="line">fc_encoding = fc.face_encodings(img)[<span class="number">0</span>]</span><br><span class="line"></span><br><span class="line">know_fcs = [fc_encoding]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 初始化一些变量</span></span><br><span class="line">fc_locations = []</span><br><span class="line">fc_encodings = []</span><br><span class="line">fc_names = []</span><br><span class="line">process_this_frame = <span class="literal">True</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">    <span class="comment"># 获取每一帧视频</span></span><br><span class="line">    ret, frame = cap.read()</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 调整视频大小为4分之1，便于更快的进行识别</span></span><br><span class="line">    small_frame = cv2.resize(frame, (<span class="number">0</span>, <span class="number">0</span>), fx=<span class="number">0.25</span>, fy=<span class="number">0.25</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 将图像转换为RGB颜色</span></span><br><span class="line">    rgb_sframe = small_frame[:, :, ::-<span class="number">1</span>]</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 仅处理每一帧视频节省时间</span></span><br><span class="line">    <span class="keyword">if</span> process_this_frame:</span><br><span class="line"></span><br><span class="line">        <span class="comment"># 在当前视频帧中查找所有面部和面部编码</span></span><br><span class="line">        fc_locations = fc.face_locations(rgb_sframe)</span><br><span class="line">        fc_encodings = fc.face_encodings(rgb_sframe, fc_locations)</span><br><span class="line"></span><br><span class="line">        fc_names = []</span><br><span class="line">        <span class="keyword">for</span> encoding <span class="keyword">in</span> fc_encodings:</span><br><span class="line"></span><br><span class="line">            <span class="comment"># 判断面部是否与已知面部匹配</span></span><br><span class="line">            matches = fc.compare_faces(know_fcs, encoding)</span><br><span class="line">            name = <span class="string">&#x27;Unknown&#x27;</span></span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> <span class="literal">True</span> <span class="keyword">in</span> matches:</span><br><span class="line">                first_index = matches.index(<span class="literal">True</span>)</span><br><span class="line">                name = <span class="string">&#x27;huge&#x27;</span></span><br><span class="line"></span><br><span class="line">            fc_names.append(name)</span><br><span class="line"></span><br><span class="line">    process_this_frame = <span class="keyword">not</span> process_this_frame</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 显示结果</span></span><br><span class="line">    <span class="keyword">for</span> (top, right, bottom, left), name <span class="keyword">in</span> <span class="built_in">zip</span>(fc_locations, fc_names):</span><br><span class="line">        top *= <span class="number">4</span></span><br><span class="line">        right *= <span class="number">4</span></span><br><span class="line">        bottom *= <span class="number">4</span></span><br><span class="line">        left *= <span class="number">4</span></span><br><span class="line"></span><br><span class="line">        <span class="comment"># 在脸上画上矩形区域</span></span><br><span class="line">        cv2.rectangle(frame, (left, top), (right, bottom), (<span class="number">0</span>, <span class="number">0</span>, <span class="number">255</span>), <span class="number">2</span>)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># 在脸部下面绘制名字标签</span></span><br><span class="line">        cv2.rectangle(frame, (left, bottom - <span class="number">35</span>), (right, bottom), (<span class="number">0</span>, <span class="number">0</span>, <span class="number">255</span>), cv2.FILLED)</span><br><span class="line">        font = cv2.FONT_HERSHEY_DUPLEX</span><br><span class="line">        cv2.putText(frame, name, (left + <span class="number">6</span>, bottom - <span class="number">6</span>), font, <span class="number">1.0</span>, (<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>), <span class="number">1</span>)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># 显示结果图像</span></span><br><span class="line">        cv2.imshow(<span class="string">&#x27;Video&#x27;</span>, frame)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># 点击键盘的‘q’以退出</span></span><br><span class="line">        <span class="keyword">if</span> cv2.waitKey(<span class="number">1</span>) &amp; <span class="number">0xFF</span> == <span class="built_in">ord</span>(<span class="string">&#x27;q&#x27;</span>):</span><br><span class="line">            <span class="keyword">break</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 释放摄像头的手柄</span></span><br><span class="line">cap.release()</span><br><span class="line">cv2.destroyAllWindows()</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>-编程</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
       </tags>
   </entry>
   <entry>
