@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.2.0">
+
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/safari-pinned-tab-next.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" integrity="sha256-DfWjNxDkM94fVBWx1H5BMMp0Zq7luBlV8QRcSES7s+0=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/themes/orange/pace-theme-bounce.css">
+  <script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"hijiaopeng.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.11.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="Windows 10开发前安装和配置dlib和face_recognition">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用Python实现人脸识别">
+<meta property="og:url" content="https://hijiaopeng.github.io/2021/02/25/python-face-recognition/index.html">
+<meta property="og:site_name" content="JiaoPeng&#96;s Blogs">
+<meta property="og:description" content="Windows 10开发前安装和配置dlib和face_recognition">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-02-25T02:41:35.000Z">
+<meta property="article:modified_time" content="2022-05-16T14:48:10.727Z">
+<meta property="article:author" content="JPeng">
+<meta property="article:tag" content="Python">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://hijiaopeng.github.io/2021/02/25/python-face-recognition/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://hijiaopeng.github.io/2021/02/25/python-face-recognition/","path":"2021/02/25/python-face-recognition/","title":"使用Python实现人脸识别"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>使用Python实现人脸识别 | JiaoPeng`s Blogs</title>
+  
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">JiaoPeng`s Blogs</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">JP的小站</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Windows-10"><span class="nav-number">1.</span> <span class="nav-text">Windows 10</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85Visual-Studio"><span class="nav-number">1.1.</span> <span class="nav-text">安装Visual Studio</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85Boost-C-Libraries"><span class="nav-number">1.2.</span> <span class="nav-text">安装Boost C++ Libraries</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85CMake"><span class="nav-number">1.3.</span> <span class="nav-text">安装CMake</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%80%E5%90%8E"><span class="nav-number">1.4.</span> <span class="nav-text">最后</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B5%8B%E8%AF%95"><span class="nav-number">1.5.</span> <span class="nav-text">测试</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85OpenCV"><span class="nav-number">1.6.</span> <span class="nav-text">安装OpenCV</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A4%BA%E4%BE%8B%E4%BB%A3%E7%A0%81"><span class="nav-number">1.7.</span> <span class="nav-text">示例代码</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="JPeng"
+      src="/images/avatar.JPG">
+  <p class="site-author-name" itemprop="name">JPeng</p>
+  <div class="site-description" itemprop="description">好记性不如烂笔头</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">30</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/hijiaopeng" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;hijiaopeng" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/hijiaop@outlook.com" title="E-Mail → hijiaop@outlook.com"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+  <div class="cc-license site-overview-item animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" class="cc-opacity" rel="noopener" target="_blank"><img src="https://cdn.jsdelivr.net/npm/@creativecommons/vocabulary@2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></a>
+  </div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://hijiaopeng.github.io/2021/02/25/python-face-recognition/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.JPG">
+      <meta itemprop="name" content="JPeng">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="JiaoPeng`s Blogs">
+      <meta itemprop="description" content="好记性不如烂笔头">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="使用Python实现人脸识别 | JiaoPeng`s Blogs">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          使用Python实现人脸识别
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-02-25 10:41:35" itemprop="dateCreated datePublished" datetime="2021-02-25T10:41:35+08:00">2021-02-25</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-05-16 22:48:10" itemprop="dateModified" datetime="2022-05-16T22:48:10+08:00">2022-05-16</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E7%BC%96%E7%A8%8B/" itemprop="url" rel="index"><span itemprop="name">-编程</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>2.4k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>2 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h2 id="Windows-10"><a href="#Windows-10" class="headerlink" title="Windows 10"></a>Windows 10</h2><p>开发前安装和配置dlib和face_recognition</p>
+<span id="more"></span>
+
+<h3 id="安装Visual-Studio"><a href="#安装Visual-Studio" class="headerlink" title="安装Visual Studio"></a>安装Visual Studio</h3><ul>
+<li>安装VS 2015 C++：下载地址：<a target="_blank" rel="noopener" href="https://www.microsoft.com/en-us/download/confirmation.aspx?id=48145%E3%80%82">https://www.microsoft.com/en-us/download/confirmation.aspx?id=48145。</a></li>
+<li>安装Visual Studio：下载地址：<a target="_blank" rel="noopener" href="https://visualstudio.microsoft.com/zh-hans/downloads/%E3%80%82">https://visualstudio.microsoft.com/zh-hans/downloads/。</a> 安装过程中应该注意：在工作负载中选中“使用C++的桌面开发”，我这里还选中了“Visual Studio扩展开发”。</li>
+</ul>
+<h3 id="安装Boost-C-Libraries"><a href="#安装Boost-C-Libraries" class="headerlink" title="安装Boost C++ Libraries"></a>安装Boost C++ Libraries</h3><ul>
+<li>下载地址：<a target="_blank" rel="noopener" href="https://sourceforge.net/projects/boost/files%EF%BC%8C%E9%80%89%E6%8B%A9boost-binaries%EF%BC%8C%E6%89%BE%E5%88%B0%E6%9C%80%E6%96%B0%E7%89%88%E6%9C%AC%EF%BC%8C%E4%B8%8B%E8%BD%BDexe%E3%80%82%EF%BC%88%E5%AE%98%E7%BD%91%E4%B8%8B%E8%BD%BD%E4%B8%8B%E5%88%B0%E6%9C%80%E5%90%8E%E5%B0%B1%E6%B2%A1%E8%B5%84%E6%BA%90%E4%BA%86%EF%BC%8C%E5%BE%88%E6%97%A0%E5%A5%88%EF%BC%89">https://sourceforge.net/projects/boost/files，选择boost-binaries，找到最新版本，下载exe。（官网下载下到最后就没资源了，很无奈）</a></li>
+<li>运行exe文件，选择安装路径，进行安装。时间较慢，慢慢等待。</li>
+<li>将360等安全软件关闭掉。</li>
+<li>在菜单中，找到并打开“适用于VS 2017的x86_x64兼容工具命令提示”，输入命令：cd xx:\xx…\boost\boost_1_68_0（即进入boost安装目录下）。 再次输入：bootstrap.bat。 此时，会生成b2.exe、bjam.exe和project-config.jam文件。 ———-* 找到：project-config.jam，编辑： import option ; using msvc : 14.1 : “cl.exe的路径” option.set keep-going : false ; ———–*我在安装好之后，直接点击了b2.exe文件，然后他就开始编译了。 我也已经搞不清楚该怎么实现了。你可以都试试，目的是成功就行了。 ps：关于boost的编译，还没有搞清楚，好像不用编译也可以。</li>
+</ul>
+<h3 id="安装CMake"><a href="#安装CMake" class="headerlink" title="安装CMake"></a>安装CMake</h3><p>下载地址：<a target="_blank" rel="noopener" href="https://cmake.org/download/%E3%80%82">https://cmake.org/download/。</a> 建议下载msi文件。可以自动配置环境变量。</p>
+<h3 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h3><p>通过pip install dlib和pip install face_recognition进行最后的安装。</p>
+<h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><p>在python文件中import face_recognition检验是否安装成功。</p>
+<h3 id="安装OpenCV"><a href="#安装OpenCV" class="headerlink" title="安装OpenCV"></a>安装OpenCV</h3><p>pip install opencv-python</p>
+<h3 id="示例代码"><a href="#示例代码" class="headerlink" title="示例代码"></a>示例代码</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 调用OpenCV</span></span><br><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"><span class="comment"># 调用人脸识别</span></span><br><span class="line"><span class="keyword">import</span> face_recognition <span class="keyword">as</span> fc</span><br><span class="line"></span><br><span class="line"><span class="comment"># 打开摄像头，参数为调用第几个摄像头</span></span><br><span class="line">cap = cv2.VideoCapture(<span class="number">0</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 加载样本图片，并了解如何识别它</span></span><br><span class="line">img = fc.load_image_file(<span class="string">&#x27;h.jpg&#x27;</span>)</span><br><span class="line">fc_encoding = fc.face_encodings(img)[<span class="number">0</span>]</span><br><span class="line"></span><br><span class="line">know_fcs = [fc_encoding]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 初始化一些变量</span></span><br><span class="line">fc_locations = []</span><br><span class="line">fc_encodings = []</span><br><span class="line">fc_names = []</span><br><span class="line">process_this_frame = <span class="literal">True</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">    <span class="comment"># 获取每一帧视频</span></span><br><span class="line">    ret, frame = cap.read()</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 调整视频大小为4分之1，便于更快的进行识别</span></span><br><span class="line">    small_frame = cv2.resize(frame, (<span class="number">0</span>, <span class="number">0</span>), fx=<span class="number">0.25</span>, fy=<span class="number">0.25</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 将图像转换为RGB颜色</span></span><br><span class="line">    rgb_sframe = small_frame[:, :, ::-<span class="number">1</span>]</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 仅处理每一帧视频节省时间</span></span><br><span class="line">    <span class="keyword">if</span> process_this_frame:</span><br><span class="line"></span><br><span class="line">        <span class="comment"># 在当前视频帧中查找所有面部和面部编码</span></span><br><span class="line">        fc_locations = fc.face_locations(rgb_sframe)</span><br><span class="line">        fc_encodings = fc.face_encodings(rgb_sframe, fc_locations)</span><br><span class="line"></span><br><span class="line">        fc_names = []</span><br><span class="line">        <span class="keyword">for</span> encoding <span class="keyword">in</span> fc_encodings:</span><br><span class="line"></span><br><span class="line">            <span class="comment"># 判断面部是否与已知面部匹配</span></span><br><span class="line">            matches = fc.compare_faces(know_fcs, encoding)</span><br><span class="line">            name = <span class="string">&#x27;Unknown&#x27;</span></span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> <span class="literal">True</span> <span class="keyword">in</span> matches:</span><br><span class="line">                first_index = matches.index(<span class="literal">True</span>)</span><br><span class="line">                name = <span class="string">&#x27;huge&#x27;</span></span><br><span class="line"></span><br><span class="line">            fc_names.append(name)</span><br><span class="line"></span><br><span class="line">    process_this_frame = <span class="keyword">not</span> process_this_frame</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 显示结果</span></span><br><span class="line">    <span class="keyword">for</span> (top, right, bottom, left), name <span class="keyword">in</span> <span class="built_in">zip</span>(fc_locations, fc_names):</span><br><span class="line">        top *= <span class="number">4</span></span><br><span class="line">        right *= <span class="number">4</span></span><br><span class="line">        bottom *= <span class="number">4</span></span><br><span class="line">        left *= <span class="number">4</span></span><br><span class="line"></span><br><span class="line">        <span class="comment"># 在脸上画上矩形区域</span></span><br><span class="line">        cv2.rectangle(frame, (left, top), (right, bottom), (<span class="number">0</span>, <span class="number">0</span>, <span class="number">255</span>), <span class="number">2</span>)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># 在脸部下面绘制名字标签</span></span><br><span class="line">        cv2.rectangle(frame, (left, bottom - <span class="number">35</span>), (right, bottom), (<span class="number">0</span>, <span class="number">0</span>, <span class="number">255</span>), cv2.FILLED)</span><br><span class="line">        font = cv2.FONT_HERSHEY_DUPLEX</span><br><span class="line">        cv2.putText(frame, name, (left + <span class="number">6</span>, bottom - <span class="number">6</span>), font, <span class="number">1.0</span>, (<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>), <span class="number">1</span>)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># 显示结果图像</span></span><br><span class="line">        cv2.imshow(<span class="string">&#x27;Video&#x27;</span>, frame)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># 点击键盘的‘q’以退出</span></span><br><span class="line">        <span class="keyword">if</span> cv2.waitKey(<span class="number">1</span>) &amp; <span class="number">0xFF</span> == <span class="built_in">ord</span>(<span class="string">&#x27;q&#x27;</span>):</span><br><span class="line">            <span class="keyword">break</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 释放摄像头的手柄</span></span><br><span class="line">cap.release()</span><br><span class="line">cv2.destroyAllWindows()</span><br></pre></td></tr></table></figure>
+
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>JPeng
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://hijiaopeng.github.io/2021/02/25/python-face-recognition/" title="使用Python实现人脸识别">https://hijiaopeng.github.io/2021/02/25/python-face-recognition/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/Python/" rel="tag"><i class="fa fa-tag"></i> Python</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2021/02/25/android-gitignore/" rel="prev" title="Android-设置.gitignore忽略文件">
+                  <i class="fa fa-chevron-left"></i> Android-设置.gitignore忽略文件
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2021/02/25/android-keyboard/" rel="next" title="Android-自定义键盘">
+                  Android-自定义键盘 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">by JiaoPeng</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">88k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">1:20</span>
+  </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script size="300" alpha="0.6" zIndex="-1" src="https://cdn.jsdelivr.net/npm/ribbon.js@1.0.2/dist/ribbon.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@next-theme/pjax@0.5.0/pjax.min.js" integrity="sha256-3NkoLDrmHLTYj7csHIZSr0MHAFTXth7Ua/DDt4MRUAg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js" integrity="sha256-EdPgYcPk/IIrw7FYeuJQexva49pVRZNmt3LculEr7zM=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script><script src="/js/pjax.js"></script>
+
+  
+<script src="https://cdn.jsdelivr.net/npm/hexo-generator-searchdb@1.4.0/dist/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+  <script src="/js/third-party/fancybox.js"></script>
+
+  <script src="/js/third-party/pace.js"></script>
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js","integrity":"sha256-r+3itOMtGGjap0x+10hu6jW/gZCzxHsoKrOd7gyRSGY="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/quicklink@2.2.0/dist/quicklink.umd.js" integrity="sha256-4kQf9z5ntdQrzsBC3YSHnEz02Z9C1UeW/E9OgnvlzSY=" crossorigin="anonymous"></script>
+  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":true,"archive":true,"delay":true,"timeout":3000,"priority":true,"url":"https://hijiaopeng.github.io/2021/02/25/python-face-recognition/"}</script>
+  <script src="/js/third-party/quicklink.js"></script>
+
+</body>
+</html>
