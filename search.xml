@@ -1,21 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hello World</title>
-    <url>/2022/05/11/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+    <title>Elden Ring-速刷卢恩699大法</title>
+    <url>/2022/05/16/ER-699/</url>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>艾尔登法环里面，除了在“鲜血银行”刷乌鸦和白金之子，更为快捷的方式便是“699大法”了。</p>
+<p>因为“王之卢恩”只能持有699个，所以叫做“699大法”。“王之卢恩”是最多的，一个5w。</p>
+<p>这种刷卢恩的方式，有个很重要的前提，就是你得有一个同样在玩艾尔登法环的小伙伴，两个人一起刷。以下为操作步骤。图片在以后上传，现阶段为文字讲述。</p>
+<span id="more"></span>
 
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<h2 id="操作流程"><a href="#操作流程" class="headerlink" title="操作流程"></a>操作流程</h2><ul>
+<li>两个同时在线的玩家A和B（确保服务器连接正常）</li>
+<li>确保玩家A拥有“王之卢恩”。</li>
+<li>玩家A打开电脑的C盘，找到文件夹的选项，打开后，点击“查看”，下滑找到“显示隐藏的文件、文件夹和驱动器”选项，并选中，依次点击“应用”–“确定”。</li>
+<li>这时候，玩家A进入C盘–用户–用户名下，可以看见AppData文件夹了。</li>
+<li>玩家A进入文件夹：C:\Users\用户名\AppData\Roaming\EldenRing\765……396（这里是一堆数字的文件夹），可以看到有3个文件：ER0000.sl2，ER0000.sl2.bak，steam_autocloud.vdf。</li>
+<li>玩家A将ER0000.sl2复制出来，个人建议复制到桌面，这样好找。</li>
+<li>此时准备工作基本完成。</li>
+<li>玩家A和玩家B同时上线，找一个赐福点，两人同时传送过去。</li>
+<li>两名玩家打开游戏页面的菜单，找到“多人联机游玩”，设置同一个“多人联机游玩暗号”，并确保应用成功。</li>
+<li>玩家B使用“斗士勾指”画下红色符号，等待召唤。</li>
+<li>玩家A在玩家B画完符号后，使用“唤勾指药”，就能看见玩家B所画的红色符号，过去进行召唤，等待玩家B进入玩家A的世界来。</li>
+<li>玩家B进入玩家A的世界后，玩家A将“王之卢恩”“放置原地”，等玩家B拾取，玩家B拾取后，返回自己的世界。</li>
+<li>玩家A等待玩家B返回自己的世界后，正常退出游戏。</li>
+<li>玩家A用之前复制的ER0000.sl2替换当前文件夹中的ER0000.sl2。</li>
+<li>重新进入游戏，此时玩家A的“王之卢恩”又回来了，玩家B画符，玩家A召唤。</li>
+<li>这时候是玩家B将“王之卢恩”“放置原地”，由玩家A拾取，玩家A此时的“王之卢恩”变成双倍了。</li>
+<li>玩家B返回自己的世界，玩家A坐一下赐福，返回游戏的标题页面，“请按任意按钮”那个页面，返回电脑桌面，将文件夹刷新一下，重新备份ER0000.sl2文件。再进入页面。</li>
+<li>重复以上步骤，直到玩家A拥有699个。</li>
+<li>当玩家A有了699个后，备份当前存档，进入游戏，召唤玩家B，再给玩家B“王之卢恩”，玩家B拿到后返回自己的世界，玩家A需要坐赐福从箱子里面再取出“王之卢恩”，召唤玩家B。依次重复进行。这里需要注意的是，玩家A坐赐福取卢恩后，不需要重新使用“唤勾指药”，等玩家B画符就行。</li>
+<li>当玩家B也699个后，玩家A再把之前的存档覆盖回来，那么，两个人就都是699个“王之卢恩”了。</li>
+</ul>
+<h2 id="提示"><a href="#提示" class="headerlink" title="提示"></a>提示</h2><ul>
+<li>请确保“唤勾指药”的数量，拿“落叶花”进行制作，这玩意儿到处都是，也可以去“壶村”刷。</li>
+<li>如果想保存游戏存档，只坐赐福是不管用的，得回到标题页面才行。</li>
+<li>服务器的稳定性决定刷卢恩的时间。</li>
+<li>一定要用“斗士勾指”画符，不然会被其他玩家入侵，链接起来更慢。</li>
+</ul>
+<p>最后祝各位小伙伴刷的开心，玩的飞起！</p>
 ]]></content>
+      <categories>
+        <category>游戏时间</category>
+      </categories>
+      <tags>
+        <tag>Elden Ring</tag>
+      </tags>
   </entry>
 </search>
