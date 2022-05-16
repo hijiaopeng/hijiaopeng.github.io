@@ -305,39 +305,39 @@
 <p>系统架构：LAMP（Linux，Apache，MySQL，PHP）</p>
 <p>博客框架：WordPress</p>
 <h5 id="更新服务器"><a href="#更新服务器" class="headerlink" title="更新服务器"></a>更新服务器</h5><p>首先，我们需要确保服务器系统中的所有内容都是最新的：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ yum -y update </span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ yum -y update </span><br></pre></td></tr></table></figure>
 
 <h5 id="搭建LAMP："><a href="#搭建LAMP：" class="headerlink" title="搭建LAMP："></a>搭建LAMP：</h5><p>安装Apache：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ yum -y install httpd</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ yum -y install httpd</span><br></pre></td></tr></table></figure>
 
 <p>设置开机启动：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ chkconfig httpd on</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ chkconfig httpd on</span><br></pre></td></tr></table></figure>
 
 <p>启动服务：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ systemctl start httpd.service</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ systemctl start httpd.service</span><br></pre></td></tr></table></figure>
 
 <p>查看服务状态：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ systemctl status httpd.service </span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ systemctl status httpd.service </span><br></pre></td></tr></table></figure>
 
 <p>配置云服务器安全组规则，设置Apache Http端口，一般为80。</p>
 <p>规则方向为入方向，端口范围设置为80&#x2F;80，授权对象为0.0.0.0&#x2F;0。</p>
 <h5 id="安装MySQL"><a href="#安装MySQL" class="headerlink" title="安装MySQL"></a>安装MySQL</h5><p>先安装带有当前可用的mysql5系列社区版资源的rpm包：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ rpm -Uvh http://dev.mysql.com/get/mysql-community-release-el7-5.noarch.rpm</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ rpm -Uvh http://dev.mysql.com/get/mysql-community-release-el7-5.noarch.rpm</span><br></pre></td></tr></table></figure>
 
 <p>查看当前可用的mysql安装资源：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ yum repolist enabled | grep <span class="string">&quot;mysql.-community.&quot;</span> </span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ yum repolist enabled | grep <span class="string">&quot;mysql.-community.&quot;</span> </span><br></pre></td></tr></table></figure>
 
 <p>安装MySQL5.6版本：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ yum -y install mysql-community-server </span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ yum -y install mysql-community-server </span><br></pre></td></tr></table></figure>
 
 <p>设置MySQL开机启动：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ systemctl <span class="built_in">enable</span> mysqld </span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ systemctl <span class="built_in">enable</span> mysqld </span><br></pre></td></tr></table></figure>
 
 <p>启动MySQL：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ systemctl start mysqld </span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ systemctl start mysqld </span><br></pre></td></tr></table></figure>
 
 <p>初始化MySQL各项配置：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ mysql_secure_installation</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ mysql_secure_installation</span><br></pre></td></tr></table></figure>
 
 <p>首次打开MySQL提示输入密码，默认是没有密码的，直接回车就可以。</p>
 <p>其次开始设置MySQL各项配置：</p>
@@ -347,38 +347,38 @@
 <p>Remove test database and access to it? [Y&#x2F;n] &#x2F;&#x2F;删除默认的 test 数据库（选Y） </p>
 <p>Reload privilege tables now? [Y&#x2F;n] &#x2F;&#x2F;是否马上应用最新的设置（选Y）</p>
 <h5 id="创建WordPress数据库"><a href="#创建WordPress数据库" class="headerlink" title="创建WordPress数据库"></a>创建WordPress数据库</h5><p>登录MySQL：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ mysql -u root -p</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ mysql -u root -p</span><br></pre></td></tr></table></figure>
 
 <p>输入之前设置的密码 创建WordPress需要的数据库，名称自定义：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ create database wordpress;</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ create database wordpress;</span><br></pre></td></tr></table></figure>
 
 <h5 id="安装PHP"><a href="#安装PHP" class="headerlink" title="安装PHP"></a>安装PHP</h5><p>安装PHP：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ yum -y install php php-mysql php-gd php-xml</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ yum -y install php php-mysql php-gd php-xml</span><br></pre></td></tr></table></figure>
 
 <p>查看PHP版本，是否已经安装成功：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ php -v</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ php -v</span><br></pre></td></tr></table></figure>
 
 <h5 id="安装WordPress"><a href="#安装WordPress" class="headerlink" title="安装WordPress"></a>安装WordPress</h5><p>进入官网<a target="_blank" rel="noopener" href="https://cn.wordpress.org/txt-download/">WordPress下载地址</a>，查看最新版本号，并进行下载：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ wget http://cn.wordpress.org/wordpress-最新的版本号-zh_CN.zip</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ wget http://cn.wordpress.org/wordpress-最新的版本号-zh_CN.zip</span><br></pre></td></tr></table></figure>
 
 <p>解压下载的压缩包：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ unzip wordpress-最新的版本号-zh_CN.zip</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ unzip wordpress-最新的版本号-zh_CN.zip</span><br></pre></td></tr></table></figure>
 
 <p>如果没有unzip的话，执行以下命令安装：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ yum install unzip</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ yum install unzip</span><br></pre></td></tr></table></figure>
 
 <p>将wordpress下的所有文件复制到Apache服务器下的根目录：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cp</span> -r wordpress/* /var/www/html/</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cp</span> -r wordpress/* /var/www/html/</span><br></pre></td></tr></table></figure>
 
 <p>配置WordPress的配置文件</p>
 <p>进入Apache的根目录html目录下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> /var/www/html/</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> /var/www/html/</span><br></pre></td></tr></table></figure>
 
 <p>复制配置文件到wp-config.php：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cp</span> wp-config-sample.php wp-config.php</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cp</span> wp-config-sample.php wp-config.php</span><br></pre></td></tr></table></figure>
 
 <p>编辑WordPress的配置文件：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ vi wp-config.php</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ vi wp-config.php</span><br></pre></td></tr></table></figure>
 
 <p>根据文件中的提示，依次设置数据库名称DB_NAME；</p>
 <p>数据库用户名DB_USER（我这里使用的是root）；</p>
@@ -388,10 +388,10 @@
 <p>define(“FS_METHOD”, “direct”); define(“FSCHMODDIR”, 0777); define(“FSCHMODFILE”, 0777);</p>
 <p>用来解决FTP登录凭据问题。</p>
 <p>为了防止之后可能会出现的安装失败或者权限不足等问题， 后退找到html目录，给予它足够的权限，777，并且较为安全。（在安装和更新时设置为777，其他时候最好不要给与这么高权限，存在安全问题）：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">chmod</span> -R 777 html/</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">chmod</span> -R 777 html/</span><br></pre></td></tr></table></figure>
 
 <p>最后重启Apache服务：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ systemctl restart httpd.service</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ systemctl restart httpd.service</span><br></pre></td></tr></table></figure>
 
 <h5 id="WordPress五分钟安装程序"><a href="#WordPress五分钟安装程序" class="headerlink" title="WordPress五分钟安装程序"></a>WordPress五分钟安装程序</h5><p>最后就是按照步骤，填写自己的站点信息和用户信息，一步一步填写就行，密码最好设置的较为复杂一些。之后会进入博客的仪表盘页面，可以在里面管理自己的网站了。</p>
 
@@ -463,13 +463,13 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">88k</span>
+    <span title="站点总字数">86k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">1:20</span>
+    <span title="站点阅读时长">1:18</span>
   </span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动

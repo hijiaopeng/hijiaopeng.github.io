@@ -24,12 +24,12 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"hijiaopeng.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.11.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="第一种方式：找到module的build.gradle文件，在dependencies{}里面直接添加： 1implementation fileTree(include: [&amp;#x27;*.jar&amp;#x27;,&quot;*.aar&quot;], dir: &amp;#x27;libs&amp;#x27;)  第二种方式：找到项目的build.gradle文件，添加： 12345678allproject">
+    <meta name="description" content="第一种方式：找到module的build.gradle文件，在dependencies{}里面直接添加： implementation fileTree(include: [&amp;#x27;*.jar&amp;#x27;,&quot;*.aar&quot;], dir: &amp;#x27;libs&amp;#x27;)  第二种方式：找到项目的build.gradle文件，添加： allprojects &amp;#123;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Android Studio项目中导入aar包">
 <meta property="og:url" content="https://hijiaopeng.github.io/2021/05/07/android-build-aar/index.html">
 <meta property="og:site_name" content="JiaoPeng&#96;s Blogs">
-<meta property="og:description" content="第一种方式：找到module的build.gradle文件，在dependencies{}里面直接添加： 1implementation fileTree(include: [&amp;#x27;*.jar&amp;#x27;,&quot;*.aar&quot;], dir: &amp;#x27;libs&amp;#x27;)  第二种方式：找到项目的build.gradle文件，添加： 12345678allproject">
+<meta property="og:description" content="第一种方式：找到module的build.gradle文件，在dependencies{}里面直接添加： implementation fileTree(include: [&amp;#x27;*.jar&amp;#x27;,&quot;*.aar&quot;], dir: &amp;#x27;libs&amp;#x27;)  第二种方式：找到项目的build.gradle文件，添加： allprojects &amp;#123;">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-05-07T01:52:24.000Z">
 <meta property="article:modified_time" content="2022-05-16T14:33:47.668Z">
@@ -281,7 +281,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>793</span>
+      <span>769</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -302,20 +302,20 @@
         <span id="more"></span>
 
 <h4 id="第一种方式："><a href="#第一种方式：" class="headerlink" title="第一种方式："></a>第一种方式：</h4><p>找到module的build.gradle文件，在dependencies{}里面直接添加：</p>
-<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">implementation fileTree(include: [<span class="string">&#x27;*.jar&#x27;</span>,<span class="string">&quot;*.aar&quot;</span>], dir: <span class="string">&#x27;libs&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line">implementation fileTree(include: [<span class="string">&#x27;*.jar&#x27;</span>,<span class="string">&quot;*.aar&quot;</span>], dir: <span class="string">&#x27;libs&#x27;</span>)</span><br></pre></td></tr></table></figure>
 
 <h4 id="第二种方式："><a href="#第二种方式：" class="headerlink" title="第二种方式："></a>第二种方式：</h4><p>找到项目的build.gradle文件，添加：</p>
-<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">allprojects &#123;</span><br><span class="line">    repositories &#123;</span><br><span class="line">    		...</span><br><span class="line">    		flatDir &#123;</span><br><span class="line">            dirs <span class="string">&#x27;libs&#x27;</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line">allprojects &#123;</span><br><span class="line">    repositories &#123;</span><br><span class="line">    		...</span><br><span class="line">    		flatDir &#123;</span><br><span class="line">            dirs <span class="string">&#x27;libs&#x27;</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>在使用到的对应module的build.gradle文件里面添加：</p>
-<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">dependencies &#123;</span><br><span class="line">		 implementation(name: <span class="string">&#x27;aar名字&#x27;</span>, ext: <span class="string">&#x27;aar&#x27;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line">dependencies &#123;</span><br><span class="line">		 implementation(name: <span class="string">&#x27;aar名字&#x27;</span>, ext: <span class="string">&#x27;aar&#x27;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>注意点：此种方法适用于单一module引入aar文件。如果引入aar的是一个moduleA，这个moduleA又被其他module引用，项目就会编译失败，所以在多module下，使用下面这种方式。</p>
 <h4 id="第三种方式："><a href="#第三种方式：" class="headerlink" title="第三种方式："></a>第三种方式：</h4><p>修改项目的build.gradle文件：</p>
-<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">allprojects &#123;</span><br><span class="line">    repositories &#123;</span><br><span class="line">    		...</span><br><span class="line">    		flatDir &#123;</span><br><span class="line">    				<span class="comment">//这里需要把引入了aar包的module添加到依赖关系中</span></span><br><span class="line">            dirs project(<span class="string">&#x27;:xxModule&#x27;</span>).file(<span class="string">&#x27;libs&#x27;</span>)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line">allprojects &#123;</span><br><span class="line">    repositories &#123;</span><br><span class="line">    		...</span><br><span class="line">    		flatDir &#123;</span><br><span class="line">    				<span class="comment">//这里需要把引入了aar包的module添加到依赖关系中</span></span><br><span class="line">            dirs project(<span class="string">&#x27;:xxModule&#x27;</span>).file(<span class="string">&#x27;libs&#x27;</span>)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>xxModule的build.gradle文件里面添加：</p>
-<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">dependencies &#123;</span><br><span class="line">		 implementation(name: <span class="string">&#x27;aar名字&#x27;</span>, ext: <span class="string">&#x27;aar&#x27;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line">dependencies &#123;</span><br><span class="line">		 implementation(name: <span class="string">&#x27;aar名字&#x27;</span>, ext: <span class="string">&#x27;aar&#x27;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>至此完成。</p>
 
@@ -391,13 +391,13 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">88k</span>
+    <span title="站点总字数">86k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">1:20</span>
+    <span title="站点阅读时长">1:18</span>
   </span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动

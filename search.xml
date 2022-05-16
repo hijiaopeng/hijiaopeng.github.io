@@ -46,36 +46,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Android-判断常用APP是否安装</title>
-    <url>/2021/02/25/android-app-installation/</url>
-    <content><![CDATA[<span id="more"></span>
-
-<h4 id="微信"><a href="#微信" class="headerlink" title="微信"></a>微信</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 判断是否安装微信</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> context</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="type">boolean</span> <span class="title function_">isWxInstall</span><span class="params">(Context context)</span> &#123;</span><br><span class="line">    <span class="keyword">final</span> <span class="type">PackageManager</span> <span class="variable">packagemanager</span> <span class="operator">=</span> context.getPackageManager();<span class="comment">// 获取packagemanager</span></span><br><span class="line">    List&lt;PackageInfo&gt; pinfo = packagemanager.getInstalledPackages(<span class="number">0</span>);<span class="comment">// 获取所有已安装程序的包信息</span></span><br><span class="line">    <span class="keyword">if</span> (pinfo != <span class="literal">null</span>) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; pinfo.size(); i++) &#123;</span><br><span class="line">            <span class="type">String</span> <span class="variable">pn</span> <span class="operator">=</span> pinfo.get(i).packageName;</span><br><span class="line">            <span class="keyword">if</span> (pn.equals(<span class="string">&quot;com.tencent.mm&quot;</span>)) &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="支付宝"><a href="#支付宝" class="headerlink" title="支付宝"></a>支付宝</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 检测是否安装支付宝</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> context</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="type">boolean</span> <span class="title function_">isAliPayInstall</span><span class="params">(Context context)</span> &#123;</span><br><span class="line">    <span class="type">Uri</span> <span class="variable">uri</span> <span class="operator">=</span> Uri.parse(<span class="string">&quot;alipays://platformapi/startApp&quot;</span>);</span><br><span class="line">    <span class="type">Intent</span> <span class="variable">intent</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Intent</span>(Intent.ACTION_VIEW, uri);</span><br><span class="line">    <span class="type">ComponentName</span> <span class="variable">componentName</span> <span class="operator">=</span> intent.resolveActivity(context.getPackageManager());</span><br><span class="line">    <span class="keyword">return</span> componentName != <span class="literal">null</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="腾讯地图"><a href="#腾讯地图" class="headerlink" title="腾讯地图"></a>腾讯地图</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 判断是否安装腾讯地图</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> Boolean <span class="title function_">isTencentInstall</span><span class="params">()</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">File</span>(<span class="string">&quot;/data/data/com.tencent.map&quot;</span>).exists();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="QQ"><a href="#QQ" class="headerlink" title="QQ"></a>QQ</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 判断是否安装QQ</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="type">boolean</span> <span class="title function_">isQQInstall</span><span class="params">(Context context)</span> &#123;</span><br><span class="line">    <span class="keyword">final</span> <span class="type">PackageManager</span> <span class="variable">packageManager</span> <span class="operator">=</span> context.getPackageManager();</span><br><span class="line">    List&lt;PackageInfo&gt; pinfo = packageManager.getInstalledPackages(<span class="number">0</span>);</span><br><span class="line">    <span class="keyword">if</span> (pinfo != <span class="literal">null</span>) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; pinfo.size(); i++) &#123;</span><br><span class="line">            <span class="type">String</span> <span class="variable">pn</span> <span class="operator">=</span> pinfo.get(i).packageName;</span><br><span class="line">            <span class="keyword">if</span> (pn.equalsIgnoreCase(<span class="string">&quot;com.tencent.qqlite&quot;</span>) || pn.equalsIgnoreCase(<span class="string">&quot;com.tencent.mobileqq&quot;</span>)) &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="新浪微博"><a href="#新浪微博" class="headerlink" title="新浪微博"></a>新浪微博</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 判断是否安装新浪微博</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="type">boolean</span> <span class="title function_">isSinaInstall</span><span class="params">(Context context)</span> &#123;</span><br><span class="line">    <span class="keyword">final</span> <span class="type">PackageManager</span> <span class="variable">packageManager</span> <span class="operator">=</span> context.getPackageManager();<span class="comment">// 获取packagemanager</span></span><br><span class="line">    List&lt;PackageInfo&gt; pinfo = packageManager.getInstalledPackages(<span class="number">0</span>);<span class="comment">// 获取所有已安装程序的包信息</span></span><br><span class="line">    <span class="keyword">if</span> (pinfo != <span class="literal">null</span>) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; pinfo.size(); i++) &#123;</span><br><span class="line">            <span class="type">String</span> <span class="variable">pn</span> <span class="operator">=</span> pinfo.get(i).packageName;</span><br><span class="line">            <span class="keyword">if</span> (pn.equals(<span class="string">&quot;com.sina.weibo&quot;</span>)) &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="高德地图"><a href="#高德地图" class="headerlink" title="高德地图"></a>高德地图</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 判断是否安装高德地图</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> context</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> Boolean <span class="title function_">isAmapInstall</span><span class="params">(Context context)</span> &#123;</span><br><span class="line">    PackageInfo packageInfo;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        packageInfo = context.getPackageManager().getPackageInfo(<span class="string">&quot;com.autonavi.minimap&quot;</span>, <span class="number">0</span>);</span><br><span class="line">    &#125; <span class="keyword">catch</span> (PackageManager.NameNotFoundException e) &#123;</span><br><span class="line">        packageInfo = <span class="literal">null</span>;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (packageInfo == <span class="literal">null</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="百度地图"><a href="#百度地图" class="headerlink" title="百度地图"></a>百度地图</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 判断是否安装百度地图</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> context</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> Boolean <span class="title function_">isBDMapInstall</span><span class="params">(Context context)</span> &#123;</span><br><span class="line">    PackageInfo packageInfo;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        packageInfo = context.getPackageManager().getPackageInfo(<span class="string">&quot;com.baidu.BaiduMap&quot;</span>, <span class="number">0</span>);</span><br><span class="line">    &#125; <span class="keyword">catch</span> (PackageManager.NameNotFoundException e) &#123;</span><br><span class="line">        packageInfo = <span class="literal">null</span>;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (packageInfo == <span class="literal">null</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="根据包名判断该APP是否安装"><a href="#根据包名判断该APP是否安装" class="headerlink" title="根据包名判断该APP是否安装"></a>根据包名判断该APP是否安装</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 判断是否安装了这个应用</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> context</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> packagename</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> Boolean <span class="title function_">isInstall</span><span class="params">(Context context, String packagename)</span> &#123;</span><br><span class="line">    PackageInfo packageInfo;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        packageInfo = context.getPackageManager().getPackageInfo(packagename, <span class="number">0</span>);</span><br><span class="line">    &#125; <span class="keyword">catch</span> (PackageManager.NameNotFoundException e) &#123;</span><br><span class="line">        packageInfo = <span class="literal">null</span>;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (packageInfo == <span class="literal">null</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>-编程</category>
-      </categories>
-      <tags>
-        <tag>Android</tag>
-        <tag>Java</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Linux7.4快速搭建WordPress博客</title>
     <url>/2021/02/24/Linux-WordPress/</url>
     <content><![CDATA[<p>这篇博客是我几年前写的了，当初买的阿里云服务器，又正巧学习了一段时间Linux，才搞的WordPress。整体安装步骤应该一致，可能存在部分版本老旧问题。</p>
@@ -183,34 +153,33 @@
       </tags>
   </entry>
   <entry>
-    <title>Android Studio项目中导入aar包</title>
-    <url>/2021/05/07/android-build-aar/</url>
+    <title>Android-判断常用APP是否安装</title>
+    <url>/2021/02/25/android-app-installation/</url>
     <content><![CDATA[<span id="more"></span>
 
-<h4 id="第一种方式："><a href="#第一种方式：" class="headerlink" title="第一种方式："></a>第一种方式：</h4><p>找到module的build.gradle文件，在dependencies{}里面直接添加：</p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line">implementation fileTree(include: [<span class="string">&#x27;*.jar&#x27;</span>,<span class="string">&quot;*.aar&quot;</span>], dir: <span class="string">&#x27;libs&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<h4 id="微信"><a href="#微信" class="headerlink" title="微信"></a>微信</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 判断是否安装微信</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> context</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="type">boolean</span> <span class="title function_">isWxInstall</span><span class="params">(Context context)</span> &#123;</span><br><span class="line">    <span class="keyword">final</span> <span class="type">PackageManager</span> <span class="variable">packagemanager</span> <span class="operator">=</span> context.getPackageManager();<span class="comment">// 获取packagemanager</span></span><br><span class="line">    List&lt;PackageInfo&gt; pinfo = packagemanager.getInstalledPackages(<span class="number">0</span>);<span class="comment">// 获取所有已安装程序的包信息</span></span><br><span class="line">    <span class="keyword">if</span> (pinfo != <span class="literal">null</span>) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; pinfo.size(); i++) &#123;</span><br><span class="line">            <span class="type">String</span> <span class="variable">pn</span> <span class="operator">=</span> pinfo.get(i).packageName;</span><br><span class="line">            <span class="keyword">if</span> (pn.equals(<span class="string">&quot;com.tencent.mm&quot;</span>)) &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h4 id="第二种方式："><a href="#第二种方式：" class="headerlink" title="第二种方式："></a>第二种方式：</h4><p>找到项目的build.gradle文件，添加：</p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line">allprojects &#123;</span><br><span class="line">    repositories &#123;</span><br><span class="line">    		...</span><br><span class="line">    		flatDir &#123;</span><br><span class="line">            dirs <span class="string">&#x27;libs&#x27;</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="支付宝"><a href="#支付宝" class="headerlink" title="支付宝"></a>支付宝</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 检测是否安装支付宝</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> context</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="type">boolean</span> <span class="title function_">isAliPayInstall</span><span class="params">(Context context)</span> &#123;</span><br><span class="line">    <span class="type">Uri</span> <span class="variable">uri</span> <span class="operator">=</span> Uri.parse(<span class="string">&quot;alipays://platformapi/startApp&quot;</span>);</span><br><span class="line">    <span class="type">Intent</span> <span class="variable">intent</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Intent</span>(Intent.ACTION_VIEW, uri);</span><br><span class="line">    <span class="type">ComponentName</span> <span class="variable">componentName</span> <span class="operator">=</span> intent.resolveActivity(context.getPackageManager());</span><br><span class="line">    <span class="keyword">return</span> componentName != <span class="literal">null</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>在使用到的对应module的build.gradle文件里面添加：</p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line">dependencies &#123;</span><br><span class="line">		 implementation(name: <span class="string">&#x27;aar名字&#x27;</span>, ext: <span class="string">&#x27;aar&#x27;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="腾讯地图"><a href="#腾讯地图" class="headerlink" title="腾讯地图"></a>腾讯地图</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 判断是否安装腾讯地图</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> Boolean <span class="title function_">isTencentInstall</span><span class="params">()</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">File</span>(<span class="string">&quot;/data/data/com.tencent.map&quot;</span>).exists();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>注意点：此种方法适用于单一module引入aar文件。如果引入aar的是一个moduleA，这个moduleA又被其他module引用，项目就会编译失败，所以在多module下，使用下面这种方式。</p>
-<h4 id="第三种方式："><a href="#第三种方式：" class="headerlink" title="第三种方式："></a>第三种方式：</h4><p>修改项目的build.gradle文件：</p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line">allprojects &#123;</span><br><span class="line">    repositories &#123;</span><br><span class="line">    		...</span><br><span class="line">    		flatDir &#123;</span><br><span class="line">    				<span class="comment">//这里需要把引入了aar包的module添加到依赖关系中</span></span><br><span class="line">            dirs project(<span class="string">&#x27;:xxModule&#x27;</span>).file(<span class="string">&#x27;libs&#x27;</span>)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="QQ"><a href="#QQ" class="headerlink" title="QQ"></a>QQ</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 判断是否安装QQ</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="type">boolean</span> <span class="title function_">isQQInstall</span><span class="params">(Context context)</span> &#123;</span><br><span class="line">    <span class="keyword">final</span> <span class="type">PackageManager</span> <span class="variable">packageManager</span> <span class="operator">=</span> context.getPackageManager();</span><br><span class="line">    List&lt;PackageInfo&gt; pinfo = packageManager.getInstalledPackages(<span class="number">0</span>);</span><br><span class="line">    <span class="keyword">if</span> (pinfo != <span class="literal">null</span>) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; pinfo.size(); i++) &#123;</span><br><span class="line">            <span class="type">String</span> <span class="variable">pn</span> <span class="operator">=</span> pinfo.get(i).packageName;</span><br><span class="line">            <span class="keyword">if</span> (pn.equalsIgnoreCase(<span class="string">&quot;com.tencent.qqlite&quot;</span>) || pn.equalsIgnoreCase(<span class="string">&quot;com.tencent.mobileqq&quot;</span>)) &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>xxModule的build.gradle文件里面添加：</p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line">dependencies &#123;</span><br><span class="line">		 implementation(name: <span class="string">&#x27;aar名字&#x27;</span>, ext: <span class="string">&#x27;aar&#x27;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="新浪微博"><a href="#新浪微博" class="headerlink" title="新浪微博"></a>新浪微博</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 判断是否安装新浪微博</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="type">boolean</span> <span class="title function_">isSinaInstall</span><span class="params">(Context context)</span> &#123;</span><br><span class="line">    <span class="keyword">final</span> <span class="type">PackageManager</span> <span class="variable">packageManager</span> <span class="operator">=</span> context.getPackageManager();<span class="comment">// 获取packagemanager</span></span><br><span class="line">    List&lt;PackageInfo&gt; pinfo = packageManager.getInstalledPackages(<span class="number">0</span>);<span class="comment">// 获取所有已安装程序的包信息</span></span><br><span class="line">    <span class="keyword">if</span> (pinfo != <span class="literal">null</span>) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; pinfo.size(); i++) &#123;</span><br><span class="line">            <span class="type">String</span> <span class="variable">pn</span> <span class="operator">=</span> pinfo.get(i).packageName;</span><br><span class="line">            <span class="keyword">if</span> (pn.equals(<span class="string">&quot;com.sina.weibo&quot;</span>)) &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>至此完成。</p>
+<h4 id="高德地图"><a href="#高德地图" class="headerlink" title="高德地图"></a>高德地图</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 判断是否安装高德地图</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> context</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> Boolean <span class="title function_">isAmapInstall</span><span class="params">(Context context)</span> &#123;</span><br><span class="line">    PackageInfo packageInfo;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        packageInfo = context.getPackageManager().getPackageInfo(<span class="string">&quot;com.autonavi.minimap&quot;</span>, <span class="number">0</span>);</span><br><span class="line">    &#125; <span class="keyword">catch</span> (PackageManager.NameNotFoundException e) &#123;</span><br><span class="line">        packageInfo = <span class="literal">null</span>;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (packageInfo == <span class="literal">null</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="百度地图"><a href="#百度地图" class="headerlink" title="百度地图"></a>百度地图</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 判断是否安装百度地图</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> context</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> Boolean <span class="title function_">isBDMapInstall</span><span class="params">(Context context)</span> &#123;</span><br><span class="line">    PackageInfo packageInfo;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        packageInfo = context.getPackageManager().getPackageInfo(<span class="string">&quot;com.baidu.BaiduMap&quot;</span>, <span class="number">0</span>);</span><br><span class="line">    &#125; <span class="keyword">catch</span> (PackageManager.NameNotFoundException e) &#123;</span><br><span class="line">        packageInfo = <span class="literal">null</span>;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (packageInfo == <span class="literal">null</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="根据包名判断该APP是否安装"><a href="#根据包名判断该APP是否安装" class="headerlink" title="根据包名判断该APP是否安装"></a>根据包名判断该APP是否安装</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 判断是否安装了这个应用</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> context</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> packagename</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> Boolean <span class="title function_">isInstall</span><span class="params">(Context context, String packagename)</span> &#123;</span><br><span class="line">    PackageInfo packageInfo;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        packageInfo = context.getPackageManager().getPackageInfo(packagename, <span class="number">0</span>);</span><br><span class="line">    &#125; <span class="keyword">catch</span> (PackageManager.NameNotFoundException e) &#123;</span><br><span class="line">        packageInfo = <span class="literal">null</span>;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (packageInfo == <span class="literal">null</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 ]]></content>
       <categories>
         <category>-编程</category>
       </categories>
       <tags>
         <tag>Android</tag>
-        <tag>Android Studio</tag>
+        <tag>Java</tag>
       </tags>
   </entry>
   <entry>
@@ -254,30 +223,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Android-关于混淆的理解和使用</title>
-    <url>/2021/02/25/android-garble-use/</url>
-    <content><![CDATA[<p>Android Studio使用Proguard进行代码混淆，是一个压缩，优化，混淆Java字节码文件的工具。混淆配置在proguard-rules.pro文件中。</p>
-<p>通过混淆，可以防止APP被反编译等手段逆向破解，混淆后，代码中原来有具体含义的包名，类名，方法名，变量名等等名称将变成按顺序排列的无意义的英文字母，从而增加阅读的难度，保护程序的安全性。</p>
-<span id="more"></span>
-
-<p>首先需要在build.gradle–buildTypes目录下，打开minifyEnabled true（代码混淆），shrinkResources true（资源缩减，移除没用的资源文件，必须和minifyEnabled 一起使用），zipAlignEnabled true（对APK包进行对齐优化，提高运行效率）。proguardFilesgetDefaultProguardFile(‘proguard-android.txt’),’proguard-rules.pro’</p>
-<p>前半段代表系统默认的混淆文件，该文件中包含了基本的混淆声明，后一部分是我们自己定义的混淆文件。</p>
-<p>注意点：在minifyEnabled置为false的情况下，zipAlignEnabled 和 shrinkResources 也要置为false，否则会编译报错。</p>
-<p>最好在debug模式下也开启混淆进行测试，防止release时发生错误。</p>
-<p>关于shrinkResources true：在res&#x2F;raw&#x2F;下创建一个keep.xml文件，该文件不会被打包进APK中，</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=<span class="string">&quot;1.0&quot;</span> encoding=<span class="string">&quot;utf-8&quot;</span>?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">resources</span> <span class="attr">xmlns:tools</span>=<span class="string">&quot;http://schemas.android.com/tools&quot;</span></span></span><br><span class="line"><span class="tag">           <span class="attr">tools:discard</span>=<span class="string">&quot;@color/selector_tint_color&quot;</span></span></span><br><span class="line"><span class="tag">           <span class="attr">tools:keep</span>=<span class="string">&quot;@layout/activity_test1,@layout/activity_test2&quot;</span></span></span><br><span class="line"><span class="tag">           <span class="attr">tools:shrinkMode</span>=<span class="string">&quot;strict&quot;</span>/&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--discard：做严格检查--&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--keep :不做严格检查--&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--shrinkMode=&quot;strict&quot; :该模式只保留在代码或者资源文件中明确引用的资源--&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--shrinkMode=&quot;safe&quot; :该模式会保留所有明确引用的资源以及可能被 Resources.getIdentifier() 动态引用的资源--&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h6 id="基本配置模板："><a href="#基本配置模板：" class="headerlink" title="基本配置模板："></a>基本配置模板：</h6><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">#指定代码的压缩级别<span class="number">0</span>-<span class="number">7</span>(指定代码进行迭代优化的次数，在Android里面默认是<span class="number">5</span>，这条指令也只有在可以优化时起作用。)</span><br><span class="line">-optimizationpasses5</span><br><span class="line"></span><br><span class="line">#混淆时不会产生形形色色的类名(混淆时不使用大小写混合类名)</span><br><span class="line">-dontusemixedcaseclassnames</span><br><span class="line"></span><br><span class="line">#指定不去忽略非公共的库类(不跳过library中的非<span class="keyword">public</span>的类)</span><br><span class="line">-dontskipnonpubliclibraryclasses</span><br><span class="line"></span><br><span class="line">#指定不去忽略包可见的库类的成员</span><br><span class="line">-dontskipnonpubliclibraryclassmembers</span><br><span class="line"></span><br><span class="line">#不进行优化，建议使用此选项，</span><br><span class="line">-dontoptimize</span><br><span class="line"></span><br><span class="line">#不进行预校验,Android不需要,可加快混淆速度。</span><br><span class="line">-dontpreverify</span><br><span class="line"></span><br><span class="line">#混淆时记录日志(打印混淆的详细信息)</span><br><span class="line">#这句话能够使我们的项目混淆后产生映射文件</span><br><span class="line">#包含有类名-&gt;混淆后类名的映射关系</span><br><span class="line">-verbose</span><br><span class="line">-printmappingpriguardMapping.txt</span><br><span class="line"></span><br><span class="line">#指定混淆时采用的算法，后面的参数是一个过滤器</span><br><span class="line">#这个过滤器是谷歌推荐的算法，一般不改变</span><br><span class="line">-optimizations!code/simplification/cast,!field<span class="comment">/*,!class/merging/*</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">#错误显示行号</span></span><br><span class="line"><span class="comment">-keepattributesSourceFile,LineNumberTable</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">#屏蔽警告</span></span><br><span class="line"><span class="comment">-ignorewarnings</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">#设置是否允许改变作用域</span></span><br><span class="line"><span class="comment">-allowaccessmodification</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">#把混淆类中的方法名也混淆了</span></span><br><span class="line"><span class="comment">-useuniqueclassmembernames</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">#apk包内所有class的内部结构</span></span><br><span class="line"><span class="comment">-dumpclass_files.txt</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">#未混淆的类和成员</span></span><br><span class="line"><span class="comment">-printseedsseeds_txt</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">#列出从apk中删除的代码</span></span><br><span class="line"><span class="comment">-printusageunused.txt</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment">#-----------------------------默认保留-----------------------------</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment">#--------------------------------------------------------------------</span></span><br><span class="line"><span class="comment">#保持哪些类不被混淆</span></span><br><span class="line"><span class="comment">#继承activity,application,service,broadcastReceiver,contentprovider....不进行混淆</span></span><br><span class="line"><span class="comment">-keeppublicclass*extendsandroid.app.Activity</span></span><br><span class="line"><span class="comment">-keeppublicclass*extendsandroid.app.Application</span></span><br><span class="line"><span class="comment">-keeppublicclass*extendsandroid.support.multidex.MultiDexApplication</span></span><br><span class="line"><span class="comment">-keeppublicclass*extendsandroid.app.Service</span></span><br><span class="line"><span class="comment">-keeppublicclass*extendsandroid.content.BroadcastReceiver</span></span><br><span class="line"><span class="comment">-keeppublicclass*extendsandroid.content.ContentProvider</span></span><br><span class="line"><span class="comment">-keeppublicclass*extendsandroid.app.backup.BackupAgentHelper</span></span><br><span class="line"><span class="comment">-keeppublicclass*extendsandroid.preference.Preference</span></span><br><span class="line"><span class="comment">-keeppublicclass*extendsandroid.view.View</span></span><br><span class="line"><span class="comment">-keepclassandroid.support.**&#123;*;&#125;##保留support下的所有类及其内部类</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">-keeppublicclasscom.google.vending.licensing.ILicensingService</span></span><br><span class="line"><span class="comment">-keeppublicclasscom.android.vending.licensing.ILicensingService</span></span><br><span class="line"><span class="comment">#表示不混淆上面声明的类，最后这两个类我们基本也用不上，是接入Google原生的一些服务时使用的。</span></span><br><span class="line"><span class="comment">#----------------------------------------------------</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">#保留继承的</span></span><br><span class="line"><span class="comment">-keeppublicclass*extendsandroid.support.v4.**</span></span><br><span class="line"><span class="comment">-keeppublicclass*extendsandroid.support.v7.**</span></span><br><span class="line"><span class="comment">-keeppublicclass*extendsandroid.support.annotation.**</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">#Androidx</span></span><br><span class="line"><span class="comment">-keepclasscom.google.android.material.**&#123;*;&#125;</span></span><br><span class="line"><span class="comment">-keepclassandroidx.**&#123;*;&#125;</span></span><br><span class="line"><span class="comment">-keeppublicclass*extendsandroidx.**</span></span><br><span class="line"><span class="comment">-keepinterfaceandroidx.**&#123;*;&#125;</span></span><br><span class="line"><span class="comment">-dontwarncom.google.android.material.**</span></span><br><span class="line"><span class="comment">-dontnotecom.google.android.material.**</span></span><br><span class="line"><span class="comment">-dontwarnandroidx.**</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">#supportdesign</span></span><br><span class="line"><span class="comment">-keepclassandroid.support.design.**&#123;*;&#125;</span></span><br><span class="line"><span class="comment">-keepinterfaceandroid.support.design.**&#123;*;&#125;</span></span><br><span class="line"><span class="comment">-keeppublicclassandroid.support.design.R$*&#123;*;&#125;</span></span><br><span class="line"><span class="comment">-dontwarnandroid.support.design.**</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">#这个主要是在layout中写的onclick方法android:onclick=&quot;onClick&quot;，不进行混淆</span></span><br><span class="line"><span class="comment">#表示不混淆Activity中参数是View的方法，因为有这样一种用法，在XML中配置android:onClick=”buttonClick”属性，</span></span><br><span class="line"><span class="comment">#当用户点击该按钮时就会调用Activity中的buttonClick(Viewview)方法，如果这个方法被混淆的话就找不到了</span></span><br><span class="line"><span class="comment">-keepclassmembersclass*extendsandroid.app.Activity&#123;</span></span><br><span class="line"><span class="comment">publicvoid*(android.view.View);</span></span><br><span class="line"><span class="comment">&#125;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">#保护代码中的Annotation不被混淆</span></span><br><span class="line"><span class="comment">#这在JSON实体映射时非常重要，比如fastJson</span></span><br><span class="line"><span class="comment">-keepattributesAnnotation</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">################annotation###############</span></span><br><span class="line"><span class="comment">-keepclassandroid.support.annotation.*&#123;*;&#125;</span></span><br><span class="line"><span class="comment">-keepclassandroidx.annotation.*&#123;*;&#125;</span></span><br><span class="line"><span class="comment">-keepinterfaceandroid.support.annotation.*&#123;*;&#125;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">#避免混淆泛型</span></span><br><span class="line"><span class="comment">#这在JSON实体映射时非常重要，比如fastJson</span></span><br><span class="line"><span class="comment">-keepattributesSignature</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">#保留所有的本地native方法不被混淆</span></span><br><span class="line"><span class="comment">-keepclasseswithmembernamesclass*&#123;</span></span><br><span class="line"><span class="comment">native&lt;methods&gt;;</span></span><br><span class="line"><span class="comment">&#125;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">#枚举类不能被混淆</span></span><br><span class="line"><span class="comment">-keepclassmembersenum*&#123;</span></span><br><span class="line"><span class="comment">publicstatic**[]values();</span></span><br><span class="line"><span class="comment">publicstatic**valueOf(java.lang.String);</span></span><br><span class="line"><span class="comment">&#125;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">#保留R下面的资源</span></span><br><span class="line"><span class="comment">-keepclass**.R$*&#123;</span></span><br><span class="line"><span class="comment">*;</span></span><br><span class="line"><span class="comment">&#125;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">#不混淆资源类下static的</span></span><br><span class="line"><span class="comment">-keepclassmembersclass**.R$*&#123;</span></span><br><span class="line"><span class="comment">publicstatic&lt;fields&gt;;</span></span><br><span class="line"><span class="comment">&#125;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">#表示不混淆任何一个View中的setXxx()和getXxx()方法，</span></span><br><span class="line"><span class="comment">#因为属性动画需要有相应的setter和getter的方法实现，混淆了就无法工作了。</span></span><br><span class="line"><span class="comment">-keeppublicclass*extendsandroid.view.View&#123;</span></span><br><span class="line"><span class="comment">***get*();</span></span><br><span class="line"><span class="comment">voidset*(***);</span></span><br><span class="line"><span class="comment">public&lt;init&gt;(android.content.Context);</span></span><br><span class="line"><span class="comment">public&lt;init&gt;(android.content.Context,android.util.AttributeSet);</span></span><br><span class="line"><span class="comment">public&lt;init&gt;(android.content.Context,android.util.AttributeSet,int);</span></span><br><span class="line"><span class="comment">&#125;</span></span><br><span class="line"><span class="comment">-keepclasseswithmembersclass*&#123;</span></span><br><span class="line"><span class="comment">public&lt;init&gt;(android.content.Context,android.util.AttributeSet);</span></span><br><span class="line"><span class="comment">public&lt;init&gt;(android.content.Context,android.util.AttributeSet,int);</span></span><br><span class="line"><span class="comment">&#125;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">#表示不混淆Parcelable实现类中的CREATOR字段，</span></span><br><span class="line"><span class="comment">#毫无疑问，CREATOR字段是绝对不能改变的，包括大小写都不能变，不然整个Parcelable工作机制都会失败。</span></span><br><span class="line"><span class="comment">-keepclass*implementsandroid.os.Parcelable&#123;</span></span><br><span class="line"><span class="comment">publicstaticfinalandroid.os.Parcelable$Creator*;</span></span><br><span class="line"><span class="comment">&#125;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">#这指定了继承Serizalizable的类的如下成员不被移除混淆</span></span><br><span class="line"><span class="comment">-keepclassmembersclass*implementsjava.io.Serializable&#123;</span></span><br><span class="line"><span class="comment">staticfinallongserialVersionUID;</span></span><br><span class="line"><span class="comment">privatestaticfinaljava.io.ObjectStreamField[]serialPersistentFields;</span></span><br><span class="line"><span class="comment">privatevoidwriteObject(java.io.ObjectOutputStream);</span></span><br><span class="line"><span class="comment">privatevoidreadObject(java.io.ObjectInputStream);</span></span><br><span class="line"><span class="comment">java.lang.ObjectwriteReplace();</span></span><br><span class="line"><span class="comment">java.lang.ObjectreadResolve();</span></span><br><span class="line"><span class="comment">&#125;</span></span><br><span class="line"><span class="comment">#对于带有回调函数的onXXEvent、**On*Listener的，不能被混淆</span></span><br><span class="line"><span class="comment">-keepclassmembersclass*&#123;</span></span><br><span class="line"><span class="comment">void*(**On*Event);</span></span><br><span class="line"><span class="comment">void*(**On*Listener);</span></span><br><span class="line"><span class="comment">&#125;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">#保留我们自定义控件（继承自View）不被混淆</span></span><br><span class="line"><span class="comment">-keeppublicclass*extendsandroid.view.View&#123;</span></span><br><span class="line"><span class="comment">***get*();</span></span><br><span class="line"><span class="comment">voidset*(***);</span></span><br><span class="line"><span class="comment">public&lt;init&gt;(android.content.Context);</span></span><br><span class="line"><span class="comment">public&lt;init&gt;(android.content.Context,android.util.AttributeSet);</span></span><br><span class="line"><span class="comment">public&lt;init&gt;(android.content.Context,android.util.AttributeSet,int);</span></span><br><span class="line"><span class="comment">&#125;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment">#-----------------------------WebView(项目中没有可以忽略)-----------------------------</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment">#webView需要进行特殊处理</span></span><br><span class="line"><span class="comment">-keepclassmembersclassfqcn.of.javascript.interface.for.webview&#123;</span></span><br><span class="line"><span class="comment">public*;</span></span><br><span class="line"><span class="comment">&#125;</span></span><br><span class="line"><span class="comment">-keepclassmembersclass*extendsandroid.webkit.WebViewClient&#123;</span></span><br><span class="line"><span class="comment">publicvoid*(android.webkit.WebView,java.lang.String,android.graphics.Bitmap);</span></span><br><span class="line"><span class="comment">publicboolean*(android.webkit.WebView,java.lang.String);</span></span><br><span class="line"><span class="comment">&#125;</span></span><br><span class="line"><span class="comment">-keepclassmembersclass*extendsandroid.webkit.WebViewClient&#123;</span></span><br><span class="line"><span class="comment">publicvoid*(android.webkit.WebView,java.lang.String);</span></span><br><span class="line"><span class="comment">&#125;</span></span><br><span class="line"><span class="comment">#在app中与HTML5的JavaScript的交互进行特殊处理</span></span><br><span class="line"><span class="comment">#我们需要确保这些js要调用的原生方法不能够被混淆，于是我们需要做如下处理：</span></span><br><span class="line"><span class="comment">#-keepclassmembersclasscom.ljd.example.JSInterface&#123;</span></span><br><span class="line"><span class="comment">#&lt;methods&gt;;</span></span><br><span class="line"><span class="comment">#&#125;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">#JS调用Java方法</span></span><br><span class="line"><span class="comment">-keepattributes*JavascriptInterface*</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment">#---------------------------------实体类---------------------------------</span></span><br><span class="line"><span class="comment">#--------(实体Model不能混淆，否则找不到对应的属性获取不到值)-----</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment">#-dontwarncom.suchengkeji.android.confusiondemo.md.**</span></span><br><span class="line"><span class="comment">#对含有反射类的处理</span></span><br><span class="line"><span class="comment">#-keepclasscom.suchengkeji.android.confusiondemo.md.**&#123;*;&#125;</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment">#-----------------------------其他的-----------------------------</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment">#删除代码中Log相关的代码</span></span><br><span class="line"><span class="comment">-assumenosideeffectsclassandroid.util.Log&#123;</span></span><br><span class="line"><span class="comment">publicstaticbooleanisLoggable(java.lang.String,int);</span></span><br><span class="line"><span class="comment">publicstaticintv(...);</span></span><br><span class="line"><span class="comment">publicstaticinti(...);</span></span><br><span class="line"><span class="comment">publicstaticintw(...);</span></span><br><span class="line"><span class="comment">publicstaticintd(...);</span></span><br><span class="line"><span class="comment">publicstaticinte(...);</span></span><br><span class="line"><span class="comment">&#125;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">#保持测试相关的代码</span></span><br><span class="line"><span class="comment">#-dontnotejunit.framework.**</span></span><br><span class="line"><span class="comment">#-dontnotejunit.runner.**</span></span><br><span class="line"><span class="comment">#-dontwarnandroid.test.**</span></span><br><span class="line"><span class="comment">#-dontwarnandroid.support.test.**</span></span><br><span class="line"><span class="comment">#-dontwarnorg.junit.**</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment">#-----------------------------第三方-----------------------------</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment">...</span></span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>-编程</category>
-      </categories>
-      <tags>
-        <tag>Android</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Android-设置.gitignore忽略文件</title>
     <url>/2021/02/25/android-gitignore/</url>
     <content><![CDATA[<p>之前使用Github for Windows的时候，直接创建一个目录，就开始往里面放项目，也没有考虑过设置忽略文件，倒是很久之前，刚开始做项目时，因为是两个人一起开发，所以设置的SVN的忽略文件。 最近要开始新的项目，又因为是在Mac上开发，最后还需要放到公司的Windows电脑上，所以好好梳理了一下忽略文件这个知识点，方便项目的多端开发使用。</p>
@@ -310,6 +255,37 @@
       </categories>
       <tags>
         <tag>Android</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Android Studio项目中导入aar包</title>
+    <url>/2021/05/07/android-build-aar/</url>
+    <content><![CDATA[<span id="more"></span>
+
+<h4 id="第一种方式："><a href="#第一种方式：" class="headerlink" title="第一种方式："></a>第一种方式：</h4><p>找到module的build.gradle文件，在dependencies{}里面直接添加：</p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line">implementation fileTree(include: [<span class="string">&#x27;*.jar&#x27;</span>,<span class="string">&quot;*.aar&quot;</span>], dir: <span class="string">&#x27;libs&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<h4 id="第二种方式："><a href="#第二种方式：" class="headerlink" title="第二种方式："></a>第二种方式：</h4><p>找到项目的build.gradle文件，添加：</p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line">allprojects &#123;</span><br><span class="line">    repositories &#123;</span><br><span class="line">    		...</span><br><span class="line">    		flatDir &#123;</span><br><span class="line">            dirs <span class="string">&#x27;libs&#x27;</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>在使用到的对应module的build.gradle文件里面添加：</p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line">dependencies &#123;</span><br><span class="line">		 implementation(name: <span class="string">&#x27;aar名字&#x27;</span>, ext: <span class="string">&#x27;aar&#x27;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>注意点：此种方法适用于单一module引入aar文件。如果引入aar的是一个moduleA，这个moduleA又被其他module引用，项目就会编译失败，所以在多module下，使用下面这种方式。</p>
+<h4 id="第三种方式："><a href="#第三种方式：" class="headerlink" title="第三种方式："></a>第三种方式：</h4><p>修改项目的build.gradle文件：</p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line">allprojects &#123;</span><br><span class="line">    repositories &#123;</span><br><span class="line">    		...</span><br><span class="line">    		flatDir &#123;</span><br><span class="line">    				<span class="comment">//这里需要把引入了aar包的module添加到依赖关系中</span></span><br><span class="line">            dirs project(<span class="string">&#x27;:xxModule&#x27;</span>).file(<span class="string">&#x27;libs&#x27;</span>)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>xxModule的build.gradle文件里面添加：</p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line">dependencies &#123;</span><br><span class="line">		 implementation(name: <span class="string">&#x27;aar名字&#x27;</span>, ext: <span class="string">&#x27;aar&#x27;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>至此完成。</p>
+]]></content>
+      <categories>
+        <category>-编程</category>
+      </categories>
+      <tags>
+        <tag>Android</tag>
+        <tag>Android Studio</tag>
       </tags>
   </entry>
   <entry>
@@ -379,28 +355,21 @@
       </tags>
   </entry>
   <entry>
-    <title>Activity的启动模式</title>
-    <url>/2021/05/27/android-launch-mode/</url>
-    <content><![CDATA[<h4 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h4><p><code>Activity</code>的启动模式，在面试中提问到的几率很高，以此梳理一下知识点。</p>
+    <title>Android-关于混淆的理解和使用</title>
+    <url>/2021/02/25/android-garble-use/</url>
+    <content><![CDATA[<p>Android Studio使用Proguard进行代码混淆，是一个压缩，优化，混淆Java字节码文件的工具。混淆配置在proguard-rules.pro文件中。</p>
+<p>通过混淆，可以防止APP被反编译等手段逆向破解，混淆后，代码中原来有具体含义的包名，类名，方法名，变量名等等名称将变成按顺序排列的无意义的英文字母，从而增加阅读的难度，保护程序的安全性。</p>
 <span id="more"></span>
 
-<h4 id="任务栈"><a href="#任务栈" class="headerlink" title="任务栈"></a>任务栈</h4><p><code>Android</code>采用任务栈的方式管理<code>Activity</code>的实例，当一个应用启动时，<code>Android</code>就会创建一个任务栈。任务栈类似于一个容器，每次存放一个<code>Activity</code>时，满足“先进后出（First-In&#x2F;Last-out）”的原则。先加入的<code>Activity</code>实例将会处于底部，后加入的<code>Activity</code>实例会依次处于栈的上面。堆栈中存放的<code>Activity</code>实例顺序永远不会重新排列，只会被送入和退出。</p>
-<p>启动模式简单地说就是<code>Activity</code>启动时的策略，告诉堆栈将如何管理里面的实例。</p>
-<h4 id="四种启动模式"><a href="#四种启动模式" class="headerlink" title="四种启动模式"></a>四种启动模式</h4><h5 id="standard"><a href="#standard" class="headerlink" title="standard"></a>standard</h5><p>标准模式。默认启动模式。每启动一个<code>Activity</code>，就会创建一个新的实例，并将处于堆栈的栈顶位置。</p>
-<h5 id="singleTop"><a href="#singleTop" class="headerlink" title="singleTop"></a>singleTop</h5><p>栈顶复用模式。如果当前实例已经存在于栈顶，堆栈将直接使用它，不会再重新创建新的实例。系统将调用<code>onNewIntent()</code>方法将<code>intent</code>转送给该实例。</p>
-<h5 id="singleTask"><a href="#singleTask" class="headerlink" title="singleTask"></a>singleTask</h5><p>栈内复用模式。每次启动该<code>Activity</code>时，系统首先会检查堆栈中是否存在该<code>Activity</code>的实例，如果发现已经存在则直接使用该实例，并将当前<code>Activity</code>之上的所有<code>Activity</code>出栈，如果没有发现则创建一个新的实例。 系统将调用<code>onNewIntent()</code>方法将<code>intent</code>转送给该实例。</p>
-<h5 id="singleInstance"><a href="#singleInstance" class="headerlink" title="singleInstance"></a>singleInstance</h5><p>单实例模式。<code>singleTask</code>的增强版，具有它的所有特性。如果该<code>Activity</code>实例不存在，系统将开启一个新的堆栈，存放这个实例，并保证不再有其他<code>Activity</code>实例进入。如果<code>Activity</code>实例已经存在，无论位于哪个应用程序或者哪个任务栈中，系统都会把该<code>Activity</code>所有的任务栈转到前台，从而使该<code>Activity</code>显示出来。</p>
-<h4 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h4><p>standard：适用于大部分场景。</p>
-<p>singleTop：适合接收通知启动的内容显示页面。</p>
-<p>singleTask：适合作为程序入口点。</p>
-<p>singleInstance：适合需要与程序分离开的页面。</p>
-<h4 id="使用方式"><a href="#使用方式" class="headerlink" title="使用方式"></a>使用方式</h4><ul>
-<li><p>在 Manifest.xml中指定Activity启动模式</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">activity</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:name</span>=<span class="string">&quot;.activity.Activity&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:launchMode</span>=<span class="string">&quot;singleTop&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>使用<code>Intent</code>标记</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//FLAG_ACTIVITY_NEW_TASK</span></span><br><span class="line"><span class="comment">//作用是为Activity指定 “SingleTask”启动模式。跟在AndroidMainfest.xml指定效果同样。</span></span><br><span class="line"><span class="comment">//FLAG_ACTIVITY_SINGLE_TOP</span></span><br><span class="line"><span class="comment">//作用是为Activity指定 “SingleTop”启动模式，跟在AndroidMainfest.xml指定效果同样。</span></span><br><span class="line"><span class="comment">//FLAG_ACTIVITY_CLEAN_TOP</span></span><br><span class="line"><span class="comment">//具有此标记位的Activity，启动时会将与该Activity在同一任务栈的其他Activity出栈。一般与SingleTask启动模式一起出现。它会完毕SingleTask的作用。但事实上SingleTask启动模式默认具有此标记位的作用</span></span><br><span class="line"><span class="comment">//FLAG_ACTIVITY_EXCLUDE_FROM_RECENTS</span></span><br><span class="line"><span class="comment">//具有此标记位的Activity不会出如今历史Activity的列表中，使用场景：当某些情况下我们不希望用户通过历史列表回到Activity时，此标记位便体现了它的效果。它等同于在xml中指定Activity的属性：</span></span><br><span class="line"><span class="comment">//android:excludeFromRecents=“trure”</span></span><br><span class="line"><span class="type">Intent</span> <span class="variable">intent</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Intent</span>();</span><br><span class="line">intent.setClass(context, MainActivity.class);</span><br><span class="line">intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);</span><br><span class="line">context.startActivity(intent);</span><br></pre></td></tr></table></figure></li>
-</ul>
+<p>首先需要在build.gradle–buildTypes目录下，打开minifyEnabled true（代码混淆），shrinkResources true（资源缩减，移除没用的资源文件，必须和minifyEnabled 一起使用），zipAlignEnabled true（对APK包进行对齐优化，提高运行效率）。proguardFilesgetDefaultProguardFile(‘proguard-android.txt’),’proguard-rules.pro’</p>
+<p>前半段代表系统默认的混淆文件，该文件中包含了基本的混淆声明，后一部分是我们自己定义的混淆文件。</p>
+<p>注意点：在minifyEnabled置为false的情况下，zipAlignEnabled 和 shrinkResources 也要置为false，否则会编译报错。</p>
+<p>最好在debug模式下也开启混淆进行测试，防止release时发生错误。</p>
+<p>关于shrinkResources true：在res&#x2F;raw&#x2F;下创建一个keep.xml文件，该文件不会被打包进APK中，</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=<span class="string">&quot;1.0&quot;</span> encoding=<span class="string">&quot;utf-8&quot;</span>?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">resources</span> <span class="attr">xmlns:tools</span>=<span class="string">&quot;http://schemas.android.com/tools&quot;</span></span></span><br><span class="line"><span class="tag">           <span class="attr">tools:discard</span>=<span class="string">&quot;@color/selector_tint_color&quot;</span></span></span><br><span class="line"><span class="tag">           <span class="attr">tools:keep</span>=<span class="string">&quot;@layout/activity_test1,@layout/activity_test2&quot;</span></span></span><br><span class="line"><span class="tag">           <span class="attr">tools:shrinkMode</span>=<span class="string">&quot;strict&quot;</span>/&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--discard：做严格检查--&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--keep :不做严格检查--&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--shrinkMode=&quot;strict&quot; :该模式只保留在代码或者资源文件中明确引用的资源--&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--shrinkMode=&quot;safe&quot; :该模式会保留所有明确引用的资源以及可能被 Resources.getIdentifier() 动态引用的资源--&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h6 id="基本配置模板："><a href="#基本配置模板：" class="headerlink" title="基本配置模板："></a>基本配置模板：</h6><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">#指定代码的压缩级别<span class="number">0</span>-<span class="number">7</span>(指定代码进行迭代优化的次数，在Android里面默认是<span class="number">5</span>，这条指令也只有在可以优化时起作用。)</span><br><span class="line">-optimizationpasses5</span><br><span class="line"></span><br><span class="line">#混淆时不会产生形形色色的类名(混淆时不使用大小写混合类名)</span><br><span class="line">-dontusemixedcaseclassnames</span><br><span class="line"></span><br><span class="line">#指定不去忽略非公共的库类(不跳过library中的非<span class="keyword">public</span>的类)</span><br><span class="line">-dontskipnonpubliclibraryclasses</span><br><span class="line"></span><br><span class="line">#指定不去忽略包可见的库类的成员</span><br><span class="line">-dontskipnonpubliclibraryclassmembers</span><br><span class="line"></span><br><span class="line">#不进行优化，建议使用此选项，</span><br><span class="line">-dontoptimize</span><br><span class="line"></span><br><span class="line">#不进行预校验,Android不需要,可加快混淆速度。</span><br><span class="line">-dontpreverify</span><br><span class="line"></span><br><span class="line">#混淆时记录日志(打印混淆的详细信息)</span><br><span class="line">#这句话能够使我们的项目混淆后产生映射文件</span><br><span class="line">#包含有类名-&gt;混淆后类名的映射关系</span><br><span class="line">-verbose</span><br><span class="line">-printmappingpriguardMapping.txt</span><br><span class="line"></span><br><span class="line">#指定混淆时采用的算法，后面的参数是一个过滤器</span><br><span class="line">#这个过滤器是谷歌推荐的算法，一般不改变</span><br><span class="line">-optimizations!code/simplification/cast,!field<span class="comment">/*,!class/merging/*</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">#错误显示行号</span></span><br><span class="line"><span class="comment">-keepattributesSourceFile,LineNumberTable</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">#屏蔽警告</span></span><br><span class="line"><span class="comment">-ignorewarnings</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">#设置是否允许改变作用域</span></span><br><span class="line"><span class="comment">-allowaccessmodification</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">#把混淆类中的方法名也混淆了</span></span><br><span class="line"><span class="comment">-useuniqueclassmembernames</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">#apk包内所有class的内部结构</span></span><br><span class="line"><span class="comment">-dumpclass_files.txt</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">#未混淆的类和成员</span></span><br><span class="line"><span class="comment">-printseedsseeds_txt</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">#列出从apk中删除的代码</span></span><br><span class="line"><span class="comment">-printusageunused.txt</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment">#-----------------------------默认保留-----------------------------</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment">#--------------------------------------------------------------------</span></span><br><span class="line"><span class="comment">#保持哪些类不被混淆</span></span><br><span class="line"><span class="comment">#继承activity,application,service,broadcastReceiver,contentprovider....不进行混淆</span></span><br><span class="line"><span class="comment">-keeppublicclass*extendsandroid.app.Activity</span></span><br><span class="line"><span class="comment">-keeppublicclass*extendsandroid.app.Application</span></span><br><span class="line"><span class="comment">-keeppublicclass*extendsandroid.support.multidex.MultiDexApplication</span></span><br><span class="line"><span class="comment">-keeppublicclass*extendsandroid.app.Service</span></span><br><span class="line"><span class="comment">-keeppublicclass*extendsandroid.content.BroadcastReceiver</span></span><br><span class="line"><span class="comment">-keeppublicclass*extendsandroid.content.ContentProvider</span></span><br><span class="line"><span class="comment">-keeppublicclass*extendsandroid.app.backup.BackupAgentHelper</span></span><br><span class="line"><span class="comment">-keeppublicclass*extendsandroid.preference.Preference</span></span><br><span class="line"><span class="comment">-keeppublicclass*extendsandroid.view.View</span></span><br><span class="line"><span class="comment">-keepclassandroid.support.**&#123;*;&#125;##保留support下的所有类及其内部类</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">-keeppublicclasscom.google.vending.licensing.ILicensingService</span></span><br><span class="line"><span class="comment">-keeppublicclasscom.android.vending.licensing.ILicensingService</span></span><br><span class="line"><span class="comment">#表示不混淆上面声明的类，最后这两个类我们基本也用不上，是接入Google原生的一些服务时使用的。</span></span><br><span class="line"><span class="comment">#----------------------------------------------------</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">#保留继承的</span></span><br><span class="line"><span class="comment">-keeppublicclass*extendsandroid.support.v4.**</span></span><br><span class="line"><span class="comment">-keeppublicclass*extendsandroid.support.v7.**</span></span><br><span class="line"><span class="comment">-keeppublicclass*extendsandroid.support.annotation.**</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">#Androidx</span></span><br><span class="line"><span class="comment">-keepclasscom.google.android.material.**&#123;*;&#125;</span></span><br><span class="line"><span class="comment">-keepclassandroidx.**&#123;*;&#125;</span></span><br><span class="line"><span class="comment">-keeppublicclass*extendsandroidx.**</span></span><br><span class="line"><span class="comment">-keepinterfaceandroidx.**&#123;*;&#125;</span></span><br><span class="line"><span class="comment">-dontwarncom.google.android.material.**</span></span><br><span class="line"><span class="comment">-dontnotecom.google.android.material.**</span></span><br><span class="line"><span class="comment">-dontwarnandroidx.**</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">#supportdesign</span></span><br><span class="line"><span class="comment">-keepclassandroid.support.design.**&#123;*;&#125;</span></span><br><span class="line"><span class="comment">-keepinterfaceandroid.support.design.**&#123;*;&#125;</span></span><br><span class="line"><span class="comment">-keeppublicclassandroid.support.design.R$*&#123;*;&#125;</span></span><br><span class="line"><span class="comment">-dontwarnandroid.support.design.**</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">#这个主要是在layout中写的onclick方法android:onclick=&quot;onClick&quot;，不进行混淆</span></span><br><span class="line"><span class="comment">#表示不混淆Activity中参数是View的方法，因为有这样一种用法，在XML中配置android:onClick=”buttonClick”属性，</span></span><br><span class="line"><span class="comment">#当用户点击该按钮时就会调用Activity中的buttonClick(Viewview)方法，如果这个方法被混淆的话就找不到了</span></span><br><span class="line"><span class="comment">-keepclassmembersclass*extendsandroid.app.Activity&#123;</span></span><br><span class="line"><span class="comment">publicvoid*(android.view.View);</span></span><br><span class="line"><span class="comment">&#125;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">#保护代码中的Annotation不被混淆</span></span><br><span class="line"><span class="comment">#这在JSON实体映射时非常重要，比如fastJson</span></span><br><span class="line"><span class="comment">-keepattributesAnnotation</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">################annotation###############</span></span><br><span class="line"><span class="comment">-keepclassandroid.support.annotation.*&#123;*;&#125;</span></span><br><span class="line"><span class="comment">-keepclassandroidx.annotation.*&#123;*;&#125;</span></span><br><span class="line"><span class="comment">-keepinterfaceandroid.support.annotation.*&#123;*;&#125;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">#避免混淆泛型</span></span><br><span class="line"><span class="comment">#这在JSON实体映射时非常重要，比如fastJson</span></span><br><span class="line"><span class="comment">-keepattributesSignature</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">#保留所有的本地native方法不被混淆</span></span><br><span class="line"><span class="comment">-keepclasseswithmembernamesclass*&#123;</span></span><br><span class="line"><span class="comment">native&lt;methods&gt;;</span></span><br><span class="line"><span class="comment">&#125;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">#枚举类不能被混淆</span></span><br><span class="line"><span class="comment">-keepclassmembersenum*&#123;</span></span><br><span class="line"><span class="comment">publicstatic**[]values();</span></span><br><span class="line"><span class="comment">publicstatic**valueOf(java.lang.String);</span></span><br><span class="line"><span class="comment">&#125;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">#保留R下面的资源</span></span><br><span class="line"><span class="comment">-keepclass**.R$*&#123;</span></span><br><span class="line"><span class="comment">*;</span></span><br><span class="line"><span class="comment">&#125;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">#不混淆资源类下static的</span></span><br><span class="line"><span class="comment">-keepclassmembersclass**.R$*&#123;</span></span><br><span class="line"><span class="comment">publicstatic&lt;fields&gt;;</span></span><br><span class="line"><span class="comment">&#125;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">#表示不混淆任何一个View中的setXxx()和getXxx()方法，</span></span><br><span class="line"><span class="comment">#因为属性动画需要有相应的setter和getter的方法实现，混淆了就无法工作了。</span></span><br><span class="line"><span class="comment">-keeppublicclass*extendsandroid.view.View&#123;</span></span><br><span class="line"><span class="comment">***get*();</span></span><br><span class="line"><span class="comment">voidset*(***);</span></span><br><span class="line"><span class="comment">public&lt;init&gt;(android.content.Context);</span></span><br><span class="line"><span class="comment">public&lt;init&gt;(android.content.Context,android.util.AttributeSet);</span></span><br><span class="line"><span class="comment">public&lt;init&gt;(android.content.Context,android.util.AttributeSet,int);</span></span><br><span class="line"><span class="comment">&#125;</span></span><br><span class="line"><span class="comment">-keepclasseswithmembersclass*&#123;</span></span><br><span class="line"><span class="comment">public&lt;init&gt;(android.content.Context,android.util.AttributeSet);</span></span><br><span class="line"><span class="comment">public&lt;init&gt;(android.content.Context,android.util.AttributeSet,int);</span></span><br><span class="line"><span class="comment">&#125;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">#表示不混淆Parcelable实现类中的CREATOR字段，</span></span><br><span class="line"><span class="comment">#毫无疑问，CREATOR字段是绝对不能改变的，包括大小写都不能变，不然整个Parcelable工作机制都会失败。</span></span><br><span class="line"><span class="comment">-keepclass*implementsandroid.os.Parcelable&#123;</span></span><br><span class="line"><span class="comment">publicstaticfinalandroid.os.Parcelable$Creator*;</span></span><br><span class="line"><span class="comment">&#125;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">#这指定了继承Serizalizable的类的如下成员不被移除混淆</span></span><br><span class="line"><span class="comment">-keepclassmembersclass*implementsjava.io.Serializable&#123;</span></span><br><span class="line"><span class="comment">staticfinallongserialVersionUID;</span></span><br><span class="line"><span class="comment">privatestaticfinaljava.io.ObjectStreamField[]serialPersistentFields;</span></span><br><span class="line"><span class="comment">privatevoidwriteObject(java.io.ObjectOutputStream);</span></span><br><span class="line"><span class="comment">privatevoidreadObject(java.io.ObjectInputStream);</span></span><br><span class="line"><span class="comment">java.lang.ObjectwriteReplace();</span></span><br><span class="line"><span class="comment">java.lang.ObjectreadResolve();</span></span><br><span class="line"><span class="comment">&#125;</span></span><br><span class="line"><span class="comment">#对于带有回调函数的onXXEvent、**On*Listener的，不能被混淆</span></span><br><span class="line"><span class="comment">-keepclassmembersclass*&#123;</span></span><br><span class="line"><span class="comment">void*(**On*Event);</span></span><br><span class="line"><span class="comment">void*(**On*Listener);</span></span><br><span class="line"><span class="comment">&#125;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">#保留我们自定义控件（继承自View）不被混淆</span></span><br><span class="line"><span class="comment">-keeppublicclass*extendsandroid.view.View&#123;</span></span><br><span class="line"><span class="comment">***get*();</span></span><br><span class="line"><span class="comment">voidset*(***);</span></span><br><span class="line"><span class="comment">public&lt;init&gt;(android.content.Context);</span></span><br><span class="line"><span class="comment">public&lt;init&gt;(android.content.Context,android.util.AttributeSet);</span></span><br><span class="line"><span class="comment">public&lt;init&gt;(android.content.Context,android.util.AttributeSet,int);</span></span><br><span class="line"><span class="comment">&#125;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment">#-----------------------------WebView(项目中没有可以忽略)-----------------------------</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment">#webView需要进行特殊处理</span></span><br><span class="line"><span class="comment">-keepclassmembersclassfqcn.of.javascript.interface.for.webview&#123;</span></span><br><span class="line"><span class="comment">public*;</span></span><br><span class="line"><span class="comment">&#125;</span></span><br><span class="line"><span class="comment">-keepclassmembersclass*extendsandroid.webkit.WebViewClient&#123;</span></span><br><span class="line"><span class="comment">publicvoid*(android.webkit.WebView,java.lang.String,android.graphics.Bitmap);</span></span><br><span class="line"><span class="comment">publicboolean*(android.webkit.WebView,java.lang.String);</span></span><br><span class="line"><span class="comment">&#125;</span></span><br><span class="line"><span class="comment">-keepclassmembersclass*extendsandroid.webkit.WebViewClient&#123;</span></span><br><span class="line"><span class="comment">publicvoid*(android.webkit.WebView,java.lang.String);</span></span><br><span class="line"><span class="comment">&#125;</span></span><br><span class="line"><span class="comment">#在app中与HTML5的JavaScript的交互进行特殊处理</span></span><br><span class="line"><span class="comment">#我们需要确保这些js要调用的原生方法不能够被混淆，于是我们需要做如下处理：</span></span><br><span class="line"><span class="comment">#-keepclassmembersclasscom.ljd.example.JSInterface&#123;</span></span><br><span class="line"><span class="comment">#&lt;methods&gt;;</span></span><br><span class="line"><span class="comment">#&#125;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">#JS调用Java方法</span></span><br><span class="line"><span class="comment">-keepattributes*JavascriptInterface*</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment">#---------------------------------实体类---------------------------------</span></span><br><span class="line"><span class="comment">#--------(实体Model不能混淆，否则找不到对应的属性获取不到值)-----</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment">#-dontwarncom.suchengkeji.android.confusiondemo.md.**</span></span><br><span class="line"><span class="comment">#对含有反射类的处理</span></span><br><span class="line"><span class="comment">#-keepclasscom.suchengkeji.android.confusiondemo.md.**&#123;*;&#125;</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment">#-----------------------------其他的-----------------------------</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment">#删除代码中Log相关的代码</span></span><br><span class="line"><span class="comment">-assumenosideeffectsclassandroid.util.Log&#123;</span></span><br><span class="line"><span class="comment">publicstaticbooleanisLoggable(java.lang.String,int);</span></span><br><span class="line"><span class="comment">publicstaticintv(...);</span></span><br><span class="line"><span class="comment">publicstaticinti(...);</span></span><br><span class="line"><span class="comment">publicstaticintw(...);</span></span><br><span class="line"><span class="comment">publicstaticintd(...);</span></span><br><span class="line"><span class="comment">publicstaticinte(...);</span></span><br><span class="line"><span class="comment">&#125;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">#保持测试相关的代码</span></span><br><span class="line"><span class="comment">#-dontnotejunit.framework.**</span></span><br><span class="line"><span class="comment">#-dontnotejunit.runner.**</span></span><br><span class="line"><span class="comment">#-dontwarnandroid.test.**</span></span><br><span class="line"><span class="comment">#-dontwarnandroid.support.test.**</span></span><br><span class="line"><span class="comment">#-dontwarnorg.junit.**</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment">#-----------------------------第三方-----------------------------</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment">...</span></span><br></pre></td></tr></table></figure>
+
 ]]></content>
       <categories>
         <category>-编程</category>
@@ -449,6 +418,84 @@
 <p>使用起来就很简单了，只需要先实例化Util类，依次调用键盘的初始化和显示或隐藏就行了，不过在键盘中设置了“完成”按钮，所以点击“完成”即可关闭掉自定义键盘。</p>
 <p>这只不过是很简单的自定义键盘，如果像银行那种安全性键盘，我想应该一些字码安全处理，有了基础，再根据需求深度开发不也是手到擒来的么。</p>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">private</span> KeyboardUtil keyboardUtil;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">onCreate</span><span class="params">(Bundle savedInstanceState)</span> &#123;</span><br><span class="line">    <span class="built_in">super</span>.onCreate(savedInstanceState);</span><br><span class="line">    setContentView(R.layout.activity_main);</span><br><span class="line">    ButterKnife.bind(<span class="built_in">this</span>);</span><br><span class="line">    keyboardUtil = KeyboardUtil.getInstance();</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//显示键盘</span></span><br><span class="line"><span class="meta">@OnClick(R.id.tvProvince)</span></span><br><span class="line"><span class="keyword">void</span> <span class="title function_">tvProvince</span><span class="params">()</span> &#123;</span><br><span class="line">    keyboardUtil.initTextViewFeatures(<span class="built_in">this</span>, tvProvince, kvShow);</span><br><span class="line">    keyboardUtil.showTextKeyboard();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>-编程</category>
+      </categories>
+      <tags>
+        <tag>Android</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Activity的启动模式</title>
+    <url>/2021/05/27/android-launch-mode/</url>
+    <content><![CDATA[<h4 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h4><p><code>Activity</code>的启动模式，在面试中提问到的几率很高，以此梳理一下知识点。</p>
+<span id="more"></span>
+
+<h4 id="任务栈"><a href="#任务栈" class="headerlink" title="任务栈"></a>任务栈</h4><p><code>Android</code>采用任务栈的方式管理<code>Activity</code>的实例，当一个应用启动时，<code>Android</code>就会创建一个任务栈。任务栈类似于一个容器，每次存放一个<code>Activity</code>时，满足“先进后出（First-In&#x2F;Last-out）”的原则。先加入的<code>Activity</code>实例将会处于底部，后加入的<code>Activity</code>实例会依次处于栈的上面。堆栈中存放的<code>Activity</code>实例顺序永远不会重新排列，只会被送入和退出。</p>
+<p>启动模式简单地说就是<code>Activity</code>启动时的策略，告诉堆栈将如何管理里面的实例。</p>
+<h4 id="四种启动模式"><a href="#四种启动模式" class="headerlink" title="四种启动模式"></a>四种启动模式</h4><h5 id="standard"><a href="#standard" class="headerlink" title="standard"></a>standard</h5><p>标准模式。默认启动模式。每启动一个<code>Activity</code>，就会创建一个新的实例，并将处于堆栈的栈顶位置。</p>
+<h5 id="singleTop"><a href="#singleTop" class="headerlink" title="singleTop"></a>singleTop</h5><p>栈顶复用模式。如果当前实例已经存在于栈顶，堆栈将直接使用它，不会再重新创建新的实例。系统将调用<code>onNewIntent()</code>方法将<code>intent</code>转送给该实例。</p>
+<h5 id="singleTask"><a href="#singleTask" class="headerlink" title="singleTask"></a>singleTask</h5><p>栈内复用模式。每次启动该<code>Activity</code>时，系统首先会检查堆栈中是否存在该<code>Activity</code>的实例，如果发现已经存在则直接使用该实例，并将当前<code>Activity</code>之上的所有<code>Activity</code>出栈，如果没有发现则创建一个新的实例。 系统将调用<code>onNewIntent()</code>方法将<code>intent</code>转送给该实例。</p>
+<h5 id="singleInstance"><a href="#singleInstance" class="headerlink" title="singleInstance"></a>singleInstance</h5><p>单实例模式。<code>singleTask</code>的增强版，具有它的所有特性。如果该<code>Activity</code>实例不存在，系统将开启一个新的堆栈，存放这个实例，并保证不再有其他<code>Activity</code>实例进入。如果<code>Activity</code>实例已经存在，无论位于哪个应用程序或者哪个任务栈中，系统都会把该<code>Activity</code>所有的任务栈转到前台，从而使该<code>Activity</code>显示出来。</p>
+<h4 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h4><p>standard：适用于大部分场景。</p>
+<p>singleTop：适合接收通知启动的内容显示页面。</p>
+<p>singleTask：适合作为程序入口点。</p>
+<p>singleInstance：适合需要与程序分离开的页面。</p>
+<h4 id="使用方式"><a href="#使用方式" class="headerlink" title="使用方式"></a>使用方式</h4><ul>
+<li><p>在 Manifest.xml中指定Activity启动模式</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">activity</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:name</span>=<span class="string">&quot;.activity.Activity&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:launchMode</span>=<span class="string">&quot;singleTop&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>使用<code>Intent</code>标记</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//FLAG_ACTIVITY_NEW_TASK</span></span><br><span class="line"><span class="comment">//作用是为Activity指定 “SingleTask”启动模式。跟在AndroidMainfest.xml指定效果同样。</span></span><br><span class="line"><span class="comment">//FLAG_ACTIVITY_SINGLE_TOP</span></span><br><span class="line"><span class="comment">//作用是为Activity指定 “SingleTop”启动模式，跟在AndroidMainfest.xml指定效果同样。</span></span><br><span class="line"><span class="comment">//FLAG_ACTIVITY_CLEAN_TOP</span></span><br><span class="line"><span class="comment">//具有此标记位的Activity，启动时会将与该Activity在同一任务栈的其他Activity出栈。一般与SingleTask启动模式一起出现。它会完毕SingleTask的作用。但事实上SingleTask启动模式默认具有此标记位的作用</span></span><br><span class="line"><span class="comment">//FLAG_ACTIVITY_EXCLUDE_FROM_RECENTS</span></span><br><span class="line"><span class="comment">//具有此标记位的Activity不会出如今历史Activity的列表中，使用场景：当某些情况下我们不希望用户通过历史列表回到Activity时，此标记位便体现了它的效果。它等同于在xml中指定Activity的属性：</span></span><br><span class="line"><span class="comment">//android:excludeFromRecents=“trure”</span></span><br><span class="line"><span class="type">Intent</span> <span class="variable">intent</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Intent</span>();</span><br><span class="line">intent.setClass(context, MainActivity.class);</span><br><span class="line">intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);</span><br><span class="line">context.startActivity(intent);</span><br></pre></td></tr></table></figure></li>
+</ul>
+]]></content>
+      <categories>
+        <category>-编程</category>
+      </categories>
+      <tags>
+        <tag>Android</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Android-关于Activity生命周期的理解</title>
+    <url>/2021/05/24/android-life-cycle/</url>
+    <content><![CDATA[<h4 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h4><p>最近在重构支付模块时，测试说一直跳转不到支付结果页面，最后发现我们是在<code>onRestart()</code>里面写的支付回调接口，但是那个小米的测试机，真的就是不走<code>onRestart()</code>方法啊！！奇怪的知识又增加了，这个到现在我也没搞明白为什么……也好，再次熟悉一下Activity的生命周期吧，毕竟面试问的最多的也是这个。</p>
+<span id="more"></span>
+
+<h4 id="Activity生命周期的简化图示"><a href="#Activity生命周期的简化图示" class="headerlink" title="Activity生命周期的简化图示"></a>Activity生命周期的简化图示</h4><p><img data-src="https://developer.android.google.cn/guide/components/images/activity_lifecycle.png"></p>
+<p>惯例先看这张经典的流程图。</p>
+<h4 id="详解"><a href="#详解" class="headerlink" title="详解"></a>详解</h4><h6 id="onCreate"><a href="#onCreate" class="headerlink" title="onCreate()"></a>onCreate()</h6><p>在<code>Activity</code>首次创建时触发，<code>Activity</code>会在创建后进入“已创建”的状态。并且只会发生一次。应当在此时完成<code>Activity</code>中的一些初始化操作。</p>
+<p>参数：<code>savedInstanceState: Bundle</code>：包含<code>Activity</code>先前保存状态的<code>Bundle</code>对象，如果<code>Activity</code>此前未曾存在，该对象值为<code>null</code>。与之对应的方法为：</p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">override</span> <span class="function"><span class="keyword">fun</span> <span class="title">onCreate</span><span class="params">(savedInstanceState: <span class="type">Bundle</span>?)</span></span> &#123;</span><br><span class="line">    <span class="keyword">super</span>.onCreate(savedInstanceState)</span><br><span class="line">    <span class="comment">//获取保存的状态值</span></span><br><span class="line">    <span class="keyword">val</span> gameState = savedInstanceState?.getString(GAME_STATE_KEY)</span><br><span class="line">    setContentView(R.layout.main_activity)</span><br><span class="line">		<span class="comment">//do something</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">override</span> <span class="function"><span class="keyword">fun</span> <span class="title">onRestoreInstanceState</span><span class="params">(savedInstanceState: <span class="type">Bundle</span>?)</span></span> &#123;</span><br><span class="line">    <span class="comment">//此方法在onStart()完成后执行，根据不同业务场景按需调用</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//当活动可能被临时破坏时调用，在此处保存实例状态</span></span><br><span class="line"><span class="keyword">override</span> <span class="function"><span class="keyword">fun</span> <span class="title">onSaveInstanceState</span><span class="params">(outState: <span class="type">Bundle</span>?)</span></span> &#123;</span><br><span class="line">    outState?.run &#123;</span><br><span class="line">        putString(GAME_STATE_KEY, gameState)</span><br><span class="line">        putString(TEXT_VIEW_KEY, textView.text.toString())</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">super</span>.onSaveInstanceState(outState)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h6 id="onStart"><a href="#onStart" class="headerlink" title="onStart()"></a>onStart()</h6><p>在<code>onCreate()</code>之后执行，<code>Activity</code>处于“已开始”状态，此时<code>Activity</code>对用户是可见状态，应用会为<code>Activity</code>进入前台并支持互动做准备，可以在<code>onStart()</code>方法中，初始化维护界面的代码。</p>
+<h6 id="onResume"><a href="#onResume" class="headerlink" title="onResume()"></a>onResume()</h6><p><code>Activity</code>进入“已恢复”状态，并来到前台，此时应用与用户处于互动状态。应用会一直保持这种状态。<code>Activity</code>也一定位于返回栈的栈顶并处于运行状态。</p>
+<h6 id="onPause"><a href="#onPause" class="headerlink" title="onPause()"></a>onPause()</h6><p>调用这个方法时，说明用户将要离开当前<code>Activity</code>，<code>Activity</code>将不再位于前台，而是处于“已暂停”状态。这个函数的执行速度一定要快，不然会影响新的栈顶活动的使用。通常在此函数中将一些消耗CPU的资源释放掉，以及保存一些重要的数据。</p>
+<h6 id="onStop"><a href="#onStop" class="headerlink" title="onStop()"></a>onStop()</h6><p>此时，<code>Activity</code>已进入“已停止”状态，<code>Activity</code>不再对用户可见，新的<code>Activity</code>已经覆盖屏幕。这个函数中，应释放或调整在应用对用户不可见时的无用资源，例如：暂停动画效果等。</p>
+<h6 id="onDestroy"><a href="#onDestroy" class="headerlink" title="onDestroy()"></a>onDestroy()</h6><p><code>Activity</code>销毁状态调用，此时<code>Activity</code>被用户彻底关闭，或者调用了<code>finish()</code>方法，或者由于配置变更，例如设备旋转、多窗口模式，系统暂时销毁<code>Activity</code>。</p>
+<h6 id="onRestart"><a href="#onRestart" class="headerlink" title="onRestart()"></a>onRestart()</h6><p><code>Activity</code>由停止状态变为运行状态之前调用，<code>Activity</code>重启。</p>
+<h4 id="各种场景下调用顺序"><a href="#各种场景下调用顺序" class="headerlink" title="各种场景下调用顺序"></a>各种场景下调用顺序</h4><ul>
+<li><h6 id="Activity跳转到下一个Activity"><a href="#Activity跳转到下一个Activity" class="headerlink" title="Activity跳转到下一个Activity"></a><code>Activity</code>跳转到下一个<code>Activity</code></h6></li>
+</ul>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line">$:MainActivity onCreate</span><br><span class="line">$:MainActivity onStart</span><br><span class="line">$:MainActivity onResume</span><br><span class="line">$:MainActivity onPause</span><br><span class="line">$:SecondActivity onCreate</span><br><span class="line">$:SecondActivity onStart</span><br><span class="line">$:SecondActivity onResume</span><br><span class="line">$:MainActivity onStop</span><br></pre></td></tr></table></figure>
+
+<p>然后从第二个<code>Activity</code>返回到之前的<code>Activity</code></p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line">$:SecondActivity onPause</span><br><span class="line">$:MainActivity onRestart</span><br><span class="line">$:MainActivity onStart</span><br><span class="line">$:MainActivity onResume</span><br><span class="line">$:SecondActivity onStop</span><br><span class="line">$:SecondActivity onDestroy</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><h6 id="Activity中打开Dialog样式的Activity"><a href="#Activity中打开Dialog样式的Activity" class="headerlink" title="Activity中打开Dialog样式的Activity"></a><code>Activity</code>中打开<code>Dialog</code>样式的<code>Activity</code></h6></li>
+</ul>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line">$:MainActivity onCreate</span><br><span class="line">$:MainActivity onStart</span><br><span class="line">$:MainActivity onResume</span><br><span class="line">$:MainActivity onPause</span><br><span class="line">$:SecondActivity onCreate</span><br><span class="line">$:SecondActivity onStart</span><br><span class="line">$:SecondActivity onResume</span><br></pre></td></tr></table></figure>
+
+<p>关闭<code>Dialog</code></p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line">$:SecondActivity onPause</span><br><span class="line">$:MainActivity onResume</span><br><span class="line">$:SecondActivity onStop</span><br><span class="line">$:SecondActivity onDestroy</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><h6 id="Activity翻转屏幕（会重新创建）"><a href="#Activity翻转屏幕（会重新创建）" class="headerlink" title="Activity翻转屏幕（会重新创建）"></a><code>Activity</code>翻转屏幕（会重新创建）</h6></li>
+</ul>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line">$:MainActivity onCreate</span><br><span class="line">$:MainActivity onStart</span><br><span class="line">$:MainActivity onResume</span><br><span class="line">$:MainActivity onPause</span><br><span class="line">$:MainActivity onStop</span><br><span class="line">$:MainActivity onDestroy</span><br><span class="line">$:MainActivity onCreate</span><br><span class="line">$:MainActivity onStart</span><br><span class="line">$:MainActivity onResume</span><br></pre></td></tr></table></figure>
 
 ]]></content>
       <categories>
@@ -677,53 +724,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Android-关于Activity生命周期的理解</title>
-    <url>/2021/05/24/android-life-cycle/</url>
-    <content><![CDATA[<h4 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h4><p>最近在重构支付模块时，测试说一直跳转不到支付结果页面，最后发现我们是在<code>onRestart()</code>里面写的支付回调接口，但是那个小米的测试机，真的就是不走<code>onRestart()</code>方法啊！！奇怪的知识又增加了，这个到现在我也没搞明白为什么……也好，再次熟悉一下Activity的生命周期吧，毕竟面试问的最多的也是这个。</p>
-<span id="more"></span>
-
-<h4 id="Activity生命周期的简化图示"><a href="#Activity生命周期的简化图示" class="headerlink" title="Activity生命周期的简化图示"></a>Activity生命周期的简化图示</h4><p><img data-src="https://developer.android.google.cn/guide/components/images/activity_lifecycle.png"></p>
-<p>惯例先看这张经典的流程图。</p>
-<h4 id="详解"><a href="#详解" class="headerlink" title="详解"></a>详解</h4><h6 id="onCreate"><a href="#onCreate" class="headerlink" title="onCreate()"></a>onCreate()</h6><p>在<code>Activity</code>首次创建时触发，<code>Activity</code>会在创建后进入“已创建”的状态。并且只会发生一次。应当在此时完成<code>Activity</code>中的一些初始化操作。</p>
-<p>参数：<code>savedInstanceState: Bundle</code>：包含<code>Activity</code>先前保存状态的<code>Bundle</code>对象，如果<code>Activity</code>此前未曾存在，该对象值为<code>null</code>。与之对应的方法为：</p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">override</span> <span class="function"><span class="keyword">fun</span> <span class="title">onCreate</span><span class="params">(savedInstanceState: <span class="type">Bundle</span>?)</span></span> &#123;</span><br><span class="line">    <span class="keyword">super</span>.onCreate(savedInstanceState)</span><br><span class="line">    <span class="comment">//获取保存的状态值</span></span><br><span class="line">    <span class="keyword">val</span> gameState = savedInstanceState?.getString(GAME_STATE_KEY)</span><br><span class="line">    setContentView(R.layout.main_activity)</span><br><span class="line">		<span class="comment">//do something</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">override</span> <span class="function"><span class="keyword">fun</span> <span class="title">onRestoreInstanceState</span><span class="params">(savedInstanceState: <span class="type">Bundle</span>?)</span></span> &#123;</span><br><span class="line">    <span class="comment">//此方法在onStart()完成后执行，根据不同业务场景按需调用</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//当活动可能被临时破坏时调用，在此处保存实例状态</span></span><br><span class="line"><span class="keyword">override</span> <span class="function"><span class="keyword">fun</span> <span class="title">onSaveInstanceState</span><span class="params">(outState: <span class="type">Bundle</span>?)</span></span> &#123;</span><br><span class="line">    outState?.run &#123;</span><br><span class="line">        putString(GAME_STATE_KEY, gameState)</span><br><span class="line">        putString(TEXT_VIEW_KEY, textView.text.toString())</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">super</span>.onSaveInstanceState(outState)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h6 id="onStart"><a href="#onStart" class="headerlink" title="onStart()"></a>onStart()</h6><p>在<code>onCreate()</code>之后执行，<code>Activity</code>处于“已开始”状态，此时<code>Activity</code>对用户是可见状态，应用会为<code>Activity</code>进入前台并支持互动做准备，可以在<code>onStart()</code>方法中，初始化维护界面的代码。</p>
-<h6 id="onResume"><a href="#onResume" class="headerlink" title="onResume()"></a>onResume()</h6><p><code>Activity</code>进入“已恢复”状态，并来到前台，此时应用与用户处于互动状态。应用会一直保持这种状态。<code>Activity</code>也一定位于返回栈的栈顶并处于运行状态。</p>
-<h6 id="onPause"><a href="#onPause" class="headerlink" title="onPause()"></a>onPause()</h6><p>调用这个方法时，说明用户将要离开当前<code>Activity</code>，<code>Activity</code>将不再位于前台，而是处于“已暂停”状态。这个函数的执行速度一定要快，不然会影响新的栈顶活动的使用。通常在此函数中将一些消耗CPU的资源释放掉，以及保存一些重要的数据。</p>
-<h6 id="onStop"><a href="#onStop" class="headerlink" title="onStop()"></a>onStop()</h6><p>此时，<code>Activity</code>已进入“已停止”状态，<code>Activity</code>不再对用户可见，新的<code>Activity</code>已经覆盖屏幕。这个函数中，应释放或调整在应用对用户不可见时的无用资源，例如：暂停动画效果等。</p>
-<h6 id="onDestroy"><a href="#onDestroy" class="headerlink" title="onDestroy()"></a>onDestroy()</h6><p><code>Activity</code>销毁状态调用，此时<code>Activity</code>被用户彻底关闭，或者调用了<code>finish()</code>方法，或者由于配置变更，例如设备旋转、多窗口模式，系统暂时销毁<code>Activity</code>。</p>
-<h6 id="onRestart"><a href="#onRestart" class="headerlink" title="onRestart()"></a>onRestart()</h6><p><code>Activity</code>由停止状态变为运行状态之前调用，<code>Activity</code>重启。</p>
-<h4 id="各种场景下调用顺序"><a href="#各种场景下调用顺序" class="headerlink" title="各种场景下调用顺序"></a>各种场景下调用顺序</h4><ul>
-<li><h6 id="Activity跳转到下一个Activity"><a href="#Activity跳转到下一个Activity" class="headerlink" title="Activity跳转到下一个Activity"></a><code>Activity</code>跳转到下一个<code>Activity</code></h6></li>
-</ul>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line">$:MainActivity onCreate</span><br><span class="line">$:MainActivity onStart</span><br><span class="line">$:MainActivity onResume</span><br><span class="line">$:MainActivity onPause</span><br><span class="line">$:SecondActivity onCreate</span><br><span class="line">$:SecondActivity onStart</span><br><span class="line">$:SecondActivity onResume</span><br><span class="line">$:MainActivity onStop</span><br></pre></td></tr></table></figure>
-
-<p>然后从第二个<code>Activity</code>返回到之前的<code>Activity</code></p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line">$:SecondActivity onPause</span><br><span class="line">$:MainActivity onRestart</span><br><span class="line">$:MainActivity onStart</span><br><span class="line">$:MainActivity onResume</span><br><span class="line">$:SecondActivity onStop</span><br><span class="line">$:SecondActivity onDestroy</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><h6 id="Activity中打开Dialog样式的Activity"><a href="#Activity中打开Dialog样式的Activity" class="headerlink" title="Activity中打开Dialog样式的Activity"></a><code>Activity</code>中打开<code>Dialog</code>样式的<code>Activity</code></h6></li>
-</ul>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line">$:MainActivity onCreate</span><br><span class="line">$:MainActivity onStart</span><br><span class="line">$:MainActivity onResume</span><br><span class="line">$:MainActivity onPause</span><br><span class="line">$:SecondActivity onCreate</span><br><span class="line">$:SecondActivity onStart</span><br><span class="line">$:SecondActivity onResume</span><br></pre></td></tr></table></figure>
-
-<p>关闭<code>Dialog</code></p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line">$:SecondActivity onPause</span><br><span class="line">$:MainActivity onResume</span><br><span class="line">$:SecondActivity onStop</span><br><span class="line">$:SecondActivity onDestroy</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><h6 id="Activity翻转屏幕（会重新创建）"><a href="#Activity翻转屏幕（会重新创建）" class="headerlink" title="Activity翻转屏幕（会重新创建）"></a><code>Activity</code>翻转屏幕（会重新创建）</h6></li>
-</ul>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line">$:MainActivity onCreate</span><br><span class="line">$:MainActivity onStart</span><br><span class="line">$:MainActivity onResume</span><br><span class="line">$:MainActivity onPause</span><br><span class="line">$:MainActivity onStop</span><br><span class="line">$:MainActivity onDestroy</span><br><span class="line">$:MainActivity onCreate</span><br><span class="line">$:MainActivity onStart</span><br><span class="line">$:MainActivity onResume</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>-编程</category>
-      </categories>
-      <tags>
-        <tag>Android</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Android-MotionLayout管理运动和微件动画</title>
     <url>/2021/03/02/android-motionLayout/</url>
     <content><![CDATA[<h4 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h4><p><code>MotionLayout</code>是一种布局类型，是<code>ConstraintLayout</code> 库的一部分，实现了运动形式的动画，缩小了布局转换与复杂运动处理之间的差距，同时在<code>属性动画框架</code>和 <code>CoordinatorLayout</code>之间提供了各种功能。</p>
@@ -773,26 +773,6 @@
 
 <h4 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h4><p>更多事例可以查看<a href="https://developer.android.google.cn/training/constraint-layout/motionlayout/examples">MotionLayout 示例</a>，官方已经写好了，以提供参考。</p>
 <h4 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h4><p><code>MotionLayout</code>解决了我们绘制动画的复杂性，减少了相当多的计算绘制代码，但是也不能说就一定要用它，视情况和需求而定。</p>
-]]></content>
-      <categories>
-        <category>-编程</category>
-      </categories>
-      <tags>
-        <tag>Android</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Android-使用前台服务</title>
-    <url>/2021/03/03/android-notification-service/</url>
-    <content><![CDATA[<h4 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h4><p>项目中涉及到了蓝牙设备的开发，需要开启一个后台服务实时监听数据变化，在进程保活这块和同事探讨了很久，然后发现课本里面有讲啊《第一行代码- Android》。产品需求也不并不是很严，就考虑使用前台服务确保进程的保活，起码不会被kill了。</p>
-<span id="more"></span>
-
-<h4 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h4><h6 id="创建Service"><a href="#创建Service" class="headerlink" title="创建Service"></a>创建Service</h6><figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyService</span> : <span class="type">Service</span></span>() &#123;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">override</span> <span class="function"><span class="keyword">fun</span> <span class="title">onCreate</span><span class="params">()</span></span> &#123;</span><br><span class="line">        <span class="keyword">super</span>.onCreate()</span><br><span class="line">        <span class="keyword">val</span> manager = getSystemService(Context.NOTIFICATION_SERVICE) <span class="keyword">as</span> NotificationManager</span><br><span class="line">        <span class="keyword">if</span> (Build.VERSION.SDK_INT &gt;= Build.VERSION_CODES.O) &#123;</span><br><span class="line">            <span class="keyword">val</span> channel = NotificationChannel(</span><br><span class="line">                <span class="string">&quot;my_service&quot;</span>,</span><br><span class="line">                <span class="string">&quot;前台服务通知&quot;</span>,</span><br><span class="line">                NotificationManager.IMPORTANCE_DEFAULT</span><br><span class="line">            )</span><br><span class="line">            manager.createNotificationChannel(channel)</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">val</span> intent = Intent(<span class="keyword">this</span>, MainActivity::<span class="keyword">class</span>.java)</span><br><span class="line">        <span class="keyword">val</span> pi = PendingIntent.getActivity(<span class="keyword">this</span>, <span class="number">0</span>, intent, <span class="number">0</span>)</span><br><span class="line">        <span class="keyword">val</span> notification = NotificationCompat.Builder(<span class="keyword">this</span>, <span class="string">&quot;my_service&quot;</span>)</span><br><span class="line">            .setContentTitle(<span class="string">&quot;这是标题&quot;</span>)</span><br><span class="line">            .setContentText(<span class="string">&quot;这是内容&quot;</span>)</span><br><span class="line">            .setSmallIcon(R.mipmap.ic_launcher_round)</span><br><span class="line">            .setLargeIcon(BitmapFactory.decodeResource(resources, R.mipmap.ic_launcher))</span><br><span class="line">            .setContentIntent(pi)</span><br><span class="line">            .build()</span><br><span class="line">        startForeground(<span class="number">1</span>, notification)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">override</span> <span class="function"><span class="keyword">fun</span> <span class="title">onStartCommand</span><span class="params">(intent: <span class="type">Intent</span>?, flags: <span class="type">Int</span>, startId: <span class="type">Int</span>)</span></span>: <span class="built_in">Int</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> START_STICKY</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">override</span> <span class="function"><span class="keyword">fun</span> <span class="title">onBind</span><span class="params">(intent: <span class="type">Intent</span>?)</span></span>: IBinder? &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">null</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h6 id="配置清单文件AndroidManifest-xml"><a href="#配置清单文件AndroidManifest-xml" class="headerlink" title="配置清单文件AndroidManifest.xml"></a>配置清单文件AndroidManifest.xml</h6><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">uses-permission</span> <span class="attr">android:name</span>=<span class="string">&quot;android.permission.FOREGROUND_SERVICE&quot;</span> /&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">application</span></span></span><br><span class="line"><span class="tag">				<span class="attr">...</span>&gt;</span></span><br><span class="line">        </span><br><span class="line">				...</span><br><span class="line">  			</span><br><span class="line">				<span class="comment">&lt;!--android:enabled：表示是否启用这个服务</span></span><br><span class="line"><span class="comment">            android:exported：表示是否允许除了当前程序之外的其他程序访问这个服务</span></span><br><span class="line"><span class="comment">            android:process：是否需要在单独的进程中运行,当设置为android:process=”:remote”时，代表Service在单独的进程中运行。注意“：”很重要，它的意思是指要在当前进程名称前面附加上当前的包名，所以“remote”和”:remote”不是同一个意思，前者的进程名称为：remote，而后者的进程名称为：App-packageName:remote。</span></span><br><span class="line"><span class="comment">            android:isolatedProcess：设置 true 意味着，服务会在一个特殊的进程下运行，这个进程与系统其他进程分开且没有自己的权限。与其通信的唯一途径是通过服务的API(bind and start)。</span></span><br><span class="line"><span class="comment">        --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">service</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:name</span>=<span class="string">&quot;.MyService&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:enabled</span>=<span class="string">&quot;true&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:exported</span>=<span class="string">&quot;false&quot;</span> /&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;/<span class="name">application</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h6 id="启动服务"><a href="#启动服务" class="headerlink" title="启动服务"></a>启动服务</h6><figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line">startService(Intent(<span class="keyword">this</span>, MyService::<span class="keyword">class</span>.java))</span><br></pre></td></tr></table></figure>
-
 ]]></content>
       <categories>
         <category>-编程</category>
@@ -879,111 +859,17 @@
       </tags>
   </entry>
   <entry>
-    <title>Android开发中一些实用点</title>
-    <url>/2021/05/07/android-tips/</url>
-    <content><![CDATA[<span id="more"></span>
+    <title>Android-使用前台服务</title>
+    <url>/2021/03/03/android-notification-service/</url>
+    <content><![CDATA[<h4 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h4><p>项目中涉及到了蓝牙设备的开发，需要开启一个后台服务实时监听数据变化，在进程保活这块和同事探讨了很久，然后发现课本里面有讲啊《第一行代码- Android》。产品需求也不并不是很严，就考虑使用前台服务确保进程的保活，起码不会被kill了。</p>
+<span id="more"></span>
 
-<ul>
-<li><p>组合使用<merge/>（只能在布局根节点使用）、<include/>、<ViewStub/>标签，减少布局层级嵌套；</p>
-</li>
-<li><p>RecyclerView的layoutManager，spanCount,orientation属性可以在xml中设置；</p>
-</li>
-<li><p>通过SpannableString设置TextView样式，减少TextView创建；</p>
-</li>
-<li><p>图片如果只是颜色不一致的话，可以使用tint着色器进行更改，不必进行图片切换，减少图片资源的引入；</p>
-</li>
-<li><p>ViewFlipper：翻转视图，可以用来实现轮播，大图滑动查看，Banner图，启动引导页等；</p>
-</li>
-<li><p>设置EditText文本：EditText.text &#x3D; Editable.Factory.getInstance().newEditable(“”)；</p>
-</li>
-<li><p>设置Button无样式显示：style&#x3D;”?android:attr&#x2F;borderlessButtonStyle”；</p>
-</li>
-<li><p>防止同时按下两个按钮触发两个事件,在style中配置：</p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line">&lt;style name=<span class="string">&quot;AppTheme&quot;</span> parent=<span class="string">&quot;Theme.AppCompat.Light.NoActionBar&quot;</span>&gt;</span><br><span class="line">    &lt;!-- 防止同时按下两个按钮 --&gt;</span><br><span class="line">    &lt;item name=<span class="string">&quot;android:windowEnableSplitTouch&quot;</span>&gt;<span class="literal">false</span>&lt;/item&gt;</span><br><span class="line">    &lt;item name=<span class="string">&quot;android:splitMotionEvents&quot;</span>&gt;<span class="literal">false</span>&lt;/item&gt;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>金钱等两位小数的值使用BigDecimal类型；</p>
-</li>
-<li><p>对于简单方案，例如调用list集合的扩展函数，可以不使用{ }的lambda形式，直接使用（类名：属性）的方式，易于阅读；</p>
-</li>
-<li><p>a &#x3D; b.also { b &#x3D; a } ，交换两个属性，不用来回赋值了，每一次触发，都会进行调换；</p>
-</li>
-<li><p>by lazy只能作用于val关键字标注的属性，当属性用到的时候才会初始化”lazy{}”里面的内容，而且再次调用属性的时候，只会得到结果，而不会再次执行lazy{}的运行过程；</p>
-</li>
-<li><p>绘制RecyclerView后，可以设置tools:listitem&#x3D;”@layout&#x2F;list_item”，显示对应的Item布局；</p>
-</li>
-<li><p>解决android:animateLayoutChanges&#x3D;”true”动画跳跃问题：</p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span>(Build.VERSION.SDK_INT&gt;=Build.VERSION_CODES.JELLY_BEAN)&#123;		 	 		</span><br><span class="line">		父布局?.layoutTransition!!.enableTransitionType(LayoutTransition.CHANGING);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>动态的在代码里进行设置edittext限制规则：</p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line">editText.setKeyListener(DigitsKeyListener.getInstance(<span class="string">&quot;1234567890&quot;</span>));</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>单独对某个值或者对象判空并操作：</p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line">bean?.let &#123;</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>取某个对象中的各个属性进行操作：</p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line">with(bean) &#123;</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>既判空也取各个属性，并且不需要依靠it来调用：</p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line">bean.run &#123;</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>apply：1、适用于run函数的任何场景，一般用于初始化一个对象实例的时候，操作对象属性，并最终返回这个对象。<br>2、动态inflate出一个XML的View的时候需要给View绑定数据也会用到.<br>3、一般可用于多个扩展函数链式调用<br>4、数据model多层级包裹判空处理的问题</p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line">bean?.apply &#123;</span><br><span class="line">    <span class="comment">//第一层级不为空</span></span><br><span class="line">&#125;?.name?.apply &#123;</span><br><span class="line">    <span class="comment">//第二层级不为空</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><code>also</code> 对于执行一些将上下文对象作为参数的操作很有用。 对于需要引用对象而不是其属性与函数的操作，或者不想屏蔽来自外部作用域的 <code>this</code> 引用时，请使用 <code>also</code>。可以将其理解为“并且用该对象执行以下操作”</p>
-</li>
-<li><p>要善于使用解构声明，把一个对象，或者一个方法直接返回所需的多个变量：</p>
-<p>小括号里面的变量会从对象中依次调取，如果有用不到的参数，使用<code>_</code>替代</p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">val</span> (name,age) = f1()</span><br><span class="line"><span class="keyword">private</span> <span class="function"><span class="keyword">fun</span> <span class="title">f1</span><span class="params">()</span></span>: MyTestBean &#123;</span><br><span class="line">   <span class="keyword">return</span> MyTestBean(<span class="string">&quot;123&quot;</span>, <span class="number">0</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h4><h6 id="创建Service"><a href="#创建Service" class="headerlink" title="创建Service"></a>创建Service</h6><figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyService</span> : <span class="type">Service</span></span>() &#123;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">override</span> <span class="function"><span class="keyword">fun</span> <span class="title">onCreate</span><span class="params">()</span></span> &#123;</span><br><span class="line">        <span class="keyword">super</span>.onCreate()</span><br><span class="line">        <span class="keyword">val</span> manager = getSystemService(Context.NOTIFICATION_SERVICE) <span class="keyword">as</span> NotificationManager</span><br><span class="line">        <span class="keyword">if</span> (Build.VERSION.SDK_INT &gt;= Build.VERSION_CODES.O) &#123;</span><br><span class="line">            <span class="keyword">val</span> channel = NotificationChannel(</span><br><span class="line">                <span class="string">&quot;my_service&quot;</span>,</span><br><span class="line">                <span class="string">&quot;前台服务通知&quot;</span>,</span><br><span class="line">                NotificationManager.IMPORTANCE_DEFAULT</span><br><span class="line">            )</span><br><span class="line">            manager.createNotificationChannel(channel)</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">val</span> intent = Intent(<span class="keyword">this</span>, MainActivity::<span class="keyword">class</span>.java)</span><br><span class="line">        <span class="keyword">val</span> pi = PendingIntent.getActivity(<span class="keyword">this</span>, <span class="number">0</span>, intent, <span class="number">0</span>)</span><br><span class="line">        <span class="keyword">val</span> notification = NotificationCompat.Builder(<span class="keyword">this</span>, <span class="string">&quot;my_service&quot;</span>)</span><br><span class="line">            .setContentTitle(<span class="string">&quot;这是标题&quot;</span>)</span><br><span class="line">            .setContentText(<span class="string">&quot;这是内容&quot;</span>)</span><br><span class="line">            .setSmallIcon(R.mipmap.ic_launcher_round)</span><br><span class="line">            .setLargeIcon(BitmapFactory.decodeResource(resources, R.mipmap.ic_launcher))</span><br><span class="line">            .setContentIntent(pi)</span><br><span class="line">            .build()</span><br><span class="line">        startForeground(<span class="number">1</span>, notification)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">override</span> <span class="function"><span class="keyword">fun</span> <span class="title">onStartCommand</span><span class="params">(intent: <span class="type">Intent</span>?, flags: <span class="type">Int</span>, startId: <span class="type">Int</span>)</span></span>: <span class="built_in">Int</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> START_STICKY</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">override</span> <span class="function"><span class="keyword">fun</span> <span class="title">onBind</span><span class="params">(intent: <span class="type">Intent</span>?)</span></span>: IBinder? &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">null</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>集合中也可以使用：</p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">val</span> list = arrayListOf(</span><br><span class="line">    MyTestBean(<span class="string">&quot;123&quot;</span>, <span class="number">0</span>),</span><br><span class="line">    MyTestBean(<span class="string">&quot;456&quot;</span>, <span class="number">1</span>),</span><br><span class="line">    MyTestBean(<span class="string">&quot;789&quot;</span>, <span class="number">2</span>),</span><br><span class="line">    MyTestBean(<span class="string">&quot;000&quot;</span>, <span class="number">3</span>)</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> ((name,age) <span class="keyword">in</span> list)&#123;</span><br><span class="line">    Log.e(<span class="string">&quot;JP&quot;</span>, <span class="string">&quot;name: <span class="variable">$name</span>&quot;</span>)</span><br><span class="line">    Log.e(<span class="string">&quot;JP&quot;</span>, <span class="string">&quot;age: <span class="variable">$age</span>&quot;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>判断一个变量是否为null，并做对应的处理，可以使用：</p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line">haha?.let &#123;</span><br><span class="line">            Log.e(<span class="string">&quot;JP&quot;</span>, <span class="string">&quot;不为null&quot;</span>)</span><br><span class="line">        &#125; ?: run &#123;</span><br><span class="line">  					<span class="comment">//注意：let函数中存在多个let判断的话，有一个为null，都会进入run</span></span><br><span class="line">            Log.e(<span class="string">&quot;JP&quot;</span>, <span class="string">&quot;null&quot;</span>)</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>当声明的变量名存在相同概念的情况，私有的变量名使用_标识</p>
-</li>
-<li><p>TextView.lineCount：获取显示的文案有几行；TextView.layout.getLineWidth(0)：指定第几行文案显示的宽度；TextView.layout.getLineStart(0)：指定第几行显示的第一个字占所有文字的脚标；TextView.layout.getLineEnd(0)：指定第几行显示的最后一个字占所有文字的脚标。</p>
-<p>以上调用应该在TextView绘制完成，即post{dothing}</p>
-</li>
-<li><p>当进行类型转换的时候，如果可能存在null的情况，应使用as?</p>
-</li>
-<li><p>判断字符串是否为空：</p>
-<p>isNullOrEmpty : 为空指针或者字串长度为0时返回true，非空串与可空串均可调用。<br>isNullOrBlank : 为空指针或者字串长度为0或者全为空格时返回true，非空串与可空串均可调用。<br>isEmpty : 字串长度为0时返回true，只有非空串可调用。<br>isBlank : 字串长度为0或者全为空格时返回true，只有非空串可调用。<br>isNotEmpty : 字串长度大于0时返回true，只有非空串可调用。<br>isNotBlank : 字串长度大于0且不是全空格串时返回true，只有非空串可调用。</p>
-</li>
-<li><p>如果要对集合做很多或复杂的操作时，可以考虑转换为Sequence序列，再执行，提升处理效率</p>
-</li>
-<li><p>以字符串形式展示集合的数据时，使用list.joinToString(separator &#x3D; “ | “, prefix &#x3D; “start: “, postfix &#x3D; “: end”) – separator ：每个元素间的分割符</p>
-<p>–prefix ：数据开始的头描述</p>
-<p>–postfix ：数据结束的尾描述</p>
-</li>
-<li><p>在设置颜色**<code>colors.xml</code><strong>时，命名规则可以为</strong><code>_颜色值</code>**</p>
-</li>
-<li><p>在项目中可以创建多个styles.xml文件，这个文件名称并没有作用，起作用的是在文件 里xml的<code>&lt;style&gt;</code>标签。将通用的样式写到style中，布局里面直接加载style，不要再一个一个编写属性。</p>
-</li>
-<li><p>对于详情页面数据的访问，处理某个实时状态的话，用轮询访问服务器。</p>
-</li>
-<li><p>布局中使用分割线的话，可以考虑LinearLayout中的divider。</p>
-<p><code>divider</code>：传入分割线的<code>drawable</code>，可以是一个图片，也可以是自己通过<code>xml</code>实现的<code>drawable</code>。例如系统的分割线：@android:drawable&#x2F;divider_horizontal_bright</p>
-<p><code>showDividers</code>：分割线显示的位置，<code>beginning/middle/end</code>，分割对应头部、中间、尾部。</p>
-<p><code>dividerPadding</code>：分割线距离两边的间距。</p>
-</li>
-<li><p>如果不想使用外边距和View实现间距，考虑使用Space标签，它是一个空实现，因此它只占位置，而不去渲染，使用它来进行占位填充比其它控件更加高效</p>
-</li>
-<li><p>对比两个字符串，但是需要忽略大小写时，使用old.equals(new, ignoreCase &#x3D; <strong>true</strong>)</p>
-</li>
-<li><p>判断一个字符串是否为空字符串或者空格，最后加上为null的默认值：</p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line">str?.ifBlank &#123; <span class="string">&quot;123&quot;</span> &#125; ?: <span class="string">&quot;000&quot;</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>字符串移除相关：</p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> <span class="keyword">data</span> = <span class="string">&quot;**hi dhl**&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 移除前缀</span></span><br><span class="line">println(<span class="keyword">data</span>.removePrefix(<span class="string">&quot;**&quot;</span>)) <span class="comment">// hi dhl**</span></span><br><span class="line"><span class="comment">// 移除后缀</span></span><br><span class="line">println(<span class="keyword">data</span>.removeSuffix(<span class="string">&quot;**&quot;</span>)) <span class="comment">// **hi dhl</span></span><br><span class="line"><span class="comment">// 移除前缀和后缀</span></span><br><span class="line">println(<span class="keyword">data</span>.removeSurrounding(<span class="string">&quot;**&quot;</span>)) <span class="comment">// hi dhl</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 返回第一次出现分隔符后的字符串</span></span><br><span class="line">println(<span class="keyword">data</span>.substringAfter(<span class="string">&quot;**&quot;</span>)) <span class="comment">// hi dhl**</span></span><br><span class="line"><span class="comment">// 如果没有找到，返回原始字符串</span></span><br><span class="line">println(<span class="keyword">data</span>.substringAfter(<span class="string">&quot;--&quot;</span>)) <span class="comment">// **hi dhl**</span></span><br><span class="line"><span class="comment">// 如果没有找到，返回默认字符串 &quot;no match&quot;</span></span><br><span class="line">println(<span class="keyword">data</span>.substringAfter(<span class="string">&quot;--&quot;</span>,<span class="string">&quot;no match&quot;</span>)) <span class="comment">// no match</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">data</span> = <span class="string">&quot;&#123;JAVA | KOTLIN | C++ | PYTHON&#125;&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 移除前缀和后缀</span></span><br><span class="line">println(<span class="keyword">data</span>.removeSurrounding(<span class="string">&quot;&#123;&quot;</span>, <span class="string">&quot;&#125;&quot;</span>)) <span class="comment">// JAVA | KOTLIN | C++ | PYTHON</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>可以考虑减少if-else的判断，使用require(){}和checkXXX(){}进行检测</p>
-</li>
-<li><p>TextView设置跑马灯效果：</p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line">&lt;TextView</span><br><span class="line">                   ...</span><br><span class="line">                   android:ellipsize=<span class="string">&quot;marquee&quot;</span></span><br><span class="line">                   android:focusable=<span class="string">&quot;true&quot;</span></span><br><span class="line">                   android:focusableInTouchMode=<span class="string">&quot;true&quot;</span></span><br><span class="line">                   android:marqueeRepeatLimit=<span class="string">&quot;marquee_forever&quot;</span></span><br><span class="line">                   android:maxWidth=<span class="string">&quot;120dp&quot;</span></span><br><span class="line">                   android:maxLines=<span class="string">&quot;1&quot;</span></span><br><span class="line">                   android:scrollHorizontally=<span class="string">&quot;true&quot;</span></span><br><span class="line">                   android:singleLine=<span class="string">&quot;true&quot;</span>&gt;</span><br><span class="line">                   </span><br><span class="line">                   &lt;requestFocus /&gt;</span><br><span class="line">  </span><br><span class="line">               &lt;/TextView&gt;</span><br></pre></td></tr></table></figure></li>
-</ul>
-<p>注意的是，不要设置高度，可以考虑设置 android:paddingVertical。</p>
+<h6 id="配置清单文件AndroidManifest-xml"><a href="#配置清单文件AndroidManifest-xml" class="headerlink" title="配置清单文件AndroidManifest.xml"></a>配置清单文件AndroidManifest.xml</h6><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">uses-permission</span> <span class="attr">android:name</span>=<span class="string">&quot;android.permission.FOREGROUND_SERVICE&quot;</span> /&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">application</span></span></span><br><span class="line"><span class="tag">				<span class="attr">...</span>&gt;</span></span><br><span class="line">        </span><br><span class="line">				...</span><br><span class="line">  			</span><br><span class="line">				<span class="comment">&lt;!--android:enabled：表示是否启用这个服务</span></span><br><span class="line"><span class="comment">            android:exported：表示是否允许除了当前程序之外的其他程序访问这个服务</span></span><br><span class="line"><span class="comment">            android:process：是否需要在单独的进程中运行,当设置为android:process=”:remote”时，代表Service在单独的进程中运行。注意“：”很重要，它的意思是指要在当前进程名称前面附加上当前的包名，所以“remote”和”:remote”不是同一个意思，前者的进程名称为：remote，而后者的进程名称为：App-packageName:remote。</span></span><br><span class="line"><span class="comment">            android:isolatedProcess：设置 true 意味着，服务会在一个特殊的进程下运行，这个进程与系统其他进程分开且没有自己的权限。与其通信的唯一途径是通过服务的API(bind and start)。</span></span><br><span class="line"><span class="comment">        --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">service</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:name</span>=<span class="string">&quot;.MyService&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:enabled</span>=<span class="string">&quot;true&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:exported</span>=<span class="string">&quot;false&quot;</span> /&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;/<span class="name">application</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h6 id="启动服务"><a href="#启动服务" class="headerlink" title="启动服务"></a>启动服务</h6><figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line">startService(Intent(<span class="keyword">this</span>, MyService::<span class="keyword">class</span>.java))</span><br></pre></td></tr></table></figure>
+
 ]]></content>
       <categories>
         <category>-编程</category>
@@ -1024,109 +910,6 @@
       </categories>
       <tags>
         <tag>Android Studio</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>HTTP的学习</title>
-    <url>/2022/05/16/http/</url>
-    <content><![CDATA[<h4 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h4><p>HTTP：HyperText Transfer Protocol，超文本传输协议。它是一种用于分布式、协作式和超媒体信息系统的应用层协议。HTTP是万维网数据通信的基础。</p>
-<span id="more"></span>
-
-<h4 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h4><p>HTTP是一个客户端终端和服务器端请求和应答的标准（TCP），通过使用网页浏览器、网络爬虫或者其他工具，客户端发起一个HTTP请求到服务器上指定端口（默认端口为80）。称此客户端为用户代理程序。应答的服务器上存储着一些资源，称其为源服务器。客户端和源服务器中间可能存在多个“中间层”，比如代理服务器、网关或隧道。</p>
-<p>尽管TCP&#x2F;IP协议是互联网上最流行的应用，HTTP协议中，并没有规定必须使用它或它支持的层。事实上，HTTP可以在任何互联网协议上，或其他网络上实现。HTTP假定其下层协议提供可靠的传输。因此，任何能够提供这种保证的协议都可以被其使用。因此也就是其在TCP&#x2F;IP协议族使用TCP作为其传输层。</p>
-<h4 id="工作原理"><a href="#工作原理" class="headerlink" title="工作原理"></a>工作原理</h4><p>HTTP协议采用了请求&#x2F;响应模型。客户端向服务器发送一个请求报文，请求报文包含请求的方法、URL、协议版本、请求头部和请求数据。服务器以一个状态行作为响应，响应的内容包括协议的版本、成功或者错误代码、服务器信息、响应头部和响应数据。</p>
-<p>步骤如下：</p>
-<ul>
-<li>客户端连接到服务器：即两端之间建立一个TCP套接字连接；</li>
-<li>发送HTTP请求：通过TCP套接字，客户端向服务端发送一个文本的请求报文，一个请求报文由请求行、请求头部、空行和请求数据4部分组成；</li>
-<li>服务器接受请求并返回HTTP响应：服务器解析请求，定位请求资源，服务器将资源复本写到TCP套接字，由客户端读取。一个响应由状态行、响应头部、空行和响应数据4部分组成；</li>
-<li>释放TCP连接：若connection模式为close，则服务器主动关闭TCP连接，客户端被动关闭连接，释放TCP连接；若connection 模式为keepalive，则该连接会保持一段时间，在该时间内可以继续接收请求；</li>
-<li>客户端解析内容：客户端先解析状态行，查看表明请求是否成功的状态码。然后解析每一个响应头，响应头告知以下为若干字节的文档的字符集。客户端读取响应数据，并格式化后显示。</li>
-</ul>
-<p>请求必定由客户端发出，而服务器端回复响应。</p>
-<h4 id="无状态保存"><a href="#无状态保存" class="headerlink" title="无状态保存"></a>无状态保存</h4><p>HTTP是一种不保存状，即无状态(stateless)协议。HTTP协议自身不对请求和响应之间的通信状态进行保存。也就是说在HTTP这个级别，协议对于发送过的请求或响应都不做持久化处理。这是为了更快的处理大量事务，确保协议的可伸缩性，而特意设计成如此简单的。</p>
-<p>HTTP&#x2F;1.1虽然是无状态协议，但为了实现期望的保持状态功能，于是引入了Cookie技术。</p>
-<h4 id="无连接"><a href="#无连接" class="headerlink" title="无连接"></a>无连接</h4><p>无连接的含义是限制每次连接只处理一个请求。服务器处理完客户端的请求，并收到客户端的应答后，即断开连接。采用这种方式可以节省传输时间，并且可以提高并发性能，不能和每个用户建立长久的连接，请求一次响应一次，服务端和客户端就中断了。但是无连接有两种方式，早期的http协议是一个请求一个响应之后，直接就断开了，但是现在的http协议1.1版本不是直接就断开了，而是等几秒钟，这几秒钟是等什么呢，等着用户有后续的操作，如果用户在这几秒钟之内有新的请求，那么还是通过之前的连接通道来收发消息，如果过了这几秒钟用户没有发送新的请求，那么就会断开连接，这样可以提高效率，减少短时间内建立连接的次数，因为建立连接也是耗时的，默认的好像是3秒，但是这个时间是可以通过咱们后端的代码来调整的，自己网站根据自己网站用户的行为来分析统计出一个最优的等待时间。</p>
-<h4 id="请求方法"><a href="#请求方法" class="headerlink" title="请求方法"></a>请求方法</h4><ul>
-<li>GET：向指定的资源发出“显示”请求。使用GET方法应该只用在读取数据，而不应当被用于产生“副作用”的操作中；</li>
-<li>HEAD：与GET方法一样，都是向服务器发出指定资源的请求。只不过服务器将不传回资源的本文部分。它的好处在于，使用这个方法可以在不必传输全部内容的情况下，就可以获取其中“关于该资源的信息”（元信息或称元数据）；</li>
-<li>POST：向指定资源提交数据，请求服务器进行处理（例如提交表单或者上传文件）。数据被包含在请求本文中。这个请求可能会创建新的资源或修改现有资源，或二者皆有；</li>
-<li>PUT：向指定资源位置上传其最新内容；</li>
-<li>DELETE：请求服务器删除Request-URI所标识的资源；</li>
-<li>TRACE：回显服务器收到的请求，主要用于测试或诊断；</li>
-<li>OPTIONS：使服务器传回该资源所支持的所有HTTP请求方法。用’*’来代替资源名称，向Web服务器发送OPTIONS请求，可以测试服务器功能是否正常运作；</li>
-<li>CONNECT：HTTP&#x2F;1.1协议中预留给能够将连接改为管道方式的代理服务器。通常用于SSL加密服务器的链接（经由非加密的HTTP代理服务器）。</li>
-</ul>
-<p>注意事项：</p>
-<ul>
-<li>方法名称是区分大小的；</li>
-<li>服务器至少应该实现GET和HEAD方法；</li>
-<li>GET提交的数据会放在URL之后，也就是请求行里面，以?分割URL和传输数据，参数之间以&amp;相连；</li>
-<li>GET提交的数据大小有限制（因为浏览器对URL的长度有限制），而POST方法提交的数据没有限制；</li>
-</ul>
-<h4 id="HTTP状态码简述"><a href="#HTTP状态码简述" class="headerlink" title="HTTP状态码简述"></a>HTTP状态码简述</h4><ul>
-<li>1xx——信息性状态码——接收的请求正在处理</li>
-<li>2xx——成功状态码——请求正常处理完毕</li>
-<li>3xx——重定向状态码——需要进行附加操作以完成请求</li>
-<li>4xx——客户端错误状态码——服务器无法处理请求</li>
-<li>5xx——服务器错误状态码——服务器处理请求出错</li>
-</ul>
-<h4 id="请求头"><a href="#请求头" class="headerlink" title="请求头"></a>请求头</h4><p>请求头部由关键字&#x2F;值对组成，每行一对，关键字和值用英文冒号“:”分隔。请求头部通知服务器有关于客户端请求的信息，典型的请求头有：</p>
-<ul>
-<li>User-Agent：产生请求的浏览器类型；</li>
-<li>Accept：客户端可识别的响应内容类型列表;星号 “ * ” 用于按范围将类型分组，用 “ <em>&#x2F;</em> ” 指示可接受全部类型，用“ type&#x2F;* ”指示可接受 type 类型的所有子类型；</li>
-<li>Accept-Language：客户端可接受的自然语言；</li>
-<li>Accept-Encoding：客户端可接受的编码压缩格式；</li>
-<li>Accept-Charset：可接受的应答的字符集；</li>
-<li>Host：请求的主机名，允许多个域名同处一个IP 地址，即虚拟主机；</li>
-<li>connection：连接方式(close 或 keepalive)；</li>
-<li>Cookie：存储于客户端扩展字段，向同一域名的服务端发送属于该域的cookie。</li>
-</ul>
-<h4 id="uri、url、urn三者区别"><a href="#uri、url、urn三者区别" class="headerlink" title="uri、url、urn三者区别"></a>uri、url、urn三者区别</h4><ul>
-<li><p>uri：只用来唯一标识资源，不进行查找、定位。</p>
-</li>
-<li><p>url：唯一标识资源，并且规定了如何查找、定位资源。</p>
-</li>
-<li><p>urn：规定了资源的命名规则。</p>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>-编程</category>
-      </categories>
-      <tags>
-        <tag>Principle</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>EventBus和BroadCast的差异</title>
-    <url>/2021/06/25/eventbus-broadcast/</url>
-    <content><![CDATA[<p>消息传递的实现，可以使用EventBus、广播、观察者。任何一种方式都有它的利弊，存在差异。</p>
-<span id="more"></span>
-
-<ul>
-<li><h5 id="广播BroadCastReceiver"><a href="#广播BroadCastReceiver" class="headerlink" title="广播BroadCastReceiver"></a>广播BroadCastReceiver</h5></li>
-</ul>
-<p>全局广播：它是重量级的，会消耗很多的资源，但是可以跨进程通信，这个特点是其他方案做不到的。</p>
-<p>本地广播：也会消耗很多资源，较全局广播轻量些，它可以拿到Context、Intent等和Android系统紧密相关的上下文，这样就方便数据的传递和接收。但是，获取到的这些对象，并不是像Activity那样获取到后做最全的事情。</p>
-<p>作为四大组件之一，广播同SDK的交互比较好。所以系统级的事件都是通过广播来实现的。</p>
-<p>谨记：广播是消耗时间、空间最多的一种方式。</p>
-<ul>
-<li><h5 id="EventBus"><a href="#EventBus" class="headerlink" title="EventBus"></a>EventBus</h5></li>
-</ul>
-<p>开发中使用最多的一种方式，调度灵活，不依赖Context，父类对于通知的监听和处理可以继承给子类，设置通知的优先级，粘滞事件能够保证通知不会因 Subscriber 的不在场而忽略。</p>
-<p>使用起来也简单，通过注册来监听数据变化即可。</p>
-<p>使用完成后需要解绑监听，并且无法跨进程传递消息。</p>
-<ul>
-<li><h5 id="观察者模式"><a href="#观察者模式" class="headerlink" title="观察者模式"></a>观察者模式</h5></li>
-</ul>
-<p>观察者的实现比较简单，性能上所以是最好的，但是无法控制优先级、粘滞事件，耦合性比EventBus大。</p>
-]]></content>
-      <categories>
-        <category>-编程</category>
-      </categories>
-      <tags>
-        <tag>Android</tag>
       </tags>
   </entry>
   <entry>
@@ -1244,6 +1027,120 @@
       </tags>
   </entry>
   <entry>
+    <title>Android开发中一些实用点</title>
+    <url>/2021/05/07/android-tips/</url>
+    <content><![CDATA[<span id="more"></span>
+
+<ul>
+<li><p>组合使用<merge/>（只能在布局根节点使用）、<include/>、<ViewStub/>标签，减少布局层级嵌套；</p>
+</li>
+<li><p>RecyclerView的layoutManager，spanCount,orientation属性可以在xml中设置；</p>
+</li>
+<li><p>通过SpannableString设置TextView样式，减少TextView创建；</p>
+</li>
+<li><p>图片如果只是颜色不一致的话，可以使用tint着色器进行更改，不必进行图片切换，减少图片资源的引入；</p>
+</li>
+<li><p>ViewFlipper：翻转视图，可以用来实现轮播，大图滑动查看，Banner图，启动引导页等；</p>
+</li>
+<li><p>设置EditText文本：EditText.text &#x3D; Editable.Factory.getInstance().newEditable(“”)；</p>
+</li>
+<li><p>设置Button无样式显示：style&#x3D;”?android:attr&#x2F;borderlessButtonStyle”；</p>
+</li>
+<li><p>防止同时按下两个按钮触发两个事件,在style中配置：</p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line">&lt;style name=<span class="string">&quot;AppTheme&quot;</span> parent=<span class="string">&quot;Theme.AppCompat.Light.NoActionBar&quot;</span>&gt;</span><br><span class="line">    &lt;!-- 防止同时按下两个按钮 --&gt;</span><br><span class="line">    &lt;item name=<span class="string">&quot;android:windowEnableSplitTouch&quot;</span>&gt;<span class="literal">false</span>&lt;/item&gt;</span><br><span class="line">    &lt;item name=<span class="string">&quot;android:splitMotionEvents&quot;</span>&gt;<span class="literal">false</span>&lt;/item&gt;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>金钱等两位小数的值使用BigDecimal类型；</p>
+</li>
+<li><p>对于简单方案，例如调用list集合的扩展函数，可以不使用{ }的lambda形式，直接使用（类名：属性）的方式，易于阅读；</p>
+</li>
+<li><p>a &#x3D; b.also { b &#x3D; a } ，交换两个属性，不用来回赋值了，每一次触发，都会进行调换；</p>
+</li>
+<li><p>by lazy只能作用于val关键字标注的属性，当属性用到的时候才会初始化”lazy{}”里面的内容，而且再次调用属性的时候，只会得到结果，而不会再次执行lazy{}的运行过程；</p>
+</li>
+<li><p>绘制RecyclerView后，可以设置tools:listitem&#x3D;”@layout&#x2F;list_item”，显示对应的Item布局；</p>
+</li>
+<li><p>解决android:animateLayoutChanges&#x3D;”true”动画跳跃问题：</p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span>(Build.VERSION.SDK_INT&gt;=Build.VERSION_CODES.JELLY_BEAN)&#123;		 	 		</span><br><span class="line">		父布局?.layoutTransition!!.enableTransitionType(LayoutTransition.CHANGING);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>动态的在代码里进行设置edittext限制规则：</p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line">editText.setKeyListener(DigitsKeyListener.getInstance(<span class="string">&quot;1234567890&quot;</span>));</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>单独对某个值或者对象判空并操作：</p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line">bean?.let &#123;</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>取某个对象中的各个属性进行操作：</p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line">with(bean) &#123;</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>既判空也取各个属性，并且不需要依靠it来调用：</p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line">bean.run &#123;</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>apply：1、适用于run函数的任何场景，一般用于初始化一个对象实例的时候，操作对象属性，并最终返回这个对象。<br>2、动态inflate出一个XML的View的时候需要给View绑定数据也会用到.<br>3、一般可用于多个扩展函数链式调用<br>4、数据model多层级包裹判空处理的问题</p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line">bean?.apply &#123;</span><br><span class="line">    <span class="comment">//第一层级不为空</span></span><br><span class="line">&#125;?.name?.apply &#123;</span><br><span class="line">    <span class="comment">//第二层级不为空</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>also</code> 对于执行一些将上下文对象作为参数的操作很有用。 对于需要引用对象而不是其属性与函数的操作，或者不想屏蔽来自外部作用域的 <code>this</code> 引用时，请使用 <code>also</code>。可以将其理解为“并且用该对象执行以下操作”</p>
+</li>
+<li><p>要善于使用解构声明，把一个对象，或者一个方法直接返回所需的多个变量：</p>
+<p>小括号里面的变量会从对象中依次调取，如果有用不到的参数，使用<code>_</code>替代</p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">val</span> (name,age) = f1()</span><br><span class="line"><span class="keyword">private</span> <span class="function"><span class="keyword">fun</span> <span class="title">f1</span><span class="params">()</span></span>: MyTestBean &#123;</span><br><span class="line">   <span class="keyword">return</span> MyTestBean(<span class="string">&quot;123&quot;</span>, <span class="number">0</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>集合中也可以使用：</p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">val</span> list = arrayListOf(</span><br><span class="line">    MyTestBean(<span class="string">&quot;123&quot;</span>, <span class="number">0</span>),</span><br><span class="line">    MyTestBean(<span class="string">&quot;456&quot;</span>, <span class="number">1</span>),</span><br><span class="line">    MyTestBean(<span class="string">&quot;789&quot;</span>, <span class="number">2</span>),</span><br><span class="line">    MyTestBean(<span class="string">&quot;000&quot;</span>, <span class="number">3</span>)</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> ((name,age) <span class="keyword">in</span> list)&#123;</span><br><span class="line">    Log.e(<span class="string">&quot;JP&quot;</span>, <span class="string">&quot;name: <span class="variable">$name</span>&quot;</span>)</span><br><span class="line">    Log.e(<span class="string">&quot;JP&quot;</span>, <span class="string">&quot;age: <span class="variable">$age</span>&quot;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>判断一个变量是否为null，并做对应的处理，可以使用：</p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line">haha?.let &#123;</span><br><span class="line">            Log.e(<span class="string">&quot;JP&quot;</span>, <span class="string">&quot;不为null&quot;</span>)</span><br><span class="line">        &#125; ?: run &#123;</span><br><span class="line">  					<span class="comment">//注意：let函数中存在多个let判断的话，有一个为null，都会进入run</span></span><br><span class="line">            Log.e(<span class="string">&quot;JP&quot;</span>, <span class="string">&quot;null&quot;</span>)</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>当声明的变量名存在相同概念的情况，私有的变量名使用_标识</p>
+</li>
+<li><p>TextView.lineCount：获取显示的文案有几行；TextView.layout.getLineWidth(0)：指定第几行文案显示的宽度；TextView.layout.getLineStart(0)：指定第几行显示的第一个字占所有文字的脚标；TextView.layout.getLineEnd(0)：指定第几行显示的最后一个字占所有文字的脚标。</p>
+<p>以上调用应该在TextView绘制完成，即post{dothing}</p>
+</li>
+<li><p>当进行类型转换的时候，如果可能存在null的情况，应使用as?</p>
+</li>
+<li><p>判断字符串是否为空：</p>
+<p>isNullOrEmpty : 为空指针或者字串长度为0时返回true，非空串与可空串均可调用。<br>isNullOrBlank : 为空指针或者字串长度为0或者全为空格时返回true，非空串与可空串均可调用。<br>isEmpty : 字串长度为0时返回true，只有非空串可调用。<br>isBlank : 字串长度为0或者全为空格时返回true，只有非空串可调用。<br>isNotEmpty : 字串长度大于0时返回true，只有非空串可调用。<br>isNotBlank : 字串长度大于0且不是全空格串时返回true，只有非空串可调用。</p>
+</li>
+<li><p>如果要对集合做很多或复杂的操作时，可以考虑转换为Sequence序列，再执行，提升处理效率</p>
+</li>
+<li><p>以字符串形式展示集合的数据时，使用list.joinToString(separator &#x3D; “ | “, prefix &#x3D; “start: “, postfix &#x3D; “: end”) – separator ：每个元素间的分割符</p>
+<p>–prefix ：数据开始的头描述</p>
+<p>–postfix ：数据结束的尾描述</p>
+</li>
+<li><p>在设置颜色**<code>colors.xml</code><strong>时，命名规则可以为</strong><code>_颜色值</code>**</p>
+</li>
+<li><p>在项目中可以创建多个styles.xml文件，这个文件名称并没有作用，起作用的是在文件 里xml的<code>&lt;style&gt;</code>标签。将通用的样式写到style中，布局里面直接加载style，不要再一个一个编写属性。</p>
+</li>
+<li><p>对于详情页面数据的访问，处理某个实时状态的话，用轮询访问服务器。</p>
+</li>
+<li><p>布局中使用分割线的话，可以考虑LinearLayout中的divider。</p>
+<p><code>divider</code>：传入分割线的<code>drawable</code>，可以是一个图片，也可以是自己通过<code>xml</code>实现的<code>drawable</code>。例如系统的分割线：@android:drawable&#x2F;divider_horizontal_bright</p>
+<p><code>showDividers</code>：分割线显示的位置，<code>beginning/middle/end</code>，分割对应头部、中间、尾部。</p>
+<p><code>dividerPadding</code>：分割线距离两边的间距。</p>
+</li>
+<li><p>如果不想使用外边距和View实现间距，考虑使用Space标签，它是一个空实现，因此它只占位置，而不去渲染，使用它来进行占位填充比其它控件更加高效</p>
+</li>
+<li><p>对比两个字符串，但是需要忽略大小写时，使用old.equals(new, ignoreCase &#x3D; <strong>true</strong>)</p>
+</li>
+<li><p>判断一个字符串是否为空字符串或者空格，最后加上为null的默认值：</p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line">str?.ifBlank &#123; <span class="string">&quot;123&quot;</span> &#125; ?: <span class="string">&quot;000&quot;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>字符串移除相关：</p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> <span class="keyword">data</span> = <span class="string">&quot;**hi dhl**&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 移除前缀</span></span><br><span class="line">println(<span class="keyword">data</span>.removePrefix(<span class="string">&quot;**&quot;</span>)) <span class="comment">// hi dhl**</span></span><br><span class="line"><span class="comment">// 移除后缀</span></span><br><span class="line">println(<span class="keyword">data</span>.removeSuffix(<span class="string">&quot;**&quot;</span>)) <span class="comment">// **hi dhl</span></span><br><span class="line"><span class="comment">// 移除前缀和后缀</span></span><br><span class="line">println(<span class="keyword">data</span>.removeSurrounding(<span class="string">&quot;**&quot;</span>)) <span class="comment">// hi dhl</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 返回第一次出现分隔符后的字符串</span></span><br><span class="line">println(<span class="keyword">data</span>.substringAfter(<span class="string">&quot;**&quot;</span>)) <span class="comment">// hi dhl**</span></span><br><span class="line"><span class="comment">// 如果没有找到，返回原始字符串</span></span><br><span class="line">println(<span class="keyword">data</span>.substringAfter(<span class="string">&quot;--&quot;</span>)) <span class="comment">// **hi dhl**</span></span><br><span class="line"><span class="comment">// 如果没有找到，返回默认字符串 &quot;no match&quot;</span></span><br><span class="line">println(<span class="keyword">data</span>.substringAfter(<span class="string">&quot;--&quot;</span>,<span class="string">&quot;no match&quot;</span>)) <span class="comment">// no match</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">data</span> = <span class="string">&quot;&#123;JAVA | KOTLIN | C++ | PYTHON&#125;&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 移除前缀和后缀</span></span><br><span class="line">println(<span class="keyword">data</span>.removeSurrounding(<span class="string">&quot;&#123;&quot;</span>, <span class="string">&quot;&#125;&quot;</span>)) <span class="comment">// JAVA | KOTLIN | C++ | PYTHON</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>可以考虑减少if-else的判断，使用require(){}和checkXXX(){}进行检测</p>
+</li>
+<li><p>TextView设置跑马灯效果：</p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line">&lt;TextView</span><br><span class="line">                   ...</span><br><span class="line">                   android:ellipsize=<span class="string">&quot;marquee&quot;</span></span><br><span class="line">                   android:focusable=<span class="string">&quot;true&quot;</span></span><br><span class="line">                   android:focusableInTouchMode=<span class="string">&quot;true&quot;</span></span><br><span class="line">                   android:marqueeRepeatLimit=<span class="string">&quot;marquee_forever&quot;</span></span><br><span class="line">                   android:maxWidth=<span class="string">&quot;120dp&quot;</span></span><br><span class="line">                   android:maxLines=<span class="string">&quot;1&quot;</span></span><br><span class="line">                   android:scrollHorizontally=<span class="string">&quot;true&quot;</span></span><br><span class="line">                   android:singleLine=<span class="string">&quot;true&quot;</span>&gt;</span><br><span class="line">                   </span><br><span class="line">                   &lt;requestFocus /&gt;</span><br><span class="line">  </span><br><span class="line">               &lt;/TextView&gt;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<p>注意的是，不要设置高度，可以考虑设置 android:paddingVertical。</p>
+]]></content>
+      <categories>
+        <category>-编程</category>
+      </categories>
+      <tags>
+        <tag>Android</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>低耦合高内聚</title>
     <url>/2021/06/25/coupling-cohesion/</url>
     <content><![CDATA[<p>软件编程总原则：低耦合，高内聚。</p>
@@ -1272,6 +1169,109 @@
 <li>顺序内聚：如果一个模块的各个成分和同一个功能密切相关，而且一个成分的输出作为另一个成分的输入，则称为顺序内聚。</li>
 <li>信息内聚：如果模块进行许多操作，每个都有各自的入口点，每个操作的代码相对独立，而且所有的操作都对相同的数据结构完成。</li>
 <li>功能内聚：模块内所有元素的各个组成部分全部都为完成同一个功能而存在，共同完成一个单一的功能，模块已不可再分。即模块仅包括为完成某个功能所必须的所有成分，这些成分紧密联系、缺一不可。</li>
+</ul>
+]]></content>
+      <categories>
+        <category>-编程</category>
+      </categories>
+      <tags>
+        <tag>Principle</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>EventBus和BroadCast的差异</title>
+    <url>/2021/06/25/eventbus-broadcast/</url>
+    <content><![CDATA[<p>消息传递的实现，可以使用EventBus、广播、观察者。任何一种方式都有它的利弊，存在差异。</p>
+<span id="more"></span>
+
+<ul>
+<li><h5 id="广播BroadCastReceiver"><a href="#广播BroadCastReceiver" class="headerlink" title="广播BroadCastReceiver"></a>广播BroadCastReceiver</h5></li>
+</ul>
+<p>全局广播：它是重量级的，会消耗很多的资源，但是可以跨进程通信，这个特点是其他方案做不到的。</p>
+<p>本地广播：也会消耗很多资源，较全局广播轻量些，它可以拿到Context、Intent等和Android系统紧密相关的上下文，这样就方便数据的传递和接收。但是，获取到的这些对象，并不是像Activity那样获取到后做最全的事情。</p>
+<p>作为四大组件之一，广播同SDK的交互比较好。所以系统级的事件都是通过广播来实现的。</p>
+<p>谨记：广播是消耗时间、空间最多的一种方式。</p>
+<ul>
+<li><h5 id="EventBus"><a href="#EventBus" class="headerlink" title="EventBus"></a>EventBus</h5></li>
+</ul>
+<p>开发中使用最多的一种方式，调度灵活，不依赖Context，父类对于通知的监听和处理可以继承给子类，设置通知的优先级，粘滞事件能够保证通知不会因 Subscriber 的不在场而忽略。</p>
+<p>使用起来也简单，通过注册来监听数据变化即可。</p>
+<p>使用完成后需要解绑监听，并且无法跨进程传递消息。</p>
+<ul>
+<li><h5 id="观察者模式"><a href="#观察者模式" class="headerlink" title="观察者模式"></a>观察者模式</h5></li>
+</ul>
+<p>观察者的实现比较简单，性能上所以是最好的，但是无法控制优先级、粘滞事件，耦合性比EventBus大。</p>
+]]></content>
+      <categories>
+        <category>-编程</category>
+      </categories>
+      <tags>
+        <tag>Android</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>HTTP的学习</title>
+    <url>/2022/05/16/http/</url>
+    <content><![CDATA[<h4 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h4><p>HTTP：HyperText Transfer Protocol，超文本传输协议。它是一种用于分布式、协作式和超媒体信息系统的应用层协议。HTTP是万维网数据通信的基础。</p>
+<span id="more"></span>
+
+<h4 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h4><p>HTTP是一个客户端终端和服务器端请求和应答的标准（TCP），通过使用网页浏览器、网络爬虫或者其他工具，客户端发起一个HTTP请求到服务器上指定端口（默认端口为80）。称此客户端为用户代理程序。应答的服务器上存储着一些资源，称其为源服务器。客户端和源服务器中间可能存在多个“中间层”，比如代理服务器、网关或隧道。</p>
+<p>尽管TCP&#x2F;IP协议是互联网上最流行的应用，HTTP协议中，并没有规定必须使用它或它支持的层。事实上，HTTP可以在任何互联网协议上，或其他网络上实现。HTTP假定其下层协议提供可靠的传输。因此，任何能够提供这种保证的协议都可以被其使用。因此也就是其在TCP&#x2F;IP协议族使用TCP作为其传输层。</p>
+<h4 id="工作原理"><a href="#工作原理" class="headerlink" title="工作原理"></a>工作原理</h4><p>HTTP协议采用了请求&#x2F;响应模型。客户端向服务器发送一个请求报文，请求报文包含请求的方法、URL、协议版本、请求头部和请求数据。服务器以一个状态行作为响应，响应的内容包括协议的版本、成功或者错误代码、服务器信息、响应头部和响应数据。</p>
+<p>步骤如下：</p>
+<ul>
+<li>客户端连接到服务器：即两端之间建立一个TCP套接字连接；</li>
+<li>发送HTTP请求：通过TCP套接字，客户端向服务端发送一个文本的请求报文，一个请求报文由请求行、请求头部、空行和请求数据4部分组成；</li>
+<li>服务器接受请求并返回HTTP响应：服务器解析请求，定位请求资源，服务器将资源复本写到TCP套接字，由客户端读取。一个响应由状态行、响应头部、空行和响应数据4部分组成；</li>
+<li>释放TCP连接：若connection模式为close，则服务器主动关闭TCP连接，客户端被动关闭连接，释放TCP连接；若connection 模式为keepalive，则该连接会保持一段时间，在该时间内可以继续接收请求；</li>
+<li>客户端解析内容：客户端先解析状态行，查看表明请求是否成功的状态码。然后解析每一个响应头，响应头告知以下为若干字节的文档的字符集。客户端读取响应数据，并格式化后显示。</li>
+</ul>
+<p>请求必定由客户端发出，而服务器端回复响应。</p>
+<h4 id="无状态保存"><a href="#无状态保存" class="headerlink" title="无状态保存"></a>无状态保存</h4><p>HTTP是一种不保存状，即无状态(stateless)协议。HTTP协议自身不对请求和响应之间的通信状态进行保存。也就是说在HTTP这个级别，协议对于发送过的请求或响应都不做持久化处理。这是为了更快的处理大量事务，确保协议的可伸缩性，而特意设计成如此简单的。</p>
+<p>HTTP&#x2F;1.1虽然是无状态协议，但为了实现期望的保持状态功能，于是引入了Cookie技术。</p>
+<h4 id="无连接"><a href="#无连接" class="headerlink" title="无连接"></a>无连接</h4><p>无连接的含义是限制每次连接只处理一个请求。服务器处理完客户端的请求，并收到客户端的应答后，即断开连接。采用这种方式可以节省传输时间，并且可以提高并发性能，不能和每个用户建立长久的连接，请求一次响应一次，服务端和客户端就中断了。但是无连接有两种方式，早期的http协议是一个请求一个响应之后，直接就断开了，但是现在的http协议1.1版本不是直接就断开了，而是等几秒钟，这几秒钟是等什么呢，等着用户有后续的操作，如果用户在这几秒钟之内有新的请求，那么还是通过之前的连接通道来收发消息，如果过了这几秒钟用户没有发送新的请求，那么就会断开连接，这样可以提高效率，减少短时间内建立连接的次数，因为建立连接也是耗时的，默认的好像是3秒，但是这个时间是可以通过咱们后端的代码来调整的，自己网站根据自己网站用户的行为来分析统计出一个最优的等待时间。</p>
+<h4 id="请求方法"><a href="#请求方法" class="headerlink" title="请求方法"></a>请求方法</h4><ul>
+<li>GET：向指定的资源发出“显示”请求。使用GET方法应该只用在读取数据，而不应当被用于产生“副作用”的操作中；</li>
+<li>HEAD：与GET方法一样，都是向服务器发出指定资源的请求。只不过服务器将不传回资源的本文部分。它的好处在于，使用这个方法可以在不必传输全部内容的情况下，就可以获取其中“关于该资源的信息”（元信息或称元数据）；</li>
+<li>POST：向指定资源提交数据，请求服务器进行处理（例如提交表单或者上传文件）。数据被包含在请求本文中。这个请求可能会创建新的资源或修改现有资源，或二者皆有；</li>
+<li>PUT：向指定资源位置上传其最新内容；</li>
+<li>DELETE：请求服务器删除Request-URI所标识的资源；</li>
+<li>TRACE：回显服务器收到的请求，主要用于测试或诊断；</li>
+<li>OPTIONS：使服务器传回该资源所支持的所有HTTP请求方法。用’*’来代替资源名称，向Web服务器发送OPTIONS请求，可以测试服务器功能是否正常运作；</li>
+<li>CONNECT：HTTP&#x2F;1.1协议中预留给能够将连接改为管道方式的代理服务器。通常用于SSL加密服务器的链接（经由非加密的HTTP代理服务器）。</li>
+</ul>
+<p>注意事项：</p>
+<ul>
+<li>方法名称是区分大小的；</li>
+<li>服务器至少应该实现GET和HEAD方法；</li>
+<li>GET提交的数据会放在URL之后，也就是请求行里面，以?分割URL和传输数据，参数之间以&amp;相连；</li>
+<li>GET提交的数据大小有限制（因为浏览器对URL的长度有限制），而POST方法提交的数据没有限制；</li>
+</ul>
+<h4 id="HTTP状态码简述"><a href="#HTTP状态码简述" class="headerlink" title="HTTP状态码简述"></a>HTTP状态码简述</h4><ul>
+<li>1xx——信息性状态码——接收的请求正在处理</li>
+<li>2xx——成功状态码——请求正常处理完毕</li>
+<li>3xx——重定向状态码——需要进行附加操作以完成请求</li>
+<li>4xx——客户端错误状态码——服务器无法处理请求</li>
+<li>5xx——服务器错误状态码——服务器处理请求出错</li>
+</ul>
+<h4 id="请求头"><a href="#请求头" class="headerlink" title="请求头"></a>请求头</h4><p>请求头部由关键字&#x2F;值对组成，每行一对，关键字和值用英文冒号“:”分隔。请求头部通知服务器有关于客户端请求的信息，典型的请求头有：</p>
+<ul>
+<li>User-Agent：产生请求的浏览器类型；</li>
+<li>Accept：客户端可识别的响应内容类型列表;星号 “ * ” 用于按范围将类型分组，用 “ <em>&#x2F;</em> ” 指示可接受全部类型，用“ type&#x2F;* ”指示可接受 type 类型的所有子类型；</li>
+<li>Accept-Language：客户端可接受的自然语言；</li>
+<li>Accept-Encoding：客户端可接受的编码压缩格式；</li>
+<li>Accept-Charset：可接受的应答的字符集；</li>
+<li>Host：请求的主机名，允许多个域名同处一个IP 地址，即虚拟主机；</li>
+<li>connection：连接方式(close 或 keepalive)；</li>
+<li>Cookie：存储于客户端扩展字段，向同一域名的服务端发送属于该域的cookie。</li>
+</ul>
+<h4 id="uri、url、urn三者区别"><a href="#uri、url、urn三者区别" class="headerlink" title="uri、url、urn三者区别"></a>uri、url、urn三者区别</h4><ul>
+<li><p>uri：只用来唯一标识资源，不进行查找、定位。</p>
+</li>
+<li><p>url：唯一标识资源，并且规定了如何查找、定位资源。</p>
+</li>
+<li><p>urn：规定了资源的命名规则。</p>
+</li>
 </ul>
 ]]></content>
       <categories>
@@ -1510,133 +1510,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Kotlin-关于List集合的操作扩展函数</title>
-    <url>/2021/02/25/kotlin-list-operate/</url>
-    <content><![CDATA[<span id="more"></span>
-
-<p>A</p>
-<ul>
-<li>associateBy({key},{value})：通过指定的条件，把list转换成map</li>
-<li>any() : 判断是不是一个集合，若是，则在判断集合是否为空，若为空则返回false,反之返回true,若不是集合，则返回hasNext</li>
-<li>any{…} : 判断集合中是否存在满足条件的元素。若存在则返回true,反之返回false</li>
-<li>all{…} : 判断集合中的所有元素是否都满足条件。若是则返回true,反之则返回false</li>
-<li>average() : 获取平均数</li>
-</ul>
-<h6 id="B"><a href="#B" class="headerlink" title="B"></a>B</h6><h6 id="C"><a href="#C" class="headerlink" title="C"></a>C</h6><ul>
-<li>contains(元素) : 检查集合中是否包含指定的元素，若存在则返回true，反之返回false</li>
-<li>componentX() ： 这个函数在前面的章节中提过多次了。用于获取元素。其中的X只能代表1..5。</li>
-<li>count{}:返回符合匹配条件的元素的个数</li>
-</ul>
-<h6 id="D"><a href="#D" class="headerlink" title="D"></a>D</h6><ul>
-<li>drop(num) : 过滤集合中前num个元素</li>
-<li>dropWhile{…} : 相同条件下，和执行takeWhile{…}函数后得到的结果相反</li>
-<li>dropLast(num) : 过滤集合中后num个元素</li>
-<li>dropLastWhile{…} : 相同条件下，和执行takeLastWhile{…}函数后得到的结果相反</li>
-<li>distinct() : 去除重复元素</li>
-<li>distinctBy{…} : 根据操作元素后的结果去除重复元素</li>
-</ul>
-<h6 id="E"><a href="#E" class="headerlink" title="E"></a>E</h6><ul>
-<li>elementAt(index) : 获取对应下标的元素。若下标越界，会抛出IndexOutOfBoundsException（下标越界）异常，同get(index)一样</li>
-<li>elementAtOrElse(index,{…}) : 获取对应下标的元素。若下标越界，返回默认值，此默认值就是你传入的下标的运算值</li>
-<li>elementAtOrNull(index) : 获取对应下标的元素。若下标越界，返回null</li>
-</ul>
-<h6 id="F"><a href="#F" class="headerlink" title="F"></a>F</h6><ul>
-<li>first() : 获取第一个元素，若集合为空集合，这会抛出NoSuchElementException异常</li>
-<li>first{} : 获取指定元素的第一个元素。若不满足条件，则抛出NoSuchElementException异常</li>
-<li>firstOrNull() : 获取第一个元素，若集合为空集合，返回null</li>
-<li>firstOrNull{} : 获取指定元素的第一个元素。若不满足条件，返回null</li>
-<li>forEach{…} : 遍历元素。一般用作元素的打印</li>
-<li>forEachIndexed{index,value} : 遍历元素，可获得集合中元素的下标。一般用作元素以及下标的打印</li>
-<li>filter{…} : 把不满足条件的元素过滤掉</li>
-<li>filterIndexed{…} : 和filter{}函数作用类似，只是可以操作集合中元素的下标（index）</li>
-<li>filterNot{…} : 和filter{}函数的作用相反</li>
-<li>filterNotNull() : 过滤掉集合中为null的元素。</li>
-<li>fold{…} : 和reduce{}类似，但是fold{}有一个初始值</li>
-<li>foldIndexed{…} : 和reduceIndexed{}类似，但是foldIndexed{}有一个初始值</li>
-<li>foldRight{…} : 和reduceRight{}类似，但是foldRight{}有一个初始值</li>
-<li>foldRightIndexed{…} : 和reduceRightIndexed{}类似，但是foldRightIndexed{}有一个初始值</li>
-<li>flatMap() : 合并两个集合，可以在合并的时候对迭代元素值it做想要的操作</li>
-<li>flatten() : 遍历一个单独的集合，包含给定嵌套集合里面的所有元素。</li>
-</ul>
-<h6 id="G"><a href="#G" class="headerlink" title="G"></a>G</h6><ul>
-<li>getOrElse(index,{…}) : 获取对应下标的元素。若下标越界，返回默认值，此默认值就是你传入的下标的运算值</li>
-<li>getOrNull(index) : 获取对应下标的元素。若下标越界，返回默认值，此默认值就是你传入的下标的运算值</li>
-<li>groupBy() : 将集合中的元素按照某个条件分组，返回Map</li>
-<li>get() : 获取索引所在的元素，没有则返回ArrayIndexOutOfBoundsException</li>
-<li>getOrElse() : 获取索引所在的元素，没有就返回默认值</li>
-<li>getOrNull() : 获取索引所在的元素，没有就返回nul</li>
-</ul>
-<h6 id="H"><a href="#H" class="headerlink" title="H"></a>H</h6><h6 id="I"><a href="#I" class="headerlink" title="I"></a>I</h6><ul>
-<li>indexOf(元素) : 返回指定元素的下标，若不存在，则返回-1</li>
-<li>indexOfFirst{…} : 返回第一个满足条件元素的下标，若不存在，则返回-1</li>
-<li>indexOfLast{…} : 返回最后一个满足条件元素的下标，若不存在，则返回-1</li>
-</ul>
-<h6 id="J"><a href="#J" class="headerlink" title="J"></a>J</h6><h6 id="K"><a href="#K" class="headerlink" title="K"></a>K</h6><h6 id="L"><a href="#L" class="headerlink" title="L"></a>L</h6><ul>
-<li>last() : 获取最后一个元素，若集合为空集合，这会抛出NoSuchElementException异常</li>
-<li>last{} : 获取指定元素的最后一个元素。若不满足条件，则抛出NoSuchElementException异常</li>
-<li>lastOrNull{} : 获取指定元素的最后一个元素。若不满足条件，返回null</li>
-<li>lastOrNull() : 获取最后一个元素，若集合为空集合，返回null</li>
-</ul>
-<h6 id="M"><a href="#M" class="headerlink" title="M"></a>M</h6><ul>
-<li>map():重组所用到的函数</li>
-<li>max() : 获取集合中最大的元素，若为空元素集合，则返回null</li>
-<li>maxBy{…} : 获取方法处理后返回结果最大值对应那个元素的初始值，如果没有则返回null</li>
-<li>min() : 获取集合中最小的元素，若为空元素集合，则返回null</li>
-<li>minBy{…} : 获取方法处理后返回结果最小值对应那个元素的初始值，如果没有则返回null</li>
-<li>mapIndexed() : 除了得到转换后的结果，还可以拿到index(索引)</li>
-<li>mapNotNull() : 执行方法转换前过滤掉为null的元素</li>
-</ul>
-<h6 id="N"><a href="#N" class="headerlink" title="N"></a>N</h6><ul>
-<li>none() : 如果集合中没有元素，则返回true，否则返回false</li>
-<li>none{…} : 如果集合中没有符合匹配条件的元素，返回true，否则返回false</li>
-</ul>
-<h6 id="O"><a href="#O" class="headerlink" title="O"></a>O</h6><h6 id="P"><a href="#P" class="headerlink" title="P"></a>P</h6><ul>
-<li>partition():将原始集合拆分两个集合，一个集合包含判断条件为true的元素，另一个集合包含判断条件为false的元素</li>
-<li>plus() : 合并两个List</li>
-</ul>
-<h6 id="Q"><a href="#Q" class="headerlink" title="Q"></a>Q</h6><h6 id="R"><a href="#R" class="headerlink" title="R"></a>R</h6><ul>
-<li>reversed() : 反序。即和初始化的顺序反过来。</li>
-<li>reduce{…} : 从集合中的第一项到最后一项的累计操作。</li>
-<li>reduceIndexed{…} : 和reduce{}作用相同，只是其可以操作元素的下标(index)</li>
-<li>reduceRight{…} : 从集合中的最后一项到第一项的累计操作。</li>
-<li>reduceRightIndexed{…} : 和reduceRight{}作用相同，只是其可以操作元素的下标(index)</li>
-<li>retainAll(list)：取两个集合的交集</li>
-</ul>
-<h6 id="S"><a href="#S" class="headerlink" title="S"></a>S</h6><ul>
-<li>single() : 若集合的长度等于0,则抛出NoSuchElementException异常，若等于1，则返回第一个元素。反之，则抛出IllegalArgumentException异常</li>
-<li>single{} : 找到集合中满足条件的元素，若元素满足条件，则返回该元素。否则会根据不同的条件，抛出异常。这个方法慎用</li>
-<li>singleOrNull() : 若集合的长度等于1,则返回第一个元素。否则，返回null</li>
-<li>singleOrNull{} : 找到集合中满足条件的元素，若元素满足条件，则返回该元素。否则返回null</li>
-<li>sorted() : 自然升序。</li>
-<li>sortedBy{} : 根据条件升序，即把不满足条件的放在前面，满足条件的放在后面</li>
-<li>sortedDescending() : 自然降序。</li>
-<li>sortedByDescending{} : 根据条件降序。和sortedBy{}相反</li>
-<li>slice() : 过滤掉所有不满足执行下标的元素。</li>
-<li>sum() : 计算出集合元素累加的结果。</li>
-<li>sumBy{…} : 根据元素运算操作后的结果，然后根据这个结果计算出累加的值。</li>
-<li>sumByDouble{…} : 和sumBy{}相似，不过sumBy{}是操作Int类型数据，而sumByDouble{}操作的是Double类型数据</li>
-</ul>
-<h6 id="T"><a href="#T" class="headerlink" title="T"></a>T</h6><ul>
-<li>take(num) : 返回集合中前num个元素组成的集合</li>
-<li>takeWhile{…} : 循环遍历集合，从第一个元素开始遍历集合，当第一个出现不满足条件元素的时候，退出遍历。然后把满足条件所有元素组成的集合返回。</li>
-<li>takeLast(num) : 返回集合中后num个元素组成的集合</li>
-<li>takeLastWhile{…} : 循环遍历集合，从最后一个元素开始遍历集合，当第一个出现不满足条件元素的时候，退出遍历。然后把满足条件所有元素组成的集合返回。</li>
-</ul>
-<h6 id="U"><a href="#U" class="headerlink" title="U"></a>U</h6><ul>
-<li>unzip() : 和zip的作用相反。把一个类型为List<Pair>的集合拆分为两个集合</li>
-</ul>
-<h6 id="V"><a href="#V" class="headerlink" title="V"></a>V</h6><h6 id="W"><a href="#W" class="headerlink" title="W"></a>W</h6><h6 id="X"><a href="#X" class="headerlink" title="X"></a>X</h6><h6 id="Y"><a href="#Y" class="headerlink" title="Y"></a>Y</h6><h6 id="Z"><a href="#Z" class="headerlink" title="Z"></a>Z</h6><ul>
-<li>zip() : 返回一个列表，该列表由两个集合中相同索引元素建立的元素对。这个列表长度为最短集合的长度</li>
-</ul>
-]]></content>
-      <categories>
-        <category>-编程</category>
-      </categories>
-      <tags>
-        <tag>Kotlin</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Java-环境配置</title>
     <url>/2021/03/24/java-install-jdk/</url>
     <content><![CDATA[<span id="more"></span>
@@ -1827,6 +1700,133 @@
       </categories>
       <tags>
         <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Kotlin-关于List集合的操作扩展函数</title>
+    <url>/2021/02/25/kotlin-list-operate/</url>
+    <content><![CDATA[<span id="more"></span>
+
+<p>A</p>
+<ul>
+<li>associateBy({key},{value})：通过指定的条件，把list转换成map</li>
+<li>any() : 判断是不是一个集合，若是，则在判断集合是否为空，若为空则返回false,反之返回true,若不是集合，则返回hasNext</li>
+<li>any{…} : 判断集合中是否存在满足条件的元素。若存在则返回true,反之返回false</li>
+<li>all{…} : 判断集合中的所有元素是否都满足条件。若是则返回true,反之则返回false</li>
+<li>average() : 获取平均数</li>
+</ul>
+<h6 id="B"><a href="#B" class="headerlink" title="B"></a>B</h6><h6 id="C"><a href="#C" class="headerlink" title="C"></a>C</h6><ul>
+<li>contains(元素) : 检查集合中是否包含指定的元素，若存在则返回true，反之返回false</li>
+<li>componentX() ： 这个函数在前面的章节中提过多次了。用于获取元素。其中的X只能代表1..5。</li>
+<li>count{}:返回符合匹配条件的元素的个数</li>
+</ul>
+<h6 id="D"><a href="#D" class="headerlink" title="D"></a>D</h6><ul>
+<li>drop(num) : 过滤集合中前num个元素</li>
+<li>dropWhile{…} : 相同条件下，和执行takeWhile{…}函数后得到的结果相反</li>
+<li>dropLast(num) : 过滤集合中后num个元素</li>
+<li>dropLastWhile{…} : 相同条件下，和执行takeLastWhile{…}函数后得到的结果相反</li>
+<li>distinct() : 去除重复元素</li>
+<li>distinctBy{…} : 根据操作元素后的结果去除重复元素</li>
+</ul>
+<h6 id="E"><a href="#E" class="headerlink" title="E"></a>E</h6><ul>
+<li>elementAt(index) : 获取对应下标的元素。若下标越界，会抛出IndexOutOfBoundsException（下标越界）异常，同get(index)一样</li>
+<li>elementAtOrElse(index,{…}) : 获取对应下标的元素。若下标越界，返回默认值，此默认值就是你传入的下标的运算值</li>
+<li>elementAtOrNull(index) : 获取对应下标的元素。若下标越界，返回null</li>
+</ul>
+<h6 id="F"><a href="#F" class="headerlink" title="F"></a>F</h6><ul>
+<li>first() : 获取第一个元素，若集合为空集合，这会抛出NoSuchElementException异常</li>
+<li>first{} : 获取指定元素的第一个元素。若不满足条件，则抛出NoSuchElementException异常</li>
+<li>firstOrNull() : 获取第一个元素，若集合为空集合，返回null</li>
+<li>firstOrNull{} : 获取指定元素的第一个元素。若不满足条件，返回null</li>
+<li>forEach{…} : 遍历元素。一般用作元素的打印</li>
+<li>forEachIndexed{index,value} : 遍历元素，可获得集合中元素的下标。一般用作元素以及下标的打印</li>
+<li>filter{…} : 把不满足条件的元素过滤掉</li>
+<li>filterIndexed{…} : 和filter{}函数作用类似，只是可以操作集合中元素的下标（index）</li>
+<li>filterNot{…} : 和filter{}函数的作用相反</li>
+<li>filterNotNull() : 过滤掉集合中为null的元素。</li>
+<li>fold{…} : 和reduce{}类似，但是fold{}有一个初始值</li>
+<li>foldIndexed{…} : 和reduceIndexed{}类似，但是foldIndexed{}有一个初始值</li>
+<li>foldRight{…} : 和reduceRight{}类似，但是foldRight{}有一个初始值</li>
+<li>foldRightIndexed{…} : 和reduceRightIndexed{}类似，但是foldRightIndexed{}有一个初始值</li>
+<li>flatMap() : 合并两个集合，可以在合并的时候对迭代元素值it做想要的操作</li>
+<li>flatten() : 遍历一个单独的集合，包含给定嵌套集合里面的所有元素。</li>
+</ul>
+<h6 id="G"><a href="#G" class="headerlink" title="G"></a>G</h6><ul>
+<li>getOrElse(index,{…}) : 获取对应下标的元素。若下标越界，返回默认值，此默认值就是你传入的下标的运算值</li>
+<li>getOrNull(index) : 获取对应下标的元素。若下标越界，返回默认值，此默认值就是你传入的下标的运算值</li>
+<li>groupBy() : 将集合中的元素按照某个条件分组，返回Map</li>
+<li>get() : 获取索引所在的元素，没有则返回ArrayIndexOutOfBoundsException</li>
+<li>getOrElse() : 获取索引所在的元素，没有就返回默认值</li>
+<li>getOrNull() : 获取索引所在的元素，没有就返回nul</li>
+</ul>
+<h6 id="H"><a href="#H" class="headerlink" title="H"></a>H</h6><h6 id="I"><a href="#I" class="headerlink" title="I"></a>I</h6><ul>
+<li>indexOf(元素) : 返回指定元素的下标，若不存在，则返回-1</li>
+<li>indexOfFirst{…} : 返回第一个满足条件元素的下标，若不存在，则返回-1</li>
+<li>indexOfLast{…} : 返回最后一个满足条件元素的下标，若不存在，则返回-1</li>
+</ul>
+<h6 id="J"><a href="#J" class="headerlink" title="J"></a>J</h6><h6 id="K"><a href="#K" class="headerlink" title="K"></a>K</h6><h6 id="L"><a href="#L" class="headerlink" title="L"></a>L</h6><ul>
+<li>last() : 获取最后一个元素，若集合为空集合，这会抛出NoSuchElementException异常</li>
+<li>last{} : 获取指定元素的最后一个元素。若不满足条件，则抛出NoSuchElementException异常</li>
+<li>lastOrNull{} : 获取指定元素的最后一个元素。若不满足条件，返回null</li>
+<li>lastOrNull() : 获取最后一个元素，若集合为空集合，返回null</li>
+</ul>
+<h6 id="M"><a href="#M" class="headerlink" title="M"></a>M</h6><ul>
+<li>map():重组所用到的函数</li>
+<li>max() : 获取集合中最大的元素，若为空元素集合，则返回null</li>
+<li>maxBy{…} : 获取方法处理后返回结果最大值对应那个元素的初始值，如果没有则返回null</li>
+<li>min() : 获取集合中最小的元素，若为空元素集合，则返回null</li>
+<li>minBy{…} : 获取方法处理后返回结果最小值对应那个元素的初始值，如果没有则返回null</li>
+<li>mapIndexed() : 除了得到转换后的结果，还可以拿到index(索引)</li>
+<li>mapNotNull() : 执行方法转换前过滤掉为null的元素</li>
+</ul>
+<h6 id="N"><a href="#N" class="headerlink" title="N"></a>N</h6><ul>
+<li>none() : 如果集合中没有元素，则返回true，否则返回false</li>
+<li>none{…} : 如果集合中没有符合匹配条件的元素，返回true，否则返回false</li>
+</ul>
+<h6 id="O"><a href="#O" class="headerlink" title="O"></a>O</h6><h6 id="P"><a href="#P" class="headerlink" title="P"></a>P</h6><ul>
+<li>partition():将原始集合拆分两个集合，一个集合包含判断条件为true的元素，另一个集合包含判断条件为false的元素</li>
+<li>plus() : 合并两个List</li>
+</ul>
+<h6 id="Q"><a href="#Q" class="headerlink" title="Q"></a>Q</h6><h6 id="R"><a href="#R" class="headerlink" title="R"></a>R</h6><ul>
+<li>reversed() : 反序。即和初始化的顺序反过来。</li>
+<li>reduce{…} : 从集合中的第一项到最后一项的累计操作。</li>
+<li>reduceIndexed{…} : 和reduce{}作用相同，只是其可以操作元素的下标(index)</li>
+<li>reduceRight{…} : 从集合中的最后一项到第一项的累计操作。</li>
+<li>reduceRightIndexed{…} : 和reduceRight{}作用相同，只是其可以操作元素的下标(index)</li>
+<li>retainAll(list)：取两个集合的交集</li>
+</ul>
+<h6 id="S"><a href="#S" class="headerlink" title="S"></a>S</h6><ul>
+<li>single() : 若集合的长度等于0,则抛出NoSuchElementException异常，若等于1，则返回第一个元素。反之，则抛出IllegalArgumentException异常</li>
+<li>single{} : 找到集合中满足条件的元素，若元素满足条件，则返回该元素。否则会根据不同的条件，抛出异常。这个方法慎用</li>
+<li>singleOrNull() : 若集合的长度等于1,则返回第一个元素。否则，返回null</li>
+<li>singleOrNull{} : 找到集合中满足条件的元素，若元素满足条件，则返回该元素。否则返回null</li>
+<li>sorted() : 自然升序。</li>
+<li>sortedBy{} : 根据条件升序，即把不满足条件的放在前面，满足条件的放在后面</li>
+<li>sortedDescending() : 自然降序。</li>
+<li>sortedByDescending{} : 根据条件降序。和sortedBy{}相反</li>
+<li>slice() : 过滤掉所有不满足执行下标的元素。</li>
+<li>sum() : 计算出集合元素累加的结果。</li>
+<li>sumBy{…} : 根据元素运算操作后的结果，然后根据这个结果计算出累加的值。</li>
+<li>sumByDouble{…} : 和sumBy{}相似，不过sumBy{}是操作Int类型数据，而sumByDouble{}操作的是Double类型数据</li>
+</ul>
+<h6 id="T"><a href="#T" class="headerlink" title="T"></a>T</h6><ul>
+<li>take(num) : 返回集合中前num个元素组成的集合</li>
+<li>takeWhile{…} : 循环遍历集合，从第一个元素开始遍历集合，当第一个出现不满足条件元素的时候，退出遍历。然后把满足条件所有元素组成的集合返回。</li>
+<li>takeLast(num) : 返回集合中后num个元素组成的集合</li>
+<li>takeLastWhile{…} : 循环遍历集合，从最后一个元素开始遍历集合，当第一个出现不满足条件元素的时候，退出遍历。然后把满足条件所有元素组成的集合返回。</li>
+</ul>
+<h6 id="U"><a href="#U" class="headerlink" title="U"></a>U</h6><ul>
+<li>unzip() : 和zip的作用相反。把一个类型为List<Pair>的集合拆分为两个集合</li>
+</ul>
+<h6 id="V"><a href="#V" class="headerlink" title="V"></a>V</h6><h6 id="W"><a href="#W" class="headerlink" title="W"></a>W</h6><h6 id="X"><a href="#X" class="headerlink" title="X"></a>X</h6><h6 id="Y"><a href="#Y" class="headerlink" title="Y"></a>Y</h6><h6 id="Z"><a href="#Z" class="headerlink" title="Z"></a>Z</h6><ul>
+<li>zip() : 返回一个列表，该列表由两个集合中相同索引元素建立的元素对。这个列表长度为最短集合的长度</li>
+</ul>
+]]></content>
+      <categories>
+        <category>-编程</category>
+      </categories>
+      <tags>
+        <tag>Kotlin</tag>
       </tags>
   </entry>
   <entry>

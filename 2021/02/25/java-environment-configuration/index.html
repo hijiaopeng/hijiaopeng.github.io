@@ -316,13 +316,13 @@
 <li><p>在系统变量中新建CLASSPATH，取值为：</p>
 </li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\lib\tools.jar;</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">.;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\lib\tools.jar;</span><br></pre></td></tr></table></figure>
 
 <p>特别注意！！最前面有个点，千万不要忘记！！ </p>
 <ul>
 <li>在Path中添加</li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">%JAVA_HOME%\bin;%JAVA_HOME%\jre\bin; </span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">%JAVA_HOME%\bin;%JAVA_HOME%\jre\bin; </span><br></pre></td></tr></table></figure>
 
 <ul>
 <li><p>设置完成之后，依次点击确定退出。</p>
@@ -330,7 +330,7 @@
 <li><p>使用快捷键Win+R，打开运行，输入cmd，打开命令提示符窗口，执行命令：</p>
 </li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ java -version</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ java -version</span><br></pre></td></tr></table></figure>
 
 <ul>
 <li>如果出现类似以下的信息：</li>
@@ -341,12 +341,12 @@
 <ul>
 <li>查看系统自带的openJDK版本</li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ rpm -qa | grep jdk</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ rpm -qa | grep jdk</span><br></pre></td></tr></table></figure>
 
 <ul>
 <li>依次删除这些jdk</li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ yum -y remove jdk名称</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ yum -y remove jdk名称</span><br></pre></td></tr></table></figure>
 
 <ul>
 <li><p>安装之前，我们可以根据需求，在根目录中创建专门安装软件的目录（e.g. software）。</p>
@@ -379,27 +379,27 @@
 <li><p>创建软件安装目录（e.g. software）</p>
 </li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo <span class="built_in">mkdir</span> software</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo <span class="built_in">mkdir</span> software</span><br></pre></td></tr></table></figure>
 
 <ul>
 <li>进入目录</li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> software</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> software</span><br></pre></td></tr></table></figure>
 
 <ul>
 <li>创建一个新的java目录</li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">mkdir</span> java</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">mkdir</span> java</span><br></pre></td></tr></table></figure>
 
 <ul>
 <li>进入java，我们要在这个目录里进行安装配置</li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> java</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> java</span><br></pre></td></tr></table></figure>
 
 <ul>
 <li>下载jdk的tar包</li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ wget http://download.oracle.com/otn-pub/java/jdk/......</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ wget http://download.oracle.com/otn-pub/java/jdk/......</span><br></pre></td></tr></table></figure>
 
 <p>下载地址在<a target="_blank" rel="noopener" href="http://www.oracle.com/technetwork/java/javase/overview/index.html%E7%9A%84Downloads%E4%B8%AD%E5%AF%BB%E6%89%BE%EF%BC%8C%E6%89%BE%E5%88%B0%E6%83%B3%E8%A6%81%E4%B8%8B%E8%BD%BD%E7%9A%84%E7%89%88%E6%9C%AC%EF%BC%8C%E7%82%B9%E5%87%BBJDK">http://www.oracle.com/technetwork/java/javase/overview/index.html的Downloads中寻找，找到想要下载的版本，点击JDK</a> Download，选择Accept License Agreement ，右键.tar.gz格式，复制链接地址。</p>
 <p>部分版本下载地址：</p>
@@ -413,20 +413,20 @@
 <ul>
 <li>下载完成后，进行解压</li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ tar -zxvf jdk名称.tar.gz</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ tar -zxvf jdk名称.tar.gz</span><br></pre></td></tr></table></figure>
 
 <ul>
 <li>删除压缩包</li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">rm</span> jdk名称.tar.gz</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">rm</span> jdk名称.tar.gz</span><br></pre></td></tr></table></figure>
 
 <ul>
 <li>编辑&#x2F;etc&#x2F;profile文件，配置环境变量</li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ vim /etc/profile</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ vim /etc/profile</span><br></pre></td></tr></table></figure>
 
 <p>在末尾添加：</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">export</span> <span class="string">JAVA_HOME=/目录名/java（自定义目录名）/jdk目录名称</span></span><br><span class="line"><span class="string">export</span> <span class="string">CLASSPATH=.:$JAVA_HOME/jre/lib/rt.jar:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar</span></span><br><span class="line"><span class="string">export</span> <span class="string">PATH=$PATH:$JAVA_HOME/bin</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">export</span> <span class="string">JAVA_HOME=/目录名/java（自定义目录名）/jdk目录名称</span></span><br><span class="line"><span class="string">export</span> <span class="string">CLASSPATH=.:$JAVA_HOME/jre/lib/rt.jar:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar</span></span><br><span class="line"><span class="string">export</span> <span class="string">PATH=$PATH:$JAVA_HOME/bin</span></span><br></pre></td></tr></table></figure>
 
 <ul>
 <li><p>Esc</p>
@@ -436,12 +436,12 @@
 <li><p>重新加载profile目录</p>
 </li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">source</span> /etc/profile</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">source</span> /etc/profile</span><br></pre></td></tr></table></figure>
 
 <ul>
 <li>检查是否安装成功</li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ java -version</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ java -version</span><br></pre></td></tr></table></figure>
 
 <ul>
 <li>成功则会显示类似于以下信息</li>
@@ -521,13 +521,13 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">88k</span>
+    <span title="站点总字数">86k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">1:20</span>
+    <span title="站点阅读时长">1:18</span>
   </span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
