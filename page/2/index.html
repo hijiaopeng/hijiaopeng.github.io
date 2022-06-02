@@ -160,7 +160,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">30</span>
+          <span class="site-state-item-count">29</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -364,7 +364,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-05-16 22:41:52" itemprop="dateModified" datetime="2022-05-16T22:41:52+08:00">2022-05-16</time>
+      <time title="修改时间：2022-06-02 10:59:39" itemprop="dateModified" datetime="2022-06-02T10:59:39+08:00">2022-06-02</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -401,110 +401,15 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <span id="more"></span>
-
-<ul>
-<li><p>组合使用<merge/>（只能在布局根节点使用）、<include/>、<ViewStub/>标签，减少布局层级嵌套；</p>
-</li>
-<li><p>RecyclerView的layoutManager，spanCount,orientation属性可以在xml中设置；</p>
-</li>
-<li><p>通过SpannableString设置TextView样式，减少TextView创建；</p>
-</li>
-<li><p>图片如果只是颜色不一致的话，可以使用tint着色器进行更改，不必进行图片切换，减少图片资源的引入；</p>
-</li>
-<li><p>ViewFlipper：翻转视图，可以用来实现轮播，大图滑动查看，Banner图，启动引导页等；</p>
-</li>
-<li><p>设置EditText文本：EditText.text &#x3D; Editable.Factory.getInstance().newEditable(“”)；</p>
-</li>
-<li><p>设置Button无样式显示：style&#x3D;”?android:attr&#x2F;borderlessButtonStyle”；</p>
-</li>
-<li><p>防止同时按下两个按钮触发两个事件,在style中配置：</p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line">&lt;style name=<span class="string">&quot;AppTheme&quot;</span> parent=<span class="string">&quot;Theme.AppCompat.Light.NoActionBar&quot;</span>&gt;</span><br><span class="line">    &lt;!-- 防止同时按下两个按钮 --&gt;</span><br><span class="line">    &lt;item name=<span class="string">&quot;android:windowEnableSplitTouch&quot;</span>&gt;<span class="literal">false</span>&lt;/item&gt;</span><br><span class="line">    &lt;item name=<span class="string">&quot;android:splitMotionEvents&quot;</span>&gt;<span class="literal">false</span>&lt;/item&gt;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>金钱等两位小数的值使用BigDecimal类型；</p>
-</li>
-<li><p>对于简单方案，例如调用list集合的扩展函数，可以不使用{ }的lambda形式，直接使用（类名：属性）的方式，易于阅读；</p>
-</li>
-<li><p>a &#x3D; b.also { b &#x3D; a } ，交换两个属性，不用来回赋值了，每一次触发，都会进行调换；</p>
-</li>
-<li><p>by lazy只能作用于val关键字标注的属性，当属性用到的时候才会初始化”lazy{}”里面的内容，而且再次调用属性的时候，只会得到结果，而不会再次执行lazy{}的运行过程；</p>
-</li>
-<li><p>绘制RecyclerView后，可以设置tools:listitem&#x3D;”@layout&#x2F;list_item”，显示对应的Item布局；</p>
-</li>
-<li><p>解决android:animateLayoutChanges&#x3D;”true”动画跳跃问题：</p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span>(Build.VERSION.SDK_INT&gt;=Build.VERSION_CODES.JELLY_BEAN)&#123;		 	 		</span><br><span class="line">		父布局?.layoutTransition!!.enableTransitionType(LayoutTransition.CHANGING);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>动态的在代码里进行设置edittext限制规则：</p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line">editText.setKeyListener(DigitsKeyListener.getInstance(<span class="string">&quot;1234567890&quot;</span>));</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>单独对某个值或者对象判空并操作：</p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line">bean?.let &#123;</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>取某个对象中的各个属性进行操作：</p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line">with(bean) &#123;</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>既判空也取各个属性，并且不需要依靠it来调用：</p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line">bean.run &#123;</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>apply：1、适用于run函数的任何场景，一般用于初始化一个对象实例的时候，操作对象属性，并最终返回这个对象。<br>2、动态inflate出一个XML的View的时候需要给View绑定数据也会用到.<br>3、一般可用于多个扩展函数链式调用<br>4、数据model多层级包裹判空处理的问题</p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line">bean?.apply &#123;</span><br><span class="line">    <span class="comment">//第一层级不为空</span></span><br><span class="line">&#125;?.name?.apply &#123;</span><br><span class="line">    <span class="comment">//第二层级不为空</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><code>also</code> 对于执行一些将上下文对象作为参数的操作很有用。 对于需要引用对象而不是其属性与函数的操作，或者不想屏蔽来自外部作用域的 <code>this</code> 引用时，请使用 <code>also</code>。可以将其理解为“并且用该对象执行以下操作”</p>
-</li>
-<li><p>要善于使用解构声明，把一个对象，或者一个方法直接返回所需的多个变量：</p>
-<p>小括号里面的变量会从对象中依次调取，如果有用不到的参数，使用<code>_</code>替代</p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">val</span> (name,age) = f1()</span><br><span class="line"><span class="keyword">private</span> <span class="function"><span class="keyword">fun</span> <span class="title">f1</span><span class="params">()</span></span>: MyTestBean &#123;</span><br><span class="line">   <span class="keyword">return</span> MyTestBean(<span class="string">&quot;123&quot;</span>, <span class="number">0</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>集合中也可以使用：</p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">val</span> list = arrayListOf(</span><br><span class="line">    MyTestBean(<span class="string">&quot;123&quot;</span>, <span class="number">0</span>),</span><br><span class="line">    MyTestBean(<span class="string">&quot;456&quot;</span>, <span class="number">1</span>),</span><br><span class="line">    MyTestBean(<span class="string">&quot;789&quot;</span>, <span class="number">2</span>),</span><br><span class="line">    MyTestBean(<span class="string">&quot;000&quot;</span>, <span class="number">3</span>)</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> ((name,age) <span class="keyword">in</span> list)&#123;</span><br><span class="line">    Log.e(<span class="string">&quot;JP&quot;</span>, <span class="string">&quot;name: <span class="variable">$name</span>&quot;</span>)</span><br><span class="line">    Log.e(<span class="string">&quot;JP&quot;</span>, <span class="string">&quot;age: <span class="variable">$age</span>&quot;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>判断一个变量是否为null，并做对应的处理，可以使用：</p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line">haha?.let &#123;</span><br><span class="line">            Log.e(<span class="string">&quot;JP&quot;</span>, <span class="string">&quot;不为null&quot;</span>)</span><br><span class="line">        &#125; ?: run &#123;</span><br><span class="line">  					<span class="comment">//注意：let函数中存在多个let判断的话，有一个为null，都会进入run</span></span><br><span class="line">            Log.e(<span class="string">&quot;JP&quot;</span>, <span class="string">&quot;null&quot;</span>)</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>当声明的变量名存在相同概念的情况，私有的变量名使用_标识</p>
-</li>
-<li><p>TextView.lineCount：获取显示的文案有几行；TextView.layout.getLineWidth(0)：指定第几行文案显示的宽度；TextView.layout.getLineStart(0)：指定第几行显示的第一个字占所有文字的脚标；TextView.layout.getLineEnd(0)：指定第几行显示的最后一个字占所有文字的脚标。</p>
-<p>以上调用应该在TextView绘制完成，即post{dothing}</p>
-</li>
-<li><p>当进行类型转换的时候，如果可能存在null的情况，应使用as?</p>
-</li>
-<li><p>判断字符串是否为空：</p>
-<p>isNullOrEmpty : 为空指针或者字串长度为0时返回true，非空串与可空串均可调用。<br>isNullOrBlank : 为空指针或者字串长度为0或者全为空格时返回true，非空串与可空串均可调用。<br>isEmpty : 字串长度为0时返回true，只有非空串可调用。<br>isBlank : 字串长度为0或者全为空格时返回true，只有非空串可调用。<br>isNotEmpty : 字串长度大于0时返回true，只有非空串可调用。<br>isNotBlank : 字串长度大于0且不是全空格串时返回true，只有非空串可调用。</p>
-</li>
-<li><p>如果要对集合做很多或复杂的操作时，可以考虑转换为Sequence序列，再执行，提升处理效率</p>
-</li>
-<li><p>以字符串形式展示集合的数据时，使用list.joinToString(separator &#x3D; “ | “, prefix &#x3D; “start: “, postfix &#x3D; “: end”) – separator ：每个元素间的分割符</p>
-<p>–prefix ：数据开始的头描述</p>
-<p>–postfix ：数据结束的尾描述</p>
-</li>
-<li><p>在设置颜色**<code>colors.xml</code><strong>时，命名规则可以为</strong><code>_颜色值</code>**</p>
-</li>
-<li><p>在项目中可以创建多个styles.xml文件，这个文件名称并没有作用，起作用的是在文件 里xml的<code>&lt;style&gt;</code>标签。将通用的样式写到style中，布局里面直接加载style，不要再一个一个编写属性。</p>
-</li>
-<li><p>对于详情页面数据的访问，处理某个实时状态的话，用轮询访问服务器。</p>
-</li>
-<li><p>布局中使用分割线的话，可以考虑LinearLayout中的divider。</p>
-<p><code>divider</code>：传入分割线的<code>drawable</code>，可以是一个图片，也可以是自己通过<code>xml</code>实现的<code>drawable</code>。例如系统的分割线：@android:drawable&#x2F;divider_horizontal_bright</p>
-<p><code>showDividers</code>：分割线显示的位置，<code>beginning/middle/end</code>，分割对应头部、中间、尾部。</p>
-<p><code>dividerPadding</code>：分割线距离两边的间距。</p>
-</li>
-<li><p>如果不想使用外边距和View实现间距，考虑使用Space标签，它是一个空实现，因此它只占位置，而不去渲染，使用它来进行占位填充比其它控件更加高效</p>
-</li>
-<li><p>对比两个字符串，但是需要忽略大小写时，使用old.equals(new, ignoreCase &#x3D; <strong>true</strong>)</p>
-</li>
-<li><p>判断一个字符串是否为空字符串或者空格，最后加上为null的默认值：</p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line">str?.ifBlank &#123; <span class="string">&quot;123&quot;</span> &#125; ?: <span class="string">&quot;000&quot;</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>字符串移除相关：</p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> <span class="keyword">data</span> = <span class="string">&quot;**hi dhl**&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 移除前缀</span></span><br><span class="line">println(<span class="keyword">data</span>.removePrefix(<span class="string">&quot;**&quot;</span>)) <span class="comment">// hi dhl**</span></span><br><span class="line"><span class="comment">// 移除后缀</span></span><br><span class="line">println(<span class="keyword">data</span>.removeSuffix(<span class="string">&quot;**&quot;</span>)) <span class="comment">// **hi dhl</span></span><br><span class="line"><span class="comment">// 移除前缀和后缀</span></span><br><span class="line">println(<span class="keyword">data</span>.removeSurrounding(<span class="string">&quot;**&quot;</span>)) <span class="comment">// hi dhl</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 返回第一次出现分隔符后的字符串</span></span><br><span class="line">println(<span class="keyword">data</span>.substringAfter(<span class="string">&quot;**&quot;</span>)) <span class="comment">// hi dhl**</span></span><br><span class="line"><span class="comment">// 如果没有找到，返回原始字符串</span></span><br><span class="line">println(<span class="keyword">data</span>.substringAfter(<span class="string">&quot;--&quot;</span>)) <span class="comment">// **hi dhl**</span></span><br><span class="line"><span class="comment">// 如果没有找到，返回默认字符串 &quot;no match&quot;</span></span><br><span class="line">println(<span class="keyword">data</span>.substringAfter(<span class="string">&quot;--&quot;</span>,<span class="string">&quot;no match&quot;</span>)) <span class="comment">// no match</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">data</span> = <span class="string">&quot;&#123;JAVA | KOTLIN | C++ | PYTHON&#125;&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 移除前缀和后缀</span></span><br><span class="line">println(<span class="keyword">data</span>.removeSurrounding(<span class="string">&quot;&#123;&quot;</span>, <span class="string">&quot;&#125;&quot;</span>)) <span class="comment">// JAVA | KOTLIN | C++ | PYTHON</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>可以考虑减少if-else的判断，使用require(){}和checkXXX(){}进行检测</p>
-</li>
-<li><p>TextView设置跑马灯效果：</p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line">&lt;TextView</span><br><span class="line">                   ...</span><br><span class="line">                   android:ellipsize=<span class="string">&quot;marquee&quot;</span></span><br><span class="line">                   android:focusable=<span class="string">&quot;true&quot;</span></span><br><span class="line">                   android:focusableInTouchMode=<span class="string">&quot;true&quot;</span></span><br><span class="line">                   android:marqueeRepeatLimit=<span class="string">&quot;marquee_forever&quot;</span></span><br><span class="line">                   android:maxWidth=<span class="string">&quot;120dp&quot;</span></span><br><span class="line">                   android:maxLines=<span class="string">&quot;1&quot;</span></span><br><span class="line">                   android:scrollHorizontally=<span class="string">&quot;true&quot;</span></span><br><span class="line">                   android:singleLine=<span class="string">&quot;true&quot;</span>&gt;</span><br><span class="line">                   </span><br><span class="line">                   &lt;requestFocus /&gt;</span><br><span class="line">  </span><br><span class="line">               &lt;/TextView&gt;</span><br></pre></td></tr></table></figure></li>
-</ul>
-<p>注意的是，不要设置高度，可以考虑设置 android:paddingVertical。</p>
-
+          <p>没事常回来看看。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/05/07/android-tips/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -566,7 +471,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-05-16 22:41:30" itemprop="dateModified" datetime="2022-05-16T22:41:30+08:00">2022-05-16</time>
+      <time title="修改时间：2022-06-02 11:01:23" itemprop="dateModified" datetime="2022-06-02T11:01:23+08:00">2022-06-02</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -585,7 +490,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>493</span>
+      <span>498</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -603,30 +508,15 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <span id="more"></span>
-
-<ul>
-<li>SequenceDiagram：根据代码调用链路自动生成时序图</li>
-<li>.ignore：生成代码提交的忽略文件</li>
-<li>JSON To Kotlin Class：Json字符串转译为Kotlin数据类</li>
-<li>Markdown：Markdown编辑器</li>
-<li>Material Theme UI：自定义Android Studio的界面UI</li>
-<li>Translation：翻译插件</li>
-<li>CodeGlance：在右侧显示代码地图</li>
-<li>Rainbow Brackets：彩虹括号</li>
-<li>Codota：辅助开发神器，智能代码自动提示</li>
-<li>AiXcoder Code Completer：代码提示补全</li>
-<li>Grep Console：自定义控制台输出格式</li>
-<li>HighlightBracketPair：高亮显示</li>
-<li>Android Drawable Preview：预览图片资源缩略图</li>
-<li>ADB Idea：ADB调试工具</li>
-<li>AndroidProguardPlugin：一键生成项目混淆代码</li>
-<li>folding-plugin：布局文件分组</li>
-<li>Kotlin Fill Class：快速创建具有默认属性的Kotlin类</li>
-<li>KDoc-er - Kotlin Doc Generator：快速生成注释</li>
-<li>Lint Cleaner Plugin：删除项目中未使用的资源</li>
-</ul>
-
+          <p>按需配置。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/05/07/android-studio-plugin/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -688,7 +578,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-05-16 22:33:47" itemprop="dateModified" datetime="2022-05-16T22:33:47+08:00">2022-05-16</time>
+      <time title="修改时间：2022-06-02 11:02:09" itemprop="dateModified" datetime="2022-06-02T11:02:09+08:00">2022-06-02</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -707,7 +597,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>769</span>
+      <span>780</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -725,26 +615,15 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <span id="more"></span>
-
-<h4 id="第一种方式："><a href="#第一种方式：" class="headerlink" title="第一种方式："></a>第一种方式：</h4><p>找到module的build.gradle文件，在dependencies{}里面直接添加：</p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line">implementation fileTree(include: [<span class="string">&#x27;*.jar&#x27;</span>,<span class="string">&quot;*.aar&quot;</span>], dir: <span class="string">&#x27;libs&#x27;</span>)</span><br></pre></td></tr></table></figure>
-
-<h4 id="第二种方式："><a href="#第二种方式：" class="headerlink" title="第二种方式："></a>第二种方式：</h4><p>找到项目的build.gradle文件，添加：</p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line">allprojects &#123;</span><br><span class="line">    repositories &#123;</span><br><span class="line">    		...</span><br><span class="line">    		flatDir &#123;</span><br><span class="line">            dirs <span class="string">&#x27;libs&#x27;</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>在使用到的对应module的build.gradle文件里面添加：</p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line">dependencies &#123;</span><br><span class="line">		 implementation(name: <span class="string">&#x27;aar名字&#x27;</span>, ext: <span class="string">&#x27;aar&#x27;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>注意点：此种方法适用于单一module引入aar文件。如果引入aar的是一个moduleA，这个moduleA又被其他module引用，项目就会编译失败，所以在多module下，使用下面这种方式。</p>
-<h4 id="第三种方式："><a href="#第三种方式：" class="headerlink" title="第三种方式："></a>第三种方式：</h4><p>修改项目的build.gradle文件：</p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line">allprojects &#123;</span><br><span class="line">    repositories &#123;</span><br><span class="line">    		...</span><br><span class="line">    		flatDir &#123;</span><br><span class="line">    				<span class="comment">//这里需要把引入了aar包的module添加到依赖关系中</span></span><br><span class="line">            dirs project(<span class="string">&#x27;:xxModule&#x27;</span>).file(<span class="string">&#x27;libs&#x27;</span>)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>xxModule的build.gradle文件里面添加：</p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line">dependencies &#123;</span><br><span class="line">		 implementation(name: <span class="string">&#x27;aar名字&#x27;</span>, ext: <span class="string">&#x27;aar&#x27;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>至此完成。</p>
-
+          <p>选择其中一种方式即可。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/05/07/android-build-aar/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -806,7 +685,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-05-16 22:45:14" itemprop="dateModified" datetime="2022-05-16T22:45:14+08:00">2022-05-16</time>
+      <time title="修改时间：2022-06-02 11:02:47" itemprop="dateModified" datetime="2022-06-02T11:02:47+08:00">2022-06-02</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -843,125 +722,15 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <span id="more"></span>
-
-<h4 id="Windows"><a href="#Windows" class="headerlink" title="Windows"></a>Windows</h4><ul>
-<li><p>进入<a target="_blank" rel="noopener" href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">http://www.oracle.com/technetwork/java/javase/downloads/index.html</a> 官网，找到需要下载的版本，选择Accept License Agreement，点击下载。</p>
-</li>
-<li><p>新建一个文件夹java，里面创建jdk和jre两个文件夹。</p>
-</li>
-<li><p>双击下载的exe文件，开始安装。 </p>
-</li>
-<li><p>安装路径选择java&#x2F;jdk，当提示安装jre时，安装路径选择java&#x2F;jre。区分jdk和jre分别安装。</p>
-</li>
-<li><p>安装完成之后，返回桌面，选中此电脑或者计算机，依次进入右键–属性–高级系统设置–高级–环境变量。 </p>
-</li>
-<li><p>在系统变量中新建JAVA_HOME，取值为jdk安装目录 –在系统变量中新建CLASSPATH，取值为： <code>.;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\lib\tools.jar;</code> 特别注意！！最前面有个点，千万不要忘记！！ </p>
-</li>
-<li><p>在Path中添加 <code>%JAVA_HOME%\bin;%JAVA_HOME%\jre\bin;</code></p>
-</li>
-<li><p>设置完成之后，依次点击确定退出。 </p>
-</li>
-<li><p>使用快捷键Win+R，打开运行，输入cmd，打开命令提示符窗口，执行命令：<code>java -version</code></p>
-</li>
-<li><p>如果出现类似以下的信息：</p>
-</li>
-</ul>
-<p> <code>java version &quot;1.8.0_162&quot; Java(TM) SE Runtime Environment (build 1.8.0_162-b12) Java HotSpot(TM) 64-Bit Server VM (build 25.162-b12, mixed mode)</code></p>
-<p> 则说明Java环境配置成功。 </p>
-<h4 id="Linux"><a href="#Linux" class="headerlink" title="Linux"></a>Linux</h4><p>目前使用的Linux为Centos7。 </p>
-<ul>
-<li>查看系统自带的openJDK版本</li>
-</ul>
-<p><code>rpm -qa | grep jdk</code></p>
-<ul>
-<li>依次删除这些jdk</li>
-</ul>
-<p><code>yum -y remove jdk名称</code></p>
-<ul>
-<li><p>安装之前，我们可以根据需求，在根目录中创建专门安装软件的目录（e.g. software）。</p>
-</li>
-<li><p>此时，如果使用普通账户的话，会有权限不足的提示，就需要我们给用户添加root权限。</p>
-</li>
-</ul>
-<p>给普通账户添加权限：</p>
-<ol>
-<li>使用su，进入root账户下。</li>
-<li>ll查看&#x2F;etc&#x2F;sudoers目录权限状态，是否可编辑。</li>
-<li>设置sudoers目录为可写状态：440，执行命令<code>chmod 777 sudoers</code>，将sudoers目录变成可读可写可执行。</li>
-<li>执行命令<code>vim /etc/sudoers</code>,点击i键，找到</li>
-</ol>
-<p>## Allow root to run any commands anywhere</p>
-<p>root ALL&#x3D;(ALL) ALL</p>
-<p>在下面添加：用户名 ALL&#x3D;(ALL) ALL</p>
-<p>点击esc，输入：wq保存。</p>
-<ol>
-<li>此时完成账户的权限配置，接下来要把sudoers目录的权限复原，执行命令chmod 440 sudoers。</li>
-</ol>
-<ul>
-<li><p>以下可以使用登录的普通账户进行操作，注意的是命令前面需要加上sudo（即root权限操作）</p>
-</li>
-<li><p>创建软件安装目录（e.g. software）</p>
-</li>
-</ul>
-<p><code>sudo mkdir software</code></p>
-<ul>
-<li>进入目录</li>
-</ul>
-<p><code>cd software</code></p>
-<ul>
-<li>创建一个新的java目录</li>
-</ul>
-<p><code>mkdir java</code></p>
-<ul>
-<li>进入java，我们要在这个目录里进行安装配置</li>
-</ul>
-<p><code>cd java</code></p>
-<ul>
-<li>下载jdk的tar包</li>
-</ul>
-<p><code>wget http://download.oracle.com/otn-pub/java/jdk/......</code></p>
-<p>下载地址在<a target="_blank" rel="noopener" href="http://www.oracle.com/technetwork/java/javase/overview/index.html%E7%9A%84Downloads%E4%B8%AD%E5%AF%BB%E6%89%BE%EF%BC%8C%E6%89%BE%E5%88%B0%E6%83%B3%E8%A6%81%E4%B8%8B%E8%BD%BD%E7%9A%84%E7%89%88%E6%9C%AC%EF%BC%8C%E7%82%B9%E5%87%BBJDK">http://www.oracle.com/technetwork/java/javase/overview/index.html的Downloads中寻找，找到想要下载的版本，点击JDK</a> Download，选择Accept License Agreement ，右键.tar.gz格式，复制链接地址。</p>
-<p>部分版本下载地址：</p>
-<p>32位：</p>
-<p>1.8-171：<a target="_blank" rel="noopener" href="http://download.oracle.com/otn-pub/java/jdk/8u171-b11/512cd62ec5174c3487ac17c61aaa89e8/jdk-8u171-linux-i586.tar.gz">http://download.oracle.com/otn-pub/java/jdk/8u171-b11/512cd62ec5174c3487ac17c61aaa89e8/jdk-8u171-linux-i586.tar.gz</a></p>
-<p>1.8-172：<a target="_blank" rel="noopener" href="http://download.oracle.com/otn-pub/java/jdk/8u172-b11/a58eab1ec242421181065cdc37240b08/jdk-8u172-linux-i586.tar.gz">http://download.oracle.com/otn-pub/java/jdk/8u172-b11/a58eab1ec242421181065cdc37240b08/jdk-8u172-linux-i586.tar.gz</a></p>
-<p>64位：</p>
-<p>1.8-171：<a target="_blank" rel="noopener" href="http://download.oracle.com/otn-pub/java/jdk/8u171-b11/512cd62ec5174c3487ac17c61aaa89e8/jdk-8u171-linux-x64.tar.gz">http://download.oracle.com/otn-pub/java/jdk/8u171-b11/512cd62ec5174c3487ac17c61aaa89e8/jdk-8u171-linux-x64.tar.gz</a></p>
-<p>1.8-172：<a target="_blank" rel="noopener" href="http://download.oracle.com/otn-pub/java/jdk/8u172-b11/a58eab1ec242421181065cdc37240b08/jdk-8u172-linux-x64.tar.gz">http://download.oracle.com/otn-pub/java/jdk/8u172-b11/a58eab1ec242421181065cdc37240b08/jdk-8u172-linux-x64.tar.gz</a></p>
-<p>10.0.1：<a target="_blank" rel="noopener" href="http://download.oracle.com/otn-pub/java/jdk/10.0.1+10/fb4372174a714e6b8c52526dc134031e/jdk-10.0.1_linux-x64_bin.tar.gz">http://download.oracle.com/otn-pub/java/jdk/10.0.1+10/fb4372174a714e6b8c52526dc134031e/jdk-10.0.1_linux-x64_bin.tar.gz</a></p>
-<ul>
-<li>下载完成后，进行解压</li>
-</ul>
-<p><code>tar -zxvf jdk名称.tar.gz</code></p>
-<ul>
-<li>删除压缩包</li>
-</ul>
-<p><code>rm jdk名称.tar.gz</code></p>
-<ul>
-<li>编辑&#x2F;etc&#x2F;profile文件，配置环境变量</li>
-</ul>
-<p><code>vim /etc/profile</code></p>
-<p>在末尾添加：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">export</span> JAVA_HOME=/目录名/java（自定义目录名）/jdk目录名称</span><br><span class="line"></span><br><span class="line"><span class="built_in">export</span> CLASSPATH=.:JAVA_HOME/jre/lib/rt.jar:JAVA_HOME/lib/dt.jar:<span class="variable">$JAVA_HOME</span>/lib/tools.jar</span><br><span class="line"></span><br><span class="line"><span class="built_in">export</span> PATH=PATH:JAVA_HOME/bin&gt;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><p>Esc–:wq保存并退出</p>
-</li>
-<li><p>重新加载profile目录</p>
-</li>
-</ul>
-<p><code>source /etc/profile</code></p>
-<ul>
-<li>检查是否安装成功</li>
-</ul>
-<p><code>java -version</code></p>
-<ul>
-<li>成功则会显示类似于以下信息</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">java version <span class="string">&quot;1.8.0_144&quot;</span></span><br><span class="line"></span><br><span class="line">Java(TM) SE Runtime Environment (build 1.8.0_144-b01)</span><br><span class="line"></span><br><span class="line">Java HotSpot(TM) 64-Bit Server VM (build 25.144-b01, mixed mode)</span><br></pre></td></tr></table></figure>
-
-
+          <p>写这篇博客的时候很早了，不知道现在还适用不成。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/03/24/java-install-jdk/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -1545,13 +1314,13 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">85k</span>
+    <span title="站点总字数">83k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">1:18</span>
+    <span title="站点阅读时长">1:15</span>
   </span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动

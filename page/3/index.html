@@ -160,7 +160,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">30</span>
+          <span class="site-state-item-count">29</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -257,7 +257,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-05-16 22:46:56" itemprop="dateModified" datetime="2022-05-16T22:46:56+08:00">2022-05-16</time>
+      <time title="修改时间：2022-06-02 10:54:01" itemprop="dateModified" datetime="2022-06-02T10:54:01+08:00">2022-06-02</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -294,123 +294,15 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <span id="more"></span>
-
-<p>A</p>
-<ul>
-<li>associateBy({key},{value})：通过指定的条件，把list转换成map</li>
-<li>any() : 判断是不是一个集合，若是，则在判断集合是否为空，若为空则返回false,反之返回true,若不是集合，则返回hasNext</li>
-<li>any{…} : 判断集合中是否存在满足条件的元素。若存在则返回true,反之返回false</li>
-<li>all{…} : 判断集合中的所有元素是否都满足条件。若是则返回true,反之则返回false</li>
-<li>average() : 获取平均数</li>
-</ul>
-<h6 id="B"><a href="#B" class="headerlink" title="B"></a>B</h6><h6 id="C"><a href="#C" class="headerlink" title="C"></a>C</h6><ul>
-<li>contains(元素) : 检查集合中是否包含指定的元素，若存在则返回true，反之返回false</li>
-<li>componentX() ： 这个函数在前面的章节中提过多次了。用于获取元素。其中的X只能代表1..5。</li>
-<li>count{}:返回符合匹配条件的元素的个数</li>
-</ul>
-<h6 id="D"><a href="#D" class="headerlink" title="D"></a>D</h6><ul>
-<li>drop(num) : 过滤集合中前num个元素</li>
-<li>dropWhile{…} : 相同条件下，和执行takeWhile{…}函数后得到的结果相反</li>
-<li>dropLast(num) : 过滤集合中后num个元素</li>
-<li>dropLastWhile{…} : 相同条件下，和执行takeLastWhile{…}函数后得到的结果相反</li>
-<li>distinct() : 去除重复元素</li>
-<li>distinctBy{…} : 根据操作元素后的结果去除重复元素</li>
-</ul>
-<h6 id="E"><a href="#E" class="headerlink" title="E"></a>E</h6><ul>
-<li>elementAt(index) : 获取对应下标的元素。若下标越界，会抛出IndexOutOfBoundsException（下标越界）异常，同get(index)一样</li>
-<li>elementAtOrElse(index,{…}) : 获取对应下标的元素。若下标越界，返回默认值，此默认值就是你传入的下标的运算值</li>
-<li>elementAtOrNull(index) : 获取对应下标的元素。若下标越界，返回null</li>
-</ul>
-<h6 id="F"><a href="#F" class="headerlink" title="F"></a>F</h6><ul>
-<li>first() : 获取第一个元素，若集合为空集合，这会抛出NoSuchElementException异常</li>
-<li>first{} : 获取指定元素的第一个元素。若不满足条件，则抛出NoSuchElementException异常</li>
-<li>firstOrNull() : 获取第一个元素，若集合为空集合，返回null</li>
-<li>firstOrNull{} : 获取指定元素的第一个元素。若不满足条件，返回null</li>
-<li>forEach{…} : 遍历元素。一般用作元素的打印</li>
-<li>forEachIndexed{index,value} : 遍历元素，可获得集合中元素的下标。一般用作元素以及下标的打印</li>
-<li>filter{…} : 把不满足条件的元素过滤掉</li>
-<li>filterIndexed{…} : 和filter{}函数作用类似，只是可以操作集合中元素的下标（index）</li>
-<li>filterNot{…} : 和filter{}函数的作用相反</li>
-<li>filterNotNull() : 过滤掉集合中为null的元素。</li>
-<li>fold{…} : 和reduce{}类似，但是fold{}有一个初始值</li>
-<li>foldIndexed{…} : 和reduceIndexed{}类似，但是foldIndexed{}有一个初始值</li>
-<li>foldRight{…} : 和reduceRight{}类似，但是foldRight{}有一个初始值</li>
-<li>foldRightIndexed{…} : 和reduceRightIndexed{}类似，但是foldRightIndexed{}有一个初始值</li>
-<li>flatMap() : 合并两个集合，可以在合并的时候对迭代元素值it做想要的操作</li>
-<li>flatten() : 遍历一个单独的集合，包含给定嵌套集合里面的所有元素。</li>
-</ul>
-<h6 id="G"><a href="#G" class="headerlink" title="G"></a>G</h6><ul>
-<li>getOrElse(index,{…}) : 获取对应下标的元素。若下标越界，返回默认值，此默认值就是你传入的下标的运算值</li>
-<li>getOrNull(index) : 获取对应下标的元素。若下标越界，返回默认值，此默认值就是你传入的下标的运算值</li>
-<li>groupBy() : 将集合中的元素按照某个条件分组，返回Map</li>
-<li>get() : 获取索引所在的元素，没有则返回ArrayIndexOutOfBoundsException</li>
-<li>getOrElse() : 获取索引所在的元素，没有就返回默认值</li>
-<li>getOrNull() : 获取索引所在的元素，没有就返回nul</li>
-</ul>
-<h6 id="H"><a href="#H" class="headerlink" title="H"></a>H</h6><h6 id="I"><a href="#I" class="headerlink" title="I"></a>I</h6><ul>
-<li>indexOf(元素) : 返回指定元素的下标，若不存在，则返回-1</li>
-<li>indexOfFirst{…} : 返回第一个满足条件元素的下标，若不存在，则返回-1</li>
-<li>indexOfLast{…} : 返回最后一个满足条件元素的下标，若不存在，则返回-1</li>
-</ul>
-<h6 id="J"><a href="#J" class="headerlink" title="J"></a>J</h6><h6 id="K"><a href="#K" class="headerlink" title="K"></a>K</h6><h6 id="L"><a href="#L" class="headerlink" title="L"></a>L</h6><ul>
-<li>last() : 获取最后一个元素，若集合为空集合，这会抛出NoSuchElementException异常</li>
-<li>last{} : 获取指定元素的最后一个元素。若不满足条件，则抛出NoSuchElementException异常</li>
-<li>lastOrNull{} : 获取指定元素的最后一个元素。若不满足条件，返回null</li>
-<li>lastOrNull() : 获取最后一个元素，若集合为空集合，返回null</li>
-</ul>
-<h6 id="M"><a href="#M" class="headerlink" title="M"></a>M</h6><ul>
-<li>map():重组所用到的函数</li>
-<li>max() : 获取集合中最大的元素，若为空元素集合，则返回null</li>
-<li>maxBy{…} : 获取方法处理后返回结果最大值对应那个元素的初始值，如果没有则返回null</li>
-<li>min() : 获取集合中最小的元素，若为空元素集合，则返回null</li>
-<li>minBy{…} : 获取方法处理后返回结果最小值对应那个元素的初始值，如果没有则返回null</li>
-<li>mapIndexed() : 除了得到转换后的结果，还可以拿到index(索引)</li>
-<li>mapNotNull() : 执行方法转换前过滤掉为null的元素</li>
-</ul>
-<h6 id="N"><a href="#N" class="headerlink" title="N"></a>N</h6><ul>
-<li>none() : 如果集合中没有元素，则返回true，否则返回false</li>
-<li>none{…} : 如果集合中没有符合匹配条件的元素，返回true，否则返回false</li>
-</ul>
-<h6 id="O"><a href="#O" class="headerlink" title="O"></a>O</h6><h6 id="P"><a href="#P" class="headerlink" title="P"></a>P</h6><ul>
-<li>partition():将原始集合拆分两个集合，一个集合包含判断条件为true的元素，另一个集合包含判断条件为false的元素</li>
-<li>plus() : 合并两个List</li>
-</ul>
-<h6 id="Q"><a href="#Q" class="headerlink" title="Q"></a>Q</h6><h6 id="R"><a href="#R" class="headerlink" title="R"></a>R</h6><ul>
-<li>reversed() : 反序。即和初始化的顺序反过来。</li>
-<li>reduce{…} : 从集合中的第一项到最后一项的累计操作。</li>
-<li>reduceIndexed{…} : 和reduce{}作用相同，只是其可以操作元素的下标(index)</li>
-<li>reduceRight{…} : 从集合中的最后一项到第一项的累计操作。</li>
-<li>reduceRightIndexed{…} : 和reduceRight{}作用相同，只是其可以操作元素的下标(index)</li>
-<li>retainAll(list)：取两个集合的交集</li>
-</ul>
-<h6 id="S"><a href="#S" class="headerlink" title="S"></a>S</h6><ul>
-<li>single() : 若集合的长度等于0,则抛出NoSuchElementException异常，若等于1，则返回第一个元素。反之，则抛出IllegalArgumentException异常</li>
-<li>single{} : 找到集合中满足条件的元素，若元素满足条件，则返回该元素。否则会根据不同的条件，抛出异常。这个方法慎用</li>
-<li>singleOrNull() : 若集合的长度等于1,则返回第一个元素。否则，返回null</li>
-<li>singleOrNull{} : 找到集合中满足条件的元素，若元素满足条件，则返回该元素。否则返回null</li>
-<li>sorted() : 自然升序。</li>
-<li>sortedBy{} : 根据条件升序，即把不满足条件的放在前面，满足条件的放在后面</li>
-<li>sortedDescending() : 自然降序。</li>
-<li>sortedByDescending{} : 根据条件降序。和sortedBy{}相反</li>
-<li>slice() : 过滤掉所有不满足执行下标的元素。</li>
-<li>sum() : 计算出集合元素累加的结果。</li>
-<li>sumBy{…} : 根据元素运算操作后的结果，然后根据这个结果计算出累加的值。</li>
-<li>sumByDouble{…} : 和sumBy{}相似，不过sumBy{}是操作Int类型数据，而sumByDouble{}操作的是Double类型数据</li>
-</ul>
-<h6 id="T"><a href="#T" class="headerlink" title="T"></a>T</h6><ul>
-<li>take(num) : 返回集合中前num个元素组成的集合</li>
-<li>takeWhile{…} : 循环遍历集合，从第一个元素开始遍历集合，当第一个出现不满足条件元素的时候，退出遍历。然后把满足条件所有元素组成的集合返回。</li>
-<li>takeLast(num) : 返回集合中后num个元素组成的集合</li>
-<li>takeLastWhile{…} : 循环遍历集合，从最后一个元素开始遍历集合，当第一个出现不满足条件元素的时候，退出遍历。然后把满足条件所有元素组成的集合返回。</li>
-</ul>
-<h6 id="U"><a href="#U" class="headerlink" title="U"></a>U</h6><ul>
-<li>unzip() : 和zip的作用相反。把一个类型为List<Pair>的集合拆分为两个集合</li>
-</ul>
-<h6 id="V"><a href="#V" class="headerlink" title="V"></a>V</h6><h6 id="W"><a href="#W" class="headerlink" title="W"></a>W</h6><h6 id="X"><a href="#X" class="headerlink" title="X"></a>X</h6><h6 id="Y"><a href="#Y" class="headerlink" title="Y"></a>Y</h6><h6 id="Z"><a href="#Z" class="headerlink" title="Z"></a>Z</h6><ul>
-<li>zip() : 返回一个列表，该列表由两个集合中相同索引元素建立的元素对。这个列表长度为最短集合的长度</li>
-</ul>
-
+          <p>记录一下Kotlin中List集合的扩展函数，方便查找使用。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/02/25/kotlin-list-operate/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -519,256 +411,6 @@
             </div>
           <!--/noindex-->
         
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://hijiaopeng.github.io/2021/02/25/java-environment-configuration/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.JPG">
-      <meta itemprop="name" content="JPeng">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="JiaoPeng`s Blogs">
-      <meta itemprop="description" content="好记性不如烂笔头">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | JiaoPeng`s Blogs">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/02/25/java-environment-configuration/" class="post-title-link" itemprop="url">Java-开发环境配置</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2021-02-25 11:18:29" itemprop="dateCreated datePublished" datetime="2021-02-25T11:18:29+08:00">2021-02-25</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-05-16 22:44:47" itemprop="dateModified" datetime="2022-05-16T22:44:47+08:00">2022-05-16</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E7%BC%96%E7%A8%8B/" itemprop="url" rel="index"><span itemprop="name">-编程</span></a>
-        </span>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>2.6k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>2 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <span id="more"></span>
-
-<h4 id="Windows"><a href="#Windows" class="headerlink" title="Windows"></a>Windows</h4><ul>
-<li><p>进入<a target="_blank" rel="noopener" href="http://www.oracle.com/technetwork/java/javase/downloads/index.html%E5%AE%98%E7%BD%91%EF%BC%8C%E6%89%BE%E5%88%B0%E9%9C%80%E8%A6%81%E4%B8%8B%E8%BD%BD%E7%9A%84%E7%89%88%E6%9C%AC%EF%BC%8C%E9%80%89%E6%8B%A9Accept">http://www.oracle.com/technetwork/java/javase/downloads/index.html官网，找到需要下载的版本，选择Accept</a> License Agreement，点击下载。</p>
-</li>
-<li><p>新建一个文件夹java，里面创建jdk和jre两个文件夹。</p>
-</li>
-<li><p>双击下载的exe文件，开始安装。</p>
-</li>
-<li><p>安装路径选择java&#x2F;jdk，当提示安装jre时，安装路径选择java&#x2F;jre。区分jdk和jre分别安装。</p>
-</li>
-<li><p>安装完成之后，返回桌面，选中此电脑或者计算机，依次进入右键–属性–高级系统设置–高级–环境变量。</p>
-</li>
-<li><p>在系统变量中新建JAVA_HOME，取值为jdk安装目录</p>
-</li>
-<li><p>在系统变量中新建CLASSPATH，取值为：</p>
-</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">.;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\lib\tools.jar;</span><br></pre></td></tr></table></figure>
-
-<p>特别注意！！最前面有个点，千万不要忘记！！ </p>
-<ul>
-<li>在Path中添加</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">%JAVA_HOME%\bin;%JAVA_HOME%\jre\bin; </span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><p>设置完成之后，依次点击确定退出。</p>
-</li>
-<li><p>使用快捷键Win+R，打开运行，输入cmd，打开命令提示符窗口，执行命令：</p>
-</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ java -version</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>如果出现类似以下的信息：</li>
-</ul>
-<p>java version “1.8.0_162” Java(TM) SE Runtime Environment (build 1.8.0_162-b12) Java HotSpot(TM) 64-Bit Server VM (build 25.162-b12, mixed mode)</p>
-<p>则说明Java环境配置成功。 </p>
-<h4 id="Linux"><a href="#Linux" class="headerlink" title="Linux"></a>Linux</h4><p>目前使用的Linux为Centos7。 </p>
-<ul>
-<li>查看系统自带的openJDK版本</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ rpm -qa | grep jdk</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>依次删除这些jdk</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ yum -y remove jdk名称</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><p>安装之前，我们可以根据需求，在根目录中创建专门安装软件的目录（e.g. software）。</p>
-</li>
-<li><p>此时，如果使用普通账户的话，会有权限不足的提示，就需要我们给用户添加root权限。</p>
-</li>
-</ul>
-<p>给普通账户添加权限：</p>
-<blockquote>
-<ul>
-<li><p>使用su，进入root账户下。</p>
-</li>
-<li><p>查看&#x2F;etc&#x2F;sudoers目录权限状态，是否可编辑。</p>
-</li>
-<li><p>设置sudoers目录为可写状态：440，执行命令chmod 777 sudoers，将sudoers目录变成可读可写可执行。</p>
-</li>
-<li><p>执行命令vim &#x2F;etc&#x2F;sudoers,点击i键，找到</p>
-<p>Allow root to run any commands anywhere</p>
-<p>root ALL&#x3D;(ALL) ALL</p>
-<p>在下面添加：用户名 ALL&#x3D;(ALL) ALL</p>
-<p>点击esc，输入：wq保存。</p>
-</li>
-<li><p>此时完成账户的权限配置，接下来要把sudoers目录的权限复原，执行命令chmod 440 sudoers。</p>
-</li>
-</ul>
-</blockquote>
-<ul>
-<li><p>以下可以使用登录的普通账户进行操作，注意的是命令前面需要加上sudo（即root权限操作）</p>
-</li>
-<li><p>创建软件安装目录（e.g. software）</p>
-</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo <span class="built_in">mkdir</span> software</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>进入目录</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> software</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>创建一个新的java目录</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">mkdir</span> java</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>进入java，我们要在这个目录里进行安装配置</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> java</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>下载jdk的tar包</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ wget http://download.oracle.com/otn-pub/java/jdk/......</span><br></pre></td></tr></table></figure>
-
-<p>下载地址在<a target="_blank" rel="noopener" href="http://www.oracle.com/technetwork/java/javase/overview/index.html%E7%9A%84Downloads%E4%B8%AD%E5%AF%BB%E6%89%BE%EF%BC%8C%E6%89%BE%E5%88%B0%E6%83%B3%E8%A6%81%E4%B8%8B%E8%BD%BD%E7%9A%84%E7%89%88%E6%9C%AC%EF%BC%8C%E7%82%B9%E5%87%BBJDK">http://www.oracle.com/technetwork/java/javase/overview/index.html的Downloads中寻找，找到想要下载的版本，点击JDK</a> Download，选择Accept License Agreement ，右键.tar.gz格式，复制链接地址。</p>
-<p>部分版本下载地址：</p>
-<p>32位：</p>
-<p>1.8-171：<a target="_blank" rel="noopener" href="http://download.oracle.com/otn-pub/java/jdk/8u171-b11/512cd62ec5174c3487ac17c61aaa89e8/jdk-8u171-linux-i586.tar.gz">http://download.oracle.com/otn-pub/java/jdk/8u171-b11/512cd62ec5174c3487ac17c61aaa89e8/jdk-8u171-linux-i586.tar.gz</a></p>
-<p>1.8-172：<a target="_blank" rel="noopener" href="http://download.oracle.com/otn-pub/java/jdk/8u172-b11/a58eab1ec242421181065cdc37240b08/jdk-8u172-linux-i586.tar.gz">http://download.oracle.com/otn-pub/java/jdk/8u172-b11/a58eab1ec242421181065cdc37240b08/jdk-8u172-linux-i586.tar.gz</a></p>
-<p>64位：</p>
-<p>1.8-171：<a target="_blank" rel="noopener" href="http://download.oracle.com/otn-pub/java/jdk/8u171-b11/512cd62ec5174c3487ac17c61aaa89e8/jdk-8u171-linux-x64.tar.gz">http://download.oracle.com/otn-pub/java/jdk/8u171-b11/512cd62ec5174c3487ac17c61aaa89e8/jdk-8u171-linux-x64.tar.gz</a></p>
-<p>1.8-172：<a target="_blank" rel="noopener" href="http://download.oracle.com/otn-pub/java/jdk/8u172-b11/a58eab1ec242421181065cdc37240b08/jdk-8u172-linux-x64.tar.gz">http://download.oracle.com/otn-pub/java/jdk/8u172-b11/a58eab1ec242421181065cdc37240b08/jdk-8u172-linux-x64.tar.gz</a></p>
-<p>10.0.1：<a target="_blank" rel="noopener" href="http://download.oracle.com/otn-pub/java/jdk/10.0.1+10/fb4372174a714e6b8c52526dc134031e/jdk-10.0.1_linux-x64_bin.tar.gz">http://download.oracle.com/otn-pub/java/jdk/10.0.1+10/fb4372174a714e6b8c52526dc134031e/jdk-10.0.1_linux-x64_bin.tar.gz</a></p>
-<ul>
-<li>下载完成后，进行解压</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ tar -zxvf jdk名称.tar.gz</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>删除压缩包</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">rm</span> jdk名称.tar.gz</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>编辑&#x2F;etc&#x2F;profile文件，配置环境变量</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ vim /etc/profile</span><br></pre></td></tr></table></figure>
-
-<p>在末尾添加：</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">export</span> <span class="string">JAVA_HOME=/目录名/java（自定义目录名）/jdk目录名称</span></span><br><span class="line"><span class="string">export</span> <span class="string">CLASSPATH=.:$JAVA_HOME/jre/lib/rt.jar:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar</span></span><br><span class="line"><span class="string">export</span> <span class="string">PATH=$PATH:$JAVA_HOME/bin</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><p>Esc</p>
-</li>
-<li><p>:wq保存并退出</p>
-</li>
-<li><p>重新加载profile目录</p>
-</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">source</span> /etc/profile</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>检查是否安装成功</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ java -version</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>成功则会显示类似于以下信息</li>
-</ul>
-<p>java version “1.8.0_144”</p>
-<p>Java(TM) SE Runtime Environment (build 1.8.0_144-b01)</p>
-<p>Java HotSpot(TM) 64-Bit Server VM (build 25.144-b01, mixed mode)</p>
-
       
     </div>
 
@@ -1246,7 +888,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/02/25/android-math-use/" class="post-title-link" itemprop="url">Android-Math函数的使用</a>
+          <a href="/2021/02/25/android-math-use/" class="post-title-link" itemprop="url">Java-Math函数的使用</a>
         </h2>
 
         <div class="post-meta-container">
@@ -1264,7 +906,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-05-16 22:38:52" itemprop="dateModified" datetime="2022-05-16T22:38:52+08:00">2022-05-16</time>
+      <time title="修改时间：2022-06-02 10:57:26" itemprop="dateModified" datetime="2022-06-02T10:57:26+08:00">2022-06-02</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1283,7 +925,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>1.2k</span>
+      <span>1.3k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -1301,213 +943,15 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <span id="more"></span>
-
-<table>
-<thead>
-<tr>
-<th>函数</th>
-<th>作用</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Math.PI;</td>
-<td>圆周率</td>
-</tr>
-<tr>
-<td>Math.E;</td>
-<td>e的常量</td>
-</tr>
-<tr>
-<td>Math.sin();</td>
-<td>正弦函数</td>
-</tr>
-<tr>
-<td>Math.cos();</td>
-<td>余弦函数</td>
-</tr>
-<tr>
-<td>Math.tan();</td>
-<td>正切函数</td>
-</tr>
-<tr>
-<td>Math.asin();</td>
-<td>反正弦函数</td>
-</tr>
-<tr>
-<td>Math.acos();</td>
-<td>反余弦函数</td>
-</tr>
-<tr>
-<td>Math.atan();</td>
-<td>反正切函数</td>
-</tr>
-<tr>
-<td>Math.toRadians();</td>
-<td>将角度转换为弧度</td>
-</tr>
-<tr>
-<td>Math.toDegrees();</td>
-<td>将弧度转换角度</td>
-</tr>
-<tr>
-<td>Math.exp();</td>
-<td>求e的任意次方</td>
-</tr>
-<tr>
-<td>Math.log();</td>
-<td>自然对数</td>
-</tr>
-<tr>
-<td>Math.log10();</td>
-<td>以10为底的对数</td>
-</tr>
-<tr>
-<td>Math.sqrt();</td>
-<td>平方根</td>
-</tr>
-<tr>
-<td>Math.cbrt();</td>
-<td>立方根</td>
-</tr>
-<tr>
-<td>Math.IEEEremainder();</td>
-<td>求余</td>
-</tr>
-<tr>
-<td>Math.ceil();</td>
-<td>向上取整</td>
-</tr>
-<tr>
-<td>Math.floor();</td>
-<td>向下取整</td>
-</tr>
-<tr>
-<td>Math.rint();</td>
-<td>返回最接近该值的那个整数，如果存在两个这样的整数，则返回其中的偶数</td>
-</tr>
-<tr>
-<td>Math.atan2();</td>
-<td>返回从 x 轴到点 (x,y) 之间的角度</td>
-</tr>
-<tr>
-<td>Math.pow(x,y);</td>
-<td>x的y次方</td>
-</tr>
-<tr>
-<td>Math.round();</td>
-<td>四舍五入</td>
-</tr>
-<tr>
-<td>Math.random();</td>
-<td>返回0，1之间的一个随机数</td>
-</tr>
-<tr>
-<td>Math.addExact();</td>
-<td>加法运算</td>
-</tr>
-<tr>
-<td>Math.subtractExact();</td>
-<td>减法运算</td>
-</tr>
-<tr>
-<td>Math.multiplyExact();</td>
-<td>乘法运算</td>
-</tr>
-<tr>
-<td>Math.incrementExact();</td>
-<td>返回参数值加一</td>
-</tr>
-<tr>
-<td>Math.decrementExact();</td>
-<td>返回参数值减一</td>
-</tr>
-<tr>
-<td>Math.negateExact();</td>
-<td>改变参数符号</td>
-</tr>
-<tr>
-<td>Math.toIntExact();</td>
-<td>求int值</td>
-</tr>
-<tr>
-<td>Math.floorDiv();</td>
-<td>第一个参数除以第二参数，然后针对结果执行floor操作，返回小于或等于商的整数</td>
-</tr>
-<tr>
-<td>Math.floorMod();</td>
-<td>对一个数的余数进行下舍入，返回给定参数最大的整数，该整数小于或等给定的参数</td>
-</tr>
-<tr>
-<td>Math.abs();</td>
-<td>返回绝对值</td>
-</tr>
-<tr>
-<td>Math.max();</td>
-<td>求两数中最大</td>
-</tr>
-<tr>
-<td>Math.min();</td>
-<td>求两数中最小</td>
-</tr>
-<tr>
-<td>Math.ulp();</td>
-<td>返回参数的ulp大小</td>
-</tr>
-<tr>
-<td>Math.signum();</td>
-<td>符号函数；如果参数为 0，则返回 0；如果参数大于 0，则返回 1.0；如果参数小于 0，则返回 -1.0。</td>
-</tr>
-<tr>
-<td>Math.sinh();</td>
-<td>双曲正弦值</td>
-</tr>
-<tr>
-<td>Math.cosh();</td>
-<td>双曲余弦值</td>
-</tr>
-<tr>
-<td>Math.tanh();</td>
-<td>双曲正切值</td>
-</tr>
-<tr>
-<td>Math.hypot();</td>
-<td>返回 sqrt(x2次方 +y2次方) 没有中间溢或下溢</td>
-</tr>
-<tr>
-<td>Math.expm1();</td>
-<td>返回 Ex次方 - 1, 其中 x 是该函数的参数, E 是自然对数的底数</td>
-</tr>
-<tr>
-<td>Math.log1p();</td>
-<td>返回参数与 1 之和的自然对数</td>
-</tr>
-<tr>
-<td>Math.copySign();</td>
-<td>符号赋值，返回带有第二个浮点数符号的第一个浮点参数</td>
-</tr>
-<tr>
-<td>Math.getExponent();</td>
-<td>返回参数的无偏指数</td>
-</tr>
-<tr>
-<td>Math.nextAfter();</td>
-<td>返回第一个参数和第二个参数之间与第一个参数相邻的浮点数</td>
-</tr>
-<tr>
-<td>Math.nextUp();</td>
-<td>返回比目标数略大的浮点数</td>
-</tr>
-<tr>
-<td>Math.nextDown();</td>
-<td>返回参数直接较低的值</td>
-</tr>
-<tr>
-<td>Math.scalb();</td>
-<td>返回 d x 2(scaleFactor次方)</td>
-</tr>
-</tbody></table>
-
+          <p>Java中Math类的使用，Kotlin中有直接的函数方法。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/02/25/android-math-use/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -1569,7 +1013,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-05-16 22:33:40" itemprop="dateModified" datetime="2022-05-16T22:33:40+08:00">2022-05-16</time>
+      <time title="修改时间：2022-06-02 11:00:25" itemprop="dateModified" datetime="2022-06-02T11:00:25+08:00">2022-06-02</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1606,25 +1050,15 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <span id="more"></span>
-
-<h4 id="微信"><a href="#微信" class="headerlink" title="微信"></a>微信</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 判断是否安装微信</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> context</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="type">boolean</span> <span class="title function_">isWxInstall</span><span class="params">(Context context)</span> &#123;</span><br><span class="line">    <span class="keyword">final</span> <span class="type">PackageManager</span> <span class="variable">packagemanager</span> <span class="operator">=</span> context.getPackageManager();<span class="comment">// 获取packagemanager</span></span><br><span class="line">    List&lt;PackageInfo&gt; pinfo = packagemanager.getInstalledPackages(<span class="number">0</span>);<span class="comment">// 获取所有已安装程序的包信息</span></span><br><span class="line">    <span class="keyword">if</span> (pinfo != <span class="literal">null</span>) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; pinfo.size(); i++) &#123;</span><br><span class="line">            <span class="type">String</span> <span class="variable">pn</span> <span class="operator">=</span> pinfo.get(i).packageName;</span><br><span class="line">            <span class="keyword">if</span> (pn.equals(<span class="string">&quot;com.tencent.mm&quot;</span>)) &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="支付宝"><a href="#支付宝" class="headerlink" title="支付宝"></a>支付宝</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 检测是否安装支付宝</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> context</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="type">boolean</span> <span class="title function_">isAliPayInstall</span><span class="params">(Context context)</span> &#123;</span><br><span class="line">    <span class="type">Uri</span> <span class="variable">uri</span> <span class="operator">=</span> Uri.parse(<span class="string">&quot;alipays://platformapi/startApp&quot;</span>);</span><br><span class="line">    <span class="type">Intent</span> <span class="variable">intent</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Intent</span>(Intent.ACTION_VIEW, uri);</span><br><span class="line">    <span class="type">ComponentName</span> <span class="variable">componentName</span> <span class="operator">=</span> intent.resolveActivity(context.getPackageManager());</span><br><span class="line">    <span class="keyword">return</span> componentName != <span class="literal">null</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="腾讯地图"><a href="#腾讯地图" class="headerlink" title="腾讯地图"></a>腾讯地图</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 判断是否安装腾讯地图</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> Boolean <span class="title function_">isTencentInstall</span><span class="params">()</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">File</span>(<span class="string">&quot;/data/data/com.tencent.map&quot;</span>).exists();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="QQ"><a href="#QQ" class="headerlink" title="QQ"></a>QQ</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 判断是否安装QQ</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="type">boolean</span> <span class="title function_">isQQInstall</span><span class="params">(Context context)</span> &#123;</span><br><span class="line">    <span class="keyword">final</span> <span class="type">PackageManager</span> <span class="variable">packageManager</span> <span class="operator">=</span> context.getPackageManager();</span><br><span class="line">    List&lt;PackageInfo&gt; pinfo = packageManager.getInstalledPackages(<span class="number">0</span>);</span><br><span class="line">    <span class="keyword">if</span> (pinfo != <span class="literal">null</span>) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; pinfo.size(); i++) &#123;</span><br><span class="line">            <span class="type">String</span> <span class="variable">pn</span> <span class="operator">=</span> pinfo.get(i).packageName;</span><br><span class="line">            <span class="keyword">if</span> (pn.equalsIgnoreCase(<span class="string">&quot;com.tencent.qqlite&quot;</span>) || pn.equalsIgnoreCase(<span class="string">&quot;com.tencent.mobileqq&quot;</span>)) &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="新浪微博"><a href="#新浪微博" class="headerlink" title="新浪微博"></a>新浪微博</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 判断是否安装新浪微博</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="type">boolean</span> <span class="title function_">isSinaInstall</span><span class="params">(Context context)</span> &#123;</span><br><span class="line">    <span class="keyword">final</span> <span class="type">PackageManager</span> <span class="variable">packageManager</span> <span class="operator">=</span> context.getPackageManager();<span class="comment">// 获取packagemanager</span></span><br><span class="line">    List&lt;PackageInfo&gt; pinfo = packageManager.getInstalledPackages(<span class="number">0</span>);<span class="comment">// 获取所有已安装程序的包信息</span></span><br><span class="line">    <span class="keyword">if</span> (pinfo != <span class="literal">null</span>) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; pinfo.size(); i++) &#123;</span><br><span class="line">            <span class="type">String</span> <span class="variable">pn</span> <span class="operator">=</span> pinfo.get(i).packageName;</span><br><span class="line">            <span class="keyword">if</span> (pn.equals(<span class="string">&quot;com.sina.weibo&quot;</span>)) &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="高德地图"><a href="#高德地图" class="headerlink" title="高德地图"></a>高德地图</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 判断是否安装高德地图</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> context</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> Boolean <span class="title function_">isAmapInstall</span><span class="params">(Context context)</span> &#123;</span><br><span class="line">    PackageInfo packageInfo;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        packageInfo = context.getPackageManager().getPackageInfo(<span class="string">&quot;com.autonavi.minimap&quot;</span>, <span class="number">0</span>);</span><br><span class="line">    &#125; <span class="keyword">catch</span> (PackageManager.NameNotFoundException e) &#123;</span><br><span class="line">        packageInfo = <span class="literal">null</span>;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (packageInfo == <span class="literal">null</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="百度地图"><a href="#百度地图" class="headerlink" title="百度地图"></a>百度地图</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 判断是否安装百度地图</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> context</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> Boolean <span class="title function_">isBDMapInstall</span><span class="params">(Context context)</span> &#123;</span><br><span class="line">    PackageInfo packageInfo;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        packageInfo = context.getPackageManager().getPackageInfo(<span class="string">&quot;com.baidu.BaiduMap&quot;</span>, <span class="number">0</span>);</span><br><span class="line">    &#125; <span class="keyword">catch</span> (PackageManager.NameNotFoundException e) &#123;</span><br><span class="line">        packageInfo = <span class="literal">null</span>;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (packageInfo == <span class="literal">null</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="根据包名判断该APP是否安装"><a href="#根据包名判断该APP是否安装" class="headerlink" title="根据包名判断该APP是否安装"></a>根据包名判断该APP是否安装</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 判断是否安装了这个应用</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> context</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> packagename</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> Boolean <span class="title function_">isInstall</span><span class="params">(Context context, String packagename)</span> &#123;</span><br><span class="line">    PackageInfo packageInfo;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        packageInfo = context.getPackageManager().getPackageInfo(packagename, <span class="number">0</span>);</span><br><span class="line">    &#125; <span class="keyword">catch</span> (PackageManager.NameNotFoundException e) &#123;</span><br><span class="line">        packageInfo = <span class="literal">null</span>;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (packageInfo == <span class="literal">null</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
+          <p>版本较早，可能不适用当前开发了。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/02/25/android-app-installation/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -1773,13 +1207,13 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">85k</span>
+    <span title="站点总字数">83k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">1:18</span>
+    <span title="站点阅读时长">1:15</span>
   </span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
